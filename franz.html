@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Französisch Lernguide · Prüfung 24.11.</title>
+<style>
+:root{--ink:#161616;--mute:#6b6b6b;--line:#e4e4e4;--soft:#f7f7f5;--acc:#1f4fa3;--ok:#1d7a3e;--no:#b3261e;}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+.top{max-width:920px;margin:0 auto;padding:10px 20px 0;display:flex;align-items:baseline;gap:12px}
+.top b{font-size:15px;letter-spacing:.02em}
+.top span{color:var(--mute);font-size:13px}
+#nav{max-width:920px;margin:0 auto;padding:0 12px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav a{padding:10px 10px 9px;color:var(--mute);text-decoration:none;font-size:14px;white-space:nowrap;border-bottom:2px solid transparent}
+#nav a.on{color:var(--ink);border-bottom-color:var(--ink)}
+main{max-width:920px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 10px;letter-spacing:-.01em}
+h2{font-size:19px;margin:30px 0 10px}
+h3{font-size:16px;margin:26px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+a{color:var(--acc)}
+.lead{color:#333;max-width:720px}
+.small{font-size:13px;color:var(--mute)}
+.crumb{font-size:13px;color:var(--mute);margin:0}
+.crumb a{color:var(--mute)}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.hero p{margin:0;color:var(--mute);font-size:14px}
+.count{text-align:center;font-size:12px;color:var(--mute);min-width:70px}
+.count span{display:block;font-size:40px;font-weight:700;color:var(--ink);line-height:1}
+.bar{height:3px;background:var(--line);margin:14px 0 4px}
+.bar div{height:3px;background:var(--ink);transition:width .3s}
+.days{display:grid;gap:12px;margin-top:18px}
+.day{border:1px solid var(--line);padding:12px 14px}
+.dh{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+.dh span{color:#333}
+.dh em{margin-left:auto;font-style:normal;font-size:13px;color:var(--mute)}
+.task{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid #f0f0f0;font-size:15px;cursor:pointer}
+.task input{margin-top:5px;accent-color:var(--ink)}
+.task span{flex:1}
+.task input:checked+span{color:var(--mute);text-decoration:line-through}
+.go{font-size:13px;white-space:nowrap;text-decoration:none}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:8px 0}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;text-align:left;vertical-align:top}
+th{font-weight:600;font-size:13px;color:var(--mute)}
+.tw{overflow-x:auto}
+table.data td,table.data th{padding:6px 10px;white-space:nowrap;text-align:center}
+table.data th{text-align:left}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute);margin:1px}
+.pill.good,.btn.good{border-color:var(--ok);color:var(--ok)}
+.pill.bad,.btn.bad{border-color:var(--no);color:var(--no)}
+.btn{display:inline-block;font:inherit;font-size:14px;padding:8px 14px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;margin:3px 4px 3px 0;border-radius:3px}
+.btn.ghost,.btn.sm,.btn.good,.btn.bad{background:#fff;color:var(--ink)}
+.btn.sm{font-size:13px;padding:5px 10px;border-color:var(--line)}
+.btn.sm.on{background:var(--ink);color:#fff}
+.btns{white-space:nowrap}
+.list .row{display:flex;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
+.list .row b{width:22px;color:var(--mute)}
+.list .row .go{margin-left:auto}
+.tag{font-size:11px;color:var(--mute);border:1px solid var(--line);padding:1px 6px;border-radius:10px}
+.how{border-left:2px solid var(--ink);padding:4px 0 4px 14px;margin:14px 0;font-size:15px}
+.how ol{margin:6px 0 0;padding-left:20px}
+.note{font-size:14px;color:var(--mute);border:1px solid var(--line);padding:10px 12px;margin:10px 0}
+.formula{font-family:Georgia,serif;font-size:17px;padding:6px 0}
+.chapter ul,.chapter ol{padding-left:20px}
+.chapter li{margin:3px 0}
+.after{margin-top:30px;padding-top:16px;border-top:1px solid var(--ink)}
+.after b{display:block;margin-bottom:8px}
+.pn{display:flex;justify-content:space-between;margin-top:26px;font-size:14px}
+.qhead{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:10px}
+.qcard h2{font-size:20px;margin:22px 0 14px;line-height:1.35}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;font:inherit;font-size:15.5px;background:#fff;border:1px solid var(--line);padding:12px 14px;cursor:pointer;border-radius:3px;color:var(--ink)}
+.opt:hover{border-color:#999}
+.opt span{font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:50%;width:22px;height:22px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.opt.right{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.opt.wrong{border-color:var(--no);box-shadow:inset 3px 0 0 var(--no)}
+.fb{margin:14px 0;padding:10px 14px;border:1px solid var(--line);font-size:15px}
+.fb.y b,.y{color:var(--ok)}
+.fb.n b,.n{color:var(--no)}
+.rev{border-top:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.tabs a{font-size:13px;padding:5px 10px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute)}
+.tabs a.on{border-color:var(--ink);color:var(--ink)}
+svg{width:100%;height:auto;display:block}
+.chart{max-width:640px;border:1px solid var(--line);margin:12px 0}
+.ax{stroke:#222;stroke-width:1.2}
+.grid{stroke:#eee;stroke-width:1}
+.lb{font-size:11px;fill:#555;font-family:inherit}
+.dash{stroke:#888;stroke-dasharray:4 4;stroke-width:1}
+.c1{stroke:#b3261e;fill:none;stroke-width:2}
+.c2{stroke:#1d7a3e;fill:none;stroke-width:2}
+.c3{stroke:#1f4fa3;fill:none;stroke-width:2}
+.c4{stroke:#2e9e5b;fill:none;stroke-width:2}
+.c5{stroke:#222;fill:none;stroke-width:2}
+.pt{fill:#1f4fa3}
+.mark{fill:none;stroke:#161616;stroke-width:2}
+rect.blk{fill:#d9d9d4;stroke:#999}
+.guess{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:10px 0}
+.guess label{font-size:13px;color:var(--mute);display:flex;flex-direction:column;gap:4px}
+.guess input{font:inherit;padding:7px 9px;border:1px solid var(--line);width:130px}
+.drawcard{border-top:1px solid var(--line);padding:14px 0}
+.drawcard h2{font-size:17px;margin:0 0 6px}
+.sol{margin-top:10px}
+.sol svg{max-width:520px;border:1px solid var(--line)}
+.state{font-size:12px;margin-left:8px}
+.state.y{color:var(--ok)}.state.n{color:var(--no)}
+.simq{border-top:1px solid var(--line);padding:12px 0}
+.sopt{display:block;padding:4px 0 4px 4px;font-size:15px;cursor:pointer}
+.timer{position:sticky;top:90px;float:right;font-variant-numeric:tabular-nums;border:1px solid var(--ink);padding:4px 10px;background:#fff;font-size:15px}
+.ans{font:inherit;font-size:18px;padding:10px 12px;border:1px solid #bbb;width:100%;max-width:420px;margin:12px 8px 6px 0;border-radius:3px}
+.ans.sm{font-size:16px;padding:7px 10px;margin:6px 0 0;max-width:320px}
+.ans:disabled{background:#fafafa}
+.acc{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0}
+.acc button{font:inherit;font-size:15px;width:34px;height:32px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer}
+.gap{display:inline-block;border-bottom:1.5px solid var(--ink);min-width:70px;color:transparent}
+.pron{font-weight:700}
+table.conj td,table.conj th{white-space:nowrap}
+.ans.inl{display:inline-block;width:170px;margin:2px 4px;font-size:15px;padding:4px 7px}
+.ans.wide{max-width:640px}
+.ans.okk{border-color:var(--ok);background:#f4faf6}.ans.nok{border-color:var(--no);background:#fdf5f4}
+.txt{line-height:2.3;font-size:16px}
+.res{font-size:14px;margin-top:4px}
+.ch{font:inherit;font-size:14px;min-width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;margin:1px}
+@media (max-width:600px){h1{font-size:24px}main{padding:18px 16px 70px}.count span{font-size:32px}.btns{white-space:normal}th,td{padding:7px 8px 7px 0}}
+.home{font-size:13px;text-decoration:none;margin-right:6px}
+</style>
+</head>
+<body>
+<header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>Französisch Lernguide</b><span>Prüfung Di 24.11.2026</span></div><nav id="nav"></nav></header>
+<main id="app"></main>
+<script>
+const EXAM_DATE = "2026-11-24";
+const EXAM_LABEL = "Französisch · Prüfung Di 24.11.";
+
+const TOPICS = [
+{id:"p", n:1, title:"Le Présent (Formation)", short:"Présent"},
+{id:"s", n:2, title:"Le Subjonctif (Formation + Usage)", short:"Subjonctif"},
+{id:"pc", n:3, title:"Le Passé Composé", short:"Passé composé"},
+{id:"im", n:4, title:"L'Imparfait + PC ou Imparfait ?", short:"Imparfait"},
+{id:"pq", n:5, title:"Le Plus-que-parfait", short:"Plus-que-parfait"},
+{id:"fu", n:6, title:"Futur Simple & Futur Proche", short:"Futur"}
+];
+
+const CHAPTERS = {
+p: `
+<div class="how"><b>So lernst du (ca. 30 min)</b><ol>
+<li>Lies die Regeln für die Gruppen und die Sonderfälle bei -er.</li>
+<li>Schreib die unregelmässigen Verben in der Tabelle aus dem Kopf auf und korrigiere.</li>
+<li><a href="#" data-go="trainer/pres">Konjugationstrainer Présent</a>: 2 Runden.</li>
+<li>Quiz A.</li></ol></div>
+
+<h3>Regelmässige Gruppen</h3>
+<div class="tw"><table>
+<tr><th>Gruppe</th><th>Endungen</th><th>Beispiel</th></tr>
+<tr><td>-er</td><td>-e, -es, -e, -ons, -ez, -ent</td><td>je parle, nous parlons, ils parlent</td></tr>
+<tr><td>-ir wie finir (mit -iss-)</td><td>-is, -is, -it, -issons, -issez, -issent</td><td>je finis, nous finissons, ils finissent (choisir, réussir, vieillir, obéir, remplir)</td></tr>
+<tr><td>-ir wie partir (ohne -iss-)</td><td>-s, -s, -t, -ons, -ez, -ent; im Singular fällt der Konsonant vor -ir weg</td><td>je pars, il part, nous partons (sortir, dormir, sentir, mentir)</td></tr>
+<tr><td>-ir wie -er</td><td>-e, -es, -e, -ons, -ez, -ent</td><td>j'ouvre, tu offres (ouvrir, offrir, découvrir, souffrir)</td></tr>
+<tr><td>-re</td><td>-s, -s, (nichts), -ons, -ez, -ent</td><td>j'attends, il attend, ils attendent (répondre, entendre, vendre)</td></tr>
+</table></div>
+
+<h3>Sonderfälle bei -er</h3>
+<div class="tw"><table>
+<tr><th>Typ</th><th>Regel</th><th>Beispiel</th></tr>
+<tr><td>acheter, peser, amener, se lever</td><td>e → è vor stummer Endung (je, tu, il, ils)</td><td>j'achète, ils achètent, aber nous achetons</td></tr>
+<tr><td>préférer, espérer, répéter</td><td>é → è vor stummer Endung</td><td>je préfère, aber nous préférons</td></tr>
+<tr><td>appeler, jeter, épeler, projeter</td><td>Konsonant verdoppeln vor stummer Endung</td><td>j'appelle, ils jettent, tu épelles, aber nous appelons</td></tr>
+<tr><td>-yer: nettoyer, employer, envoyer, essayer, payer</td><td>y → i vor stummer Endung</td><td>je nettoie, ils emploient, aber nous nettoyons (bei payer/essayer ist je paye/essaye auch erlaubt)</td></tr>
+<tr><td>-ger: manger, voyager</td><td>nous mit -eons</td><td>nous mangeons, nous voyageons</td></tr>
+<tr><td>-cer: commencer, avancer</td><td>nous mit -çons</td><td>nous commençons, nous avançons</td></tr>
+</table></div>
+<p>Merke: Die Änderung passiert dort, wo die Endung stumm ist (je, tu, il, ils). Bei nous und vous bleibt der Stamm normal.</p>
+
+<h3>Unregelmässige Verben</h3>
+<div class="tw"><table class="conj">
+<tr><th></th><th>je</th><th>tu</th><th>il</th><th>nous</th><th>vous</th><th>ils</th></tr>
+<tr><td>être</td><td>suis</td><td>es</td><td>est</td><td>sommes</td><td>êtes</td><td>sont</td></tr>
+<tr><td>avoir</td><td>ai</td><td>as</td><td>a</td><td>avons</td><td>avez</td><td>ont</td></tr>
+<tr><td>aller</td><td>vais</td><td>vas</td><td>va</td><td>allons</td><td>allez</td><td>vont</td></tr>
+<tr><td>faire</td><td>fais</td><td>fais</td><td>fait</td><td>faisons</td><td>faites</td><td>font</td></tr>
+<tr><td>dire</td><td>dis</td><td>dis</td><td>dit</td><td>disons</td><td>dites</td><td>disent</td></tr>
+<tr><td>lire</td><td>lis</td><td>lis</td><td>lit</td><td>lisons</td><td>lisez</td><td>lisent</td></tr>
+<tr><td>écrire</td><td>écris</td><td>écris</td><td>écrit</td><td>écrivons</td><td>écrivez</td><td>écrivent</td></tr>
+<tr><td>vivre</td><td>vis</td><td>vis</td><td>vit</td><td>vivons</td><td>vivez</td><td>vivent</td></tr>
+<tr><td>devoir</td><td>dois</td><td>dois</td><td>doit</td><td>devons</td><td>devez</td><td>doivent</td></tr>
+<tr><td>pouvoir</td><td>peux</td><td>peux</td><td>peut</td><td>pouvons</td><td>pouvez</td><td>peuvent</td></tr>
+<tr><td>vouloir</td><td>veux</td><td>veux</td><td>veut</td><td>voulons</td><td>voulez</td><td>veulent</td></tr>
+<tr><td>savoir</td><td>sais</td><td>sais</td><td>sait</td><td>savons</td><td>savez</td><td>savent</td></tr>
+<tr><td>prendre</td><td>prends</td><td>prends</td><td>prend</td><td>prenons</td><td>prenez</td><td>prennent</td></tr>
+<tr><td>mettre</td><td>mets</td><td>mets</td><td>met</td><td>mettons</td><td>mettez</td><td>mettent</td></tr>
+<tr><td>venir</td><td>viens</td><td>viens</td><td>vient</td><td>venons</td><td>venez</td><td>viennent</td></tr>
+<tr><td>voir</td><td>vois</td><td>vois</td><td>voit</td><td>voyons</td><td>voyez</td><td>voient</td></tr>
+<tr><td>boire</td><td>bois</td><td>bois</td><td>boit</td><td>buvons</td><td>buvez</td><td>boivent</td></tr>
+<tr><td>connaître</td><td>connais</td><td>connais</td><td>connaît</td><td>connaissons</td><td>connaissez</td><td>connaissent</td></tr>
+</table></div>
+<p>Dazu: il pleut (pleuvoir), il faut (falloir).</p>
+`,
+
+s: `
+<div class="note">Die Folie zur Formation war nur als Anhang verlinkt. Die Formation-Regeln unten sind Standardstoff, der Teil "Subjonctif ou indicatif" stammt aus deinem Buch.</div>
+<div class="how"><b>So lernst du (ca. 45 min)</b><ol>
+<li>Lerne die Bildungsregel und die 9 unregelmässigen Verben.</li>
+<li>Lerne die zwei Listen "Subjonctif" und "Indicatif" auswendig, das ist der wichtigste Teil.</li>
+<li><a href="#" data-go="trainer/subj">Konjugationstrainer Subjonctif</a>.</li>
+<li>Quiz A und die Lückensätze zum Subjonctif.</li></ol></div>
+
+<h3>Bildung</h3>
+<p><b>Stamm der 3. Person Plural Präsens (ils) + -e, -es, -e, -ions, -iez, -ent.</b></p>
+<p>ils parlent → que je parle · ils finissent → que je finisse · ils attendent → que j'attende · ils partent → que je parte</p>
+<div class="tw"><table class="conj">
+<tr><th></th><th>que je</th><th>que tu</th><th>qu'il</th><th>que nous</th><th>que vous</th><th>qu'ils</th></tr>
+<tr><td>parler</td><td>parle</td><td>parles</td><td>parle</td><td>parlions</td><td>parliez</td><td>parlent</td></tr>
+<tr><td>finir</td><td>finisse</td><td>finisses</td><td>finisse</td><td>finissions</td><td>finissiez</td><td>finissent</td></tr>
+</table></div>
+<p><b>Zwei Stämme:</b> Bei Verben mit wechselndem Stamm kommen nous und vous vom nous-Stamm (wie im Imparfait): que je vienne, que nous venions · que je prenne, que nous prenions · que je boive, que nous buvions · que je doive, que nous devions · que je voie, que nous voyions · que je reçoive, que nous recevions.</p>
+
+<h3>Unregelmässig</h3>
+<div class="tw"><table class="conj">
+<tr><th></th><th>que je</th><th>que tu</th><th>qu'il</th><th>que nous</th><th>que vous</th><th>qu'ils</th></tr>
+<tr><td>être</td><td>sois</td><td>sois</td><td>soit</td><td>soyons</td><td>soyez</td><td>soient</td></tr>
+<tr><td>avoir</td><td>aie</td><td>aies</td><td>ait</td><td>ayons</td><td>ayez</td><td>aient</td></tr>
+<tr><td>aller</td><td>aille</td><td>ailles</td><td>aille</td><td>allions</td><td>alliez</td><td>aillent</td></tr>
+<tr><td>faire</td><td>fasse</td><td>fasses</td><td>fasse</td><td>fassions</td><td>fassiez</td><td>fassent</td></tr>
+<tr><td>pouvoir</td><td>puisse</td><td>puisses</td><td>puisse</td><td>puissions</td><td>puissiez</td><td>puissent</td></tr>
+<tr><td>savoir</td><td>sache</td><td>saches</td><td>sache</td><td>sachions</td><td>sachiez</td><td>sachent</td></tr>
+<tr><td>vouloir</td><td>veuille</td><td>veuilles</td><td>veuille</td><td>voulions</td><td>vouliez</td><td>veuillent</td></tr>
+</table></div>
+<p>Dazu: qu'il faille (falloir), qu'il pleuve (pleuvoir). Achtung: "soyons", nicht "soyions" (in deinem Notizbuch steht einmal "soyions", das ist falsch).</p>
+
+<h3>Présent oder Subjonctif? Die Grundregel</h3>
+<p>Der Sprecher sieht die Handlung als <b>wirklich/sicher → Indicatif</b>. Er sieht sie als <b>nur möglich, gewünscht, gefürchtet → Subjonctif</b>.<br>Il est <b>probable</b> qu'il viendra. · Il est <b>possible</b> qu'il vienne.</p>
+<div class="tw"><table>
+<tr><th>Subjonctif nach ...</th><th>Indicatif nach ...</th></tr>
+<tr><td><b>Wille, Pflicht:</b> il faut que, vouloir que, désirer que, souhaiter que</td><td><b>Meinung, Feststellung, Wissen:</b> penser que, croire que, trouver que, savoir que, être sûr/certain que, voir que, constater que, comprendre que, apprendre que</td></tr>
+<tr><td><b>Befehl, Verbot, Erlaubnis, Bitte:</b> ordonner que, interdire que, accepter que, autoriser que, demander que</td><td><b>Sagen:</b> dire que, affirmer que, déclarer que, répondre que, prétendre que</td></tr>
+<tr><td><b>Gefühle, Wertung:</b> avoir peur que, regretter que, être content/triste que, trouver curieux que, c'est bien/normal que, il est important que</td><td><b>Hohe Wahrscheinlichkeit:</b> il est probable que, il paraît que, il est évident que, il est sûr que</td></tr>
+<tr><td><b>Möglichkeit, Zweifel:</b> il est possible que, il est peu probable que, douter que</td><td><b>espérer que</b> (Achtung, Indicatif!)</td></tr>
+<tr><td><b>Konjunktionen:</b> avant que, en attendant que, jusqu'à ce que, à moins que, bien que, quoique, à condition que, pourvu que, pour que, afin que, de sorte que</td><td><b>Konjunktionen:</b> quand, lorsque, pendant que, tant que, alors que, au moment où, après que, aussitôt que, dès que, parce que, puisque, étant donné que, si, même si, comme si</td></tr>
+</table></div>
+<ul>
+<li><b>Verneinung:</b> penser/croire verneint → Subjonctif: Je crois qu'il vient. · Je ne crois pas qu'il vienne.</li>
+<li><b>Nach "si" nie Subjonctif.</b></li>
+<li><b>Doppelte Bedeutung:</b> dire, admettre, comprendre, supposer, demander. Il a demandé si tu allais bien (Frage → Indicatif). Il demande que tu lui écrives (Forderung → Subjonctif). J'admets qu'il a tort (Meinung) · J'admets qu'il ait envie de changer (Akzeptieren).</li>
+</ul>
+`,
+
+pc: `
+<div class="how"><b>So lernst du (ca. 30 min)</b><ol>
+<li>Lerne die Liste der unregelmässigen Partizipien und die Verben mit être.</li>
+<li><a href="#" data-go="trainer/pc">Konjugationstrainer Passé composé</a>, achte auf die Angleichung bei être.</li>
+<li>Quiz A.</li></ol></div>
+<h3>Bildung</h3>
+<p><b>avoir oder être im Präsens + Participe passé.</b> -er → -é (manger → mangé), -ir → -i (finir → fini, dormir → dormi).</p>
+<div class="tw"><table>
+<tr><th>Infinitiv</th><th>PP</th><th>Infinitiv</th><th>PP</th><th>Infinitiv</th><th>PP</th></tr>
+<tr><td>avoir</td><td>eu</td><td>lire</td><td>lu</td><td>offrir</td><td>offert</td></tr>
+<tr><td>être</td><td>été</td><td>boire</td><td>bu</td><td>souffrir</td><td>souffert</td></tr>
+<tr><td>faire</td><td>fait</td><td>venir*</td><td>venu</td><td>découvrir</td><td>découvert</td></tr>
+<tr><td>pouvoir</td><td>pu</td><td>descendre*</td><td>descendu</td><td>conduire</td><td>conduit</td></tr>
+<tr><td>vouloir</td><td>voulu</td><td>connaître</td><td>connu</td><td>construire</td><td>construit</td></tr>
+<tr><td>voir</td><td>vu</td><td>vivre</td><td>vécu</td><td>produire</td><td>produit</td></tr>
+<tr><td>devoir</td><td>dû</td><td>naître*</td><td>né</td><td>traduire</td><td>traduit</td></tr>
+<tr><td>savoir</td><td>su</td><td>mourir*</td><td>mort</td><td>dire</td><td>dit</td></tr>
+<tr><td>recevoir</td><td>reçu</td><td>mettre</td><td>mis</td><td>écrire</td><td>écrit</td></tr>
+<tr><td>tenir</td><td>tenu</td><td>prendre</td><td>pris</td><td>rire</td><td>ri</td></tr>
+<tr><td>croire</td><td>cru</td><td>asseoir</td><td>assis</td><td>suivre</td><td>suivi</td></tr>
+<tr><td>perdre</td><td>perdu</td><td>ouvrir</td><td>ouvert</td><td>courir</td><td>couru</td></tr>
+</table></div>
+<p>* mit être. Achtung: rire → <b>ri</b> (nicht "rit", das steht in deinem Notizbuch falsch).</p>
+
+<h3>Mit être</h3>
+<p>Verben der Bewegung und Zustandsänderung: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, tomber, naître, mourir, rentrer, retourner, devenir, revenir. Dazu <b>alle reflexiven Verben</b>: je me suis levé(e), elle s'est excusée.</p>
+<p><b>Angleichung:</b> Mit être passt sich das Partizip an das Subjekt an wie ein Adjektiv: elle est allée, ils sont allés, elles sont allées, nous sommes rentré(e)s.</p>
+<div class="tw"><table><tr><th></th><th>Singular</th><th>Plural</th></tr><tr><td>männlich</td><td>allé</td><td>allés</td></tr><tr><td>weiblich</td><td>allée</td><td>allées</td></tr></table></div>
+<p><b>Verneinung:</b> ne + Hilfsverb + pas + Partizip: je n'ai pas compris, elle n'est pas venue.</p>
+<h3>Wann Passé composé?</h3>
+<ul><li>Abgeschlossene, einmalige Handlung: Hier, je suis allé au cinéma.</li>
+<li>Aufeinanderfolgende Handlungen: Il s'est levé, il a pris son petit-déjeuner et il est parti.</li>
+<li>Eine Handlung, die eine laufende Handlung unterbricht: Je dormais quand le téléphone a sonné.</li></ul>
+<p><b>Signalwörter:</b> hier, la semaine passée, à ce moment-là, ensuite, puis, après, un jour, entre 12h et 14h, soudain, tout à coup, tout de suite.</p>
+`,
+
+im: `
+<div class="how"><b>So lernst du (ca. 40 min)</b><ol>
+<li>Lerne die Bildung (nous-Stamm + Endungen).</li>
+<li>Lerne die Tabelle "Passé composé oder Imparfait" mit den Signalwörtern.</li>
+<li><a href="#" data-go="trainer/imp">Konjugationstrainer Imparfait</a>.</li>
+<li>Quiz A und Lückensätze. Das Thema "PC oder Imparfait" kommt sicher!</li></ol></div>
+<h3>Bildung</h3>
+<p><b>Stamm der 1. Person Plural Präsens (nous) + -ais, -ais, -ait, -ions, -iez, -aient.</b></p>
+<p>faire → nous fais<s>ons</s> → je faisais · finir → nous finiss<s>ons</s> → vous finissiez · prendre → nous pren<s>ons</s> → je prenais · boire → nous buv<s>ons</s> → nous buvions</p>
+<p>Einzige Ausnahme: <b>être → ét-</b>: j'étais, tu étais, il était, nous étions, vous étiez, ils étaient.</p>
+<p>Achtung Schreibung: manger → je mangeais, aber nous mangions · commencer → je commençais, aber nous commencions (vor -i kein e bzw. kein ç).</p>
+<h3>Passé composé oder Imparfait?</h3>
+<div class="tw"><table>
+<tr><th>Passé composé</th><th>Imparfait</th></tr>
+<tr><td>abgeschlossene, einmalige Handlung<br><i>Hier, je suis allé au cinéma.</i></td><td>Gewohnheit, Wiederholung<br><i>Je marchais 45 minutes tous les jours.</i></td></tr>
+<tr><td>Abfolge von Handlungen<br><i>Il s'est levé, il a pris son petit-déjeuner et il est allé à l'école.</i></td><td>Beschreibung (Personen, Wetter, Situation)<br><i>Elle était petite, elle avait des yeux bleus.</i></td></tr>
+<tr><td>Handlung, die eine laufende unterbricht<br><i>Je dormais quand le téléphone a sonné.</i></td><td>zwei gleichzeitige Handlungen, Hintergrund<br><i>Je lisais pendant que tu faisais tes devoirs.</i></td></tr>
+<tr><td><b>Signalwörter:</b> hier, la semaine passée, à ce moment-là, ensuite, puis, après, un jour, entre 12h et 14h, soudain, tout à coup, tout de suite</td><td><b>Signalwörter:</b> tous les jours, avant, autrefois, parfois, toujours, souvent, le lundi, d'habitude, habituellement, pendant que</td></tr>
+</table></div>
+<p>Merkbild: Das Imparfait ist die Bühne (Hintergrund, was gerade lief, wie es war). Das Passé composé ist die Handlung auf der Bühne (was passiert ist).</p>
+`,
+
+pq: `
+<div class="how"><b>So lernst du (ca. 20 min)</b><ol>
+<li>Bildung: Hilfsverb im Imparfait + Partizip. Wenn du Passé composé und Imparfait kannst, kannst du das auch.</li>
+<li><a href="#" data-go="trainer/pqp">Konjugationstrainer Plus-que-parfait</a>.</li>
+<li>Quiz A.</li></ol></div>
+<h3>Bildung</h3>
+<p><b>avoir/être im Imparfait + Participe passé.</b> Gleiche Hilfsverben und gleiche Angleichung wie im Passé composé.</p>
+<p>tu avais mangé · nous avions choisi · ils étaient venus · elle était rentrée · elles étaient nées · il s'était levé · on avait ouvert</p>
+<h3>Gebrauch</h3>
+<p>Das Plus-que-parfait zeigt die <b>Vorvergangenheit</b>: etwas geschah <b>vor</b> einer anderen vergangenen Handlung.</p>
+<p><i>J'ai lu le livre que j'avais acheté le jour avant.</i> (zuerst gekauft, dann gelesen)<br><i>Quand je suis arrivé, le train était déjà parti.</i></p>
+<p><b>Signalwörter:</b> (deux) jours plus tôt, la veille, ce jour-là, avant-hier, la semaine précédente, la semaine dernière, avant, quand, lorsque, après, déjà.</p>
+<p>Trick: Zeitstrahl zeichnen. Was liegt am weitesten zurück? → Plus-que-parfait.</p>
+`,
+
+fu: `
+<div class="how"><b>So lernst du (ca. 30 min)</b><ol>
+<li>Lerne die Bildung und die unregelmässigen Stämme (auf Karteikarte schreiben).</li>
+<li><a href="#" data-go="trainer/fut">Konjugationstrainer Futur</a>.</li>
+<li>Quiz A.</li></ol></div>
+<h3>Futur simple: Bildung</h3>
+<p><b>Infinitiv + -ai, -as, -a, -ons, -ez, -ont</b> (die Endungen sind avoir im Präsens). Bei -re fällt das e weg: attendre → j'attendrai.</p>
+<p>chanter → je chanterai · regarder → tu regarderas · descendre → il descendra · attendre → nous attendrons · choisir → vous choisirez · sortir → ils sortiront</p>
+<p><b>Achtung:</b> Verben mit Stammänderung im Präsens behalten sie: j'achèterai, tu appelleras, il se lèvera, nous jetterons, vous amènerez, ils pèseront.</p>
+<div class="tw"><table>
+<tr><th>Verb</th><th>Stamm</th><th>Verb</th><th>Stamm</th></tr>
+<tr><td>être</td><td>je serai</td><td>devoir</td><td>je devrai</td></tr>
+<tr><td>avoir</td><td>j'aurai</td><td>recevoir</td><td>je recevrai</td></tr>
+<tr><td>savoir</td><td>je saurai</td><td>pouvoir</td><td>je pourrai</td></tr>
+<tr><td>faire</td><td>je ferai</td><td>mourir</td><td>je mourrai</td></tr>
+<tr><td>aller</td><td>j'irai</td><td>courir</td><td>je courrai</td></tr>
+<tr><td>tenir</td><td>je tiendrai</td><td>envoyer</td><td>j'enverrai</td></tr>
+<tr><td>venir</td><td>je viendrai</td><td>voir</td><td>je verrai</td></tr>
+<tr><td>vouloir</td><td>je voudrai</td><td>pleuvoir / falloir</td><td>il pleuvra / il faudra</td></tr>
+</table></div>
+<h3>Futur proche: Bildung</h3>
+<p><b>aller im Präsens + Infinitiv:</b> je vais partir, tu vas essayer, elle va dormir, nous allons finir, vous allez boire, ils vont se lever.</p>
+<h3>Gebrauch</h3>
+<div class="tw"><table>
+<tr><th>Futur simple</th><th>Futur proche</th></tr>
+<tr><td>Absicht, Projekt, Vorhersage (Wetter), Bedingung (Si tu viens, nous irons au cinéma), Bitte; eher weiter in der Zukunft</td><td>etwas Nahes, Unmittelbares (Ce soir je vais rentrer plus tôt); Fokus auf die baldige Handlung</td></tr>
+<tr><td>eher formell und <b>schriftlich</b></td><td>vor allem <b>mündlich</b> und umgangssprachlich</td></tr>
+</table></div>
+<p>Oft geht beides. Es kommt darauf an, ob du das Projekt (Futur simple) oder die unmittelbare Handlung (Futur proche) betonst.</p>
+`
+};
+// Erste Antwort ist richtig, Reihenfolge wird gemischt.
+const QUIZ = {
+p: {
+A: [
+{q:"Nous ___ trois billets. (acheter)", a:["achetons","achètons","achetont","achettons"], e:"Bei nous bleibt der Stamm normal: nous achetons, aber j'achète."},
+{q:"Je ___ inviter Sandrine. (préférer)", a:["préfère","préfére","préfèr","préférre"], e:"é → è vor stummer Endung: je préfère, nous préférons."},
+{q:"Comment est-ce que tu ___ ce nom ? (épeler)", a:["épelles","épèles","épeles","épellez"], e:"Wie appeler: Konsonant verdoppeln: tu épelles."},
+{q:"Nous ___ souvent une salade. (manger)", a:["mangeons","mangons","mangions","mangeions"], e:"-ger: nous mangeons (e bleibt, damit g weich bleibt)."},
+{q:"Elles ___ à Malte. (partir)", a:["partent","partissent","pars","partont"], e:"partir ohne -iss-: ils partent."},
+{q:"Vous ___ la fenêtre ? (ouvrir)", a:["ouvrez","ouvrissez","ouvrirez","ouvrent"], e:"ouvrir wird wie ein -er-Verb konjugiert: vous ouvrez."},
+{q:"Qu'est-ce que vous ___ pour les vacances ? (faire)", a:["faites","faisez","fassez","font"], e:"faire: vous faites (wie dites, êtes)."}
+],
+B: [
+{q:"Tu ___ ton devoir. (finir)", a:["finis","finit","finisses","finissez"], e:"finir: je finis, tu finis, il finit."},
+{q:"Ils ___ la maison. (choisir)", a:["choisissent","choisent","choisirent","choisissont"], e:"Mit -iss- im Plural: ils choisissent."},
+{q:"Nous ___ la réunion. (commencer)", a:["commençons","commencons","commenceons","commençions"], e:"-cer: nous commençons (ç vor o)."},
+{q:"Il ___ au téléphone. (répondre)", a:["répond","répondt","réponde","répons"], e:"-re: il répond, ohne Endung."},
+{q:"Vous ___ la vérité. (dire)", a:["dites","disez","dissez","dient"], e:"dire: vous dites."},
+{q:"Ils ___ partir tôt. (devoir)", a:["doivent","devent","doient","devont"], e:"devoir: ils doivent."},
+{q:"Il ___ beaucoup aujourd'hui. (pleuvoir)", a:["pleut","pleuve","pleuvoit","pleuvre"], e:"il pleut (pleuve ist Subjonctif)."}
+],
+C: [
+{q:"Je ___ la cuisine. (nettoyer)", a:["nettoie","nettoye","nettoies","nettoi"], e:"-oyer: y → i vor stummer Endung: je nettoie."},
+{q:"Ils ___ les déchets. (jeter)", a:["jettent","jètent","jetent","jettont"], e:"jeter verdoppelt das t: ils jettent."},
+{q:"Je ___ souvent le bus. (prendre)", a:["prends","prend","prenne","prendre"], e:"prendre: je prends, il prend."},
+{q:"Ils ___ leurs livres sur la table. (mettre)", a:["mettent","mettont","mettrent","mitent"], e:"mettre: ils mettent."},
+{q:"Elle ___ à Paris. (vivre)", a:["vit","vive","vivt","vécut"], e:"vivre: je vis, il vit."},
+{q:"Nous ___ dormir. (pouvoir)", a:["pouvons","pouvez","peuvons","puissons"], e:"pouvoir: nous pouvons."},
+{q:"Tu ___ le journal. (lire)", a:["lis","lit","lises","lisez"], e:"lire: je lis, tu lis."}
+]},
+
+s: {
+A: [
+{q:"Il faut que tu ___ tes devoirs. (faire)", a:["fasses","fais","feras","faisses"], e:"il faut que + Subjonctif; faire → que tu fasses."},
+{q:"Je veux que vous ___ à l'heure. (être)", a:["soyez","êtes","soyiez","sois"], e:"vouloir que + Subjonctif; être → que vous soyez."},
+{q:"Je pense qu'il ___ raison. (avoir)", a:["a","ait","aie","ayant"], e:"penser que (bejaht) + Indicatif."},
+{q:"Bien qu'il ___ froid, nous sortons. (faire)", a:["fasse","fait","fera","faisse"], e:"bien que + Subjonctif."},
+{q:"Nach welchem Ausdruck steht der Subjonctif?", a:["Il est possible que ...","Il est probable que ...","Je sais que ...","Parce que ..."], e:"Möglichkeit → Subjonctif. Probable, savoir, parce que → Indicatif."},
+{q:"Il faut que nous ___ . (partir)", a:["partions","partons","partissions","partirons"], e:"Stamm von ils partent + -ions."},
+{q:"Je ne crois pas qu'il ___ . (venir)", a:["vienne","vient","venne","venir"], e:"croire verneint → Subjonctif: qu'il vienne."}
+],
+B: [
+{q:"J'attendrai jusqu'à ce que tu ___ . (revenir)", a:["reviennes","reviens","revenes","reviendras"], e:"jusqu'à ce que + Subjonctif."},
+{q:"Je suis sûr qu'il ___ demain. (venir)", a:["viendra","vienne","viennes","venir"], e:"être sûr que → Indicatif."},
+{q:"Je partirai à moins qu'il ne ___ . (pleuvoir)", a:["pleuve","pleut","pleuvra","pleuvoie"], e:"à moins que + Subjonctif: qu'il pleuve."},
+{q:"Je travaille pendant que tu ___ . (dormir)", a:["dors","dormes","dormit","dormisses"], e:"pendant que + Indicatif."},
+{q:"Je souhaite que vous ___ le temps. (avoir)", a:["ayez","avez","ayiez","aviez"], e:"avoir → que vous ayez (ohne i!)."},
+{q:"Subjonctif von aller: que nous ___", a:["allions","aillions","allons","aillons"], e:"aille, ailles, aille, allions, alliez, aillent."},
+{q:"Il est important que les jeunes ___ trouver un emploi. (pouvoir)", a:["puissent","peuvent","pouvent","puissant"], e:"il est important que + Subjonctif."}
+],
+C: [
+{q:"Nach welcher Konjunktion steht der Indicatif?", a:["parce que","pour que","avant que","bien que"], e:"parce que = Grund, Realität → Indicatif."},
+{q:"J'espère que tu ___ bien. (aller)", a:["vas","ailles","aille","alles"], e:"espérer que + Indicatif."},
+{q:"Il veut que je ___ la vérité. (savoir)", a:["sache","sais","saches","savoie"], e:"savoir → que je sache."},
+{q:"Il est probable qu'il ___ . (venir)", a:["viendra","vienne","viennes","viens"], e:"Hohe Wahrscheinlichkeit → Indicatif."},
+{q:"Je regrette que tu ne ___ pas là. (être)", a:["sois","es","seras","soit"], e:"Gefühl → Subjonctif; que tu sois."},
+{q:"Woher kommt der Stamm des Subjonctif (regelmässig)?", a:["von der 3. Person Plural Präsens (ils)","vom Infinitiv","von der 1. Person Singular (je)","vom Partizip"], e:"ils finissent → que je finisse."},
+{q:"Si tu ___ , je viendrai. (vouloir)", a:["veux","veuilles","voudras","veuille"], e:"Nach si nie Subjonctif und nie Futur: si + Präsens."}
+]},
+
+pc: {
+A: [
+{q:"J' ___ avec ma cousine. (parler, PC)", a:["ai parlé","suis parlé","ai parlée","ai parler"], e:"parler mit avoir, -er → -é."},
+{q:"Marie ___ à l'école. (aller, PC)", a:["est allée","est allé","a allé","a allée"], e:"aller mit être, Angleichung an Marie: allée."},
+{q:"Participe passé von prendre:", a:["pris","prendu","pri","prit"], e:"prendre → pris (auch mettre → mis)."},
+{q:"Participe passé von voir:", a:["vu","voyé","vi","voit"], e:"voir → vu."},
+{q:"Paul et moi, nous ___ très tard. (rentrer, PC)", a:["sommes rentrés","avons rentré","sommes rentré","êtes rentrés"], e:"rentrer mit être, Plural männlich: rentrés."},
+{q:"Welches Verb bildet das PC mit être?", a:["tomber","marcher","manger","courir"], e:"Bewegung/Zustandsänderung: tomber, aller, venir ..."},
+{q:"Richtige Verneinung:", a:["Je n'ai pas compris.","Je n'ai compris pas.","Je ne pas ai compris.","J'ai ne pas compris."], e:"ne + Hilfsverb + pas + Partizip."}
+],
+B: [
+{q:"Participe passé von faire:", a:["fait","faisé","fai","fit"], e:"faire → fait."},
+{q:"Elles ___ en vacances. (partir, PC)", a:["sont parties","ont parti","sont partis","sont partie"], e:"être + Angleichung weiblich Plural: parties."},
+{q:"Participe passé von mettre:", a:["mis","mettu","met","mit"], e:"mettre → mis."},
+{q:"Vous (un groupe de garçons) ___ à quelle heure ? (sortir, PC)", a:["êtes sortis","avez sorti","êtes sorti","êtes sorties"], e:"sortir mit être, männlich Plural."},
+{q:"Participe passé von devoir:", a:["dû","devé","doit","devu"], e:"devoir → dû (mit Accent)."},
+{q:"Elle ___ à 7 heures. (se lever, PC)", a:["s'est levée","a levé","s'a levée","s'est levé"], e:"Reflexive Verben immer mit être, Angleichung: levée."},
+{q:"Nous ___ le bateau-bus. (prendre, PC)", a:["avons pris","sommes pris","avons prendu","avons prit"], e:"prendre mit avoir: avons pris."}
+],
+C: [
+{q:"Participe passé von naître:", a:["né","naît","naissé","nu"], e:"naître → né (mit être)."},
+{q:"Participe passé von ouvrir:", a:["ouvert","ouvri","ouvré","ouvrit"], e:"ouvrir, offrir, découvrir → -ert."},
+{q:"Ils ___ chez leurs amis. (arriver, PC)", a:["sont arrivés","ont arrivé","sont arrivé","sont arrivées"], e:"arriver mit être, ils → arrivés."},
+{q:"Participe passé von vivre:", a:["vécu","vivu","vivé","vit"], e:"vivre → vécu."},
+{q:"Les élèves ___ au professeur. (obéir, PC)", a:["ont obéi","sont obéis","ont obéit","ont obé"], e:"-ir → -i: obéi, mit avoir."},
+{q:"Participe passé von rire:", a:["ri","rit","riu","rié"], e:"rire → ri (ils ont ri)."},
+{q:"Wann passt sich das Partizip an das Subjekt an?", a:["mit être","mit avoir","nie","immer"], e:"Mit être wie ein Adjektiv: elle est partie."}
+]},
+
+im: {
+A: [
+{q:"Woher kommt der Stamm des Imparfait?", a:["1. Person Plural Präsens (nous)","Infinitiv","3. Person Plural Präsens (ils)","Participe passé"], e:"nous faisons → je faisais."},
+{q:"Quand j' ___ petite ... (être)", a:["étais","était","étai","été"], e:"être → ét- + ais."},
+{q:"Ils ___ dans une grande maison. (habiter)", a:["habitaient","habitait","habitiont","habitèrent"], e:"ils → -aient."},
+{q:"nous ___ (manger, imparfait)", a:["mangions","mangeions","mangeons","mangiions"], e:"Vor -i kein e: nous mangions (aber je mangeais)."},
+{q:"Quand j'étais petit, je ___ au football tous les samedis.", a:["jouais","ai joué","avais joué","jouerai"], e:"Gewohnheit (tous les samedis) → Imparfait."},
+{q:"Hier soir, nous regardions un film quand le téléphone ___ .", a:["a sonné","sonnait","avait sonné","sonne"], e:"Unterbrechende Handlung → Passé composé."},
+{q:"Welches Signalwort passt zum Imparfait?", a:["d'habitude","soudain","tout à coup","hier à 8 h"], e:"Gewohnheit → Imparfait."}
+],
+B: [
+{q:"vous ___ (pouvoir, imparfait)", a:["pouviez","pouvez","puissiez","pouvaiez"], e:"nous pouvons → vous pouviez."},
+{q:"je ___ (faire, imparfait)", a:["faisais","fasais","faisait","fis"], e:"nous faisons → je faisais."},
+{q:"Il ___ beau et les rues ___ vides. (faire / être)", a:["faisait / étaient","a fait / ont été","faisait / ont été","a fait / étaient"], e:"Beschreibung → Imparfait."},
+{q:"Samedi dernier, je me suis levé à 9 h, j' ___ mon petit-déjeuner, puis je suis parti. (prendre)", a:["ai pris","prenais","avais pris","prends"], e:"Abfolge von Handlungen → Passé composé."},
+{q:"Pendant que mes parents ___ le dîner, je faisais mes devoirs. (préparer)", a:["préparaient","ont préparé","avaient préparé","préparent"], e:"pendant que, gleichzeitige Handlungen → Imparfait."},
+{q:"Welches Signalwort passt zum Passé composé?", a:["tout à coup","tous les jours","autrefois","pendant que"], e:"Plötzliches Ereignis → Passé composé."},
+{q:"La maison ___ grande et ___ un joli jardin. (être / avoir)", a:["était / avait","a été / a eu","était / a eu","a été / avait"], e:"Beschreibung → Imparfait."}
+],
+C: [
+{q:"tu ___ (connaître, imparfait)", a:["connaissais","connaîtais","connais","connaissait"], e:"nous connaissons → tu connaissais."},
+{q:"nous ___ (boire, imparfait)", a:["buvions","boivions","buvons","boirions"], e:"nous buvons → nous buvions."},
+{q:"elles ___ (choisir, imparfait)", a:["choisissaient","choisaient","choisissait","choisiraient"], e:"nous choisissons → elles choisissaient."},
+{q:"Je dormais quand quelqu'un ___ la porte. (ouvrir)", a:["a ouvert","ouvrait","avait ouvert","ouvre"], e:"Unterbrechung → Passé composé."},
+{q:"Avant, mon frère ___ les cheveux longs, mais l'année dernière, il ___ de les couper.", a:["avait / a décidé","a eu / décidait","avait / décidait","a eu / a décidé"], e:"avant = Zustand → Imparfait; l'année dernière, einmalig → PC."},
+{q:"Zwei Handlungen laufen gleichzeitig in der Vergangenheit. Welche Zeit?", a:["beide Imparfait","beide Passé composé","Plus-que-parfait","Futur"], e:"Je lisais pendant que tu cuisinais."},
+{q:"Stamm von être im Imparfait:", a:["ét-","somm-","ser-","soi-"], e:"Einzige Ausnahme: j'étais."}
+]},
+
+pq: {
+A: [
+{q:"Wie bildet man das Plus-que-parfait?", a:["avoir/être im Imparfait + Participe passé","avoir/être im Präsens + Participe passé","Infinitiv + Endungen","aller + Infinitiv"], e:"Hilfsverb im Imparfait + Partizip."},
+{q:"tu ___ (manger, PQP)", a:["avais mangé","as mangé","avais manger","étais mangé"], e:"avoir im Imparfait + mangé."},
+{q:"ils ___ (venir, PQP)", a:["étaient venus","avaient venu","étaient venu","sont venus"], e:"venir mit être, Angleichung."},
+{q:"Was drückt das Plus-que-parfait aus?", a:["Vorvergangenheit: etwas vor einer anderen vergangenen Handlung","eine Gewohnheit in der Vergangenheit","die nahe Zukunft","eine Möglichkeit"], e:"Antériorité dans le passé."},
+{q:"J'ai lu le livre que j' ___ le jour avant. (acheter)", a:["avais acheté","ai acheté","achetais","achèterai"], e:"Kauf liegt vor dem Lesen → PQP."},
+{q:"elle ___ (rentrer, PQP)", a:["était rentrée","avait rentré","était rentré","est rentrée"], e:"rentrer mit être, weiblich."},
+{q:"Typisches Signalwort fürs Plus-que-parfait:", a:["la veille","demain","maintenant","la semaine prochaine"], e:"la veille = am Vortag."}
+],
+B: [
+{q:"vous ___ (voir, PQP)", a:["aviez vu","avez vu","étiez vus","aviez voyé"], e:"avoir im Imparfait + vu."},
+{q:"il ___ (se lever, PQP)", a:["s'était levé","s'avait levé","était levé","s'est levé"], e:"Reflexiv → être."},
+{q:"Quand je suis arrivé, le train ___ déjà. (partir)", a:["était parti","avait parti","est parti","partait"], e:"Abfahrt vor meiner Ankunft → PQP mit être."},
+{q:"Nous étions contents parce que nous ___ le match. (gagner)", a:["avions gagné","avons gagné","gagnions","étions gagnés"], e:"Sieg liegt vor dem Zufriedensein."},
+{q:"elles ___ (naître, PQP)", a:["étaient nées","avaient né","étaient né","sont nées"], e:"naître mit être, weiblich Plural."},
+{q:"Il n'a pas compris parce qu'il ___ le texte. (ne pas lire)", a:["n'avait pas lu","n'a pas lu","ne lisait pas","n'était pas lu"], e:"Nicht-Lesen lag vorher → PQP."},
+{q:"on ___ (ouvrir, PQP)", a:["avait ouvert","a ouvert","était ouvert","avait ouvri"], e:"ouvrir → ouvert, mit avoir."}
+],
+C: [
+{q:"Le film avait déjà commencé quand nous ___ . (arriver)", a:["sommes arrivés","avions arrivé","avons arrivé","étions arrivé"], e:"Unsere Ankunft = Haupthandlung → Passé composé."},
+{q:"nous ___ (choisir, PQP)", a:["avions choisi","avons choisi","étions choisis","avions choisit"], e:"avoir im Imparfait + choisi."},
+{q:"Je ne pouvais pas entrer parce que j' ___ mes clés. (oublier)", a:["avais oublié","oubliais","aurai oublié","étais oublié"], e:"Vergessen liegt vorher → PQP."},
+{q:"PQP von aller (je, Mädchen):", a:["j'étais allée","j'avais allé","j'étais allé","je suis allée"], e:"être im Imparfait + Angleichung."},
+{q:"Welche Regeln gelten für Hilfsverb und Angleichung im PQP?", a:["die gleichen wie im Passé composé","immer avoir","immer être","keine Angleichung"], e:"Gleiche Verben mit être, gleiche Angleichung."},
+{q:"Ils ___ leur chien, mais deux jours plus tard, ils l'ont retrouvé. (perdre)", a:["avaient perdu","ont perdu","perdaient","étaient perdus"], e:"Verlieren liegt vor dem Wiederfinden."},
+{q:"Signalwort aus der Liste fürs PQP:", a:["déjà","demain","bientôt","dans deux jours"], e:"déjà: le train était déjà parti."}
+]},
+
+fu: {
+A: [
+{q:"Wie bildet man das Futur simple?", a:["Infinitiv + -ai, -as, -a, -ons, -ez, -ont","aller + Infinitiv","Stamm von nous + -ais","avoir + Partizip"], e:"Bei -re fällt das e weg."},
+{q:"je ___ (être, futur simple)", a:["serai","étrai","sois","serais"], e:"être → ser-."},
+{q:"tu ___ (avoir, futur simple)", a:["auras","avoiras","avras","aies"], e:"avoir → aur-."},
+{q:"il ___ (aller, futur simple)", a:["ira","allera","va","aille"], e:"aller → ir-."},
+{q:"nous ___ (attendre, futur simple)", a:["attendrons","attenderons","attendrions","attendons"], e:"-re: e fällt weg → attendr-."},
+{q:"Wie bildet man das Futur proche?", a:["aller im Präsens + Infinitiv","Infinitiv + -ai","être + Partizip","venir de + Infinitiv"], e:"je vais partir."},
+{q:"Ce matin, je ___ partir à 9 h. (futur proche)", a:["vais","vas","va","irai"], e:"je vais + Infinitiv."}
+],
+B: [
+{q:"j' ___ (acheter, futur simple)", a:["achèterai","achetrai","acheterai","achèterais"], e:"Stammänderung bleibt: achèterai."},
+{q:"tu ___ (appeler, futur simple)", a:["appelleras","appeleras","appèleras","appellerais"], e:"Doppel-l bleibt: appelleras."},
+{q:"je ___ (venir, futur simple)", a:["viendrai","venirai","venrai","vienderai"], e:"venir → viendr-."},
+{q:"nous ___ (pouvoir, futur simple)", a:["pourrons","pouvrons","pourons","puissons"], e:"pouvoir → pourr- (zwei r)."},
+{q:"ils ___ (courir, futur simple)", a:["courront","couriront","couront","courent"], e:"courir → courr- (zwei r)."},
+{q:"j' ___ (envoyer, futur simple)", a:["enverrai","envoyerai","envoierai","enverais"], e:"envoyer → enverr-."},
+{q:"Welche Zeit ist eher formell und schriftlich?", a:["Futur simple","Futur proche","beide gleich","Passé composé"], e:"Futur proche ist eher mündlich."}
+],
+C: [
+{q:"je ___ (faire, futur simple)", a:["ferai","fairai","faisrai","fasserai"], e:"faire → fer-."},
+{q:"vous ___ (voir, futur simple)", a:["verrez","voirez","voyerez","verriez"], e:"voir → verr-."},
+{q:"Ce soir, elle ___ tôt. (se lever, futur proche)", a:["va se lever","se va lever","va lever se","se lèvera"], e:"Reflexivpronomen vor dem Infinitiv: va se lever."},
+{q:"Si tu viens, nous ___ au cinéma. (aller, futur simple)", a:["irons","allerons","irions","aillons"], e:"si + Präsens, Hauptsatz Futur simple."},
+{q:"Il ___ demain, dit la météo. (pleuvoir, futur simple)", a:["pleuvra","pleuvera","pleuvoira","pleuve"], e:"Vorhersage → Futur simple; pleuvoir → pleuvr-."},
+{q:"je ___ (savoir, futur simple)", a:["saurai","savrai","savoirai","sache"], e:"savoir → saur-."},
+{q:"Wofür steht das Futur proche vor allem?", a:["etwas Nahes, Unmittelbares, oft mündlich","weit entfernte Projekte, schriftlich","Gewohnheiten in der Vergangenheit","Wünsche und Zweifel"], e:"Ce soir je vais rentrer plus tôt."}
+]}
+};
+
+// Lückensätze zum Eintippen (wie in der Prüfung). a = akzeptierte Antworten
+const SATZ = {
+p: [
+{q:"Nous (essayer) ___ la robe.", a:["essayons"]},
+{q:"Vous (envoyer) ___ un mail à l'hôtel.", a:["envoyez"]},
+{q:"Ils (projeter) ___ un film.", a:["projettent"]},
+{q:"Je (peser) ___ les pommes.", a:["pèse"]},
+{q:"Elle (vieillir) ___ .", a:["vieillit"]},
+{q:"Ils (dormir) ___ bien.", a:["dorment"]},
+{q:"Vous (faire) ___ du sport ?", a:["faites"]},
+{q:"Il (mentir) ___ souvent.", a:["ment"]},
+{q:"Nous (découvrir) ___ la campagne.", a:["découvrons"]},
+{q:"Ils (pouvoir) ___ venir.", a:["peuvent"]},
+{q:"Nous (voyager) ___ en mai.", a:["voyageons"]},
+{q:"Tu (rappeler) ___ ta mère ?", a:["rappelles"]}
+],
+s: [
+{q:"Il faut que les entreprises (répondre) ___ aux candidatures.", a:["répondent"]},
+{q:"Les jeunes veulent que les salaires (augmenter) ___ .", a:["augmentent"]},
+{q:"Il est important que le gouvernement (faire) ___ quelque chose.", a:["fasse"]},
+{q:"Il faut que nous (être) ___ prêts.", a:["soyons"]},
+{q:"Je pense que les jeunes (avoir) ___ raison.", a:["ont"]},
+{q:"Il se lève toujours avant qu'il (faire) ___ jour.", a:["fasse"]},
+{q:"Nous attendrons jusqu'à ce qu'il (ne plus pleuvoir) ___ .", a:["ne pleuve plus"]},
+{q:"Il est possible que nous (aller) ___ à Paris.", a:["allions"]},
+{q:"Je suis sûr que cette solution (être) ___ suffisante.", a:["est"]},
+{q:"On pourra skier pourvu qu'il y (avoir) ___ de la neige.", a:["ait"]},
+{q:"Je crains que vous (être) ___ fatigués.", a:["soyez"]},
+{q:"Il a appris que tu (venir) ___ demain.", a:["viens","viendras"]}
+],
+pc: [
+{q:"Marie (aller) ___ à l'école à 8 h.", a:["est allée"]},
+{q:"Nous (choisir) ___ une autre activité.", a:["avons choisi"]},
+{q:"Ils (arriver) ___ samedi matin.", a:["sont arrivés"]},
+{q:"Mon frère (tomber) ___ de son vélo.", a:["est tombé"]},
+{q:"Tu (manger) ___ des crêpes ?", a:["as mangé"]},
+{q:"Elle (rester) ___ en bas.", a:["est restée"]},
+{q:"J' (avoir) ___ faim.", a:["ai eu"]},
+{q:"Les élèves (obéir) ___ au professeur.", a:["ont obéi"]},
+{q:"Elle (se lever) ___ tôt.", a:["s'est levée"]},
+{q:"Nous (prendre) ___ le bateau-bus.", a:["avons pris"]},
+{q:"Elles (partir) ___ en vacances.", a:["sont parties"]}
+],
+im: [
+{q:"Ils (lire) ___ les journaux tous les matins.", a:["lisaient"]},
+{q:"En Afrique, nous (boire) ___ beaucoup d'eau.", a:["buvions"]},
+{q:"Est-ce que vous (savoir) ___ parler français ?", a:["saviez"]},
+{q:"Elle (prendre) ___ le bus tous les jours.", a:["prenait"]},
+{q:"Mon grand-père (porter) ___ toujours un costume élégant.", a:["portait"]},
+{q:"Il (faire) ___ froid et les rues étaient vides.", a:["faisait"]},
+{q:"Quand j'étais petit, je (jouer) ___ au football avec mes voisins.", a:["jouais"]},
+{q:"Je dormais quand quelqu'un (ouvrir) ___ la porte.", a:["a ouvert"]},
+{q:"Hier soir, nous (regarder) ___ un film quand le téléphone a sonné.", a:["regardions"]},
+{q:"Tout à coup, il (se taire) ___ .", a:["s'est tu"]},
+{q:"Tous les étés, nous (aller) ___ à la montagne.", a:["allions"]}
+],
+pq: [
+{q:"Tu (manger) ___ avant de partir. (PQP)", a:["avais mangé"]},
+{q:"Ils (venir) ___ la veille. (PQP)", a:["étaient venus"]},
+{q:"Elle (rentrer) ___ très tard. (PQP)", a:["était rentrée"]},
+{q:"Vous (voir) ___ ce film deux jours plus tôt. (PQP)", a:["aviez vu"]},
+{q:"Elles (naître) ___ en France. (PQP)", a:["étaient nées"]},
+{q:"Quand je suis arrivé, le train (partir) ___ .", a:["était parti","était déjà parti"]},
+{q:"Il n'a pas compris parce qu'il (ne pas lire) ___ le texte.", a:["n'avait pas lu"]},
+{q:"J'ai lu le livre que j' (acheter) ___ le jour avant.", a:["avais acheté"]},
+{q:"Il (se lever) ___ avant le lever du soleil. (PQP)", a:["s'était levé"]},
+{q:"Les touristes avaient oublié qu'ils (réserver) ___ une table. (PQP)", a:["avaient réservé"]}
+],
+fu: [
+{q:"Demain, je (finir) ___ ce livre.", a:["finirai"]},
+{q:"La semaine prochaine, il (visiter) ___ le musée.", a:["visitera"]},
+{q:"Nous (rester) ___ un jour de plus.", a:["resterons"]},
+{q:"Dans un mois, ils (partir) ___ à Bordeaux.", a:["partiront"]},
+{q:"Le week-end prochain, ils (courir) ___ un marathon.", a:["courront"]},
+{q:"Mardi prochain, nous (pouvoir) ___ nous rencontrer.", a:["pourrons"]},
+{q:"Ce soir, je (partir, futur proche) ___ plus tôt.", a:["vais partir"]},
+{q:"Aujourd'hui, il (savoir, futur proche) ___ compter jusqu'à 50.", a:["va savoir"]},
+{q:"Tu (prendre) ___ un thé ?", a:["prendras"]},
+{q:"À mon anniversaire, j' (avoir) ___ plein de cadeaux.", a:["aurai"]},
+{q:"Ils (se lever, futur proche) ___ après 7 h.", a:["vont se lever"]},
+{q:"Juliette et Camille (préparer) ___ le repas.", a:["prépareront"]}
+]
+};
+// pres: 6 Formen; pp; aux; fut: Futurstamm; sj: [Stamm je/tu/il/ils, Stamm nous/vous] oder volle Formen (sjf)
+const VERBS = [
+{inf:"parler", g:"reg", pres:["parle","parles","parle","parlons","parlez","parlent"], pp:"parlé", aux:"avoir", fut:"parler", sj:["parl","parl"]},
+{inf:"acheter", g:"er+", pres:["achète","achètes","achète","achetons","achetez","achètent"], pp:"acheté", aux:"avoir", fut:"achèter", sj:["achèt","achet"]},
+{inf:"préférer", g:"er+", pres:["préfère","préfères","préfère","préférons","préférez","préfèrent"], pp:"préféré", aux:"avoir", fut:"préférer", sj:["préfèr","préfér"]},
+{inf:"appeler", g:"er+", pres:["appelle","appelles","appelle","appelons","appelez","appellent"], pp:"appelé", aux:"avoir", fut:"appeller", sj:["appell","appel"]},
+{inf:"jeter", g:"er+", pres:["jette","jettes","jette","jetons","jetez","jettent"], pp:"jeté", aux:"avoir", fut:"jetter", sj:["jett","jet"]},
+{inf:"nettoyer", g:"er+", pres:["nettoie","nettoies","nettoie","nettoyons","nettoyez","nettoient"], pp:"nettoyé", aux:"avoir", fut:"nettoier", sj:["nettoi","nettoy"]},
+{inf:"manger", g:"er+", pres:["mange","manges","mange","mangeons","mangez","mangent"], pp:"mangé", aux:"avoir", fut:"manger", sj:["mang","mang"]},
+{inf:"commencer", g:"er+", pres:["commence","commences","commence","commençons","commencez","commencent"], pp:"commencé", aux:"avoir", fut:"commencer", sj:["commenc","commenc"]},
+{inf:"finir", g:"reg", pres:["finis","finis","finit","finissons","finissez","finissent"], pp:"fini", aux:"avoir", fut:"finir", sj:["finiss","finiss"]},
+{inf:"choisir", g:"reg", pres:["choisis","choisis","choisit","choisissons","choisissez","choisissent"], pp:"choisi", aux:"avoir", fut:"choisir", sj:["choisiss","choisiss"]},
+{inf:"partir", g:"reg", pres:["pars","pars","part","partons","partez","partent"], pp:"parti", aux:"être", fut:"partir", sj:["part","part"]},
+{inf:"sortir", g:"reg", pres:["sors","sors","sort","sortons","sortez","sortent"], pp:"sorti", aux:"être", fut:"sortir", sj:["sort","sort"]},
+{inf:"dormir", g:"reg", pres:["dors","dors","dort","dormons","dormez","dorment"], pp:"dormi", aux:"avoir", fut:"dormir", sj:["dorm","dorm"]},
+{inf:"attendre", g:"reg", pres:["attends","attends","attend","attendons","attendez","attendent"], pp:"attendu", aux:"avoir", fut:"attendr", sj:["attend","attend"]},
+{inf:"répondre", g:"reg", pres:["réponds","réponds","répond","répondons","répondez","répondent"], pp:"répondu", aux:"avoir", fut:"répondr", sj:["répond","répond"]},
+{inf:"ouvrir", g:"irr", pres:["ouvre","ouvres","ouvre","ouvrons","ouvrez","ouvrent"], pp:"ouvert", aux:"avoir", fut:"ouvrir", sj:["ouvr","ouvr"]},
+{inf:"arriver", g:"reg", pres:["arrive","arrives","arrive","arrivons","arrivez","arrivent"], pp:"arrivé", aux:"être", fut:"arriver", sj:["arriv","arriv"]},
+{inf:"rester", g:"reg", pres:["reste","restes","reste","restons","restez","restent"], pp:"resté", aux:"être", fut:"rester", sj:["rest","rest"]},
+{inf:"tomber", g:"reg", pres:["tombe","tombes","tombe","tombons","tombez","tombent"], pp:"tombé", aux:"être", fut:"tomber", sj:["tomb","tomb"]},
+{inf:"être", g:"irr", pres:["suis","es","est","sommes","êtes","sont"], pp:"été", aux:"avoir", fut:"ser", imp:"ét", sjf:["sois","sois","soit","soyons","soyez","soient"]},
+{inf:"avoir", g:"irr", pres:["ai","as","a","avons","avez","ont"], pp:"eu", aux:"avoir", fut:"aur", sjf:["aie","aies","ait","ayons","ayez","aient"]},
+{inf:"aller", g:"irr", pres:["vais","vas","va","allons","allez","vont"], pp:"allé", aux:"être", fut:"ir", sj:["aill","all"]},
+{inf:"faire", g:"irr", pres:["fais","fais","fait","faisons","faites","font"], pp:"fait", aux:"avoir", fut:"fer", sj:["fass","fass"]},
+{inf:"dire", g:"irr", pres:["dis","dis","dit","disons","dites","disent"], pp:"dit", aux:"avoir", fut:"dir", sj:["dis","dis"]},
+{inf:"lire", g:"irr", pres:["lis","lis","lit","lisons","lisez","lisent"], pp:"lu", aux:"avoir", fut:"lir", sj:["lis","lis"]},
+{inf:"écrire", g:"irr", pres:["écris","écris","écrit","écrivons","écrivez","écrivent"], pp:"écrit", aux:"avoir", fut:"écrir", sj:["écriv","écriv"]},
+{inf:"vivre", g:"irr", pres:["vis","vis","vit","vivons","vivez","vivent"], pp:"vécu", aux:"avoir", fut:"vivr", sj:["viv","viv"]},
+{inf:"devoir", g:"irr", pres:["dois","dois","doit","devons","devez","doivent"], pp:"dû", aux:"avoir", fut:"devr", sj:["doiv","dev"]},
+{inf:"pouvoir", g:"irr", pres:["peux","peux","peut","pouvons","pouvez","peuvent"], pp:"pu", aux:"avoir", fut:"pourr", sj:["puiss","puiss"]},
+{inf:"vouloir", g:"irr", pres:["veux","veux","veut","voulons","voulez","veulent"], pp:"voulu", aux:"avoir", fut:"voudr", sj:["veuill","voul"]},
+{inf:"savoir", g:"irr", pres:["sais","sais","sait","savons","savez","savent"], pp:"su", aux:"avoir", fut:"saur", sj:["sach","sach"]},
+{inf:"prendre", g:"irr", pres:["prends","prends","prend","prenons","prenez","prennent"], pp:"pris", aux:"avoir", fut:"prendr", sj:["prenn","pren"]},
+{inf:"mettre", g:"irr", pres:["mets","mets","met","mettons","mettez","mettent"], pp:"mis", aux:"avoir", fut:"mettr", sj:["mett","mett"]},
+{inf:"venir", g:"irr", pres:["viens","viens","vient","venons","venez","viennent"], pp:"venu", aux:"être", fut:"viendr", sj:["vienn","ven"]},
+{inf:"voir", g:"irr", pres:["vois","vois","voit","voyons","voyez","voient"], pp:"vu", aux:"avoir", fut:"verr", sj:["voi","voy"]},
+{inf:"boire", g:"irr", pres:["bois","bois","boit","buvons","buvez","boivent"], pp:"bu", aux:"avoir", fut:"boir", sj:["boiv","buv"]},
+{inf:"recevoir", g:"irr", pres:["reçois","reçois","reçoit","recevons","recevez","reçoivent"], pp:"reçu", aux:"avoir", fut:"recevr", sj:["reçoiv","recev"]},
+{inf:"envoyer", g:"irr", pres:["envoie","envoies","envoie","envoyons","envoyez","envoient"], pp:"envoyé", aux:"avoir", fut:"enverr", sj:["envoi","envoy"]},
+{inf:"courir", g:"irr", pres:["cours","cours","court","courons","courez","courent"], pp:"couru", aux:"avoir", fut:"courr", sj:["cour","cour"]},
+{inf:"tenir", g:"irr", pres:["tiens","tiens","tient","tenons","tenez","tiennent"], pp:"tenu", aux:"avoir", fut:"tiendr", sj:["tienn","ten"]},
+{inf:"connaître", g:"irr", pres:["connais","connais","connaît","connaissons","connaissez","connaissent"], pp:"connu", aux:"avoir", fut:"connaîtr", sj:["connaiss","connaiss"]},
+{inf:"mourir", g:"irr", pres:["meurs","meurs","meurt","mourons","mourez","meurent"], pp:"mort", aux:"être", fut:"mourr", sj:["meur","mour"]},
+{inf:"rire", g:"irr", pres:["ris","ris","rit","rions","riez","rient"], pp:"ri", aux:"avoir", fut:"rir", sj:["ri","ri"]},
+{inf:"croire", g:"irr", pres:["crois","crois","croit","croyons","croyez","croient"], pp:"cru", aux:"avoir", fut:"croir", sj:["croi","croy"]},
+{inf:"naître", g:"irr", pres:["nais","nais","naît","naissons","naissez","naissent"], pp:"né", aux:"être", fut:"naîtr", sj:["naiss","naiss"]},
+{inf:"descendre", g:"reg", pres:["descends","descends","descend","descendons","descendez","descendent"], pp:"descendu", aux:"être", fut:"descendr", sj:["descend","descend"]}
+];
+
+// Personen: idx = Formindex 0-5, g = Geschlecht/Zahl für Angleichung (m, f, x = beides möglich), pl = Plural
+const PERS = [
+{p:"je", i:0, g:"x", pl:false},{p:"tu", i:1, g:"x", pl:false},{p:"il", i:2, g:"m", pl:false},{p:"elle", i:2, g:"f", pl:false},
+{p:"nous", i:3, g:"x", pl:true},{p:"vous", i:4, g:"x", pl:true},{p:"ils", i:5, g:"m", pl:true},{p:"elles", i:5, g:"f", pl:true}
+];
+const AVOIR = ["ai","as","a","avons","avez","ont"], ETRE = ["suis","es","est","sommes","êtes","sont"];
+const AVOIR_I = ["avais","avais","avait","avions","aviez","avaient"], ETRE_I = ["étais","étais","était","étions","étiez","étaient"];
+const ALLER = ["vais","vas","va","allons","allez","vont"];
+const E_IMP = ["ais","ais","ait","ions","iez","aient"], E_FUT = ["ai","as","a","ons","ez","ont"], E_SJ = ["e","es","e","ions","iez","ent"];
+
+function ppForms(v, per) {
+  if (v.aux !== "être") return [v.pp];
+  const b = v.pp; const forms = [];
+  const sing = per.pl === false, plu = per.pl === true;
+  const gs = per.g === "x" ? ["m", "f"] : [per.g];
+  // vous kann auch Höflichkeitsform Singular sein
+  const nums = per.p === "vous" ? [false, true] : [per.pl];
+  gs.forEach(g => nums.forEach(pl => forms.push(b + (g === "f" ? "e" : "") + (pl && !b.endsWith("s") ? "s" : ""))));
+  return [...new Set(forms)];
+}
+function conj(v, tense, per) {
+  const i = per.i;
+  if (tense === "pres") return [v.pres[i]];
+  if (tense === "imp") { let st = v.imp || v.pres[3].replace(/ons$/, ""); const e = E_IMP[i];
+    if (e[0] === "i") { if (st.endsWith("ge")) st = st.slice(0, -1); if (st.endsWith("ç")) st = st.slice(0, -1) + "c"; }
+    return [st + e]; }
+  if (tense === "fut") return [v.fut + E_FUT[i]];
+  if (tense === "fp") return [ALLER[i] + " " + v.inf];
+  if (tense === "subj") { if (v.sjf) return [v.sjf[i]]; const st = (i === 3 || i === 4) ? v.sj[1] : v.sj[0]; return [st + E_SJ[i]]; }
+  if (tense === "pc" || tense === "pqp") { const A = tense === "pc" ? (v.aux === "être" ? ETRE : AVOIR) : (v.aux === "être" ? ETRE_I : AVOIR_I); return ppForms(v, per).map(f => A[i] + " " + f); }
+}
+const TENSES = {pres:"Présent", subj:"Subjonctif", pc:"Passé composé", imp:"Imparfait", pqp:"Plus-que-parfait", fut:"Futur simple", fp:"Futur proche"};
+const TENSE_HINT = {
+pres:"Présent: Gruppen (-er, -ir mit/ohne -iss-, -re) und Sonderfälle beachten.",
+subj:"Subjonctif: Stamm von ils + -e, -es, -e, -ions, -iez, -ent (nous/vous oft vom nous-Stamm).",
+pc:"Passé composé: avoir/être im Präsens + Participe passé, mit être angleichen.",
+imp:"Imparfait: nous-Stamm + -ais, -ais, -ait, -ions, -iez, -aient (être: ét-).",
+pqp:"Plus-que-parfait: avoir/être im Imparfait + Participe passé.",
+fut:"Futur simple: Infinitiv (bzw. unregelmässiger Stamm) + -ai, -as, -a, -ons, -ez, -ont.",
+fp:"Futur proche: aller im Präsens + Infinitiv."
+};
+// Schwere Übungsblätter. k: gap (Lücke, Form), fix (Fehler korrigieren: richtige Form eintippen), trans (ganzen Satz schreiben), text (mehrere Lücken)
+// a: akzeptierte Antworten; bei text: Array pro Lücke
+const UEB = {
+p: [
+{t:"Übung 1 · Knifflige Formen", items:[
+{k:"gap", q:"Est-ce que vous ___ son nom ? (se rappeler)", a:["vous rappelez"]},
+{k:"gap", q:"Les enfants ___ pendant les vacances. (s'ennuyer)", a:["s'ennuient"]},
+{k:"gap", q:"Mes parents ___ deux personnes dans leur magasin. (employer)", a:["emploient"]},
+{k:"gap", q:"Nous ___ les chaises en cercle. (placer)", a:["plaçons"]},
+{k:"gap", q:"Tu ___ toujours de partir, mais tu restes. (projeter)", a:["projettes"]},
+{k:"gap", q:"Les touristes ___ la question trois fois. (répéter)", a:["répètent"]},
+{k:"gap", q:"Vous ___ toujours votre frère ! (contredire)", a:["contredisez"], h:"Nur dire und redire haben vous dites. Bei contredire, interdire, prédire: vous contredisez."},
+{k:"gap", q:"Ils ___ beaucoup de courrier. (recevoir)", a:["reçoivent"]},
+{k:"gap", q:"Mes amies ___ prudemment. (conduire)", a:["conduisent"]},
+{k:"gap", q:"Nous ___ cette idée. (rejeter)", a:["rejetons"], h:"Bei nous keine Verdoppelung."},
+{k:"gap", q:"Elle ___ les araignées. (craindre)", a:["craint"]},
+{k:"gap", q:"Ça ne ___ pas la peine. (valoir)", a:["vaut"]}
+]},
+{t:"Übung 2 · Text und Fehler", items:[
+{k:"text", q:"Le matin, Léa (se lever) ___ à 6 heures. Elle (appeler) ___ sa sœur, puis elle (jeter) ___ un coup d'œil à ses mails. Ses frères (dormir) ___ encore. À 7 heures, ils (prendre) ___ le bus et ils (essayer) ___ de ne pas être en retard. Le soir, nous (manger) ___ ensemble et nous (commencer) ___ toujours par une soupe.",
+ a:[["se lève"],["appelle"],["jette"],["dorment"],["prennent"],["essaient","essayent"],["mangeons"],["commençons"]]},
+{k:"fix", q:"Korrigiere: « Nous mangons à midi. »", a:["mangeons"]},
+{k:"fix", q:"Korrigiere: « Ils appelent le médecin. »", a:["appellent"]},
+{k:"fix", q:"Korrigiere: « Vous faisez trop de bruit. »", a:["faites"]},
+{k:"fix", q:"Korrigiere: « Elle achete du pain. »", a:["achète"]},
+{k:"fix", q:"Korrigiere: « Tu finit tes devoirs. »", a:["finis"]}
+]},
+{t:"Übung 3 · Umformen (ganze Sätze)", items:[
+{k:"trans", q:"Mets au pluriel : Je reçois une lettre.", a:["Nous recevons une lettre."]},
+{k:"trans", q:"Mets au pluriel : Tu bois du café.", a:["Vous buvez du café."]},
+{k:"trans", q:"Mets au pluriel : Elle se promène.", a:["Elles se promènent."]},
+{k:"trans", q:"Mets au pluriel : Il appelle le médecin.", a:["Ils appellent le médecin."]},
+{k:"trans", q:"Mets au pluriel : Je vois la mer.", a:["Nous voyons la mer."]},
+{k:"trans", q:"Mets au singulier (je) : Nous jetons les papiers.", a:["Je jette les papiers."]},
+{k:"trans", q:"Mets au singulier (il) : Ils doivent partir.", a:["Il doit partir."]}
+]}
+],
+
+s: [
+{t:"Übung 1 · Subjonctif oder Indicatif?", items:[
+{k:"gap", q:"Je ne pense pas que tu ___ raison. (avoir)", a:["aies"], h:"penser verneint → Subjonctif."},
+{k:"gap", q:"Je pense que tu ___ raison. (avoir)", a:["as"]},
+{k:"gap", q:"J'espère qu'il ___ beau demain. (faire)", a:["fera","fait"], h:"espérer → Indicatif."},
+{k:"gap", q:"Je t'appelle dès que je ___ quelque chose. (savoir)", a:["sais"]},
+{k:"gap", q:"Il faut que vous ___ ce film. (voir)", a:["voyiez"], h:"Zwei Stämme: que je voie, que vous voyiez."},
+{k:"gap", q:"Bien que nous ___ à ce projet, nous sommes prudents. (croire)", a:["croyions"]},
+{k:"gap", q:"Le prof exige que les élèves ___ leurs notes avant vendredi. (recevoir)", a:["reçoivent"]},
+{k:"gap", q:"Il est peu probable qu'il ___ . (pleuvoir)", a:["pleuve"]},
+{k:"gap", q:"Il paraît qu'il ___ demain. (pleuvoir)", a:["pleuvra","pleut"], h:"il paraît que → Indicatif."},
+{k:"gap", q:"Je te prête ma voiture à condition que tu me la ___ demain. (rendre)", a:["rendes"]},
+{k:"gap", q:"Parle plus fort pour que tout le monde t' ___ . (entendre)", a:["entende"]},
+{k:"gap", q:"Je suis content que vous ___ venir. (pouvoir)", a:["puissiez"]},
+{k:"gap", q:"Je doute qu'elle ___ la réponse. (savoir)", a:["sache"]},
+{k:"gap", q:"Si tu ___ , on peut y aller. (vouloir)", a:["veux"], h:"Nach si nie Subjonctif."},
+{k:"gap", q:"Il veut que nous ___ chez lui. (aller)", a:["allions"]},
+{k:"gap", q:"Il a dit à son fils qu'il ___ rentrer avant minuit. (devoir)", a:["devait"], h:"dire im Sinn von informieren → Indicatif."},
+{k:"gap", q:"Il demande que son fils ___ avant minuit. (rentrer)", a:["rentre"], h:"demander que = Forderung → Subjonctif."}
+]},
+{t:"Übung 2 · Text und Fehler", items:[
+{k:"text", q:"Ma mère veut que je (faire) ___ mes devoirs avant que mes amis (arriver) ___ . Elle pense que je (être) ___ trop souvent sur mon portable. Moi, je ne crois pas que ce (être) ___ vrai. Mais il faut que nous (trouver) ___ un compromis. J'espère qu'elle (comprendre) ___ que j'ai besoin de mes amis, même si je (savoir) ___ qu'elle a raison.",
+ a:[["fasse"],["arrivent"],["suis"],["soit"],["trouvions"],["comprend","comprendra"],["sais"]]},
+{k:"fix", q:"Korrigiere: « Il faut que nous soyions prêts. »", a:["soyons"]},
+{k:"fix", q:"Korrigiere: « Je veux que tu vas à l'école. »", a:["ailles"]},
+{k:"fix", q:"Korrigiere: « Bien qu'il fait froid, nous sortons. »", a:["fasse"]},
+{k:"fix", q:"Korrigiere: « J'espère que tu viennes. »", a:["viens","viendras"]},
+{k:"fix", q:"Korrigiere: « Il faut que vous ayiez du courage. »", a:["ayez"]}
+]},
+{t:"Übung 3 · Umformen (ganze Sätze)", items:[
+{k:"trans", q:"Beginne mit « Il faut que » : Tu fais tes devoirs.", a:["Il faut que tu fasses tes devoirs."]},
+{k:"trans", q:"Beginne mit « Il faut que » : Nous allons à la gare.", a:["Il faut que nous allions à la gare."]},
+{k:"trans", q:"Beginne mit « Il faut que » : Vous êtes à l'heure.", a:["Il faut que vous soyez à l'heure."]},
+{k:"trans", q:"Beginne mit « Je ne crois pas que » : Il a raison.", a:["Je ne crois pas qu'il ait raison."]},
+{k:"trans", q:"Beginne mit « Je doute que » : Elle peut venir.", a:["Je doute qu'elle puisse venir."]},
+{k:"trans", q:"Beginne mit « Je suis sûr que » : Il vient.", a:["Je suis sûr qu'il vient.","Je suis sûr qu'il viendra.","Je suis sûre qu'il vient.","Je suis sûre qu'il viendra."]},
+{k:"trans", q:"Beginne mit « Mes parents veulent que » : Je sais nager.", a:["Mes parents veulent que je sache nager."]}
+]}
+],
+
+pc: [
+{t:"Übung 1 · Schwere Formen", items:[
+{k:"gap", q:"Elles ___ pour attraper le train. (se dépêcher)", a:["se sont dépêchées"]},
+{k:"gap", q:"Paul et Marc ___ à la bonne station. (ne pas descendre)", a:["ne sont pas descendus"]},
+{k:"gap", q:"Ma grand-mère ___ en 1950. (naître)", a:["est née"]},
+{k:"gap", q:"Mes grands-parents ___ l'année dernière. (mourir)", a:["sont morts"]},
+{k:"gap", q:"Tu ___ ma lettre ? (recevoir)", a:["as reçu"]},
+{k:"gap", q:"Madame, où est-ce que vous ___ ? (s'asseoir)", a:["vous êtes assise"]},
+{k:"gap", q:"Les filles ___ amies. (devenir)", a:["sont devenues"]},
+{k:"gap", q:"Ils ___ de vin. (ne jamais boire)", a:["n'ont jamais bu"]},
+{k:"gap", q:"Les enfants ___ toute la soirée. (rire)", a:["ont ri"]},
+{k:"gap", q:"Nous ___ trois ans à Genève. (vivre)", a:["avons vécu"]},
+{k:"gap", q:"Elles ___ venir. (ne pas pouvoir)", a:["n'ont pas pu"]},
+{k:"gap", q:"Julie, est-ce que tu ___ hier soir ? (s'amuser)", a:["t'es amusée"]}
+]},
+{t:"Übung 2 · Text und Fehler", items:[
+{k:"text", q:"Samedi dernier, Sarah et Léa (aller) ___ en ville. Elles (prendre) ___ le train de 9 heures. D'abord, elles (faire) ___ du shopping, puis elles (s'asseoir) ___ dans un café. Léa (boire) ___ un chocolat chaud. Ensuite, elles (voir) ___ un film. Elles (rentrer) ___ à minuit et elles (ne pas pouvoir) ___ dormir.",
+ a:[["sont allées"],["ont pris"],["ont fait"],["se sont assises"],["a bu"],["ont vu"],["sont rentrées"],["n'ont pas pu"]]},
+{k:"fix", q:"Korrigiere: « Elle a tombé dans l'escalier. »", a:["est tombée"]},
+{k:"fix", q:"Korrigiere: « Ils ont rit. »", a:["ont ri"]},
+{k:"fix", q:"Korrigiere: « Nous avons venu en bus. » (nous = des garçons)", a:["sommes venus"]},
+{k:"fix", q:"Korrigiere: « Anna s'est levé tôt. »", a:["s'est levée"]},
+{k:"fix", q:"Korrigiere: « J'ai pas compris. » (schriftlich korrekt)", a:["je n'ai pas compris","n'ai pas compris"]}
+]},
+{t:"Übung 3 · Umformen (ganze Sätze)", items:[
+{k:"trans", q:"Passé composé : Elle se lève à 7 heures.", a:["Elle s'est levée à 7 heures."]},
+{k:"trans", q:"Passé composé : Nous ne partons pas. (nous = des garçons)", a:["Nous ne sommes pas partis."]},
+{k:"trans", q:"Passé composé : Ils boivent un café.", a:["Ils ont bu un café."]},
+{k:"trans", q:"Passé composé : Tu ne comprends rien.", a:["Tu n'as rien compris."]},
+{k:"trans", q:"Passé composé : Mes sœurs sortent ce soir.", a:["Mes sœurs sont sorties ce soir."]},
+{k:"trans", q:"Passé composé : Je mets mon manteau.", a:["J'ai mis mon manteau."]},
+{k:"trans", q:"Passé composé : Elles ne se parlent jamais.", a:["Elles ne se sont jamais parlé."], h:"Achtung: se parler = sich gegenseitig sprechen MIT (indirektes Objekt) → keine Angleichung. Das ist die schwerste Frage hier."}
+]}
+],
+
+im: [
+{t:"Übung 1 · Passé composé oder Imparfait?", items:[
+{k:"gap", q:"Quand j'étais petit, nous ___ toutes nos vacances en Bretagne. (passer)", a:["passions"]},
+{k:"gap", q:"Un jour, mon père ___ de vendre la maison. (décider)", a:["a décidé"]},
+{k:"gap", q:"Il ___ quand nous sommes sortis. (neiger)", a:["neigeait"]},
+{k:"gap", q:"Je ___ tranquillement quand la lumière s'est éteinte. (lire)", a:["lisais"]},
+{k:"gap", q:"Soudain, la lumière ___ . (s'éteindre)", a:["s'est éteinte"]},
+{k:"gap", q:"Autrefois, les gens ___ des lettres. (écrire)", a:["écrivaient"]},
+{k:"gap", q:"Hier, j' ___ trois lettres. (écrire)", a:["ai écrit"]},
+{k:"gap", q:"Pendant que nous ___ , le chat a volé le poisson. (dîner)", a:["dînions"]},
+{k:"gap", q:"Elle ___ peur des chiens quand elle était petite. (avoir)", a:["avait"]},
+{k:"gap", q:"Elle ___ peur quand le chien a aboyé. (avoir)", a:["a eu"], h:"Plötzliche Reaktion auf ein Ereignis → Passé composé."},
+{k:"gap", q:"Nous ___ toujours la journée par un café. (commencer)", a:["commencions"]},
+{k:"gap", q:"Tout à coup, quelqu'un ___ à la porte. (frapper)", a:["a frappé"]}
+]},
+{t:"Übung 2 · Text und Fehler", items:[
+{k:"text", q:"C' (être) ___ un dimanche matin. Il (faire) ___ beau et les oiseaux (chanter) ___ . Je (prendre) ___ mon petit-déjeuner quand mon téléphone (sonner) ___ . C' (être) ___ Marc. Il (vouloir) ___ aller à la plage. Alors, je (s'habiller) ___ vite et je (partir) ___ .",
+ a:[["était"],["faisait"],["chantaient"],["prenais"],["a sonné"],["était"],["voulait"],["me suis habillé","me suis habillée"],["suis parti","suis partie"]]},
+{k:"fix", q:"Korrigiere: « Quand j'étais petit, j'ai joué tous les jours au foot. »", a:["jouais"]},
+{k:"fix", q:"Korrigiere: « Il faisait beau quand soudain il commençait à pleuvoir. »", a:["a commencé"]},
+{k:"fix", q:"Korrigiere: « Avant, nous allons souvent au cinéma. »", a:["allions"]},
+{k:"fix", q:"Korrigiere: « Je sortais quand le téléphone sonnait. »", a:["a sonné"]},
+{k:"fix", q:"Korrigiere: « Ils étaient fatigués, alors ils dormaient tout de suite. »", a:["ont dormi"]}
+]},
+{t:"Übung 3 · Umformen (ganze Sätze)", items:[
+{k:"trans", q:"In die Vergangenheit: Il pleut quand je sors. (je = Junge)", a:["Il pleuvait quand je suis sorti."]},
+{k:"trans", q:"In die Vergangenheit: Tous les jours, je prends le bus.", a:["Tous les jours, je prenais le bus."]},
+{k:"trans", q:"In die Vergangenheit: Soudain, elle crie.", a:["Soudain, elle a crié."]},
+{k:"trans", q:"In die Vergangenheit: Pendant que tu dors, je lis.", a:["Pendant que tu dormais, je lisais."]},
+{k:"trans", q:"In die Vergangenheit: D'habitude, nous mangeons à midi.", a:["D'habitude, nous mangions à midi."]},
+{k:"trans", q:"In die Vergangenheit: Un jour, il rencontre une fille qui est très drôle.", a:["Un jour, il a rencontré une fille qui était très drôle."]}
+]}
+],
+
+pq: [
+{t:"Übung 1 · Vorvergangenheit", items:[
+{k:"gap", q:"Quand nous sommes arrivés, le film ___ . (déjà commencer)", a:["avait déjà commencé"]},
+{k:"gap", q:"Elle était fatiguée parce qu'elle ___ . (ne pas dormir)", a:["n'avait pas dormi"]},
+{k:"gap", q:"Il m'a rendu le livre que je lui ___ . (prêter)", a:["avais prêté"]},
+{k:"gap", q:"Elles ___ dans la forêt la veille. (se perdre)", a:["s'étaient perdues"]},
+{k:"gap", q:"Nous avons retrouvé le portefeuille que nous ___ . (perdre)", a:["avions perdu"]},
+{k:"gap", q:"Le prof a remarqué que les élèves ___ les devoirs. (ne pas faire)", a:["n'avaient pas fait"]},
+{k:"gap", q:"Quand je suis rentré, mes parents ___ . (partir)", a:["étaient partis","étaient déjà partis"]},
+{k:"gap", q:"Il a raconté qu'il ___ un fantôme la nuit précédente. (voir)", a:["avait vu"]},
+{k:"gap", q:"À la fin du film, mon frère ___ . (déjà s'endormir)", a:["s'était déjà endormi"]},
+{k:"gap", q:"Elle a enfin reçu le colis qu'elle ___ un mois plus tôt. (commander)", a:["avait commandé"]}
+]},
+{t:"Übung 2 · Text mit drei Zeiten",
+items:[
+{k:"text", q:"Hier, je (arriver) ___ en retard à l'école parce que j' (oublier) ___ de mettre mon réveil. Quand je (entrer) ___ dans la classe, le test (commencer) ___ déjà. Tout le monde (écrire) ___ en silence. Le professeur (être) ___ fâché. Heureusement, j' (apprendre) ___ le vocabulaire la veille.",
+ a:[["suis arrivé","suis arrivée"],["avais oublié"],["suis entré","suis entrée"],["avait commencé"],["écrivait"],["était"],["avais appris"]]},
+{k:"fix", q:"Korrigiere: « Quand je suis arrivé, le train est déjà parti. »", a:["était"]},
+{k:"fix", q:"Korrigiere: « Elle avait venu la veille. »", a:["était venue"]},
+{k:"fix", q:"Korrigiere: « Ils s'avaient levés tôt. »", a:["s'étaient levés"]},
+{k:"fix", q:"Korrigiere: « Nous avons su qu'il a déjà fini. »", a:["avait déjà fini","avait fini"]}
+]},
+{t:"Übung 3 · Sätze verbinden",
+items:[
+{k:"trans", q:"Verbinde mit « parce que » + PQP: Il était triste. Il a perdu son chien.", a:["Il était triste parce qu'il avait perdu son chien."]},
+{k:"trans", q:"Verbinde: J'étais fatigué. Je n'ai pas dormi.", a:["J'étais fatigué parce que je n'avais pas dormi."]},
+{k:"trans", q:"Verbinde: Elle était contente. Elle a réussi l'examen.", a:["Elle était contente parce qu'elle avait réussi l'examen."]},
+{k:"trans", q:"Verbinde: Ils avaient faim. Ils n'ont rien mangé.", a:["Ils avaient faim parce qu'ils n'avaient rien mangé."]},
+{k:"trans", q:"Verbinde: Nous étions en retard. Nous avons raté le bus.", a:["Nous étions en retard parce que nous avions raté le bus."]},
+{k:"trans", q:"Verbinde: Marie était énervée. Elle s'est disputée avec sa sœur.", a:["Marie était énervée parce qu'elle s'était disputée avec sa sœur."]}
+]}
+],
+
+fu: [
+{t:"Übung 1 · Fallen beim Futur", items:[
+{k:"gap", q:"Quand tu ___ grand, tu comprendras. (être)", a:["seras"], h:"Nach quand mit Bezug auf die Zukunft steht im Französischen Futur."},
+{k:"gap", q:"Dès que j' ___ mon permis, je t'emmènerai. (avoir)", a:["aurai"]},
+{k:"gap", q:"S'il fait beau, nous ___ à la plage. (aller)", a:["irons"]},
+{k:"gap", q:"Si tu ___ , je serai content. (venir)", a:["viens"], h:"si + Präsens, nie Futur."},
+{k:"gap", q:"Il ___ partir tôt demain. (falloir)", a:["faudra"]},
+{k:"gap", q:"Vous ___ la réponse lundi. (recevoir)", a:["recevrez"]},
+{k:"gap", q:"Nous ___ ce soir. (s'appeler, futur simple)", a:["nous appellerons"]},
+{k:"gap", q:"Elles ___ de rire ! (mourir, futur simple)", a:["mourront"]},
+{k:"gap", q:"J' ___ de venir. (essayer, futur simple)", a:["essaierai","essayerai"]},
+{k:"gap", q:"Tu ___ ta promesse ? (tenir, futur simple)", a:["tiendras"]},
+{k:"gap", q:"Attention, tu ___ ! (tomber, futur proche)", a:["vas tomber"]},
+{k:"gap", q:"Ce soir, nous ___ tard. (ne pas se coucher, futur proche)", a:["n'allons pas nous coucher"]},
+{k:"gap", q:"Lorsque vous ___ , appelez-moi. (arriver)", a:["arriverez"]},
+{k:"gap", q:"Je ___ ce qu'il dit. (voir, futur simple)", a:["verrai"]}
+]},
+{t:"Übung 2 · Text und Fehler", items:[
+{k:"text", q:"L'année prochaine, je (finir) ___ le gymnase. Je (faire) ___ un stage et je (devoir) ___ trouver un appartement. Mes parents m' (aider) ___ . Quand j' (avoir) ___ assez d'argent, je (voyager) ___ en Asie. Mais d'abord, ce soir, je (aller, futur proche) ___ réviser pour mon test !",
+ a:[["finirai"],["ferai"],["devrai"],["aideront"],["aurai"],["voyagerai"],["vais"]]},
+{k:"fix", q:"Korrigiere: « Si tu viendras, on ira au cinéma. »", a:["viens"]},
+{k:"fix", q:"Korrigiere: « Je pouverai venir demain. »", a:["pourrai"]},
+{k:"fix", q:"Korrigiere: « Nous allerons à Paris. »", a:["irons"]},
+{k:"fix", q:"Korrigiere: « Il va se lève tôt. »", a:["va se lever"]},
+{k:"fix", q:"Korrigiere: « J'acheterai une voiture. »", a:["achèterai"]}
+]},
+{t:"Übung 3 · Umformen (ganze Sätze)", items:[
+{k:"trans", q:"Futur simple: Je vais voir mes amis.", a:["Je verrai mes amis."]},
+{k:"trans", q:"Futur simple: Nous allons faire du ski.", a:["Nous ferons du ski."]},
+{k:"trans", q:"Futur simple: Tu vas être content.", a:["Tu seras content."]},
+{k:"trans", q:"Futur simple: Ils vont envoyer une carte.", a:["Ils enverront une carte."]},
+{k:"trans", q:"Futur proche: Elle se reposera.", a:["Elle va se reposer."]},
+{k:"trans", q:"Futur proche: Vous ne viendrez pas.", a:["Vous n'allez pas venir."]},
+{k:"trans", q:"Futur simple: Il va falloir partir.", a:["Il faudra partir."]}
+]}
+]
+};
+const PLAN = [
+{d:"Mi 18.11.", t:"Heute · Présent", min:"30 min", tasks:[
+ {x:"Kapitel 1 Présent lesen, Sonderfälle bei -er markieren", go:"guide/p"},
+ {x:"Übung 1-3 Présent (schwer)", go:"ueb/p/1"},
+ {x:"Konjugationstrainer Présent: 1 Runde", go:"trainer/pres"},
+ {x:"Quiz 1A", go:"quiz/p/A"}
+]},
+{d:"Do 19.11.", t:"Passé composé + Imparfait (Bildung)", min:"45 min", tasks:[
+ {x:"Aufwärmen: Quiz 1B", go:"quiz/p/B"},
+ {x:"Kapitel 3 Passé composé: Partizipien und être-Verben lernen", go:"guide/pc"},
+ {x:"Übung 1-3 Passé composé (schwer)", go:"ueb/pc/1"},
+ {x:"Kapitel 4 Imparfait: Bildung lesen + Trainer Imparfait", go:"guide/im"},
+ {x:"Übung 1 Imparfait (PC oder Imparfait?)", go:"ueb/im/1"},
+ {x:"Quiz 3A", go:"quiz/pc/A"}
+]},
+{d:"Fr 20.11.", t:"Im Zug: PC oder Imparfait + Plus-que-parfait", min:"60-75 min", tasks:[
+ {x:"Aufwärmen: Quiz 3B", go:"quiz/pc/B"},
+ {x:"Tabelle 'PC oder Imparfait' mit Signalwörtern lernen", go:"guide/im"},
+ {x:"Übung 2-3 Imparfait (schwer)", go:"ueb/im/2"},
+ {x:"Kapitel 5 Plus-que-parfait lesen", go:"guide/pq"},
+ {x:"Übung 1-3 Plus-que-parfait (schwer)", go:"ueb/pq/1"}
+]},
+{d:"Sa 21.11.", t:"Futur", min:"60 min", tasks:[
+ {x:"Aufwärmen: Quiz 4B", go:"quiz/im/B"},
+ {x:"Kapitel 6 Futur: unregelmässige Stämme auf Karteikarte", go:"guide/fu"},
+ {x:"Übung 1-3 Futur (schwer)", go:"ueb/fu/1"},
+ {x:"Trainer Futur + Quiz 6A", go:"trainer/fut"},
+ {x:"Kurz: Quiz 5B", go:"quiz/pq/B"}
+]},
+{d:"So 22.11.", t:"Subjonctif", min:"60 min", tasks:[
+ {x:"Aufwärmen: Quiz 6B", go:"quiz/fu/B"},
+ {x:"Kapitel 2 Subjonctif: Bildung + unregelmässige Verben", go:"guide/s"},
+ {x:"Listen 'Subjonctif nach ... / Indicatif nach ...' auswendig", go:"guide/s"},
+ {x:"Übung 1-3 Subjonctif (schwer)", go:"ueb/s/1"},
+ {x:"Trainer Subjonctif + Quiz 2A", go:"trainer/subj"}
+]},
+{d:"Mo 23.11.", t:"Generalprobe (Teile davon im Auto)", min:"60 min", tasks:[
+ {x:"Quiz 2B und 2C (Subjonctif sitzt?)", go:"quiz/s/B"},
+ {x:"Alle Übungsblätter unter 90 % nochmals", go:"ueb"},
+ {x:"Trainer 'Schwer' 2 Runden", go:"trainer/hard"},
+ {x:"Prüfungssimulation", go:"sim"},
+ {x:"'Fehler wiederholen' bei jedem Thema", go:"quiz/p/F"}
+]},
+{d:"Di 24.11.", t:"Prüfung", min:"15 min", tasks:[
+ {x:"Merkblatt lesen", go:"merk"},
+ {x:"Eine Runde Trainer 'Schwer'", go:"trainer/hard"}
+]}
+];
+
+const MERK = `
+<h3>Bildung auf einen Blick</h3>
+<div class="tw"><table>
+<tr><th>Zeit</th><th>Bildung</th><th>Beispiel</th></tr>
+<tr><td>Présent</td><td>-er: e, es, e, ons, ez, ent · -ir (finir): is, is, it, issons, issez, issent · -ir (partir): s, s, t, ons, ez, ent · -re: s, s, (nichts), ons, ez, ent</td><td>je parle, nous finissons, il part, il attend</td></tr>
+<tr><td>Subjonctif</td><td>Stamm von ils + e, es, e, ions, iez, ent</td><td>ils finissent → que je finisse</td></tr>
+<tr><td>Passé composé</td><td>avoir/être (Präsens) + Partizip</td><td>j'ai mangé, elle est partie</td></tr>
+<tr><td>Imparfait</td><td>Stamm von nous + ais, ais, ait, ions, iez, aient</td><td>nous faisons → je faisais (être: j'étais)</td></tr>
+<tr><td>Plus-que-parfait</td><td>avoir/être (Imparfait) + Partizip</td><td>j'avais mangé, elle était partie</td></tr>
+<tr><td>Futur simple</td><td>Infinitiv + ai, as, a, ons, ez, ont (-re ohne e)</td><td>je finirai, j'attendrai</td></tr>
+<tr><td>Futur proche</td><td>aller (Präsens) + Infinitiv</td><td>je vais partir</td></tr>
+</table></div>
+<h3>Sonderfälle Présent (-er)</h3>
+<p>achète · préfère · appelle/jette · nettoie · mangeons · commençons. Änderung nur bei je, tu, il, ils.</p>
+<h3>Subjonctif unregelmässig</h3>
+<p>sois · aie · aille · fasse · puisse · sache · veuille · qu'il faille · qu'il pleuve (nous: soyons, ayons, allions, fassions, puissions, sachions, voulions)</p>
+<h3>Subjonctif oder Indicatif?</h3>
+<p><b>Subjonctif:</b> il faut que, vouloir/souhaiter/désirer que, demander/ordonner/interdire/accepter que, avoir peur/regretter/être content que, il est important/normal/possible que, douter que, ne pas penser/croire que · avant que, jusqu'à ce que, en attendant que, à moins que, bien que, quoique, à condition que, pourvu que, pour que, afin que, de sorte que</p>
+<p><b>Indicatif:</b> penser/croire/trouver/savoir/être sûr que, dire que, espérer que, il est probable/évident que, il paraît que · quand, lorsque, pendant que, après que, dès que, parce que, puisque, si, même si</p>
+<h3>Passé composé mit être</h3>
+<p>aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, tomber, naître, mourir, rentrer, retourner, devenir, revenir + alle reflexiven Verben → Partizip angleichen (e, s, es).</p>
+<h3>Unregelmässige Partizipien</h3>
+<p>eu, été, fait, pu, voulu, vu, dû, su, reçu, tenu, cru, perdu, lu, bu, venu, descendu, connu, vécu, né, mort, mis, pris, assis, ouvert, offert, souffert, découvert, conduit, construit, produit, traduit, dit, écrit, ri, suivi, couru</p>
+<h3>Futur: unregelmässige Stämme</h3>
+<p>ser- · aur- · saur- · fer- · ir- · tiendr- · viendr- · voudr- · devr- · recevr- · pourr- · mourr- · courr- · enverr- · verr- · il pleuvra · il faudra</p>
+<h3>PC oder Imparfait?</h3>
+<p><b>PC:</b> einmalig, abgeschlossen, Abfolge, Unterbrechung · hier, soudain, tout à coup, un jour, ensuite, puis<br><b>Imparfait:</b> Gewohnheit, Beschreibung, Hintergrund, gleichzeitig · tous les jours, avant, autrefois, souvent, d'habitude, pendant que<br><b>PQP:</b> vorher passiert · la veille, déjà, deux jours plus tôt, la semaine précédente</p>
+<h3>Prüfungstipps</h3>
+<ul><li>Zuerst Zeit bestimmen (Signalwort? Auslöser für Subjonctif?), dann bilden.</li>
+<li>Bei être immer Angleichung prüfen (wer ist das Subjekt? weiblich? Plural?).</li>
+<li>Akzente zählen: préfère, achète, dû, été, connaît.</li>
+<li>Nach si nie Futur und nie Subjonctif.</li></ul>`;
+// ---------- Speicher ----------
+const S = (() => { let mem = {}; let ok = false;
+  try { const k = "__t"; localStorage.setItem(k, "1"); localStorage.removeItem(k); ok = true; } catch (e) {}
+  return {
+    get(k, d) { try { if (ok) { const v = localStorage.getItem("frhs26_" + k); return v === null ? d : JSON.parse(v); } } catch (e) {} return k in mem ? mem[k] : d; },
+    set(k, v) { mem[k] = v; try { if (ok) localStorage.setItem("frhs26_" + k, JSON.stringify(v)); } catch (e) {} }
+  };
+})();
+const $ = s => document.querySelector(s);
+const app = () => $("#app");
+const topic = id => TOPICS.find(t => t.id === id);
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const noteOf = r => (Math.round((1 + 5 * r) * 4) / 4).toFixed(2).replace(/0$/, "").replace(/\.0$/, "");
+
+function allQ(t) { const out = []; ["A", "B", "C"].forEach(set => QUIZ[t][set].forEach((q, i) => out.push({ ...q, id: `${t}-${set}-${i}`, t }))); return out; }
+function setQ(t, set) { return QUIZ[t][set].map((q, i) => ({ ...q, id: `${t}-${set}-${i}`, t })); }
+
+// ---------- Antworten prüfen ----------
+const deacc = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+function norm(s) {
+  s = String(s).toLowerCase().replace(/[’`´]/g, "'").replace(/\s+/g, " ").trim().replace(/[.!?,;]+$/, "").trim();
+  s = s.replace(/^(que |qu')/, "").replace(/^(je |j'|tu |il |elle |on |nous |vous |ils |elles )/, "");
+  return s.replace(/\s*'\s*/g, "'").trim();
+}
+function normFull(s) { return String(s).toLowerCase().replace(/[’`´]/g, "'").replace(/[«»"]/g, "").replace(/\s+/g, " ").trim().replace(/[.!?;]+$/, "").replace(/\s*'\s*/g, "'").replace(/\s*,\s*/g, ", ").trim(); }
+function checkFull(input, accepted) { const n = normFull(input); const acc = accepted.map(normFull); if (acc.includes(n)) return "ok"; if (n && acc.map(deacc).includes(deacc(n))) return "accent"; return "no"; }
+function check(input, accepted) {
+  const n = norm(input); const acc = accepted.map(norm);
+  if (acc.includes(n)) return "ok";
+  if (n && acc.map(deacc).includes(deacc(n))) return "accent";
+  return "no";
+}
+
+// ---------- Navigation ----------
+const NAV = [["plan", "Plan"], ["guide", "Lernguide"], ["ueb", "Übungen"], ["quiz", "Quiz"], ["trainer", "Konjugationstrainer"], ["satz", "Lückensätze"], ["sim", "Simulation"], ["merk", "Merkblatt"]];
+function renderNav(active) { $("#nav").innerHTML = NAV.map(([k, l]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${l}</a>`).join(""); }
+function daysLeft() { const ex = new Date(EXAM_DATE + "T08:00:00"); return Math.ceil((ex - new Date()) / 86400000); }
+
+document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); go(g.dataset.go); return; }
+  const a = e.target.closest("a[href^='#']"); if (a) { e.preventDefault(); go(a.getAttribute("href").slice(1)); } });
+function go(p) { window.__r = p || "plan"; route(); }
+
+function route() {
+  if (window.__timer) { clearInterval(window.__timer); window.__timer = null; }
+  const h = (window.__r || "plan").split("/"); const v = h[0];
+  renderNav(v); window.scrollTo(0, 0);
+  if (v === "guide") return h[1] ? viewChapter(h[1]) : viewGuideList();
+  if (v === "quiz") return h[1] ? startQuiz(h[1], h[2] || "A") : viewQuizList();
+  if (v === "trainer") return h[1] ? startTrainer(h[1]) : viewTrainerList();
+  if (v === "satz") return h[1] ? startSatz(h[1]) : viewSatzList();
+  if (v === "ueb") return h[1] ? viewUeb(h[1], +(h[2] || 1)) : viewUebList();
+  if (v === "sim") return viewSim();
+  if (v === "merk") return viewMerk();
+  return viewPlan();
+}
+
+// ---------- Plan ----------
+function best(k) { return S.get("best_" + k, null); }
+function pill(k, label, href) { const b = best(k); return `<a class="pill ${b === null ? "" : b >= 80 ? "good" : "bad"}" href="${href}">${label}${b === null ? "" : " " + b + "%"}</a>`; }
+function viewPlan() {
+  const done = S.get("plan", {}); const dl = daysLeft();
+  let total = 0, checked = 0; PLAN.forEach((d, i) => d.tasks.forEach((t, j) => { total++; if (done[`${i}-${j}`]) checked++; }));
+  const prog = TOPICS.map(t => { const w = S.get("wrong_" + t.id, []).length;
+    return `<tr><td><a href="#guide/${t.id}">${t.n} ${t.title}</a></td><td>${[1, 2, 3].map(n => pill(`ueb_${t.id}_${n}`, "Ü" + n, `#ueb/${t.id}/${n}`)).join(" ")} · ${["A", "B", "C"].map(x => pill(`${t.id}_${x}`, x, `#quiz/${t.id}/${x}`)).join(" ")} ${pill("satz_" + t.id, "Sätze", "#satz/" + t.id)}</td><td>${w ? `<a href="#quiz/${t.id}/F">${w} offen</a>` : "·"}</td></tr>`; }).join("");
+  const tr = Object.keys(TRAIN_MODES).map(k => pill("tr_" + k, TRAIN_MODES[k].label, "#trainer/" + k)).join(" ");
+  app().innerHTML = `
+  <section class="hero"><div><h1>${EXAM_LABEL}</h1><p>Présent · Subjonctif · Passé composé, Imparfait, Plus-que-parfait · Futur simple, Futur proche</p></div>
+  <div class="count"><span>${dl > 0 ? dl : 0}</span>${dl === 1 ? "Tag" : "Tage"}</div></section>
+  <p class="lead">Jeden Tag die Aufgaben abarbeiten und abhaken. Nach jeder Theorie kommen drei schwere Übungsblätter (Lückensätze, Texte, Fehler korrigieren, ganze Sätze umformen). Danach festigen mit Trainer und Quiz. Ziel für eine 6: alle Übungsblätter über 90 % und Trainer "Schwer" über 90 %.</p>
+  <div class="bar"><div style="width:${total ? Math.round(checked / total * 100) : 0}%"></div></div>
+  <p class="small">${checked} von ${total} Aufgaben erledigt</p>
+  <div class="days">${PLAN.map((d, i) => `<div class="day"><div class="dh"><b>${d.d}</b> <span>${d.t}</span><em>${d.min}</em></div>
+    ${d.tasks.map((t, j) => `<label class="task"><input type="checkbox" data-k="${i}-${j}" ${done[`${i}-${j}`] ? "checked" : ""}> <span>${t.x}</span> <a href="#${t.go}" class="go">öffnen →</a></label>`).join("")}</div>`).join("")}</div>
+  <h2>Dein Stand</h2>
+  <div class="tw"><table><tr><th>Thema</th><th>Beste Resultate</th><th>Fehler</th></tr>${prog}</table></div>
+  <p><b>Konjugationstrainer:</b> ${tr}</p>`;
+  app().querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => { const d = S.get("plan", {}); d[cb.dataset.k] = cb.checked; S.set("plan", d); viewPlan(); }));
+}
+
+// ---------- Lernguide ----------
+function viewGuideList() {
+  app().innerHTML = `<h1>Lernguide</h1><p class="lead">Ein Kapitel pro Prüfungsthema, mit Anleitung, wie du es lernst.</p>
+  <div class="list">${TOPICS.map(t => `<a class="row" href="#guide/${t.id}"><b>${t.n}</b> ${t.title}<span class="go">→</span></a>`).join("")}</div>`;
+}
+const TRAIN_OF = { p: "pres", s: "subj", pc: "pc", im: "imp", pq: "pqp", fu: "fut" };
+function viewChapter(id) {
+  const t = topic(id); const i = TOPICS.indexOf(t); const prev = TOPICS[i - 1], next = TOPICS[i + 1];
+  app().innerHTML = `<p class="crumb"><a href="#guide">Lernguide</a> / ${t.n}</p><h1>${t.n} ${t.title}</h1><div class="chapter">${CHAPTERS[id]}</div>
+  <div class="after"><b>Jetzt üben (schwer):</b><a class="btn" href="#ueb/${id}/1">Übung 1</a><a class="btn" href="#ueb/${id}/2">Übung 2</a><a class="btn" href="#ueb/${id}/3">Übung 3</a><br><b style="margin-top:10px">Danach festigen:</b><a class="btn ghost" href="#trainer/${TRAIN_OF[id]}">Trainer</a><a class="btn ghost" href="#quiz/${id}/A">Quiz A</a><a class="btn ghost" href="#quiz/${id}/B">Quiz B</a><a class="btn ghost" href="#quiz/${id}/C">Quiz C</a><a class="btn ghost" href="#satz/${id}">Lückensätze</a></div>
+  <div class="pn">${prev ? `<a href="#guide/${prev.id}">← ${prev.short}</a>` : "<span></span>"}${next ? `<a href="#guide/${next.id}">${next.short} →</a>` : ""}</div>`;
+}
+
+// ---------- Quiz (Multiple Choice) ----------
+function viewQuizList() {
+  app().innerHTML = `<h1>Quiz</h1><p class="lead">A, B und C haben verschiedene Fragen. "Zufall" mischt alle. "Fehler" fragt nur, was du zuletzt falsch hattest.</p>
+  <div class="tw"><table><tr><th>Thema</th><th></th></tr>${TOPICS.map(t => { const w = S.get("wrong_" + t.id, []).length;
+    return `<tr><td>${t.n} ${t.short}</td><td class="btns">${["A", "B", "C"].map(x => { const b = best(`${t.id}_${x}`); return `<a class="btn sm ${b === null ? "" : b >= 80 ? "good" : "bad"}" href="#quiz/${t.id}/${x}">${x}${b === null ? "" : " · " + b + "%"}</a>`; }).join("")}<a class="btn sm ghost" href="#quiz/${t.id}/Z">Zufall</a>${w ? `<a class="btn sm ghost" href="#quiz/${t.id}/F">Fehler (${w})</a>` : ""}</td></tr>`; }).join("")}</table></div>
+  <p><a class="btn" href="#quiz/all/Z">Gemischtes Zufallsquiz (15 Fragen)</a></p>`;
+}
+function saveWrong(qs, wrongIds, okIds) {
+  const byT = {}; qs.forEach(q => byT[q.t] = byT[q.t] || S.get("wrong_" + q.t, []));
+  wrongIds.forEach(id => { const tt = id.split("-")[0]; if (!byT[tt].includes(id)) byT[tt].push(id); });
+  okIds.forEach(id => { const tt = id.split("-")[0]; byT[tt] = byT[tt].filter(x => x !== id); });
+  Object.keys(byT).forEach(tt => S.set("wrong_" + tt, byT[tt]));
+}
+function startQuiz(t, set) {
+  let qs, title;
+  if (t === "all") { qs = shuffle(TOPICS.flatMap(x => allQ(x.id))).slice(0, 15); title = "Gemischt, alle Themen"; }
+  else if (set === "Z") { qs = shuffle(allQ(t)).slice(0, 8); title = `${topic(t).short} · Zufall`; }
+  else if (set === "F") { const ids = S.get("wrong_" + t, []); qs = shuffle(allQ(t).filter(q => ids.includes(q.id))); title = `${topic(t).short} · Fehler wiederholen`;
+    if (!qs.length) { const others = TOPICS.filter(x => S.get("wrong_" + x.id, []).length);
+      app().innerHTML = `<h1>${title}</h1><p class="lead">Keine offenen Fehler bei diesem Thema.</p>${others.length ? `<p>Offene Fehler bei: ${others.map(x => `<a href="#quiz/${x.id}/F">${x.short}</a>`).join(", ")}</p>` : ""}<p><a class="btn ghost" href="#quiz">Übersicht</a></p>`; return; } }
+  else { qs = shuffle(setQ(t, set)); title = `${topic(t).short} · Quiz ${set}`; }
+  let i = 0, right = 0; const wrong = [], ok = [], log = [];
+  function show() {
+    const q = qs[i]; const opts = shuffle(q.a.map((x, k) => ({ x, ok: k === 0 })));
+    app().innerHTML = `<p class="crumb"><a href="#quiz">Quiz</a> / ${esc(title)}</p><div class="qhead"><span>Frage ${i + 1} von ${qs.length}</span><span>${right} richtig</span></div>
+    <div class="bar"><div style="width:${i / qs.length * 100}%"></div></div>
+    <div class="qcard"><h2>${esc(q.q)}</h2>${t === "all" ? `<p class="small">${topic(q.t).short}</p>` : ""}
+    <div class="opts">${opts.map((o, k) => `<button class="opt" data-k="${k}"><span>${"ABCD"[k]}</span>${esc(o.x)}</button>`).join("")}</div><div id="fb"></div></div>`;
+    app().querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => {
+      const box = app().querySelector(".opts"); if (box.dataset.done) return; box.dataset.done = 1;
+      const o = opts[+b.dataset.k]; app().querySelectorAll(".opt").forEach((bb, k) => { if (opts[k].ok) bb.classList.add("right"); });
+      if (o.ok) { right++; ok.push(q.id); } else { b.classList.add("wrong"); wrong.push(q.id); }
+      log.push({ q, ok: o.ok, chosen: o.x });
+      $("#fb").innerHTML = `<div class="fb ${o.ok ? "y" : "n"}"><b>${o.ok ? "Richtig." : "Falsch."}</b> ${esc(q.e)}</div><button class="btn" id="nx">${i + 1 < qs.length ? "Weiter" : "Auswertung"}</button>`;
+      $("#nx").focus(); $("#nx").onclick = () => { i++; i < qs.length ? show() : end(); };
+    }));
+  }
+  function end() {
+    const score = Math.round(right / qs.length * 100);
+    if (t !== "all" && ["A", "B", "C"].includes(set)) { const b = best(`${t}_${set}`); if (b === null || score > b) S.set(`best_${t}_${set}`, score); }
+    saveWrong(qs, wrong, ok);
+    app().innerHTML = `<p class="crumb"><a href="#quiz">Quiz</a> / ${esc(title)}</p><h1>${score} %</h1>
+    <p class="lead">${right} von ${qs.length} richtig · ungefähr Note ${noteOf(right / qs.length)}.</p>
+    <p>${wrong.length && t !== "all" ? `<a class="btn" href="#quiz/${t}/F">Nur Fehler wiederholen</a>` : ""} ${t !== "all" ? `<a class="btn ghost" href="#trainer/${TRAIN_OF[t]}">Trainer</a> <a class="btn ghost" href="#guide/${t}">Kapitel</a>` : ""} <a class="btn ghost" href="#quiz">Übersicht</a></p>
+    ${wrong.length ? `<h2>Deine Fehler</h2>${log.filter(l => !l.ok).map(l => `<div class="rev"><b>${esc(l.q.q)}</b><br><span class="n">Deine Antwort: ${esc(l.chosen)}</span><br><span class="y">Richtig: ${esc(l.q.a[0])}</span><br><span class="small">${esc(l.q.e)}</span></div>`).join("")}` : ""}`;
+  }
+  show();
+}
+
+// ---------- Eintipp-Runde (für Trainer, Sätze, Simulation) ----------
+function typeRound(items, title, back, onEnd) {
+  let i = 0, right = 0; const log = [];
+  function show() {
+    const it = items[i];
+    app().innerHTML = `<p class="crumb">${back} / ${esc(title)}</p><div class="qhead"><span>${i + 1} von ${items.length}</span><span>${right} richtig</span></div>
+    <div class="bar"><div style="width:${i / items.length * 100}%"></div></div>
+    <div class="qcard"><p class="small">${esc(it.label || "")}</p><h2>${it.html}</h2>
+    <form id="f" autocomplete="off"><input id="ans" class="ans" autocapitalize="off" spellcheck="false" placeholder="Antwort eintippen"><button class="btn">Prüfen</button></form>
+    <div class="acc">${["é", "è", "ê", "à", "â", "ç", "î", "ï", "ô", "û", "ù", "ë"].map(c => `<button type="button" data-c="${c}">${c}</button>`).join("")}</div><div id="fb"></div></div>`;
+    const inp = $("#ans"); inp.focus();
+    app().querySelectorAll("[data-c]").forEach(b => b.onclick = () => { const p = inp.selectionStart ?? inp.value.length; inp.value = inp.value.slice(0, p) + b.dataset.c + inp.value.slice(inp.selectionEnd ?? p); inp.focus(); inp.setSelectionRange(p + 1, p + 1); });
+    $("#f").onsubmit = e => { e.preventDefault(); if ($("#f").dataset.done) { next(); return; } $("#f").dataset.done = 1;
+      const r = check(inp.value, it.a); const ok = r === "ok"; if (ok) right++;
+      log.push({ it, ok, given: inp.value }); inp.disabled = true;
+      $("#fb").innerHTML = `<div class="fb ${ok ? "y" : "n"}"><b>${ok ? "Richtig." : r === "accent" ? "Fast: Akzente prüfen!" : "Falsch."}</b> ${ok && it.a.length < 2 ? "" : "Lösung: <b>" + esc(it.a.join(" / ")) + "</b>"}${it.hint ? `<br><span class="small">${esc(it.hint)}</span>` : ""}</div><button class="btn" id="nx">${i + 1 < items.length ? "Weiter" : "Auswertung"}</button>`;
+      $("#nx").focus(); $("#nx").onclick = next; };
+  }
+  function next() { i++; i < items.length ? show() : end(); }
+  function end() { const score = Math.round(right / items.length * 100); onEnd(score, log);
+    app().innerHTML = `<p class="crumb">${back} / ${esc(title)}</p><h1>${score} %</h1><p class="lead">${right} von ${items.length} richtig · ungefähr Note ${noteOf(right / items.length)}.</p>
+    <p><a class="btn" href="#${window.__r}">Neue Runde</a> <a class="btn ghost" href="#plan">Plan</a></p>
+    ${log.some(l => !l.ok) ? `<h2>Deine Fehler</h2>${log.filter(l => !l.ok).map(l => `<div class="rev">${l.it.html}<br><span class="n">Deine Antwort: ${esc(l.given || "leer")}</span><br><span class="y">Richtig: ${esc(l.it.a.join(" / "))}</span>${l.it.hint ? `<br><span class="small">${esc(l.it.hint)}</span>` : ""}</div>`).join("")}` : ""}`; }
+  show();
+}
+
+// ---------- Konjugationstrainer ----------
+const TRAIN_MODES = {
+  pres: { label: "Présent", t: ["pres"] }, subj: { label: "Subjonctif", t: ["subj"] }, pc: { label: "Passé composé", t: ["pc"] },
+  imp: { label: "Imparfait", t: ["imp"] }, pqp: { label: "Plus-que-parfait", t: ["pqp"] }, fut: { label: "Futur", t: ["fut", "fp"] },
+  past: { label: "Alle Vergangenheiten", t: ["pc", "imp", "pqp"] }, all: { label: "Alle Zeiten", t: ["pres", "subj", "pc", "imp", "pqp", "fut", "fp"] },
+  hard: { label: "Schwer: nur unregelmässige Verben, alle Zeiten", t: ["pres", "subj", "pc", "imp", "pqp", "fut", "subj", "pc"], hard: true }
+};
+function viewTrainerList() {
+  app().innerHTML = `<h1>Konjugationstrainer</h1><p class="lead">Du bekommst Person, Verb und Zeit und tippst die Form ein (ohne Pronomen). Jede Runde: 12 neue Aufgaben aus ${VERBS.length} Verben. Akzente zählen, mit den Knöpfen unter dem Feld kannst du sie einfügen.</p>
+  <div class="list">${Object.entries(TRAIN_MODES).map(([k, m]) => { const b = best("tr_" + k); return `<a class="row" href="#trainer/${k}">${m.label}<span class="go">${b === null ? "" : "Bestwert " + b + " %"} →</span></a>`; }).join("")}</div>`;
+}
+const vowel = s => /^[aeéèêiîoôuûh]/i.test(s);
+function makeItem(v, tense, per) {
+  const forms = conj(v, tense, per);
+  let pron = per.p; if (pron === "je" && vowel(forms[0])) pron = "j'";
+  const que = tense === "subj" ? (/^[aeiouéèê]/.test(per.p) ? "qu'" : "que ") : "";
+  const g = v.aux === "être" && (tense === "pc" || tense === "pqp") && per.g === "x" ? " (m oder f)" : "";
+  return { html: `<span class="pron">${que}${pron}</span> … <span class="small">(${esc(v.inf)})</span>`, label: TENSES[tense] + g, a: forms, hint: TENSE_HINT[tense] + (v.aux === "être" && (tense === "pc" || tense === "pqp") ? " Dieses Verb steht mit être." : "") };
+}
+function startTrainer(mode) {
+  const m = TRAIN_MODES[mode]; const items = [];
+  const pool = m.hard ? VERBS.filter(x => x.g !== "reg") : VERBS;
+  for (let k = 0; k < (m.hard ? 15 : 12); k++) { const tense = pick(m.t); let v = pick(pool); if ((tense === "pc" || tense === "pqp") && k % 3 === 0) v = pick(pool.filter(x => x.aux === "être").length ? pool.filter(x => x.aux === "être") : VERBS); items.push(makeItem(v, tense, pick(PERS))); }
+  typeRound(items, "Trainer " + m.label, `<a href="#trainer">Trainer</a>`, score => { const b = best("tr_" + mode); if (b === null || score > b) S.set("best_tr_" + mode, score); });
+}
+
+// ---------- Lückensätze ----------
+function viewSatzList() {
+  app().innerHTML = `<h1>Lückensätze</h1><p class="lead">Wie in der Prüfung: Satz lesen, Zeit bestimmen, Verb richtig einsetzen. Pro Runde 8 Sätze in neuer Reihenfolge.</p>
+  <div class="list">${TOPICS.map(t => { const b = best("satz_" + t.id); return `<a class="row" href="#satz/${t.id}">${t.n} ${t.short}<span class="go">${b === null ? "" : "Bestwert " + b + " %"} →</span></a>`; }).join("")}
+  <a class="row" href="#satz/mix">Gemischt aus allen Themen<span class="go">${best("satz_mix") === null ? "" : "Bestwert " + best("satz_mix") + " %"} →</span></a></div>`;
+}
+function satzItem(s, t) { return { html: esc(s.q).replace("___", '<span class="gap">______</span>'), label: topic(t).short, a: s.a }; }
+function startSatz(t) {
+  const pool = t === "mix" ? TOPICS.flatMap(x => SATZ[x.id].map(s => satzItem(s, x.id))) : SATZ[t].map(s => satzItem(s, t));
+  typeRound(shuffle(pool).slice(0, t === "mix" ? 12 : 8), "Lückensätze " + (t === "mix" ? "gemischt" : topic(t).short), `<a href="#satz">Lückensätze</a>`, score => { const b = best("satz_" + t); if (b === null || score > b) S.set("best_satz_" + t, score); });
+}
+
+// ---------- Simulation ----------
+function viewSim() {
+  const hist = S.get("simhist", []);
+  app().innerHTML = `<h1>Prüfungssimulation</h1><p class="lead">Wie eine echte Prüfung: 14 Lückensätze aus allen Themen, 10 Formen ohne Kontext und 8 Multiple-Choice-Fragen zum Gebrauch. Jedes Mal andere Aufgaben. Timer 45 min, ohne Unterlagen.</p>
+  <p><button class="btn" id="go">Simulation starten</button></p>
+  ${hist.length ? `<h2>Bisherige Simulationen</h2><div class="tw"><table><tr><th>Datum</th><th>Resultat</th><th>Note ca.</th></tr>${hist.map(h => `<tr><td>${h.d}</td><td>${h.p} %</td><td>${h.n}</td></tr>`).join("")}</table></div>` : ""}`;
+  $("#go").onclick = runSim;
+}
+function runSim() {
+  const sat = shuffle(TOPICS.flatMap(x => SATZ[x.id].map(s => satzItem(s, x.id)))).slice(0, 14);
+  const forms = []; const tens = ["pres", "subj", "pc", "imp", "pqp", "fut", "fp", "subj", "pc", "fut"];
+  shuffle(tens).forEach(te => { let v = pick(VERBS); if ((te === "pc" || te === "pqp") && Math.random() < .5) v = pick(VERBS.filter(x => x.aux === "être")); forms.push(makeItem(v, te, pick(PERS))); });
+  const mc = shuffle(TOPICS.flatMap(x => allQ(x.id))).slice(0, 8);
+  const start = Date.now();
+  app().innerHTML = `<h1>Simulation</h1><div class="timer" id="tm">45:00</div>
+  <h2>Teil 1: Setze das Verb in der richtigen Form ein</h2>${sat.map((it, i) => `<div class="simq"><b>${i + 1}.</b> ${it.html}<br><input class="ans sm" data-s="${i}" autocapitalize="off" spellcheck="false"></div>`).join("")}
+  <h2>Teil 2: Konjugiere</h2>${forms.map((it, i) => `<div class="simq"><b>${i + 1}.</b> <span class="small">${esc(it.label)}</span> ${it.html}<br><input class="ans sm" data-f="${i}" autocapitalize="off" spellcheck="false"></div>`).join("")}
+  <h2>Teil 3: Wähle</h2>${mc.map((q, i) => { const o = shuffle(q.a.map((x, k) => ({ x, ok: k === 0 }))); q._o = o; return `<div class="simq"><b>${i + 1}. ${esc(q.q)}</b>${o.map((x, k) => `<label class="sopt"><input type="radio" name="m${i}" value="${k}"> ${esc(x.x)}</label>`).join("")}</div>`; }).join("")}
+  <p><button class="btn" id="sub">Abgeben</button></p>`;
+  window.__timer = setInterval(() => { const s = Math.max(0, 2700 - Math.floor((Date.now() - start) / 1000)); const el = $("#tm"); if (el) el.textContent = `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; }, 1000);
+  $("#sub").onclick = () => {
+    clearInterval(window.__timer); window.__timer = null;
+    const rows = []; let pts = 0, max = 0;
+    sat.forEach((it, i) => { const v = app().querySelector(`[data-s="${i}"]`).value; const ok = check(v, it.a) === "ok"; max++; if (ok) pts++; rows.push({ html: it.html, ok, given: v, sol: it.a.join(" / "), lab: it.label }); });
+    forms.forEach((it, i) => { const v = app().querySelector(`[data-f="${i}"]`).value; const ok = check(v, it.a) === "ok"; max++; if (ok) pts++; rows.push({ html: `${esc(it.label)}: ${it.html}`, ok, given: v, sol: it.a.join(" / "), lab: it.label }); });
+    const wrongIds = [], okIds = [];
+    mc.forEach((q, i) => { const r = app().querySelector(`input[name=m${i}]:checked`); const ok = r && q._o[+r.value].ok; max++; if (ok) { pts++; okIds.push(q.id); } else wrongIds.push(q.id); rows.push({ html: esc(q.q), ok, given: r ? q._o[+r.value].x : "", sol: q.a[0], lab: topic(q.t).short }); });
+    saveWrong(mc, wrongIds, okIds);
+    const pct = Math.round(pts / max * 100), n = noteOf(pts / max);
+    const h = S.get("simhist", []); const d = new Date(); h.unshift({ d: `${d.getDate()}.${d.getMonth() + 1}. ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`, p: pct, n }); S.set("simhist", h.slice(0, 10));
+    app().innerHTML = `<h1>${pct} %</h1><p class="lead">${pts} von ${max} Punkten in ${Math.round((Date.now() - start) / 60000)} min · geschätzte Note ${n}. ${pct >= 92 ? "Du bist ready." : pct >= 80 ? "Fast. Fehler unten nachlernen, dann Trainer 'alle Zeiten'." : "Kapitel mit den meisten Fehlern nochmals lesen, Trainer machen, dann neue Simulation."}</p>
+    <h2>Fehler</h2>${rows.filter(r => !r.ok).map(r => `<div class="rev">${r.html} <span class="small">(${esc(r.lab)})</span><br><span class="n">Deine Antwort: ${esc(r.given || "leer")}</span><br><span class="y">Richtig: ${esc(r.sol)}</span></div>`).join("") || "<p>Keine Fehler.</p>"}
+    <p><a class="btn" href="#sim">Zurück</a></p>`;
+  };
+}
+
+// ---------- Übungen (schwer) ----------
+const KLAB = { gap: "Setze ein", fix: "Korrigiere den Fehler (schreib nur die richtige Form)", trans: "Schreib den ganzen Satz", text: "Setze alle Verben ein" };
+function viewUebList() {
+  app().innerHTML = `<h1>Übungen (schwer)</h1><p class="lead">Nach jeder Theorie-Lektion: drei Übungsblätter pro Thema. Übung 1 = schwierige Lückensätze, Übung 2 = Text mit mehreren Lücken + Fehler korrigieren, Übung 3 = ganze Sätze umformen. Alles eintippen, dann alles auf einmal prüfen. Ziel: jedes Blatt über 90 %.</p>
+  <div class="tw"><table><tr><th>Thema</th><th></th></tr>${TOPICS.map(t => `<tr><td>${t.n} ${t.short}</td><td class="btns">${[1, 2, 3].map(n => { const b = best(`ueb_${t.id}_${n}`); return `<a class="btn sm ${b === null ? "" : b >= 90 ? "good" : "bad"}" href="#ueb/${t.id}/${n}">Ü${n}${b === null ? "" : " · " + b + "%"}</a>`; }).join("")}</td></tr>`).join("")}</table></div>`;
+}
+function viewUeb(t, n) {
+  const sheet = UEB[t][n - 1]; let idx = 0;
+  const field = (cls = "") => `<input class="ans sm ${cls}" data-i="${idx++}" autocapitalize="off" spellcheck="false">`;
+  const blanks = []; // {a, el}
+  const body = sheet.items.map((it, k) => {
+    if (it.k === "text") { const parts = it.q.split("___"); let h = ""; parts.forEach((p, j) => { h += esc(p); if (j < parts.length - 1) { blanks.push({ a: it.a[j], full: false }); h += field("inl"); } }); return `<div class="simq"><span class="small">${KLAB.text}</span><p class="txt">${h}</p></div>`; }
+    blanks.push({ a: it.a, full: it.k === "trans", h: it.h });
+    const q = it.k === "gap" ? esc(it.q).replace("___", '<span class="gap">______</span>') : esc(it.q);
+    return `<div class="simq"><span class="small">${KLAB[it.k]}</span><br><b>${k + 1}.</b> ${q}<br>${field(it.k === "trans" ? "wide" : "")}<div class="res"></div></div>`;
+  }).join("");
+  app().innerHTML = `<p class="crumb"><a href="#ueb">Übungen</a> / ${topic(t).short}</p><h1>${topic(t).short} · ${sheet.t}</h1>
+  <div class="tabs">${[1, 2, 3].map(m => `<a href="#ueb/${t}/${m}" class="${m === n ? "on" : ""}">Übung ${m}</a>`).join("")}</div>
+  <p class="small">Akzente: ${["é", "è", "ê", "à", "â", "ç", "î", "ô", "û", "ù", "ë", "«", "»"].map(c => `<button type="button" class="ch" data-c="${c}">${c}</button>`).join("")} (fügt ins zuletzt angeklickte Feld ein)</p>
+  ${body}<p><button class="btn" id="chk">Alles prüfen</button></p><div id="sum"></div>`;
+  let last = null; app().querySelectorAll("input.ans").forEach(i => i.addEventListener("focus", () => last = i));
+  app().querySelectorAll(".ch").forEach(b => b.onclick = () => { if (!last) return; const p = last.selectionStart ?? last.value.length; last.value = last.value.slice(0, p) + b.dataset.c + last.value.slice(last.selectionEnd ?? p); last.focus(); last.setSelectionRange(p + 1, p + 1); });
+  $("#chk").onclick = () => {
+    let right = 0;
+    app().querySelectorAll("input.ans").forEach(inp => { const b = blanks[+inp.dataset.i]; const r = b.full ? checkFull(inp.value, b.a) : checkFull(inp.value, b.a);
+      const ok = r === "ok"; if (ok) right++; inp.classList.remove("okk", "nok"); inp.classList.add(ok ? "okk" : "nok");
+      const res = inp.parentElement.querySelector(".res");
+      const msg = ok ? "" : `${r === "accent" ? "Fast: Akzente!" : "Lösung:"} <b>${esc(b.a.join(" / "))}</b>${b.h ? `<br><span class="small">${esc(b.h)}</span>` : ""}`;
+      if (res) res.innerHTML = ok ? '<span class="y">richtig</span>' : `<span class="n">${msg}</span>`;
+      else { inp.title = b.a.join(" / "); let s = inp.nextElementSibling; if (!s || !s.classList.contains("sol")) { s = document.createElement("span"); s.className = "sol"; inp.after(s); } s.innerHTML = ok ? "" : ` <span class="n">(${esc(b.a.join(" / "))})</span>`; } });
+    const score = Math.round(right / blanks.length * 100); const k = `ueb_${t}_${n}`; const b = best(k); if (b === null || score > b) S.set("best_" + k, score);
+    $("#sum").innerHTML = `<div class="fb ${score >= 90 ? "y" : "n"}"><b>${right} von ${blanks.length} richtig (${score} %).</b> ${score >= 90 ? "Sehr gut." : "Lies die Lösungen, schreib die falschen Formen 3-mal ab und mach das Blatt morgen nochmals."}</div>${n < 3 ? `<a class="btn" href="#ueb/${t}/${n + 1}">Weiter zu Übung ${n + 1}</a>` : `<a class="btn" href="#quiz/${t}/A">Weiter zum Quiz</a>`}`;
+  };
+}
+
+// ---------- Merkblatt ----------
+function viewMerk() { app().innerHTML = `<h1>Merkblatt</h1><p class="lead">Alles Wichtige auf einer Seite, für die letzten Tage und den Prüfungsmorgen.</p>${MERK}`; }
+
+route();
+</script>
+</body>
+</html>

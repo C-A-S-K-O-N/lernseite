@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cas · Lernseite</title>
+<style>
+:root{--ink:#161616;--mute:#6b6b6b;--line:#e4e4e4;--acc:#1f4fa3}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+main{max-width:860px;margin:0 auto;padding:32px 20px 80px}
+h1{font-size:30px;margin:0 0 6px;letter-spacing:-.01em}
+h2{font-size:18px;margin:34px 0 10px}
+.lead{color:#444;margin:0 0 22px}
+.sub{display:flex;align-items:center;gap:18px;padding:18px 4px;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.sub:last-child{border-bottom:1px solid var(--line)}
+.sub:hover .name{text-decoration:underline}
+.cnt{min-width:64px;text-align:center;font-size:12px;color:var(--mute)}
+.cnt b{display:block;font-size:30px;line-height:1;color:var(--ink)}
+.name{font-size:19px;font-weight:600}
+.meta{font-size:14px;color:var(--mute)}
+.go{margin-left:auto;font-size:14px;color:var(--acc)}
+.today{border:1px solid var(--ink);padding:2px 8px;font-size:12px;border-radius:12px;margin-left:8px;font-weight:400}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+td,th{border-bottom:1px solid var(--line);padding:7px 10px 7px 0;text-align:left;vertical-align:top}
+th{font-size:13px;color:var(--mute);font-weight:600}
+tr.past td{color:#aaa}
+tr.now td{font-weight:600}
+.small{font-size:13px;color:var(--mute)}
+.empty{padding:20px 0;color:var(--mute)}
+</style>
+</head>
+<body>
+<main>
+<h1>Lernseite</h1>
+<p class="lead">Alle Fächer mit kommender Prüfung. Nach der Prüfung verschwindet das Fach automatisch. Fortschritt wird in diesem Browser gespeichert.</p>
+<div id="subs"></div>
+<h2>Lernblöcke diese Woche</h2>
+<div style="overflow-x:auto"><table id="blocks"></table></div>
+<p class="small">Gleiche Zeiten wie in deinem Google Kalender. Wenn du einen Block verschiebst, verschieb ihn dort.</p>
+</main>
+<script>
+const SUBJECTS = [
+ {name:"Französisch", file:"franz.html", date:"2026-11-24", when:"Di 24.11.", desc:"Présent, Subjonctif, Passé composé / Imparfait / Plus-que-parfait, Futur"},
+ {name:"EF Sport", file:"ef.html", date:"2026-11-25", when:"Mi 25.11.", desc:"Energiebereitstellung und motorische Fähigkeiten · 60 min schriftlich"},
+ {name:"Mathematik mündlich", file:"mathe.html", date:"2026-11-25", when:"Mi 25.11.", desc:"Differentialrechnung 2-4, Stochastik 2 · 15 min mündlich"}
+];
+const BLOCKS = [
+ ["2026-11-18","19:30-20:15","EF Sport","Energiebereitstellung"],
+ ["2026-11-18","20:30-21:00","Französisch","Présent"],
+ ["2026-11-19","17:05-17:50","Französisch","Passé composé + Imparfait"],
+ ["2026-11-19","19:30-20:30","EF Sport","Laktat und Schwellen"],
+ ["2026-11-20","08:30-10:30","Mathematik","Zug: Ableitung + alle Ableitungsregeln"],
+ ["2026-11-20","10:45-11:45","Französisch","Zug: PC oder Imparfait + Plus-que-parfait"],
+ ["2026-11-20","12:00-13:00","EF Sport","Zug: Ausdauer"],
+ ["2026-11-20","13:15-13:45","Mix","Zug: Karteikarten Mathe + Trainer Französisch"],
+ ["2026-11-21","10:00-11:00","EF Sport","Koordination und Schnelligkeit"],
+ ["2026-11-21","11:15-12:15","Französisch","Futur"],
+ ["2026-11-21","14:00-15:00","Mathematik","sin, cos, e, ln"],
+ ["2026-11-22","10:00-11:00","EF Sport","Kraft und Beweglichkeit"],
+ ["2026-11-22","11:15-12:15","Französisch","Subjonctif"],
+ ["2026-11-22","14:00-15:00","Mathematik","Stochastik"],
+ ["2026-11-23","16:30-17:15","Mathematik","Auto: Präsentationen + Prüferfragen"],
+ ["2026-11-23","17:30-18:45","EF Sport","Übungstag 1"],
+ ["2026-11-23","19:15-20:15","Französisch","Generalprobe"],
+ ["2026-11-24","07:15-07:30","Französisch","Merkblatt"],
+ ["2026-11-24","17:30-19:00","EF Sport","Generalprobe"],
+ ["2026-11-24","19:15-20:15","Mathematik","Generalprobe mündlich"],
+ ["2026-11-25","07:00-07:15","EF Sport","Merkblatt"],
+ ["2026-11-25","07:15-07:35","Mathematik","Merkblatt + Präsentation laut"]
+];
+const pad = n => String(n).padStart(2, "0");
+const now = new Date(); const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+const days = d => Math.round((new Date(d + "T00:00:00") - new Date(today + "T00:00:00")) / 86400000);
+const active = SUBJECTS.filter(s => s.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+document.getElementById("subs").innerHTML = active.length ? active.map(s => { const d = days(s.date);
+  return `<a class="sub" href="${s.file}"><div class="cnt"><b>${d}</b>${d === 1 ? "Tag" : "Tage"}</div><div><div class="name">${s.name}${d === 0 ? '<span class="today">heute</span>' : ""}</div><div class="meta">${s.when} · ${s.desc}</div></div><span class="go">öffnen →</span></a>`; }).join("")
+  : `<p class="empty">Gerade keine Prüfung. Schick den nächsten Prüfungsstoff in den Chat.</p>`;
+const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+const fmt = d => { const x = new Date(d + "T00:00:00"); return `${WD[x.getDay()]} ${x.getDate()}.${x.getMonth() + 1}.`; };
+const bl = BLOCKS.filter(b => b[0] >= today && (b[2] === "Mix" || active.some(s => s.name.startsWith(b[2].slice(0, 6)))));
+document.getElementById("blocks").innerHTML = bl.length ? `<tr><th>Tag</th><th>Zeit</th><th>Fach</th><th>Inhalt</th></tr>` + bl.map(b => `<tr class="${b[0] === today ? "now" : ""}"><td>${fmt(b[0])}</td><td>${b[1]}</td><td>${b[2]}</td><td>${b[3]}</td></tr>`).join("") : `<tr><td class="empty">Keine geplanten Blöcke.</td></tr>`;
+</script>
+</body>
+</html>

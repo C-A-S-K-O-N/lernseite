@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathe mündlich · Lernguide</title>
+<style>
+:root{--ink:#161616;--mute:#6b6b6b;--line:#e4e4e4;--soft:#f7f7f5;--acc:#1f4fa3;--ok:#1d7a3e;--no:#b3261e;}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+.top{max-width:920px;margin:0 auto;padding:10px 20px 0;display:flex;align-items:baseline;gap:12px}
+.top b{font-size:15px;letter-spacing:.02em}
+.top span{color:var(--mute);font-size:13px}
+#nav{max-width:920px;margin:0 auto;padding:0 12px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav a{padding:10px 10px 9px;color:var(--mute);text-decoration:none;font-size:14px;white-space:nowrap;border-bottom:2px solid transparent}
+#nav a.on{color:var(--ink);border-bottom-color:var(--ink)}
+main{max-width:920px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 10px;letter-spacing:-.01em}
+h2{font-size:19px;margin:30px 0 10px}
+h3{font-size:16px;margin:26px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+a{color:var(--acc)}
+.lead{color:#333;max-width:720px}
+.small{font-size:13px;color:var(--mute)}
+.crumb{font-size:13px;color:var(--mute);margin:0}
+.crumb a{color:var(--mute)}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.hero p{margin:0;color:var(--mute);font-size:14px}
+.count{text-align:center;font-size:12px;color:var(--mute);min-width:70px}
+.count span{display:block;font-size:40px;font-weight:700;color:var(--ink);line-height:1}
+.bar{height:3px;background:var(--line);margin:14px 0 4px}
+.bar div{height:3px;background:var(--ink);transition:width .3s}
+.days{display:grid;gap:12px;margin-top:18px}
+.day{border:1px solid var(--line);padding:12px 14px}
+.dh{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+.dh span{color:#333}
+.dh em{margin-left:auto;font-style:normal;font-size:13px;color:var(--mute)}
+.task{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid #f0f0f0;font-size:15px;cursor:pointer}
+.task input{margin-top:5px;accent-color:var(--ink)}
+.task span{flex:1}
+.task input:checked+span{color:var(--mute);text-decoration:line-through}
+.go{font-size:13px;white-space:nowrap;text-decoration:none}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:8px 0}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;text-align:left;vertical-align:top}
+th{font-weight:600;font-size:13px;color:var(--mute)}
+.tw{overflow-x:auto}
+table.data td,table.data th{padding:6px 10px;white-space:nowrap;text-align:center}
+table.data th{text-align:left}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute);margin:1px}
+.pill.good,.btn.good{border-color:var(--ok);color:var(--ok)}
+.pill.bad,.btn.bad{border-color:var(--no);color:var(--no)}
+.btn{display:inline-block;font:inherit;font-size:14px;padding:8px 14px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;margin:3px 4px 3px 0;border-radius:3px}
+.btn.ghost,.btn.sm,.btn.good,.btn.bad{background:#fff;color:var(--ink)}
+.btn.sm{font-size:13px;padding:5px 10px;border-color:var(--line)}
+.btn.sm.on{background:var(--ink);color:#fff}
+.btns{white-space:nowrap}
+.list .row{display:flex;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
+.list .row b{width:22px;color:var(--mute)}
+.list .row .go{margin-left:auto}
+.tag{font-size:11px;color:var(--mute);border:1px solid var(--line);padding:1px 6px;border-radius:10px}
+.how{border-left:2px solid var(--ink);padding:4px 0 4px 14px;margin:14px 0;font-size:15px}
+.how ol{margin:6px 0 0;padding-left:20px}
+.note{font-size:14px;color:var(--mute);border:1px solid var(--line);padding:10px 12px;margin:10px 0}
+.formula{font-family:Georgia,serif;font-size:17px;padding:6px 0}
+.chapter ul,.chapter ol{padding-left:20px}
+.chapter li{margin:3px 0}
+.after{margin-top:30px;padding-top:16px;border-top:1px solid var(--ink)}
+.after b{display:block;margin-bottom:8px}
+.pn{display:flex;justify-content:space-between;margin-top:26px;font-size:14px}
+.qhead{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:10px}
+.qcard h2{font-size:20px;margin:22px 0 14px;line-height:1.35}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;font:inherit;font-size:15.5px;background:#fff;border:1px solid var(--line);padding:12px 14px;cursor:pointer;border-radius:3px;color:var(--ink)}
+.opt:hover{border-color:#999}
+.opt span{font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:50%;width:22px;height:22px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.opt.right{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.opt.wrong{border-color:var(--no);box-shadow:inset 3px 0 0 var(--no)}
+.fb{margin:14px 0;padding:10px 14px;border:1px solid var(--line);font-size:15px}
+.fb.y b,.y{color:var(--ok)}
+.fb.n b,.n{color:var(--no)}
+.rev{border-top:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.tabs a{font-size:13px;padding:5px 10px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute)}
+.tabs a.on{border-color:var(--ink);color:var(--ink)}
+svg{width:100%;height:auto;display:block}
+.chart{max-width:640px;border:1px solid var(--line);margin:12px 0}
+.ax{stroke:#222;stroke-width:1.2}
+.grid{stroke:#eee;stroke-width:1}
+.lb{font-size:11px;fill:#555;font-family:inherit}
+.dash{stroke:#888;stroke-dasharray:4 4;stroke-width:1}
+.c1{stroke:#b3261e;fill:none;stroke-width:2}
+.c2{stroke:#1d7a3e;fill:none;stroke-width:2}
+.c3{stroke:#1f4fa3;fill:none;stroke-width:2}
+.c4{stroke:#2e9e5b;fill:none;stroke-width:2}
+.c5{stroke:#222;fill:none;stroke-width:2}
+.pt{fill:#1f4fa3}
+.mark{fill:none;stroke:#161616;stroke-width:2}
+rect.blk{fill:#d9d9d4;stroke:#999}
+.guess{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:10px 0}
+.guess label{font-size:13px;color:var(--mute);display:flex;flex-direction:column;gap:4px}
+.guess input{font:inherit;padding:7px 9px;border:1px solid var(--line);width:130px}
+.drawcard{border-top:1px solid var(--line);padding:14px 0}
+.drawcard h2{font-size:17px;margin:0 0 6px}
+.sol{margin-top:10px}
+.sol svg{max-width:520px;border:1px solid var(--line)}
+.state{font-size:12px;margin-left:8px}
+.state.y{color:var(--ok)}.state.n{color:var(--no)}
+.simq{border-top:1px solid var(--line);padding:12px 0}
+.sopt{display:block;padding:4px 0 4px 4px;font-size:15px;cursor:pointer}
+.timer{position:sticky;top:90px;float:right;font-variant-numeric:tabular-nums;border:1px solid var(--ink);padding:4px 10px;background:#fff;font-size:15px}
+.ans{font:inherit;font-size:18px;padding:10px 12px;border:1px solid #bbb;width:100%;max-width:420px;margin:12px 8px 6px 0;border-radius:3px}
+.ans.sm{font-size:16px;padding:7px 10px;margin:6px 0 0;max-width:320px}
+.ans:disabled{background:#fafafa}
+.acc{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0}
+.acc button{font:inherit;font-size:15px;width:34px;height:32px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer}
+.gap{display:inline-block;border-bottom:1.5px solid var(--ink);min-width:70px;color:transparent}
+.pron{font-weight:700}
+table.conj td,table.conj th{white-space:nowrap}
+.ans.inl{display:inline-block;width:170px;margin:2px 4px;font-size:15px;padding:4px 7px}
+.ans.wide{max-width:640px}
+.ans.okk{border-color:var(--ok);background:#f4faf6}.ans.nok{border-color:var(--no);background:#fdf5f4}
+.txt{line-height:2.3;font-size:16px}
+.res{font-size:14px;margin-top:4px}
+.ch{font:inherit;font-size:14px;min-width:28px;height:28px;border:1px solid var(--line);background:#fff;border-radius:3px;cursor:pointer;margin:1px}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.92em;line-height:1.25}
+.fr>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+.fr>span:last-child{padding:0 3px}
+.ol{border-top:1px solid currentColor;padding-top:1px}
+.formula{font-size:17px;padding:8px 0;font-family:inherit}
+.card{border:1px solid var(--ink);min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;margin:14px 0;cursor:pointer;font-size:20px;border-radius:4px}
+.card .back{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:18px;color:#333;width:100%}
+.timer.big{position:static;float:none;display:inline-block;font-size:28px;padding:6px 14px;margin:6px 0}
+.timer.over{color:var(--no);border-color:var(--no)}
+.cues{font-size:18px;line-height:1.9}
+.step{border-left:2px solid var(--ink);padding:2px 0 2px 14px;margin:14px 0}
+.step p{margin:4px 0}
+.hide{display:none}
+.sol{border-left:2px solid var(--ok);padding:6px 12px;margin:8px 0;font-size:15px}
+.ans.okk{border-color:var(--ok);background:#f4faf6}.ans.nok{border-color:var(--no);background:#fdf5f4}
+.btn.on{background:var(--ink);color:#fff}
+@media (max-width:600px){h1{font-size:24px}main{padding:18px 16px 70px}.count span{font-size:32px}.btns{white-space:normal}th,td{padding:7px 8px 7px 0}}
+.home{font-size:13px;text-decoration:none;margin-right:6px}
+</style>
+</head>
+<body>
+<header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>Mathe mündlich</b><span>Prüfung Mi 25.11.2026</span></div><nav id="nav"></nav></header>
+<main id="app"></main>
+<script>
+const EXAM_DATE = "2026-11-25";
+const fr = (a, b) => `<span class="fr"><span>${a}</span><span>${b}</span></span>`;
+const sq = x => `√<span class="ol">${x}</span>`;
+const LIM = `lim<sub>h→0</sub>`;
+
+const TOPICS = [
+{id:"d2", n:1, title:"Die Ableitung (Diff. 2)", short:"Ableitung"},
+{id:"d3", n:2, title:"Weitere Ableitungsregeln (Diff. 3)", short:"Ableitungsregeln"},
+{id:"d4", n:3, title:"Weitere Ableitungsfunktionen (Diff. 4)", short:"sin, e, ln"},
+{id:"st", n:4, title:"Stochastik 2 (bis S. 14) + Einstiegsaufgaben", short:"Stochastik"}
+];
+
+const CHAPTERS = {
+d2: `
+<div class="how"><b>So lernst du (ca. 40 min)</b><ol><li>Lies das Kapitel und sag jede Definition laut, ohne hinzuschauen.</li><li>Rechne die Herleitung von (x²)' und (x³)' mit der h-Methode auf Papier.</li><li><a href="#" data-go="cards/d2">Karteikarten</a>, dann <a href="#" data-go="ueb/d1">Übungsblatt 1</a>.</li></ol></div>
+<h3>Differenzenquotient und Differentialquotient</h3>
+<p><b>Differenzenquotient</b> = Steigung der <b>Sekante</b> durch (x₀, f(x₀)) und (x, f(x)): ${fr("f(x) − f(x₀)", "x − x₀")} oder ${fr("f(x₀+h) − f(x₀)", "h")}</p>
+<p><b>Differentialquotient (Ableitung an der Stelle x₀)</b> = Steigung der <b>Tangente</b>: Lässt man x gegen x₀ (bzw. h gegen 0) gehen, wird die Sekante zur Tangente.</p>
+<p class="formula">f'(x₀) = lim<sub>x→x₀</sub> ${fr("f(x) − f(x₀)", "x − x₀")} = ${LIM} ${fr("f(x₀+h) − f(x₀)", "h")}</p>
+<p>f heisst <b>differenzierbar</b> an der Stelle x₀, wenn dieser Grenzwert existiert. Gegenbeispiel: f(x) = |x| hat bei x = 0 einen Knick. Von links ist die Steigung −1, von rechts +1, es gibt keine eindeutige Tangente → nicht differenzierbar.</p>
+<h3>Ableitungsfunktion und graphisches Ableiten</h3>
+<p>Ordnet man jeder Stelle x die Steigung f'(x) zu, erhält man die <b>Ableitungsfunktion f'</b>. Graphisches Differenzieren:</p>
+<div class="tw"><table><tr><th>Graph von f</th><th>Graph von f'</th></tr>
+<tr><td>Extrempunkt (Hoch-/Tiefpunkt), waagrechte Tangente</td><td>Nullstelle</td></tr>
+<tr><td>Wendepunkt (stärkste Steigung)</td><td>Extrempunkt</td></tr>
+<tr><td>f steigt</td><td>f' liegt über der x-Achse (f' > 0)</td></tr>
+<tr><td>f fällt</td><td>f' liegt unter der x-Achse (f' < 0)</td></tr>
+<tr><td>Polynom vom Grad n</td><td>Polynom vom Grad n − 1</td></tr></table></div>
+<h3>Rechnerisch ableiten (h-Methode)</h3>
+<p>Beispiel f(x) = x² + 2x: ${fr("(x+h)² + 2(x+h) − x² − 2x", "h")} = ${fr("2xh + h² + 2h", "h")} = 2x + h + 2 → <b>f'(x) = 2x + 2</b></p>
+<h3>Elementare Ableitungsregeln</h3>
+<div class="tw"><table><tr><th>Regel</th><th>Formel</th><th>Beispiel</th></tr>
+<tr><td>Konstante</td><td>f(x) = c → f'(x) = 0</td><td>(17)' = 0, (π²)' = 0</td></tr>
+<tr><td>Potenzregel</td><td>(xⁿ)' = n·xⁿ⁻¹</td><td>(x⁷)' = 7x⁶</td></tr>
+<tr><td>Faktorregel</td><td>(c·f(x))' = c·f'(x)</td><td>(3x⁵)' = 15x⁴</td></tr>
+<tr><td>Summenregel</td><td>(f(x) + g(x))' = f'(x) + g'(x)</td><td>(x⁴ + x²)' = 4x³ + 2x</td></tr></table></div>
+<p><b>Herleitung Potenzregel:</b> (x+h)ⁿ = xⁿ + n·xⁿ⁻¹·h + (Terme mit h², h³, ...). Im Differenzenquotient fällt xⁿ weg, man teilt durch h, und für h → 0 bleibt nur n·xⁿ⁻¹. Binomische Formeln: (x+h)² = x² + 2xh + h², (x+h)³ = x³ + 3x²h + 3xh² + h³.</p>
+<p><b>Herleitung Summenregel:</b> ${LIM} ${fr("f(x+h) + g(x+h) − f(x) − g(x)", "h")} = ${LIM} ${fr("f(x+h) − f(x)", "h")} + ${LIM} ${fr("g(x+h) − g(x)", "h")} = f'(x) + g'(x)</p>
+`,
+d3: `
+<div class="how"><b>So lernst du (ca. 50 min)</b><ol><li>Lerne die vier Regeln als Formel und als Merksatz.</li><li>Leite die Quotientenregel aus der Produktregel selbst her (Papier).</li><li><a href="#" data-go="ueb/d2">Übungsblatt 2</a> und <a href="#" data-go="quiz/B">Quiz B</a>.</li></ol></div>
+<h3>Ableitung von √x und 1/x</h3>
+<p>(${sq("x")})' = ${fr("1", "2" + sq("x"))} &nbsp;&nbsp; (${fr("1", "x")})' = −${fr("1", "x²")}</p>
+<p>Da ${sq("x")} = x<sup>1/2</sup> und ${fr("1", "x")} = x<sup>−1</sup>, passt das zur Potenzregel: <b>Die Potenzregel gilt für alle reellen Exponenten.</b> (Der Beweis braucht die Kettenregel und ln bzw. eˣ.) Beispiele: (x⁻¹)' = −x⁻², (x⁻³⁴)' = −34x⁻³⁵, (x<sup>1/3</sup>)' = ⅓x<sup>−2/3</sup>.</p>
+<p>h-Methode für √x: mit ${sq("x+h")} + ${sq("x")} erweitern → ${fr("h", "h(" + sq("x+h") + " + " + sq("x") + ")")} → ${fr("1", "2" + sq("x"))}. Für 1/x: auf gleichen Nenner bringen → ${fr("−h", "x(x+h)h")} → −${fr("1", "x²")}.</p>
+<h3>Produktregel</h3>
+<p class="formula">p(x) = f(x)·g(x) &nbsp;⇒&nbsp; p'(x) = f'(x)·g(x) + f(x)·g'(x)</p>
+<p><b>Achtung:</b> (f·g)' ≠ f'·g'. Gegenbeispiel: x²·x³ = x⁵ → 5x⁴, aber 2x·3x² = 6x³.</p>
+<p><b>Beweis (Nullergänzung):</b> Im Zähler −f(x)g(x+h) + f(x)g(x+h) einfügen (= 0):<br>${fr("p(x+h) − p(x)", "h")} = ${fr("f(x+h) − f(x)", "h")}·g(x+h) + f(x)·${fr("g(x+h) − g(x)", "h")} → f'(x)·g(x) + f(x)·g'(x)<br>(g(x+h) → g(x), weil g differenzierbar und damit stetig ist).</p>
+<p>Beispiele: (x·${sq("x")})' = ${sq("x")} + x·${fr("1", "2" + sq("x"))} = ${fr("3", "2")}${sq("x")} &nbsp;·&nbsp; ((1−x³)(2+2x+2x²))' = −3x²(2+2x+2x²) + (1−x³)(2+4x)</p>
+<h3>Quotientenregel</h3>
+<p class="formula">(${fr("g(x)", "h(x)")})' = ${fr("g'(x)·h(x) − g(x)·h'(x)", "h(x)²")}, h(x) ≠ 0</p>
+<p>Merksatz: <b>"Ableitung Zähler mal Nenner minus Zähler mal Ableitung Nenner, durch Nenner im Quadrat"</b> (NAZ − ZAN durch N²). Die Reihenfolge im Zähler ist wichtig wegen dem Minus.</p>
+<p><b>Herleitung:</b> f = ${fr("g", "h")} → g = f·h → Produktregel: g' = f'·h + f·h' → f' = ${fr("g' − f·h'", "h")} → f durch ${fr("g", "h")} ersetzen und auf einen Bruchstrich: f' = ${fr("g'·h − g·h'", "h²")}</p>
+<p>Beispiel: (${fr("3x", "x−3")})' = ${fr("3(x−3) − 3x·1", "(x−3)²")} = ${fr("−9", "(x−3)²")} &nbsp;·&nbsp; Spezialfall: (${fr("1", "h")})' = ${fr("−h'", "h²")}</p>
+<h3>Kettenregel</h3>
+<p>Verkettung k(x) = f(g(x)): äussere Funktion f, innere Funktion g. Beispiel (2x+1)³: f(x) = x³, g(x) = 2x+1.</p>
+<p class="formula">k'(x) = f'(g(x))·g'(x) &nbsp;&nbsp; "äussere Ableitung mal innere Ableitung"</p>
+<p>Beispiele: ((2x+1)³)' = 3(2x+1)²·2 = 6(2x+1)² &nbsp;·&nbsp; (${sq("x+1")})' = ${fr("1", "2" + sq("x+1"))} &nbsp;·&nbsp; (${fr("1", "−3x²−7")})' = −${fr("1", "(−3x²−7)²")}·(−6x) = ${fr("6x", "(−3x²−7)²")}</p>
+<p><b>Beweis-Idee:</b> Differenzenquotient mit ${fr("g(x+h) − g(x)", "g(x+h) − g(x)")} = 1 erweitern → ${fr("f(g(x+h)) − f(g(x))", "g(x+h) − g(x)")}·${fr("g(x+h) − g(x)", "h")} → f'(g(x))·g'(x).</p>
+`,
+d4: `
+<div class="how"><b>So lernst du (ca. 40 min)</b><ol><li>Lerne die Tabelle unten auswendig (Karteikarten).</li><li>Rechne die Herleitung von (eˣ)' und (ln x)' einmal nach.</li><li><a href="#" data-go="ueb/d3">Übungsblatt 3</a> und <a href="#" data-go="quiz/C">Quiz C</a>.</li></ol></div>
+<h3>Alle Ableitungen auf einen Blick</h3>
+<div class="tw"><table><tr><th>f(x)</th><th>f'(x)</th></tr>
+<tr><td>sin(x)</td><td>cos(x)</td></tr><tr><td>cos(x)</td><td>−sin(x)</td></tr>
+<tr><td>tan(x) = ${fr("sin(x)", "cos(x)")}</td><td>${fr("1", "cos²(x)")} = 1 + tan²(x)</td></tr>
+<tr><td>eˣ</td><td>eˣ</td></tr><tr><td>aˣ = e<sup>x·ln(a)</sup></td><td>ln(a)·aˣ</td></tr>
+<tr><td>ln(x)</td><td>${fr("1", "x")}</td></tr><tr><td>logₐ(x) = ${fr("ln(x)", "ln(a)")}</td><td>${fr("1", "x·ln(a)")}</td></tr></table></div>
+<h3>Herleitungen (Ideen)</h3>
+<ul>
+<li><b>sin:</b> Differenzialquotient + Additionstheorem sin(x+h) = sin x cos h + cos x sin h, dann ${LIM} ${fr("sin h", "h")} = 1 und ${LIM} ${fr("cos h − 1", "h")} = 0 → cos(x). Winkel immer im <b>Bogenmass</b>!</li>
+<li><b>tan:</b> Quotientenregel: ${fr("cos·cos − sin·(−sin)", "cos²")} = ${fr("cos² + sin²", "cos²")} = ${fr("1", "cos²")} (weil sin² + cos² = 1).</li>
+<li><b>eˣ:</b> ${fr("e<sup>x+h</sup> − eˣ", "h")} = eˣ·${fr("e<sup>h</sup> − 1", "h")} und für kleine h gilt e<sup>h</sup> ≈ 1 + h → eˣ. eˣ ist die einzige Funktion (bis auf Faktor), die ihre eigene Ableitung ist. e = ${LIM.replace("h→0", "n→∞")} (1 + 1/n)ⁿ ≈ 2.718.</li>
+<li><b>aˣ:</b> aˣ = e<sup>x·ln a</sup> → Kettenregel → ln(a)·aˣ.</li>
+<li><b>ln:</b> e<sup>ln x</sup> = x auf beiden Seiten ableiten: e<sup>ln x</sup>·(ln x)' = 1 → x·(ln x)' = 1 → (ln x)' = ${fr("1", "x")}.</li>
+<li><b>logₐ:</b> Basiswechsel logₐ x = ${fr("ln x", "ln a")} → ${fr("1", "ln a")}·${fr("1", "x")}.</li></ul>
+<p>Beispiele: (2eˣ)' = 2eˣ · (e<sup>2x+1</sup>)' = 2e<sup>2x+1</sup> · (e<sup>√x</sup>)' = e<sup>√x</sup>·${fr("1", "2" + sq("x"))} · (3ˣ)' = ln3·3ˣ · (−4ˣ)' = −ln4·4ˣ · (2<sup>x+2</sup>)' = ln2·2<sup>x+2</sup> · (ln(2x))' = ${fr("1", "x")} · (2ln(x+1))' = ${fr("2", "x+1")} · (log₃x)' = ${fr("1", "x·ln3")}</p>
+`,
+st: `
+<div class="how"><b>So lernst du (ca. 60 min)</b><ol><li>Einstieg: Pfadregeln und "mindestens einmal" wiederholen.</li><li>Definitionen Zufallsvariable, Verteilung, Erwartungswert, Varianz, Standardabweichung auswendig.</li><li>Aufgaben aus dem Skript nochmals ohne Lösung rechnen: <a href="#" data-go="ueb/s1">Stochastik-Blatt 1</a>, dann Blatt 2.</li></ol></div>
+<h3>2.0 Einstieg (Wiederholung)</h3>
+<ul><li><b>Pfadregel 1 (Produkt):</b> Wahrscheinlichkeiten entlang eines Pfades im Baumdiagramm multiplizieren.</li>
+<li><b>Pfadregel 2 (Summe):</b> Wahrscheinlichkeiten mehrerer Pfade, die zum Ereignis gehören, addieren.</li>
+<li><b>Gegenereignis:</b> P(Ā) = 1 − P(A). Nützlich bei "mindestens einmal": P(mind. 1) = 1 − P(keinmal).</li>
+<li><b>Mit / ohne Zurücklegen:</b> KELLER, 4 Karten ohne Zurücklegen: P(LEER) = ${fr("2", "6")}·${fr("2", "5")}·${fr("1", "4")}·${fr("1", "3")} = ${fr("1", "90")}; mit Zurücklegen: ${fr("2·2·2·1", "6⁴")} = ${fr("1", "162")}.</li>
+<li><b>Mindestens-Aufgabe:</b> Blutgruppe AB 4 %. Wie viele Personen für P(mind. eine AB) ≥ 90 %? 1 − 0.96ⁿ ≥ 0.9 → 0.96ⁿ ≤ 0.1 → n ≥ ${fr("ln 0.1", "ln 0.96")} ≈ 56.4 → <b>57 Personen</b> (Ungleichung dreht sich, weil ln 0.96 < 0).</li>
+<li><b>Würfelspiel Summe 8:</b> P(8) = ${fr("5", "36")}; sonst zweite Chance mit aufeinanderfolgenden Augenzahlen (${fr("10", "36")}): P(Gewinn) = ${fr("5", "36")} + ${fr("31", "36")}·${fr("10", "36")} ≈ 0.378.</li></ul>
+<h3>Zufallsvariable und Verteilung</h3>
+<p><b>Definition 1:</b> Eine <b>Zufallsvariable</b> (Zufallsgrösse) X ordnet jedem Ergebnis eines Zufallsversuchs eine Zahl zu. Mögliche Werte: x₁, x₂, ..., xₙ.</p>
+<p><b>Definition 2:</b> Ordnet man jedem Wert xᵢ die Wahrscheinlichkeit P(X = xᵢ) = pᵢ zu, erhält man die <b>Wahrscheinlichkeitsverteilung</b> von X (als Tabelle oder Säulendiagramm).</p>
+<p>Es gilt immer: <b>p₁ + p₂ + ... + pₙ = 1</b>. Werte, die nicht vorkommen, haben P = 0.</p>
+<p>Beispiel: Zwei Würfel, keine Eins → −1 Fr., sonst +1 Fr. pro Eins: P(X = 2) = ${fr("1", "36")}, P(X = 1) = ${fr("10", "36")}, P(X = −1) = ${fr("25", "36")}.</p>
+<h3>Erwartungswert</h3>
+<p class="formula">E(X) = μ = x₁·p₁ + x₂·p₂ + ... + xₙ·pₙ = Σ xᵢ·pᵢ</p>
+<p>Gewichtetes Mittel der Werte. Bei Spielen: durchschnittlicher Gewinn pro Spiel <b>auf lange Sicht</b>. Herleitung: Mittelwert = Σ xᵢ·${fr("Hᵢ", "n")}, und die relative Häufigkeit ${fr("Hᵢ", "n")} nähert sich für grosse n der Wahrscheinlichkeit pᵢ. E(X) muss kein möglicher Wert sein (Würfel: 3.5).</p>
+<p><b>Definition 4: Faires Spiel</b>, wenn sich Gewinn und Verlust auf lange Sicht ausgleichen: <b>E(Gewinn) = 0</b> (Gewinn = Auszahlung − Einsatz). Fairer Einsatz = E(Auszahlung).</p>
+<h3>Varianz und Standardabweichung</h3>
+<p>Der Erwartungswert ist ein <b>Lagemass</b>, sagt aber nichts über die Streuung. Die Summe der Abweichungen (xᵢ − μ)·pᵢ ist immer 0, darum quadriert man.</p>
+<p class="formula">Var(X) = Σ (xᵢ − μ)²·pᵢ = E((X − μ)²) &nbsp;&nbsp;&nbsp; σ(X) = √Var(X)</p>
+<p>Die Varianz hat die quadrierte Einheit (Fr.²), die Standardabweichung wieder die Einheit der Werte (Fr.). Grosse Abweichungen fallen durch das Quadrieren stärker ins Gewicht. σ = Risiko bzw. Schwankung.</p>
+<h3>Wichtige Beispiele aus dem Skript</h3>
+<div class="tw"><table><tr><th>Beispiel</th><th>E(X)</th><th>Var(X)</th><th>σ</th></tr>
+<tr><td>Achtflächiger Würfel</td><td>4.5</td><td>5.25</td><td>≈ 2.29</td></tr>
+<tr><td>Augensumme zweier Würfel</td><td>7</td><td>${fr("35", "6")} ≈ 5.83</td><td>≈ 2.42</td></tr>
+<tr><td>Betrag der Differenz zweier Würfel</td><td>${fr("70", "36")} ≈ 1.94</td><td></td><td></td></tr>
+<tr><td>Jahrmarkt (Einsatz 1, 10→2, 11→5, 12→15)</td><td>Gewinn −${fr("5", "36")} ≈ −0.14 Fr.</td><td></td><td></td></tr>
+<tr><td>Böse Drei (Einsatz 3, ohne 3 Augensumme)</td><td>Gewinn +2 Fr.</td><td></td><td></td></tr>
+<tr><td>Urne 6 rot / 4 schwarz, 3 ziehen, Einsatz 8, ≥2 rot → 10</td><td>Gewinn −${fr("4", "3")} Fr.; fair bei Einsatz ${fr("20", "3")} ≈ 6.67</td><td></td><td></td></tr>
+<tr><td>Münzen 1, 2, 5 Fr., Einsatz 2</td><td>E(X) = 4, Gewinn 2; fair bei Einsatz 4</td><td></td><td></td></tr>
+<tr><td>Schützin Barbara</td><td>495.51</td><td>≈ 2.61</td><td>≈ 1.62</td></tr></table></div>
+`
+};
+
+// Präsentationen Teil 1 (je ca. 4 min)
+const PRES = [
+{t:"Ableitung einer Potenzfunktion und Summenregel", src:"2 Die Ableitung, Theorie S. 15-17",
+steps:[
+["Einstieg (30 s)", `Die Ableitung f'(x₀) ist die Steigung der Tangente an der Stelle x₀. Man berechnet sie als Grenzwert des Differenzenquotienten: f'(x) = ${LIM} ${fr("f(x+h) − f(x)", "h")}. Ziel heute: Regeln, damit man den Grenzwert nicht jedes Mal neu rechnen muss.`],
+["Potenzregel an x² zeigen (1 min)", `${fr("(x+h)² − x²", "h")} = ${fr("x² + 2xh + h² − x²", "h")} = ${fr("2xh + h²", "h")} = 2x + h → 2x für h → 0. Genau so x³: (x+h)³ = x³ + 3x²h + 3xh² + h³ → 3x².`],
+["Verallgemeinern (45 s)", `(x+h)ⁿ = xⁿ + n·xⁿ⁻¹·h + (Terme mit h² und höher). xⁿ hebt sich weg, durch h teilen, alle Terme mit h verschwinden → <b>(xⁿ)' = n·xⁿ⁻¹</b>. Merkbild: Exponent nach vorne, Exponent minus 1. Gilt für alle reellen Exponenten: (√x)' = ½x<sup>−½</sup>, (1/x)' = −x⁻².`],
+["Konstante und Faktor (30 s)", `(c)' = 0, weil der Graph eine waagrechte Gerade ist. (c·f)' = c·f': der Faktor bleibt stehen, z.B. (3x⁵)' = 15x⁴.`],
+["Summenregel mit Beweis (1 min)", `<b>(f + g)' = f' + g'</b>. Beweis: ${fr("f(x+h)+g(x+h) − f(x) − g(x)", "h")} = ${fr("f(x+h) − f(x)", "h")} + ${fr("g(x+h) − g(x)", "h")} → f'(x) + g'(x). Der Grenzwert einer Summe ist die Summe der Grenzwerte.`],
+["Beispiel zum Schluss (20 s)", `f(x) = 2x⁷ − 3x² + 20 → f'(x) = 14x⁶ − 6x. Summen- und Faktorregel gliedweise, die Konstante 20 fällt weg.`]],
+checks:["Definition Ableitung als Grenzwert genannt","Tangentensteigung erklärt","Herleitung mit (x+h)² vorgerechnet","Allgemeine Potenzregel mit Begründung","Gilt auch für negative/gebrochene Exponenten","Konstanten- und Faktorregel","Summenregel mit Beweis","Beispiel komplett abgeleitet"],
+qs:[["Warum fällt eine additive Konstante beim Ableiten weg?","Sie verschiebt den Graphen nur nach oben/unten, die Steigung ändert sich nicht. Formal: (c)' = 0, da c − c = 0 im Zähler."],["Gilt die Potenzregel für x⁻² oder √x?","Ja, für alle reellen Exponenten: (x⁻²)' = −2x⁻³, (√x)' = (x<sup>½</sup>)' = ½x<sup>−½</sup> = 1/(2√x). Der allgemeine Beweis braucht ln und Kettenregel."],["Gibt es auch eine 'Produktregel' der Art (f·g)' = f'·g'?","Nein. x²·x³ = x⁵ hat Ableitung 5x⁴, aber 2x·3x² = 6x³. Richtig ist f'g + fg'."],["Was ist der Unterschied zwischen Differenzen- und Differentialquotient?","Differenzenquotient = Sekantensteigung zwischen zwei Punkten. Differentialquotient = Grenzwert davon für h → 0 = Tangentensteigung."],["Wo ist eine Funktion nicht differenzierbar?","Wo der Grenzwert nicht existiert, z.B. bei Knicken wie |x| bei 0 (links Steigung −1, rechts +1)."]]},
+{t:"Produktregel und Quotientenregel", src:"3 Weitere Ableitungsregeln, Theorie S. 21-24",
+steps:[
+["Motivation (30 s)", `Naheliegend wäre (f·g)' = f'·g'. Das stimmt nicht: x²·x³ = x⁵ → 5x⁴, aber 2x·3x² = 6x³. Wir brauchen eine eigene Regel.`],
+["Produktregel (30 s)", `<b>p = f·g → p' = f'·g + f·g'</b>. Kontrolle: (x²·x³)' = 2x·x³ + x²·3x² = 2x⁴ + 3x⁴ = 5x⁴ ✓.`],
+["Beweis Produktregel (1 min 15 s)", `${fr("f(x+h)g(x+h) − f(x)g(x)", "h")}. Trick: Nullergänzung −f(x)g(x+h) + f(x)g(x+h). Dann ausklammern: ${fr("f(x+h) − f(x)", "h")}·g(x+h) + f(x)·${fr("g(x+h) − g(x)", "h")} → f'(x)·g(x) + f(x)·g'(x), da g(x+h) → g(x).`],
+["Quotientenregel herleiten (1 min)", `f = ${fr("g", "h")} → g = f·h. Produktregel: g' = f'·h + f·h'. Nach f' auflösen: f' = ${fr("g' − f·h'", "h")}. f = ${fr("g", "h")} einsetzen und auf einen Bruchstrich: <b>f' = ${fr("g'·h − g·h'", "h²")}</b>, h ≠ 0. Merksatz NAZ − ZAN durch N².`],
+["Beispiel (40 s)", `f(x) = ${fr("3x", "x − 3")}: g = 3x, g' = 3, h = x − 3, h' = 1 → f'(x) = ${fr("3(x−3) − 3x", "(x−3)²")} = ${fr("−9", "(x−3)²")}.`],
+["Ausblick (15 s)", `Anwendung: tan = ${fr("sin", "cos")} → tan' = ${fr("cos² + sin²", "cos²")} = ${fr("1", "cos²")}.`]],
+checks:["Gegenbeispiel (f·g)' ≠ f'·g'","Produktregel korrekt notiert","Beweis mit Nullergänzung","Kontrolle am Beispiel","Quotientenregel aus Produktregel hergeleitet","Bedingung h(x) ≠ 0","Reihenfolge im Zähler / Merksatz","Quotienten-Beispiel komplett"],
+qs:[["Warum darf man im Zähler einfach etwas addieren?","Man addiert −f(x)g(x+h) + f(x)g(x+h) = 0, der Wert ändert sich also nicht. Das nennt man Nullergänzung."],["Warum geht g(x+h) gegen g(x)?","g ist differenzierbar, also auch stetig. Für h → 0 nähert sich g(x+h) dem Wert g(x)."],["Warum ist die Reihenfolge im Zähler der Quotientenregel wichtig?","Wegen des Minus: g'h − gh' ist das Negative von gh' − g'h. Vertauscht man, hat das Resultat das falsche Vorzeichen."],["Wie leitet man 1/h(x) ab?","Mit g = 1, g' = 0: (1/h)' = −h'/h². Beispiel (1/x)' = −1/x²."],["Kann man f(x) = (x²+1)/x auch ohne Quotientenregel ableiten?","Ja, zuerst vereinfachen: x + x⁻¹ → 1 − 1/x². Oft ist Umformen schneller."],["Wie leitet man ein Produkt aus drei Faktoren ab?","Produktregel zweimal: (fgk)' = f'gk + fg'k + fgk'."]]}
+];
+// Karteikarten (auswendig)
+const CARDS = {
+d2: [
+["Differenzenquotient", `${fr("f(x₀+h) − f(x₀)", "h")} = Steigung der Sekante`],
+["Differentialquotient f'(x₀)", `${LIM} ${fr("f(x₀+h) − f(x₀)", "h")} = Steigung der Tangente`],
+["Wann ist f an der Stelle x₀ differenzierbar?", "Wenn der Grenzwert des Differenzenquotienten existiert (eindeutige Tangente). Nicht bei Knicken, z.B. |x| bei 0."],
+["Ableitungsfunktion", "Ordnet jeder Stelle x die Steigung f'(x) des Graphen von f zu."],
+["Extrempunkt von f entspricht bei f' ...", "einer Nullstelle (waagrechte Tangente)"],
+["Wendepunkt von f entspricht bei f' ...", "einem Extrempunkt"],
+["f steigt / fällt ⇔ ...", "f' > 0 / f' < 0"],
+["Konstantenregel", "(c)' = 0"],
+["Potenzregel", "(xⁿ)' = n·xⁿ⁻¹, für alle reellen n"],
+["Faktorregel", "(c·f(x))' = c·f'(x)"],
+["Summenregel", "(f + g)' = f' + g'"],
+["(x+h)³ ausmultipliziert", "x³ + 3x²h + 3xh² + h³"]
+],
+d3: [
+["(√x)'", `${fr("1", "2" + sq("x"))}`],
+["(1/x)'", `−${fr("1", "x²")}`],
+["Produktregel", "(f·g)' = f'·g + f·g'"],
+["Quotientenregel", `(${fr("g", "h")})' = ${fr("g'·h − g·h'", "h²")}, h ≠ 0`],
+["Kettenregel", "(f(g(x)))' = f'(g(x))·g'(x): äussere mal innere Ableitung"],
+["Trick im Beweis der Produktregel", "Nullergänzung: −f(x)g(x+h) + f(x)g(x+h) im Zähler"],
+["Herleitung Quotientenregel in einem Satz", "f = g/h ⇒ g = f·h, Produktregel anwenden, nach f' auflösen, f = g/h einsetzen."],
+["Gegenbeispiel (fg)' ≠ f'g'", "x²·x³ = x⁵ → 5x⁴, aber 2x·3x² = 6x³"],
+["(1/h(x))'", `${fr("−h'(x)", "h(x)²")}`],
+["Innere und äussere Funktion von √(x+1)", "äussere f(x) = √x, innere g(x) = x + 1"]
+],
+d4: [
+["sin'(x)", "cos(x)"], ["cos'(x)", "−sin(x)"], ["tan'(x)", `${fr("1", "cos²(x)")} = 1 + tan²(x)`],
+["(eˣ)'", "eˣ"], ["(aˣ)'", "ln(a)·aˣ"], ["(ln x)'", `${fr("1", "x")}`], ["(logₐ x)'", `${fr("1", "x·ln(a)")}`],
+["Zwei Grenzwerte für sin'", `${LIM} ${fr("sin h", "h")} = 1 und ${LIM} ${fr("cos h − 1", "h")} = 0`],
+["Additionstheorem sin(x+h)", "sin x·cos h + cos x·sin h"],
+["Wie leitet man (ln x)' her?", "e^(ln x) = x beidseitig ableiten: x·(ln x)' = 1"],
+["aˣ umschreiben", "aˣ = e^(x·ln a)"]
+],
+st: [
+["Zufallsvariable", "Ordnet jedem Ergebnis eines Zufallsversuchs eine Zahl zu."],
+["Wahrscheinlichkeitsverteilung", "Zuordnung xᵢ → P(X = xᵢ) = pᵢ für alle möglichen Werte"],
+["Σ pᵢ = ?", "1"],
+["Erwartungswert", "E(X) = μ = Σ xᵢ·pᵢ (gewichtetes Mittel, Durchschnitt auf lange Sicht)"],
+["Faires Spiel", "E(Gewinn) = 0, d.h. Einsatz = E(Auszahlung)"],
+["Varianz", "Var(X) = Σ (xᵢ − μ)²·pᵢ"],
+["Standardabweichung", "σ = √Var(X), gleiche Einheit wie X"],
+["Warum quadriert man bei der Varianz?", "Σ(xᵢ − μ)pᵢ = 0, positive und negative Abweichungen heben sich auf. Quadrieren macht alle positiv und gewichtet grosse stärker."],
+["Pfadregeln", "Entlang eines Pfades multiplizieren, verschiedene Pfade addieren"],
+["P(mindestens einmal)", "1 − P(keinmal), z.B. 1 − (1−p)ⁿ"],
+["Lagemass / Streuungsmass", "Lagemass: Erwartungswert (Median, Modus). Streuungsmass: Varianz, Standardabweichung"]
+]
+};
+
+// Multiple Choice. Erste Antwort richtig.
+const QUIZ = {
+A: {t:"Grundregeln", q:[
+["f(x) = x⁷", ["7x⁶","x⁶","7x⁷","6x⁷"]],
+["f(x) = 5x³ − 2x + 4", ["15x² − 2","15x² − 2 + 4","5x² − 2","15x³ − 2"]],
+["f(x) = 1/x", ["−1/x²","1/x²","ln x","−1/x"]],
+["f(x) = √x", ["1/(2√x)","2√x","1/√x","½x"]],
+["f(x) = x⁻³", ["−3x⁻⁴","−3x⁻²","3x⁻⁴","−4x⁻³"]],
+["f(x) = 4/x²", ["−8/x³","8/x³","−8/x","−4/x³"]],
+["f(x) = x^(2/3)", ["⅔·x^(−1/3)","⅔·x^(1/3)","3/2·x^(1/3)","⅓·x^(−2/3)"]],
+["f(x) = π²", ["0","2π","π²","2π²"]]]},
+B: {t:"Produkt, Quotient, Kette", q:[
+["f(x) = x²·sin x", ["2x·sin x + x²·cos x","2x·cos x","2x·sin x − x²·cos x","x²·cos x"]],
+["f(x) = (2x+1)³", ["6(2x+1)²","3(2x+1)²","6(2x+1)³","3x(2x+1)²"]],
+["f(x) = x/(x+1)", ["1/(x+1)²","−1/(x+1)²","(2x+1)/(x+1)²","1"]],
+["f(x) = √(x²+1)", ["x/√(x²+1)","1/(2√(x²+1))","2x/√(x²+1)","x·√(x²+1)"]],
+["f(x) = x·√x", ["3/2·√x","1/(2√x)","√x","½x·√x"]],
+["f(x) = 1/(x²+4)", ["−2x/(x²+4)²","2x/(x²+4)²","−1/(x²+4)²","−1/(2x)"]],
+["f(x) = 3x/(x−3)", ["−9/(x−3)²","9/(x−3)²","3/(x−3)²","(6x−9)/(x−3)²"]],
+["f(x) = x³·(x²−1)", ["5x⁴ − 3x²","6x³","5x⁴ − x²","3x²·(x²−1)"]]]},
+C: {t:"sin, cos, tan, e, ln", q:[
+["sin'(x)", ["cos x","−cos x","−sin x","tan x"]],
+["cos'(x)", ["−sin x","sin x","−cos x","1/cos²x"]],
+["tan'(x)", ["1/cos²x","1/sin²x","−1/cos²x","cos x/sin x"]],
+["(e^(2x+1))'", ["2e^(2x+1)","e^(2x+1)","(2x+1)·e^(2x)","2e^(2x)"]],
+["(3ˣ)'", ["ln3·3ˣ","x·3^(x−1)","3ˣ","3ˣ/ln3"]],
+["(ln(2x))'", ["1/x","2/x","1/(2x)","2·ln x"]],
+["(log₃ x)'", ["1/(x·ln3)","ln3/x","1/(3x)","3/x"]],
+["(sin(x²))'", ["2x·cos(x²)","cos(2x)","cos(x²)","2x·sin(x²)"]],
+["(e^√x)'", ["e^√x/(2√x)","e^√x","√x·e^√x","e^(1/(2√x))"]]]},
+D: {t:"Begriffe und Graphen", q:[
+["Was gibt der Differenzenquotient an?", ["die Steigung der Sekante","die Steigung der Tangente","die Fläche unter dem Graphen","den y-Achsenabschnitt"]],
+["f hat bei x = 2 einen Hochpunkt. Dann gilt:", ["f'(2) = 0","f(2) = 0","f'(2) > 0","f'(2) existiert nicht"]],
+["Ein Wendepunkt von f ist beim Graphen von f' ...", ["ein Extrempunkt","eine Nullstelle","ein Wendepunkt","eine Polstelle"]],
+["Wo f fällt, ist f' ...", ["negativ","positiv","null","nicht definiert"]],
+["f(x) = |x| an der Stelle 0:", ["nicht differenzierbar (Knick)","f'(0) = 0","f'(0) = 1","f'(0) = −1"]],
+["Ist f ein Polynom vom Grad 4, dann ist f' ...", ["ein Polynom vom Grad 3","ein Polynom vom Grad 4","ein Polynom vom Grad 5","konstant"]],
+["Was passiert beim Differentialquotienten?", ["h → 0, aus der Sekante wird die Tangente","h → ∞","x → 0","man setzt h = 0 direkt ein"]],
+["Warum darf man im Differenzenquotienten nicht einfach h = 0 einsetzen?", ["Man würde durch 0 teilen (0/0)","Weil h negativ ist","Weil dann f'(x) = 0 wäre","Das darf man"]]]},
+E: {t:"Stochastik", q:[
+["Σ pᵢ einer Wahrscheinlichkeitsverteilung ist ...", ["1","0","100","E(X)"]],
+["Ein Spiel ist fair, wenn ...", ["E(Gewinn) = 0","E(Auszahlung) = 0","σ = 0","P(Gewinn) = 0.5"]],
+["Erwartungswert eines fairen Würfels", ["3.5","3","6","21"]],
+["Die Varianz hat die Einheit ...", ["der Werte im Quadrat (z.B. Fr.²)","der Werte (Fr.)","keine Einheit, sie ist eine Wahrscheinlichkeit","Prozent"]],
+["Σ (xᵢ − μ)·pᵢ ist immer ...", ["0","1","Var(X)","σ"]],
+["P(mindestens eine 6 bei 4 Würfen)", ["1 − (5/6)⁴ ≈ 0.518","4·1/6 ≈ 0.667","(1/6)⁴","1 − (1/6)⁴"]],
+["Muss E(X) ein möglicher Wert von X sein?", ["Nein (Würfel: 3.5)","Ja, immer","Nur bei fairen Spielen","Nur wenn σ = 0"]],
+["Zwei Würfel, X = Augensumme. E(X) = ?", ["7","6","6.5","12"]],
+["Wofür steht σ in einer Spielsituation?", ["für das Risiko / die Schwankung des Gewinns","für den durchschnittlichen Gewinn","für die Gewinnwahrscheinlichkeit","für den Einsatz"]]]}
+};
+
+// Übungsblätter mit Zahlen-Antwort (auto) oder Selbstkontrolle (sol)
+const UEB = {
+d1: {t:"Blatt 1 · Grundregeln, Tangenten, h-Methode", items:[
+{q:"f(x) = 3x⁴ − 2x³ + x − 7. Berechne f'(2).", n:73, s:"f'(x) = 12x³ − 6x² + 1 → 96 − 24 + 1 = 73"},
+{q:"f(x) = 4√x + 2/x. Berechne f'(4).", n:0.875, s:"f(x) = 4x^½ + 2x⁻¹ → f'(x) = 2/√x − 2/x² → 1 − 0.125 = 0.875"},
+{q:"f(x) = x^(3/2). Berechne f'(9).", n:4.5, s:"f'(x) = 1.5·x^½ → 1.5·3 = 4.5"},
+{q:"f(x) = (x² + 1)/x. Berechne f'(2) (Tipp: zuerst vereinfachen).", n:0.75, s:"f(x) = x + x⁻¹ → f'(x) = 1 − 1/x² → 1 − 1/4 = 0.75"},
+{q:"Tangente an f(x) = x³ − 2x im Punkt x = 1: Wie gross ist der y-Achsenabschnitt?", n:-2, s:"f(1) = −1, f'(x) = 3x² − 2 → m = 1. y = 1·x + q durch (1|−1) → q = −2. Tangente y = x − 2."},
+{q:"An welcher Stelle hat f(x) = x² − 4x + 1 die Steigung 2?", n:3, s:"f'(x) = 2x − 4 = 2 → x = 3"},
+{q:"f(x) = x³ − 3x. An welcher Stelle x > 0 ist die Tangente waagrecht?", n:1, s:"f'(x) = 3x² − 3 = 0 → x = ±1, also x = 1"},
+{q:"Zeige mit der h-Methode: (x³)' = 3x². Schreib alle Schritte und kommentiere sie laut.", sol:`${fr("(x+h)³ − x³", "h")} = ${fr("x³ + 3x²h + 3xh² + h³ − x³", "h")} = ${fr("h(3x² + 3xh + h²)", "h")} = 3x² + 3xh + h² → 3x² für h → 0. Kommentar: binomisch ausmultiplizieren, x³ hebt sich weg, h ausklammern und kürzen, erst dann Grenzwert.`},
+{q:"Zeige mit der h-Methode: (1/x)' = −1/x².", sol:`${fr("1/(x+h) − 1/x", "h")} = ${fr("x − (x+h)", "x(x+h)·h")} = ${fr("−h", "x(x+h)h")} = ${fr("−1", "x(x+h)")} → −${fr("1", "x²")}`},
+{q:"Skizziere zu f(x) = x³ − 3x den Graphen von f'. Wo hat f' Nullstellen, wo ein Minimum?", sol:"f'(x) = 3x² − 3: nach oben geöffnete Parabel, Nullstellen bei ±1 (= Extrempunkte von f), Minimum bei x = 0 (= Wendepunkt von f)."}
+]},
+d2: {t:"Blatt 2 · Produkt-, Quotienten-, Kettenregel", items:[
+{q:"f(x) = (x² + 1)(x³ − x). Berechne f'(1).", n:4, s:"Produktregel: 2x(x³ − x) + (x² + 1)(3x² − 1). Bei x = 1: 2·0 + 2·2 = 4"},
+{q:"f(x) = x/(x² + 1). Berechne f'(2).", n:-0.12, s:"Quotientenregel: ((x² + 1) − x·2x)/(x² + 1)² = (1 − x²)/(x² + 1)² → −3/25 = −0.12"},
+{q:"f(x) = (3x − 2)⁵. Berechne f'(1).", n:15, s:"Kettenregel: 5(3x − 2)⁴·3 → 15·1 = 15"},
+{q:"f(x) = √(2x + 5). Berechne f'(2).", n:1/3, s:"1/(2√(2x+5))·2 = 1/√(2x+5) → 1/3"},
+{q:"f(x) = x²·√x. Berechne f'(4).", n:20, s:"= x^(5/2) → 2.5·x^(3/2) → 2.5·8 = 20 (oder Produktregel)"},
+{q:"f(x) = 1/(x² − 3)². Berechne f'(2).", n:-8, s:"(x² − 3)⁻² → −2(x² − 3)⁻³·2x → −8/1 = −8"},
+{q:"f(x) = (x + 1)/(x − 1). Berechne f'(3).", n:-0.5, s:"((x − 1) − (x + 1))/(x − 1)² = −2/(x − 1)² → −2/4 = −0.5"},
+{q:"f(x) = x·(2x + 1)³. Berechne f'(0).", n:1, s:"Produkt + Kette: (2x+1)³ + x·3(2x+1)²·2 = (2x+1)²(8x+1) → 1"},
+{q:"Leite die Quotientenregel aus der Produktregel her und kommentiere jeden Schritt.", sol:"f = g/h → g = f·h. Produktregel: g' = f'h + fh'. Nach f' auflösen: f' = (g' − fh')/h. f = g/h einsetzen: (g' − gh'/h)/h. Mit h erweitern: (g'h − gh')/h²."},
+{q:"Leite ab und vereinfache: f(x) = (x² − 1)/(x² + 1).", sol:"(2x(x² + 1) − (x² − 1)2x)/(x² + 1)² = (2x³ + 2x − 2x³ + 2x)/(x² + 1)² = 4x/(x² + 1)²"}
+]},
+d3: {t:"Blatt 3 · sin, cos, tan, e, ln", items:[
+{q:"f(x) = x·sin x. Berechne f'(π).", n:-Math.PI, s:"sin x + x·cos x → 0 + π·(−1) = −π ≈ −3.142"},
+{q:"f(x) = x·e^(2x). Berechne f'(0).", n:1, s:"e^(2x) + x·2e^(2x) → 1"},
+{q:"f(x) = ln(x² + 1). Berechne f'(1).", n:1, s:"2x/(x² + 1) → 2/2 = 1"},
+{q:"f(x) = 2ˣ. Berechne f'(0).", n:Math.LN2, s:"ln2·2ˣ → ln2 ≈ 0.693"},
+{q:"f(x) = sin(2x). Berechne f'(0).", n:2, s:"2cos(2x) → 2"},
+{q:"f(x) = cos²(x). Berechne f'(π/4).", n:-1, s:"2cos x·(−sin x) → −2·(√2/2)² = −1"},
+{q:"f(x) = eˣ/x. Berechne f'(1).", n:0, s:"(eˣ·x − eˣ)/x² → (e − e)/1 = 0"},
+{q:"f(x) = log₁₀(x). Berechne f'(10) auf 4 Stellen.", n:1/(10*Math.LN10), s:"1/(x·ln10) → 1/(10·2.3026) ≈ 0.0434"},
+{q:"Leite tan(x) mit der Quotientenregel her.", sol:"tan = sin/cos → (cos·cos − sin·(−sin))/cos² = (cos² + sin²)/cos² = 1/cos² = 1 + tan²"},
+{q:"Zeige: (ln x)' = 1/x.", sol:"e^(ln x) = x. Beide Seiten ableiten (links Kettenregel): e^(ln x)·(ln x)' = 1 → x·(ln x)' = 1 → (ln x)' = 1/x"}
+]},
+s1: {t:"Stochastik-Blatt 1 · Aufgaben aus dem Skript", items:[
+{q:"Jahrmarkt: Einsatz 1 Fr., Augensumme 10 → 2 Fr., 11 → 5 Fr., 12 → 15 Fr. Erwarteter Gewinn pro Spiel (in Fr.)?", n:-5/36, s:"P(10) = 3/36, P(11) = 2/36, P(12) = 1/36. E(Auszahlung) = (6 + 10 + 15)/36 = 31/36 → Gewinn 31/36 − 1 = −5/36 ≈ −0.139 Fr."},
+{q:"Zwei Würfel, X = Augensumme. Var(X)?", n:35/6, s:"μ = 7. Var = (25·1 + 16·2 + 9·3 + 4·4 + 1·5 + 0 + 1·5 + 4·4 + 9·3 + 16·2 + 25·1)/36 = 210/36 = 35/6 ≈ 5.83"},
+{q:"Zwei Würfel, Y = Betrag der Differenz. E(Y)?", n:70/36, s:"P(0)=6/36, P(1)=10/36, P(2)=8/36, P(3)=6/36, P(4)=4/36, P(5)=2/36 → (10 + 16 + 18 + 16 + 10)/36 = 70/36 ≈ 1.94"},
+{q:"Böse Drei: Einsatz 3 Fr. Kommt keine 3, wird die Augensumme ausbezahlt. Erwarteter Gewinn?", n:2, s:"25 Paare ohne 3, Summe aller Augensummen = 2·5·18 = 180 → E(Auszahlung) = 180/36 = 5 → Gewinn 5 − 3 = +2 Fr. (gut für den Spieler)"},
+{q:"Urne 6 rot, 4 schwarz, 3 mit einem Griff. P(X = 2 rote)?", n:0.5, s:"C(6,2)·C(4,1)/C(10,3) = 15·4/120 = 0.5"},
+{q:"Gleiche Urne, Einsatz 8 Fr., mind. 2 rote → 10 Fr. Erwarteter Gewinn?", n:-4/3, s:"P(mind. 2 rot) = (60 + 20)/120 = 2/3. E(Gewinn) = 2/3·2 + 1/3·(−8) = −4/3 ≈ −1.33 Fr. Nicht fair."},
+{q:"Gleiche Urne: Bei welchem Einsatz wäre das Spiel fair?", n:20/3, s:"Einsatz = E(Auszahlung) = 2/3·10 ≈ 6.67 Fr."},
+{q:"Münzen 1, 2, 5 Fr., man behält die mit Zahl, Einsatz 2 Fr. Erwarteter Nettogewinn E(Y)?", n:2, s:"X ∈ {0,1,2,3,5,6,7,8}, je 1/8 → E(X) = 32/8 = 4. E(Y) = 4 − 2 = 2. Fair wäre Einsatz 4 Fr."}
+]},
+s2: {t:"Stochastik-Blatt 2 · Neue Aufgaben", items:[
+{q:"Glücksrad: ½ → 0 Fr., ⅓ → 2 Fr., ⅙ → 6 Fr. Einsatz 1.50 Fr. Erwarteter Gewinn?", n:1/6, s:"E(Auszahlung) = 0 + 2/3 + 1 = 5/3 → 5/3 − 1.5 = 1/6 ≈ 0.17 Fr."},
+{q:"Gleiches Glücksrad: Standardabweichung der Auszahlung?", n:Math.sqrt(246/54), s:"μ = 5/3. Var = ½·(5/3)² + ⅓·(1/3)² + ⅙·(13/3)² = 246/54 ≈ 4.56 → σ ≈ 2.13"},
+{q:"Wie oft muss man mindestens würfeln, damit mit mind. 95 % mindestens eine 6 kommt?", n:17, int:true, s:"1 − (5/6)ⁿ ≥ 0.95 → (5/6)ⁿ ≤ 0.05 → n ≥ ln0.05/ln(5/6) ≈ 16.4 → 17"},
+{q:"Blutgruppe AB 4 %. Wie viele Personen für P(mind. eine AB) ≥ 90 %?", n:57, int:true, s:"0.96ⁿ ≤ 0.1 → n ≥ 56.4 → 57"},
+{q:"KELLER, 4 Karten mit Zurücklegen. P(ELLE)?", n:1/81, s:"(2/6)⁴ = 16/1296 = 1/81 ≈ 0.0123"},
+{q:"Würfelspiel: Summe 8 gewinnt, sonst zweiter Wurf mit zwei aufeinanderfolgenden Augenzahlen. P(Gewinn)?", n:5/36 + 31/36*10/36, s:"5/36 + 31/36·10/36 ≈ 0.378"},
+{q:"P(Knabe) = 0.51. X = Anzahl Mädchen bei drei Kindern. E(X)?", n:1.47, s:"E = 0·0.1327 + 1·0.3823 + 2·0.3674 + 3·0.1176 ≈ 1.47 (= 3·0.49)"},
+{q:"Achtflächiger Würfel: Var(X)?", n:5.25, s:"μ = 4.5, Var = (12.25 + 6.25 + 2.25 + 0.25)·2/8 = 42/8 = 5.25"},
+{q:"Schützin Barbara: σ der Punktzahl (Tabelle im Skript)?", n:Math.sqrt(2.6099), s:"μ = 495.51, Var ≈ 2.61, σ ≈ 1.62"},
+{q:"Erkläre in zwei Sätzen, warum Barbara ins Team soll und nicht nur wegen des Erwartungswerts.", sol:"Gesucht ist die grösste Trefferquote bei geringsten Schwankungen. Man vergleicht also μ (hoch) und σ (klein) aller drei; die mit hohem μ und kleinem σ ist am konstantesten."}
+]}
+};
+
+// Prüferfragen (mündlich beantworten)
+const ORAL = [
+["Was ist die Ableitung geometrisch?","Die Steigung der Tangente an den Graphen an dieser Stelle."],
+["Erkläre den Übergang von der Sekante zur Tangente.","Der zweite Punkt wandert zum ersten (h → 0). Die Sekantensteigung (Differenzenquotient) nähert sich der Tangentensteigung (Differentialquotient)."],
+["Warum kann man im Differenzenquotient h nicht direkt 0 setzen?","Man hätte 0/0. Man muss zuerst umformen und h kürzen, dann den Grenzwert bilden."],
+["Was bedeutet f'(3) = −2?","Bei x = 3 fällt der Graph mit Steigung −2: geht man 1 nach rechts, geht die Tangente 2 nach unten."],
+["Wie bestimmst du die Tangentengleichung?","Steigung m = f'(x₀), Punkt (x₀ | f(x₀)) in y = mx + q einsetzen, q ausrechnen."],
+["Wo hat eine Funktion eine waagrechte Tangente?","Wo f'(x) = 0, z.B. Hoch-, Tief- oder Terrassenpunkte."],
+["Wann verwendest du Produkt-, Quotienten- oder Kettenregel?","Produkt: zwei Funktionen multipliziert. Quotient: Bruch mit x im Nenner. Kette: Funktion in einer Funktion (z.B. Klammer hoch n, Wurzel aus Term, e hoch Term)."],
+["Wie erkennst du innere und äussere Funktion?","Die innere ist das, was man zuerst ausrechnet (z.B. 2x + 1), die äussere das, was man damit macht (hoch 3)."],
+["Warum ist eˣ besonders?","Sie ist ihre eigene Ableitung. Steigung = Funktionswert an jeder Stelle."],
+["Warum muss man bei sin' im Bogenmass rechnen?","Nur im Bogenmass gilt lim sin(h)/h = 1. In Grad käme ein Faktor π/180 dazu."],
+["Wie leitest du 5ˣ ab und warum?","5ˣ = e^(x·ln5), Kettenregel → ln5·5ˣ."],
+["Was ist eine Zufallsvariable?","Eine Zuordnung, die jedem Ergebnis eines Zufallsversuchs eine Zahl zuordnet, z.B. Gewinn in Fr."],
+["Was sagt der Erwartungswert aus?","Den durchschnittlichen Wert auf lange Sicht, z.B. Gewinn pro Spiel bei sehr vielen Spielen."],
+["Wie prüfst du, ob ein Spiel fair ist?","Gewinn = Auszahlung − Einsatz als Zufallsvariable. Fair, wenn E(Gewinn) = 0."],
+["Warum braucht man neben E(X) noch σ?","Zwei Verteilungen können den gleichen Erwartungswert haben, aber unterschiedlich stark streuen (Risiko)."],
+["Warum nimmt man nicht einfach den Durchschnitt der Abweichungen?","Weil Σ(xᵢ − μ)pᵢ immer 0 ist. Darum quadriert man (Varianz) und zieht am Schluss die Wurzel."],
+["Wann rechnest du mit dem Gegenereignis?","Bei 'mindestens einmal': 1 − P(keinmal) ist viel einfacher als alle Fälle zu addieren."],
+["Was ist der Unterschied zwischen mit und ohne Zurücklegen?","Mit: Wahrscheinlichkeiten bleiben gleich. Ohne: Nenner (und evtl. Zähler) werden bei jedem Zug kleiner."]
+];
+
+// Simulationsaufgaben Teil 2
+const SIMD = [
+{q:"Bestimme die Ableitung von f(x) = (x² + 1)/(x − 2) und die Tangente bei x = 3.", sol:"Quotientenregel: (2x(x − 2) − (x² + 1))/(x − 2)² = (x² − 4x − 1)/(x − 2)². f'(3) = −4, f(3) = 10 → y = −4x + 22.", c:["Regel benannt und begründet","Ableitung richtig","Tangente mit Punkt und Steigung"]},
+{q:"Leite f(x) = x²·e^(−x) ab. Wo hat f waagrechte Tangenten?", sol:"Produkt + Kette: 2x·e^(−x) − x²e^(−x) = x(2 − x)e^(−x) = 0 → x = 0 oder x = 2 (eˣ ist nie 0).", c:["Produkt- und Kettenregel erkannt","Ausklammern","e^(−x) ≠ 0 begründet"]},
+{q:"Zeige mit der h-Methode, dass (x² + 3x)' = 2x + 3.", sol:"((x+h)² + 3(x+h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3 → 2x + 3", c:["Ansatz Differenzenquotient","sauber gekürzt","Grenzwert erklärt"]},
+{q:"Leite f(x) = √(x³ + 1) ab und berechne f'(2).", sol:"Kettenregel: 3x²/(2√(x³ + 1)) → 12/(2·3) = 2", c:["innere/äussere Funktion genannt","Ableitung richtig","Wert richtig"]},
+{q:"Leite f(x) = sin(x)·cos(x) ab. Wo ist f'(x) = 0 im Intervall [0, π]?", sol:"cos²x − sin²x = 0 → tan²x = 1 → x = π/4, 3π/4", c:["Produktregel","sin' und cos' auswendig","Lösungen gefunden"]},
+{q:"Skizziere f(x) = x³ − 6x² + 9x und den Graphen von f'. Erkläre den Zusammenhang.", sol:"f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3): Nullstellen bei 1 und 3 = Hoch- und Tiefpunkt von f. Minimum von f' bei x = 2 = Wendepunkt von f.", c:["f' korrekt","Extrempunkte ↔ Nullstellen","Wendepunkt ↔ Extrempunkt"]},
+{q:"Leite ab: f(x) = ln(3x² + 1) und g(x) = 4ˣ.", sol:"f' = 6x/(3x² + 1); g' = ln4·4ˣ", c:["Kettenregel bei ln","aˣ-Regel","Begründung aˣ = e^(x ln a)"]},
+{q:"Leite f(x) = (2x − 1)⁴·x ab.", sol:"(2x − 1)⁴ + x·4(2x − 1)³·2 = (2x − 1)³(2x − 1 + 8x) = (2x − 1)³(10x − 1)", c:["Produkt + Kette","Ausklammern","Resultat"]}
+];
+const SIMS = [
+{q:"Ein Würfel wird zweimal geworfen. Gewinn: Doppelsechs 10 Fr., sonst eine Sechs 2 Fr., sonst nichts. Einsatz 1 Fr. Ist das Spiel fair?", sol:"P(66) = 1/36, P(genau eine 6) = 10/36. E(Auszahlung) = (10 + 20)/36 = 30/36 → Gewinn −1/6 ≈ −0.17 Fr. Nicht fair; fair wäre Einsatz 5/6 Fr.", c:["Verteilung aufgestellt","Erwartungswert richtig","Fairness begründet"]},
+{q:"Urne mit 3 roten und 2 blauen Kugeln. 2 ohne Zurücklegen. X = Anzahl rote. Verteilung, E(X), Var(X).", sol:"P(0) = 2/5·1/4 = 0.1, P(1) = 2·3/5·2/4 = 0.6, P(2) = 3/5·2/4 = 0.3. E = 1.2. Var = 1.44·0.1 + 0.04·0.6 + 0.64·0.3 = 0.36.", c:["Baumdiagramm/Pfadregeln","E(X) richtig","Varianz richtig"]},
+{q:"Erkläre Erwartungswert und Standardabweichung am Beispiel der Augensumme zweier Würfel.", sol:"μ = 7 (Symmetrie oder Σxᵢpᵢ = 252/36). Var = 210/36 ≈ 5.83, σ ≈ 2.42: die Summe weicht im Schnitt etwa 2.4 von 7 ab.", c:["Definitionen korrekt","Rechnung","Interpretation"]},
+{q:"Mit welcher Wahrscheinlichkeit kommt bei 10 Münzwürfen mindestens einmal Kopf? Wie viele Würfe für 99.9 %?", sol:"1 − 0.5¹⁰ ≈ 0.999. 0.5ⁿ ≤ 0.001 → n ≥ 9.97 → 10.", c:["Gegenereignis","Logarithmus","Ungleichung dreht"]},
+{q:"Ursina wirft eine Münze, bis Kopf kommt, höchstens dreimal. Jeder Wurf kostet 1 Fr., bei Kopf gibt Paul 3 Fr. X = Gewinn von Ursina. Verteilung und E(X).", sol:"K1: +2 (½), K2: +1 (¼), K3: 0 (⅛), kein Kopf: −3 (⅛). E = 1 + 0.25 + 0 − 0.375 = 0.875 Fr.", c:["Werte von X","Wahrscheinlichkeiten","E(X)"]},
+{q:"Zwei Spiele haben beide E(Gewinn) = 0. Bei A ist σ = 1 Fr., bei B σ = 20 Fr. Was bedeutet das?", sol:"Beide sind fair. B ist viel riskanter: Gewinne und Verluste schwanken stärker um 0.", c:["Fair erkannt","σ als Streuung erklärt","Interpretation Risiko"]}
+];
+const PLAN = [
+{d:"Fr 20.11.", t:"Im Zug: Ableitung + alle Ableitungsregeln", min:"ca. 2 h", tasks:[
+ {x:"Kapitel 1 Die Ableitung lesen, Definitionen leise aufsagen", go:"guide/d2"},
+ {x:"Karteikarten Kapitel 1", go:"cards/d2"},
+ {x:"Übungsblatt 1 (schwer, auf Papier)", go:"ueb/d1"},
+ {x:"Kapitel 2 Ableitungsregeln, Quotientenregel selbst herleiten", go:"guide/d3"},
+ {x:"Übungsblatt 2 (schwer)", go:"ueb/d2"},
+ {x:"Quiz A und B", go:"quiz/A"},
+ {x:"Beide Präsentationen durchlesen", go:"pres"}
+]},
+{d:"Sa 21.11.", t:"sin, cos, e, ln", min:"60 min", tasks:[
+ {x:"Kapitel 3 lesen, Tabelle auswendig", go:"guide/d4"},
+ {x:"Karteikarten Kapitel 2 und 3", go:"cards/d3"},
+ {x:"Übungsblatt 3 (schwer)", go:"ueb/d3"},
+ {x:"Quiz C und D", go:"quiz/C"}
+]},
+{d:"So 22.11.", t:"Stochastik", min:"60 min", tasks:[
+ {x:"Kapitel 4 Stochastik lesen, Definitionen laut", go:"guide/st"},
+ {x:"Stochastik-Blatt 1 (Skript-Aufgaben ohne Lösung)", go:"ueb/s1"},
+ {x:"Karteikarten Stochastik + Quiz E", go:"cards/st"},
+ {x:"Präsentation 1 einmal laut mit Timer", go:"pres/0"}
+]},
+{d:"Mo 23.11.", t:"Im Auto: Präsentationen + Prüferfragen", min:"45 min", tasks:[
+ {x:"Stochastik-Blatt 2", go:"ueb/s2"},
+ {x:"Präsentation 2 laut mit Timer (geht gut im Auto)", go:"pres/1"},
+ {x:"Karteikarten alle", go:"cards/all"},
+ {x:"Prüferfragen laut beantworten", go:"oral"}
+]},
+{d:"Di 24.11.", t:"Generalprobe (nach dem F-Test)", min:"60 min", tasks:[
+ {x:"Simulation 1: laut, am besten jemandem vortragen oder aufnehmen", go:"sim"},
+ {x:"Karteikarten 'nochmals' durchgehen", go:"cards/all"},
+ {x:"Simulation 2 mit anderen Aufgaben", go:"sim"}
+]},
+{d:"Mi 25.11.", t:"Prüfung (+ EF Sport)", min:"20 min", tasks:[
+ {x:"Merkblatt lesen", go:"merk"},
+ {x:"Deine Präsentation einmal laut, 4 min", go:"pres/0"}
+]}
+];
+
+const MERK = `
+<h3>Ableitungen</h3>
+<div class="tw"><table>
+<tr><td>Differentialquotient</td><td>f'(x) = ${LIM} ${fr("f(x+h) − f(x)", "h")}</td></tr>
+<tr><td>Konstante / Potenz</td><td>(c)' = 0 · (xⁿ)' = n·xⁿ⁻¹ (alle reellen n)</td></tr>
+<tr><td>Faktor / Summe</td><td>(c·f)' = c·f' · (f + g)' = f' + g'</td></tr>
+<tr><td>Produkt</td><td>(f·g)' = f'g + fg'</td></tr>
+<tr><td>Quotient</td><td>(${fr("g", "h")})' = ${fr("g'h − gh'", "h²")}</td></tr>
+<tr><td>Kette</td><td>(f(g(x)))' = f'(g(x))·g'(x)</td></tr>
+<tr><td>√x · 1/x</td><td>${fr("1", "2" + sq("x"))} · −${fr("1", "x²")}</td></tr>
+<tr><td>sin · cos · tan</td><td>cos · −sin · ${fr("1", "cos²")} = 1 + tan²</td></tr>
+<tr><td>eˣ · aˣ</td><td>eˣ · ln(a)·aˣ</td></tr>
+<tr><td>ln x · logₐ x</td><td>${fr("1", "x")} · ${fr("1", "x ln a")}</td></tr></table></div>
+<h3>Stochastik</h3>
+<div class="tw"><table>
+<tr><td>Σ pᵢ</td><td>1</td></tr>
+<tr><td>Erwartungswert</td><td>E(X) = Σ xᵢ·pᵢ</td></tr>
+<tr><td>Varianz</td><td>Var(X) = Σ (xᵢ − μ)²·pᵢ</td></tr>
+<tr><td>Standardabweichung</td><td>σ = √Var(X)</td></tr>
+<tr><td>Fair</td><td>E(Gewinn) = 0</td></tr>
+<tr><td>Mindestens einmal</td><td>1 − P(keinmal)</td></tr></table></div>
+<h3>So sprichst du in der Prüfung</h3>
+<ul>
+<li>Immer zuerst sagen, was du machst und warum: "Das ist ein Produkt aus x² und sin x, also brauche ich die Produktregel."</li>
+<li>Fachwörter benutzen: Sekante, Tangente, Grenzwert, differenzierbar, innere/äussere Funktion, Zufallsvariable, gewichtetes Mittel, Streuung.</li>
+<li>Wenn du nicht weiterkommst: laut denken und Tipps sofort aufnehmen. Wie du mit Tipps umgehst, wird bewertet.</li>
+<li>Präsentation: 4 min, an der Tafel mit Beispiel, langsam schreiben und gleichzeitig erklären.</li>
+</ul>
+<h3>Notenskala</h3>
+<p>12 Punkte: 11-12 → 6 · 10 → 5.5 · 9 → 5 · 8 → 4.5 · 6-7 → 4 · 5 → 3.5 · 4 → 3. Für eine 6 brauchst du mindestens 11 Punkte.</p>`;
+const S = (() => { let mem = {}; let ok = false;
+  try { localStorage.setItem("__t", "1"); localStorage.removeItem("__t"); ok = true; } catch (e) {}
+  return { get(k, d) { try { if (ok) { const v = localStorage.getItem("mamue_" + k); return v === null ? d : JSON.parse(v); } } catch (e) {} return k in mem ? mem[k] : d; },
+    set(k, v) { mem[k] = v; try { if (ok) localStorage.setItem("mamue_" + k, JSON.stringify(v)); } catch (e) {} } };
+})();
+const $ = s => document.querySelector(s);
+const app = () => $("#app");
+const topic = id => TOPICS.find(t => t.id === id);
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const SCALE = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4, 4.5, 5, 5.5, 6, 6];
+function noteFromPts(p) { p = Math.max(0, Math.min(12, p)); const lo = Math.floor(p), hi = Math.ceil(p); return lo === hi ? SCALE[lo] : (SCALE[lo] + SCALE[hi]) / 2; }
+const best = k => S.get("best_" + k, null);
+function setBest(k, v) { const b = best(k); if (b === null || v > b) S.set("best_" + k, v); }
+
+const NAV = [["plan", "Plan"], ["guide", "Lernguide"], ["pres", "Präsentation"], ["cards", "Karteikarten"], ["ueb", "Übungen"], ["quiz", "Quiz"], ["oral", "Prüferfragen"], ["sim", "Simulation"], ["merk", "Merkblatt"]];
+function renderNav(a) { $("#nav").innerHTML = NAV.map(([k, l]) => `<a href="#${k}" class="${a === k ? "on" : ""}">${l}</a>`).join(""); }
+
+document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); go(g.dataset.go); return; }
+  const a = e.target.closest("a[href^='#']"); if (a) { e.preventDefault(); go(a.getAttribute("href").slice(1)); } });
+function go(p) { window.__r = p || "plan"; route(); }
+function clearTimers() { if (window.__timer) { clearInterval(window.__timer); window.__timer = null; } }
+function route() {
+  clearTimers();
+  const h = (window.__r || "plan").split("/"); const v = h[0]; renderNav(v); window.scrollTo(0, 0);
+  if (v === "guide") return h[1] ? viewChapter(h[1]) : viewGuideList();
+  if (v === "pres") return h[1] !== undefined ? viewPres(+h[1], h[2]) : viewPresList();
+  if (v === "cards") return viewCards(h[1] || "all");
+  if (v === "ueb") return h[1] ? viewUeb(h[1]) : viewUebList();
+  if (v === "quiz") return h[1] ? startQuiz(h[1]) : viewQuizList();
+  if (v === "oral") return viewOral();
+  if (v === "sim") return viewSim();
+  if (v === "merk") return (app().innerHTML = `<h1>Merkblatt</h1><p class="lead">Alles, was du ohne Hilfsmittel wissen musst.</p>${MERK}`);
+  return viewPlan();
+}
+function timer(el, secs, onEnd) { const start = Date.now(); const tick = () => { const s = Math.max(0, secs - Math.floor((Date.now() - start) / 1000)); const e = $(el); if (e) { e.textContent = `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; if (s === 0) { e.classList.add("over"); clearTimers(); onEnd && onEnd(); } } }; tick(); window.__timer = setInterval(tick, 1000); }
+
+// ---------- Plan ----------
+function pill(k, label, href, good = 80, unit = "%") { const b = best(k); return `<a class="pill ${b === null ? "" : b >= good ? "good" : "bad"}" href="${href}">${label}${b === null ? "" : " " + b + unit}</a>`; }
+function cardStats(list) { const st = S.get("cards", {}); const known = list.filter(c => st[c[0]] === "y").length; return `${known}/${list.length}`; }
+function viewPlan() {
+  const done = S.get("plan", {}); const dl = Math.ceil((new Date(EXAM_DATE + "T08:00:00") - new Date()) / 86400000);
+  let total = 0, checked = 0; PLAN.forEach((d, i) => d.tasks.forEach((t, j) => { total++; if (done[`${i}-${j}`]) checked++; }));
+  const allCards = Object.values(CARDS).flat(); const sims = S.get("simhist", []);
+  app().innerHTML = `<section class="hero"><div><h1>Mathematik mündlich · Mi 25.11.</h1><p>15 min ohne Vorbereitung und Hilfsmittel · Teil 1: Präsentation (4 Punkte) · Teil 2: je eine Aufgabe Differentialrechnung und Stochastik (8 Punkte)</p></div><div class="count"><span>${dl > 0 ? dl : 0}</span>${dl === 1 ? "Tag" : "Tage"}</div></section>
+  <p class="lead">Mündlich heisst: Formeln und Definitionen auswendig, jeden Rechenschritt laut kommentieren, auf Fragen reagieren. Darum übst du hier vor allem laut. Ziel für eine 6: 11 von 12 Punkten. Beide Präsentationen frei in 4 min, alle Karteikarten gewusst, Übungsblätter über 90 %.</p>
+  <div class="bar"><div style="width:${total ? Math.round(checked / total * 100) : 0}%"></div></div><p class="small">${checked} von ${total} Aufgaben erledigt</p>
+  <div class="days">${PLAN.map((d, i) => `<div class="day"><div class="dh"><b>${d.d}</b> <span>${d.t}</span><em>${d.min}</em></div>${d.tasks.map((t, j) => `<label class="task"><input type="checkbox" data-k="${i}-${j}" ${done[`${i}-${j}`] ? "checked" : ""}> <span>${t.x}</span> <a href="#${t.go}" class="go">öffnen →</a></label>`).join("")}</div>`).join("")}</div>
+  <h2>Dein Stand</h2><div class="tw"><table>
+  <tr><td>Präsentationen</td><td>${PRES.map((p, i) => pill("pres" + i, "P" + (i + 1), "#pres/" + i, 4, "/4")).join(" ")}</td></tr>
+  <tr><td>Karteikarten gewusst</td><td>${cardStats(allCards)}</td></tr>
+  <tr><td>Übungsblätter</td><td>${Object.keys(UEB).map(k => pill("ueb_" + k, k.toUpperCase(), "#ueb/" + k, 90)).join(" ")}</td></tr>
+  <tr><td>Quiz</td><td>${Object.keys(QUIZ).map(k => pill("quiz_" + k, k, "#quiz/" + k)).join(" ")}</td></tr>
+  <tr><td>Simulationen</td><td>${sims.length ? sims.slice(0, 3).map(s => `Note ${s.n} (${s.p} P.)`).join(" · ") : "noch keine"}</td></tr></table></div>`;
+  app().querySelectorAll(".task input").forEach(cb => cb.onchange = () => { const d = S.get("plan", {}); d[cb.dataset.k] = cb.checked; S.set("plan", d); viewPlan(); });
+}
+
+// ---------- Lernguide ----------
+const AFTER = { d2: [["Karteikarten", "cards/d2"], ["Übungsblatt 1", "ueb/d1"], ["Quiz A", "quiz/A"], ["Quiz D", "quiz/D"]], d3: [["Karteikarten", "cards/d3"], ["Übungsblatt 2", "ueb/d2"], ["Quiz B", "quiz/B"]], d4: [["Karteikarten", "cards/d4"], ["Übungsblatt 3", "ueb/d3"], ["Quiz C", "quiz/C"]], st: [["Karteikarten", "cards/st"], ["Stochastik-Blatt 1", "ueb/s1"], ["Stochastik-Blatt 2", "ueb/s2"], ["Quiz E", "quiz/E"]] };
+function viewGuideList() { app().innerHTML = `<h1>Lernguide</h1><p class="lead">Prüfungsstoff: Differentialrechnung 2, 3, 4 und Stochastik 2 bis S. 14 plus Einstiegsaufgaben.</p><div class="list">${TOPICS.map(t => `<a class="row" href="#guide/${t.id}"><b>${t.n}</b> ${t.title}<span class="go">→</span></a>`).join("")}</div>`; }
+function viewChapter(id) { const t = topic(id), i = TOPICS.indexOf(t), p = TOPICS[i - 1], n = TOPICS[i + 1];
+  app().innerHTML = `<p class="crumb"><a href="#guide">Lernguide</a> / ${t.n}</p><h1>${t.n} ${t.title}</h1><div class="chapter">${CHAPTERS[id]}</div>
+  <div class="after"><b>Jetzt üben:</b>${AFTER[id].map(([l, g]) => `<a class="btn" href="#${g}">${l}</a>`).join("")}</div>
+  <div class="pn">${p ? `<a href="#guide/${p.id}">← ${p.short}</a>` : "<span></span>"}${n ? `<a href="#guide/${n.id}">${n.short} →</a>` : ""}</div>`; }
+
+// ---------- Präsentation ----------
+function viewPresList() { app().innerHTML = `<h1>Präsentation (Teil 1)</h1><p class="lead">5 Minuten: ca. 4 min Mikropräsentation, 1 min Fragen. Max. 4 Punkte. Bereite beide Themen vor. Zuerst Skript lesen, dann im Übungsmodus laut halten, nur mit Stichworten.</p>
+  <div class="list">${PRES.map((p, i) => `<a class="row" href="#pres/${i}">${i + 1}. ${p.t}<span class="go">${best("pres" + i) === null ? "" : "Bestwert " + best("pres" + i) + "/4 "}→</span></a>`).join("")}</div>`; }
+function viewPres(i, mode) {
+  const p = PRES[i];
+  if (mode === "go") {
+    app().innerHTML = `<p class="crumb"><a href="#pres">Präsentation</a> / Übungsmodus</p><h1>${p.t}</h1><div class="timer big" id="tm">04:00</div>
+    <p class="lead">Steh auf und halte den Vortrag laut, wie an der Tafel. Nur diese Stichworte als Hilfe:</p>
+    <ol class="cues">${p.steps.map(s => `<li>${s[0]}</li>`).join("")}</ol>
+    <p><button class="btn" id="fin">Fertig, jetzt bewerten</button></p><div id="ev"></div>`;
+    timer("#tm", 240);
+    $("#fin").onclick = () => { clearTimers(); const q = pick(p.qs);
+      $("#ev").innerHTML = `<h2>Was hast du gesagt?</h2>${p.checks.map((c, k) => `<label class="task"><input type="checkbox" data-c="${k}"> <span>${c}</span></label>`).join("")}
+      <h2>Zusatzfrage (1 min)</h2><p><b>${q[0]}</b></p><button class="btn ghost" id="ans">Antwort zeigen</button><p id="qa" hidden>${q[1]}</p>
+      <p><button class="btn" id="sc">Punkte berechnen</button></p><div id="res"></div>`;
+      $("#ans").onclick = () => $("#qa").hidden = false;
+      $("#sc").onclick = () => { const n = app().querySelectorAll("[data-c]:checked").length; const pts = Math.round(n / p.checks.length * 4 * 2) / 2; setBest("pres" + i, pts);
+        $("#res").innerHTML = `<div class="fb ${pts >= 3.5 ? "y" : "n"}"><b>${pts} von 4 Punkten.</b> ${pts >= 3.5 ? "Stark. Achte noch auf Tempo und Tafelbild." : "Lies im Skript nach, was gefehlt hat, und halte den Vortrag nochmals."}</div>`; }; };
+    return;
+  }
+  app().innerHTML = `<p class="crumb"><a href="#pres">Präsentation</a> / ${i + 1}</p><h1>${p.t}</h1><p class="small">Quelle: ${p.src}</p>
+  <p><a class="btn" href="#pres/${i}/go">Übungsmodus mit 4-min-Timer starten</a></p>
+  <h2>Skript (so kannst du es sagen und an die Tafel schreiben)</h2>
+  ${p.steps.map((s, k) => `<div class="step"><b>${k + 1}. ${s[0]}</b><p>${s[1]}</p></div>`).join("")}
+  <h2>Mögliche Fragen</h2>${p.qs.map((q, k) => `<div class="drawcard"><b>${q[0]}</b> <button class="btn sm ghost" data-r="${k}">Antwort</button><p id="pa${k}" hidden>${q[1]}</p></div>`).join("")}
+  <h2>Tipps</h2><ul><li>Tafel links: Formel gross in einen Kasten. Rechts: Herleitung und Beispiel.</li><li>Beim Schreiben weitersprechen, nicht stumm rechnen.</li><li>Mit Beispiel abschliessen, das zeigt, dass du die Regel anwenden kannst.</li></ul>`;
+  app().querySelectorAll("[data-r]").forEach(b => b.onclick = () => { const e = $("#pa" + b.dataset.r); e.hidden = !e.hidden; });
+}
+
+// ---------- Karteikarten ----------
+function viewCards(t) {
+  const list = t === "all" ? Object.values(CARDS).flat() : CARDS[t]; const st = S.get("cards", {});
+  const order = shuffle(list).sort((a, b) => (st[a[0]] === "y") - (st[b[0]] === "y"));
+  let i = 0;
+  const tabs = `<div class="tabs"><a href="#cards/all" class="${t === "all" ? "on" : ""}">Alle</a>${TOPICS.map(x => `<a href="#cards/${x.id}" class="${t === x.id ? "on" : ""}">${x.short}</a>`).join("")}</div>`;
+  function show() {
+    const s = S.get("cards", {}); const known = list.filter(c => s[c[0]] === "y").length;
+    if (i >= order.length) { app().innerHTML = `<h1>Karteikarten</h1>${tabs}<p class="lead">Runde fertig: ${known} von ${list.length} gewusst.</p><a class="btn" href="#cards/${t}">Nochmals</a>`; return; }
+    const c = order[i];
+    app().innerHTML = `<h1>Karteikarten</h1>${tabs}<p class="small">Karte ${i + 1} von ${order.length} · ${known} gewusst. Sag die Antwort laut, bevor du umdrehst.</p>
+    <div class="card" id="cd"><div class="front">${c[0]}</div><div class="back" hidden>${c[1]}</div></div>
+    <p id="bt"><button class="btn" id="flip">Umdrehen</button></p>`;
+    const flip = () => { app().querySelector(".back").hidden = false; $("#bt").innerHTML = `<button class="btn sm good" id="y">Gewusst</button> <button class="btn sm bad" id="n">Nochmals</button>`;
+      $("#y").onclick = () => mark("y"); $("#n").onclick = () => mark("n"); };
+    $("#flip").onclick = flip; $("#cd").onclick = flip;
+  }
+  function mark(v) { const s = S.get("cards", {}); s[order[i][0]] = v; S.set("cards", s); i++; show(); }
+  show();
+}
+
+// ---------- Übungen ----------
+function parseNum(s) { s = String(s).trim().replace(/−/g, "-").replace(/,/g, ".").replace(/\s/g, ""); if (!s) return NaN; const m = s.match(/^(-?[\d.]+)\/(-?[\d.]+)$/); if (m) return parseFloat(m[1]) / parseFloat(m[2]); if (/^-?π$/.test(s)) return s.startsWith("-") ? -Math.PI : Math.PI; return Number(s); }
+function viewUebList() { app().innerHTML = `<h1>Übungsblätter</h1><p class="lead">Schwere Aufgaben zum Rechnen auf Papier. Bei Zahlen-Antworten prüft die Seite dein Resultat (Brüche wie -5/36 gehen auch). Bei Herleitungen deckst du die Lösung auf und bewertest dich ehrlich. Wichtig für mündlich: jeden Schritt laut kommentieren.</p>
+  <div class="list">${Object.entries(UEB).map(([k, u]) => `<a class="row" href="#ueb/${k}">${u.t}<span class="go">${best("ueb_" + k) === null ? "" : "Bestwert " + best("ueb_" + k) + " % "}→</span></a>`).join("")}</div>`; }
+function viewUeb(k) {
+  const u = UEB[k];
+  app().innerHTML = `<p class="crumb"><a href="#ueb">Übungen</a></p><h1>${u.t}</h1><p class="small">Löse auf Papier. Zahlen auf 3 Stellen nach dem Komma genügen.</p>
+  ${u.items.map((it, i) => `<div class="simq"><b>${i + 1}.</b> ${it.q}<br>${it.n !== undefined ? `<input class="ans sm" data-i="${i}" inputmode="decimal" placeholder="Resultat">` : `<button class="btn sm ghost" data-s="${i}">Lösung zeigen</button> <span class="rate" data-r="${i}" hidden><button class="btn sm good" data-v="1">richtig</button> <button class="btn sm bad" data-v="0">falsch</button></span>`}<div class="res" id="r${i}"></div></div>`).join("")}
+  <p><button class="btn" id="chk">Zahlen prüfen + Punkte</button></p><div id="sum"></div>`;
+  const self = {};
+  app().querySelectorAll("[data-s]").forEach(b => b.onclick = () => { const i = +b.dataset.s; $("#r" + i).innerHTML = `<div class="sol">${u.items[i].sol}</div>`; app().querySelector(`[data-r="${i}"]`).hidden = false; });
+  app().querySelectorAll(".rate button").forEach(b => b.onclick = () => { const i = b.parentElement.dataset.r; self[i] = +b.dataset.v; b.parentElement.querySelectorAll("button").forEach(x => x.classList.remove("on")); b.classList.add("on"); });
+  $("#chk").onclick = () => { let right = 0, tot = 0;
+    u.items.forEach((it, i) => { if (it.n === undefined) { if (i in self) { tot++; right += self[i]; } return; }
+      tot++; const inp = app().querySelector(`[data-i="${i}"]`); const v = parseNum(inp.value); const tol = it.int ? 0 : Math.max(0.005, Math.abs(it.n) * 0.005); const ok = !isNaN(v) && Math.abs(v - it.n) <= tol;
+      if (ok) right++; inp.classList.remove("okk", "nok"); inp.classList.add(ok ? "okk" : "nok");
+      $("#r" + i).innerHTML = ok ? `<span class="y">richtig</span> <span class="small">${it.s}</span>` : `<span class="n">Lösung: ${Number.isInteger(it.n) ? it.n : it.n.toFixed(3)}</span><br><span class="small">${it.s}</span>`; });
+    const sc = tot ? Math.round(right / tot * 100) : 0; if (tot === u.items.length) setBest("ueb_" + k, sc);
+    $("#sum").innerHTML = `<div class="fb ${sc >= 90 ? "y" : "n"}"><b>${right} von ${tot} richtig (${sc} %).</b> ${tot < u.items.length ? "Bewerte noch die Herleitungen, damit das Blatt zählt." : sc >= 90 ? "Sehr gut." : "Fehler nachrechnen und das Blatt morgen nochmals lösen."}</div>`; };
+}
+
+// ---------- Quiz ----------
+function viewQuizList() { app().innerHTML = `<h1>Quiz</h1><p class="lead">Schnelles Drillen zwischendurch. Antworten werden jedes Mal gemischt.</p><div class="list">${Object.entries(QUIZ).map(([k, q]) => `<a class="row" href="#quiz/${k}">Quiz ${k} · ${q.t}<span class="go">${best("quiz_" + k) === null ? "" : "Bestwert " + best("quiz_" + k) + " % "}→</span></a>`).join("")}</div>`; }
+function startQuiz(k) {
+  const qs = shuffle(QUIZ[k].q); let i = 0, right = 0; const wrong = [];
+  function show() { const q = qs[i]; const opts = shuffle(q[1].map((x, j) => ({ x, ok: j === 0 })));
+    app().innerHTML = `<p class="crumb"><a href="#quiz">Quiz</a> / ${k} · ${QUIZ[k].t}</p><div class="qhead"><span>${i + 1} von ${qs.length}</span><span>${right} richtig</span></div><div class="bar"><div style="width:${i / qs.length * 100}%"></div></div>
+    <div class="qcard"><h2>${q[0]}${k === "A" || k === "B" ? " → f'(x) = ?" : ""}</h2><div class="opts">${opts.map((o, j) => `<button class="opt" data-k="${j}"><span>${"ABCD"[j]}</span>${o.x}</button>`).join("")}</div><div id="fb"></div></div>`;
+    app().querySelectorAll(".opt").forEach(b => b.onclick = () => { const box = app().querySelector(".opts"); if (box.dataset.d) return; box.dataset.d = 1; const o = opts[+b.dataset.k];
+      app().querySelectorAll(".opt").forEach((bb, j) => { if (opts[j].ok) bb.classList.add("right"); }); if (o.ok) right++; else { b.classList.add("wrong"); wrong.push(q); }
+      $("#fb").innerHTML = `<div class="fb ${o.ok ? "y" : "n"}"><b>${o.ok ? "Richtig." : "Falsch. Richtig: " + q[1][0]}</b></div><button class="btn" id="nx">${i + 1 < qs.length ? "Weiter" : "Auswertung"}</button>`; $("#nx").focus();
+      $("#nx").onclick = () => { i++; i < qs.length ? show() : end(); }; }); }
+  function end() { const sc = Math.round(right / qs.length * 100); setBest("quiz_" + k, sc);
+    app().innerHTML = `<h1>${sc} %</h1><p class="lead">${right} von ${qs.length} richtig.</p><p><a class="btn" href="#quiz/${k}">Nochmals</a> <a class="btn ghost" href="#quiz">Übersicht</a></p>${wrong.length ? `<h2>Fehler</h2>${wrong.map(q => `<div class="rev">${q[0]} → <span class="y">${q[1][0]}</span></div>`).join("")}` : ""}`; }
+  show();
+}
+
+// ---------- Prüferfragen ----------
+function viewOral() { const st = S.get("oral", {});
+  app().innerHTML = `<h1>Prüferfragen</h1><p class="lead">Solche Fragen kommen im Gespräch. Beantworte jede laut in 2-3 Sätzen, dann aufdecken und ehrlich bewerten.</p>
+  ${ORAL.map((o, i) => `<div class="drawcard"><b>${i + 1}. ${o[0]}</b> <span class="state ${st[i] || ""}">${st[i] === "y" ? "gewusst" : st[i] === "n" ? "nochmals" : ""}</span><br><button class="btn sm ghost" data-r="${i}">Antwort</button><div id="o${i}" hidden><p>${o[1]}</p><button class="btn sm good" data-s="y" data-i="${i}">Gewusst</button> <button class="btn sm bad" data-s="n" data-i="${i}">Nochmals</button></div></div>`).join("")}`;
+  app().querySelectorAll("[data-r]").forEach(b => b.onclick = () => { const e = $("#o" + b.dataset.r); e.hidden = !e.hidden; });
+  app().querySelectorAll("[data-s]").forEach(b => b.onclick = () => { const s = S.get("oral", {}); s[b.dataset.i] = b.dataset.s; S.set("oral", s); viewOral(); });
+}
+
+// ---------- Simulation ----------
+function viewSim() { const hist = S.get("simhist", []);
+  app().innerHTML = `<h1>Prüfungssimulation (15 min)</h1><p class="lead">Wie die echte Prüfung: zuerst ein zufälliges Präsentationsthema (5 min), dann je eine Aufgabe Differentialrechnung und Stochastik (10 min). Laut sprechen, am besten vor jemandem oder mit Aufnahme. Am Schluss bewertest du dich mit Checklisten, die Seite rechnet die Note nach der Skala deiner Lehrperson.</p>
+  <p><button class="btn" id="go">Simulation starten</button></p>
+  ${hist.length ? `<h2>Bisherige Simulationen</h2><div class="tw"><table><tr><th>Datum</th><th>Punkte</th><th>Note</th></tr>${hist.map(h => `<tr><td>${h.d}</td><td>${h.p} / 12</td><td>${h.n}</td></tr>`).join("")}</table></div>` : ""}`;
+  $("#go").onclick = runSim; }
+function runSim() {
+  const pi = Math.floor(Math.random() * PRES.length), p = PRES[pi], d = pick(SIMD), s = pick(SIMS), q1 = pick(p.qs), oq = shuffle(ORAL).slice(0, 2);
+  app().innerHTML = `<h1>Teil 1 · Präsentation</h1><div class="timer big" id="tm">05:00</div><p class="lead">Thema: <b>${p.t}</b>. 4 min vortragen, dann beantworte die Frage unten (1 min). Keine Stichworte!</p>
+  <p class="small">Zusatzfrage (erst nach dem Vortrag lesen): <span class="hide" id="h1">${q1[0]}</span> <button class="btn sm ghost" id="sh1">zeigen</button></p>
+  <p><button class="btn" id="t2">Weiter zu Teil 2</button></p>`;
+  timer("#tm", 300); $("#sh1").onclick = () => $("#h1").classList.remove("hide");
+  $("#t2").onclick = () => { clearTimers();
+    app().innerHTML = `<h1>Teil 2 · Aufgaben</h1><div class="timer big" id="tm">10:00</div><p class="lead">Löse auf Papier und kommentiere jeden Schritt laut.</p>
+    <div class="simq"><b>Differentialrechnung:</b> ${d.q}</div><div class="simq"><b>Stochastik:</b> ${s.q}</div>
+    <div class="simq"><b>Prüferfragen dazwischen:</b><br>1. ${oq[0][0]}<br>2. ${oq[1][0]}</div>
+    <p><button class="btn" id="ev">Fertig, auswerten</button></p>`;
+    timer("#tm", 600);
+    $("#ev").onclick = () => { clearTimers();
+      const blk = (title, items, sol) => `<div class="simq"><b>${title}</b>${sol ? `<div class="sol">${sol}</div>` : ""}${items.map(c => `<label class="task"><input type="checkbox" class="sc"> <span>${c}</span></label>`).join("")}</div>`;
+      app().innerHTML = `<h1>Auswertung</h1><p class="lead">Hake ehrlich ab, was du gesagt und richtig gemacht hast.</p>
+      <h2>Teil 1: ${p.t} (4 Punkte)</h2><div id="p1">${blk("Inhalt", p.checks)}${blk("Zusatzfrage: " + q1[0], ["Frage richtig beantwortet"], q1[1])}</div>
+      <h2>Teil 2 (8 Punkte)</h2><div id="p2">${blk("Differentialrechnung: " + d.q, d.c.concat(["Schritte laut kommentiert"]), d.sol)}${blk("Stochastik: " + s.q, s.c.concat(["Schritte laut kommentiert"]), s.sol)}${blk("Prüferfragen", [oq[0][0] + " → " + oq[0][1], oq[1][0] + " → " + oq[1][1]])}</div>
+      <p><button class="btn" id="calc">Note berechnen</button></p><div id="res"></div>`;
+      $("#calc").onclick = () => { const r = sel => { const all = app().querySelectorAll(sel + " .sc"); const c = [...all].filter(x => x.checked).length; return c / all.length; };
+        const pts = Math.round((r("#p1") * 4 + r("#p2") * 8) * 2) / 2; const n = noteFromPts(pts);
+        const h = S.get("simhist", []); const dt = new Date(); h.unshift({ d: `${dt.getDate()}.${dt.getMonth() + 1}. ${dt.getHours()}:${String(dt.getMinutes()).padStart(2, "0")}`, p: pts, n }); S.set("simhist", h.slice(0, 10));
+        $("#res").innerHTML = `<div class="fb ${n >= 5.5 ? "y" : "n"}"><b>${pts} von 12 Punkten → Note ${n}.</b> ${n >= 6 ? "Du bist ready." : "Schau, wo Häkchen fehlen: Karteikarten und Übungsblätter dazu, dann nochmals simulieren."}</div>`; };
+    };
+  };
+}
+
+route();
+</script>
+</body>
+</html>

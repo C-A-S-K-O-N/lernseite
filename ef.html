@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EF Sport Lernguide · Prüfung 25.11.</title>
+<style>
+:root{--ink:#161616;--mute:#6b6b6b;--line:#e4e4e4;--soft:#f7f7f5;--acc:#1f4fa3;--ok:#1d7a3e;--no:#b3261e;}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+.top{max-width:920px;margin:0 auto;padding:10px 20px 0;display:flex;align-items:baseline;gap:12px}
+.top b{font-size:15px;letter-spacing:.02em}
+.top span{color:var(--mute);font-size:13px}
+#nav{max-width:920px;margin:0 auto;padding:0 12px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav a{padding:10px 10px 9px;color:var(--mute);text-decoration:none;font-size:14px;white-space:nowrap;border-bottom:2px solid transparent}
+#nav a.on{color:var(--ink);border-bottom-color:var(--ink)}
+main{max-width:920px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 10px;letter-spacing:-.01em}
+h2{font-size:19px;margin:30px 0 10px}
+h3{font-size:16px;margin:26px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+a{color:var(--acc)}
+.lead{color:#333;max-width:720px}
+.small{font-size:13px;color:var(--mute)}
+.crumb{font-size:13px;color:var(--mute);margin:0}
+.crumb a{color:var(--mute)}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.hero p{margin:0;color:var(--mute);font-size:14px}
+.count{text-align:center;font-size:12px;color:var(--mute);min-width:70px}
+.count span{display:block;font-size:40px;font-weight:700;color:var(--ink);line-height:1}
+.bar{height:3px;background:var(--line);margin:14px 0 4px}
+.bar div{height:3px;background:var(--ink);transition:width .3s}
+.days{display:grid;gap:12px;margin-top:18px}
+.day{border:1px solid var(--line);padding:12px 14px}
+.dh{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}
+.dh span{color:#333}
+.dh em{margin-left:auto;font-style:normal;font-size:13px;color:var(--mute)}
+.task{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid #f0f0f0;font-size:15px;cursor:pointer}
+.task input{margin-top:5px;accent-color:var(--ink)}
+.task span{flex:1}
+.task input:checked+span{color:var(--mute);text-decoration:line-through}
+.go{font-size:13px;white-space:nowrap;text-decoration:none}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:8px 0}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px 8px 0;text-align:left;vertical-align:top}
+th{font-weight:600;font-size:13px;color:var(--mute)}
+.tw{overflow-x:auto}
+table.data td,table.data th{padding:6px 10px;white-space:nowrap;text-align:center}
+table.data th{text-align:left}
+.pill{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute);margin:1px}
+.pill.good,.btn.good{border-color:var(--ok);color:var(--ok)}
+.pill.bad,.btn.bad{border-color:var(--no);color:var(--no)}
+.btn{display:inline-block;font:inherit;font-size:14px;padding:8px 14px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;margin:3px 4px 3px 0;border-radius:3px}
+.btn.ghost,.btn.sm,.btn.good,.btn.bad{background:#fff;color:var(--ink)}
+.btn.sm{font-size:13px;padding:5px 10px;border-color:var(--line)}
+.btn.sm.on{background:var(--ink);color:#fff}
+.btns{white-space:nowrap}
+.list .row{display:flex;gap:12px;padding:13px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-items:center}
+.list .row b{width:22px;color:var(--mute)}
+.list .row .go{margin-left:auto}
+.tag{font-size:11px;color:var(--mute);border:1px solid var(--line);padding:1px 6px;border-radius:10px}
+.how{border-left:2px solid var(--ink);padding:4px 0 4px 14px;margin:14px 0;font-size:15px}
+.how ol{margin:6px 0 0;padding-left:20px}
+.note{font-size:14px;color:var(--mute);border:1px solid var(--line);padding:10px 12px;margin:10px 0}
+.formula{font-family:Georgia,serif;font-size:17px;padding:6px 0}
+.chapter ul,.chapter ol{padding-left:20px}
+.chapter li{margin:3px 0}
+.after{margin-top:30px;padding-top:16px;border-top:1px solid var(--ink)}
+.after b{display:block;margin-bottom:8px}
+.pn{display:flex;justify-content:space-between;margin-top:26px;font-size:14px}
+.qhead{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-top:10px}
+.qcard h2{font-size:20px;margin:22px 0 14px;line-height:1.35}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;font:inherit;font-size:15.5px;background:#fff;border:1px solid var(--line);padding:12px 14px;cursor:pointer;border-radius:3px;color:var(--ink)}
+.opt:hover{border-color:#999}
+.opt span{font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:50%;width:22px;height:22px;flex:none;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.opt.right{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.opt.wrong{border-color:var(--no);box-shadow:inset 3px 0 0 var(--no)}
+.fb{margin:14px 0;padding:10px 14px;border:1px solid var(--line);font-size:15px}
+.fb.y b,.y{color:var(--ok)}
+.fb.n b,.n{color:var(--no)}
+.rev{border-top:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.tabs a{font-size:13px;padding:5px 10px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--mute)}
+.tabs a.on{border-color:var(--ink);color:var(--ink)}
+svg{width:100%;height:auto;display:block}
+.chart{max-width:640px;border:1px solid var(--line);margin:12px 0}
+.ax{stroke:#222;stroke-width:1.2}
+.grid{stroke:#eee;stroke-width:1}
+.lb{font-size:11px;fill:#555;font-family:inherit}
+.dash{stroke:#888;stroke-dasharray:4 4;stroke-width:1}
+.c1{stroke:#b3261e;fill:none;stroke-width:2}
+.c2{stroke:#1d7a3e;fill:none;stroke-width:2}
+.c3{stroke:#1f4fa3;fill:none;stroke-width:2}
+.c4{stroke:#2e9e5b;fill:none;stroke-width:2}
+.c5{stroke:#222;fill:none;stroke-width:2}
+.pt{fill:#1f4fa3}
+.mark{fill:none;stroke:#161616;stroke-width:2}
+rect.blk{fill:#d9d9d4;stroke:#999}
+.guess{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:10px 0}
+.guess label{font-size:13px;color:var(--mute);display:flex;flex-direction:column;gap:4px}
+.guess input{font:inherit;padding:7px 9px;border:1px solid var(--line);width:130px}
+.drawcard{border-top:1px solid var(--line);padding:14px 0}
+.drawcard h2{font-size:17px;margin:0 0 6px}
+.sol{margin-top:10px}
+.sol svg{max-width:520px;border:1px solid var(--line)}
+.state{font-size:12px;margin-left:8px}
+.state.y{color:var(--ok)}.state.n{color:var(--no)}
+.simq{border-top:1px solid var(--line);padding:12px 0}
+.sopt{display:block;padding:4px 0 4px 4px;font-size:15px;cursor:pointer}
+.timer{position:sticky;top:90px;float:right;font-variant-numeric:tabular-nums;border:1px solid var(--ink);padding:4px 10px;background:#fff;font-size:15px}
+@media (max-width:600px){h1{font-size:24px}main{padding:18px 16px 70px}.count span{font-size:32px}.btns{white-space:normal}th,td{padding:7px 8px 7px 0}}
+.home{font-size:13px;text-decoration:none;margin-right:6px}
+</style>
+</head>
+<body>
+<header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>EF Sport Lernguide</b><span>Prüfung Mi 25.11.2026</span></div><nav id="nav"></nav></header>
+<main id="app"></main>
+<script>
+const TOPICS = [
+{id:"e", n:1, title:"Energiebereitstellung", short:"Energie"},
+{id:"l", n:2, title:"Leistungsphysiologie & Laktatstufentest", short:"Laktat"},
+{id:"g", n:3, title:"Grundlagen der Trainingswissenschaft", short:"Grundlagen"},
+{id:"a", n:4, title:"Ausdauer", short:"Ausdauer"},
+{id:"k", n:5, title:"Koordination", short:"Koordination"},
+{id:"f", n:6, title:"Kraft", short:"Kraft"},
+{id:"s", n:7, title:"Schnelligkeit", short:"Schnelligkeit"},
+{id:"b", n:8, title:"Beweglichkeit", short:"Beweglichkeit"}
+];
+
+const CHAPTERS = {
+e: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 30 min)</b>
+<ol><li>Lies das Kapitel einmal ganz durch.</li>
+<li>Schliess die Seite und schreib die Tabelle "Die 5 Wege" aus dem Kopf auf ein Blatt: Weg, Art, Reaktion, Dauer, ATP.</li>
+<li>Vergleiche mit der Tabelle und korrigiere mit Rot.</li>
+<li>Mach Quiz A. Unter 80 %: Fehler nachlesen und Quiz A nochmals.</li></ol></div>
+
+<h3>ATP und Resynthese</h3>
+<p>ATP (Adenosintriphosphat) ist die Energiewährung des Körpers. Jede Muskelkontraktion braucht ATP.</p>
+<p class="formula">ATP ⇌ ADP + P + Energie</p>
+<p>Der Muskel speichert nur wenig ATP (ca. 6 mmol/kg). Das reicht bei maximaler Belastung für 2-3 Sekunden, also 3-4 Kontraktionen. Darum muss ATP laufend neu gebildet werden (Resynthese). Die Energie dafür kommt aus Kohlenhydraten, Fetten und sehr wenig aus Proteinen.</p>
+<p><b>Begriffe:</b> anaerob = ohne Sauerstoff, aerob = mit Sauerstoff, alaktazid = ohne Laktatbildung, laktazid = mit Laktatbildung.</p>
+
+<h3>Die 5 Wege</h3>
+<div class="tw"><table>
+<tr><th>Weg</th><th>Art</th><th>Reaktion</th><th>Dauer</th><th>Merkmale</th></tr>
+<tr><td>ATP-Speicher</td><td>anaerob alaktazid</td><td>ATP → ADP + P + Energie</td><td>2-3 s</td><td>sofort da, sehr klein</td></tr>
+<tr><td>Kreatinphosphat (KrP)</td><td>anaerob alaktazid</td><td>KrP + ADP ⇌ Kreatin + ATP (Kreatinkinase)</td><td>bis ca. 10 s</td><td>Speicher ca. 20 mmol/kg, nach 5-8 min wieder voll; Training und Kreatin vergrössern ihn</td></tr>
+<tr><td>Anaerobe Glykolyse</td><td>anaerob laktazid</td><td>Glykogen → Laktat + Energie</td><td>ca. 45-90 s</td><td>1 Glukose = <b>2 ATP</b>, schnell aber wenig ergiebig</td></tr>
+<tr><td>Aerobe Glykolyse</td><td>aerob</td><td>Glukose + O₂</td><td>bis ca. 90 min</td><td>1 Glukose = <b>30-32 ATP</b>; braucht ca. 2 min, bis Atmung und Kreislauf angepasst sind</td></tr>
+<tr><td>Fettsäureoxidation</td><td>aerob</td><td>Fettsäuren + O₂</td><td>Stunden bis Tage</td><td>grösster Speicher, aber langsamste ATP-Bildung</td></tr>
+</table></div>
+<p>Proteine liefern nur einen sehr kleinen Anteil, vor allem bei extrem langen Belastungen. Glykogen ist die Speicherform von Glukose in Muskel und Leber.</p>
+
+<h3>Intensität und Dauer</h3>
+<p>Je höher die Intensität, desto schneller muss ATP gebildet werden (ATP-Bildungsrate). Das schaffen nur KrP und anaerobe Glykolyse. Je länger die Belastung, desto grösser der aerobe Anteil, zuerst Glukose, dann Fett. Die Systeme laufen nie allein, sie überlappen sich.</p>
+<p><b>Reihenfolge merken:</b> KrP → anaerobe Glykolyse → aerober Glukoseabbau → Fettoxidation. Nach rechts sinkt die Intensität und die mögliche Dauer steigt.</p>
+<p>Übersicht: anaerob alaktazid (ATP, KrP) bis ca. 10 s · anaerob laktazid (anaerobe Glykolyse) bis ca. 90 s · aerobe Glykolyse bis ca. 90 min · Fettverbrennung mehrere Stunden.</p>
+
+<h3>Laktat und metabolische Azidose</h3>
+<ul>
+<li><b>Entstehung:</b> In einem Schritt der Glykolyse wird ein H⁺-Ion abgegeben. Ohne genug Sauerstoff geht das nicht regulär, also wird H⁺ auf Pyruvat übertragen. So entsteht Laktat.</li>
+<li><b>Kein Abfallprodukt:</b> Herz, Leber und unbelastete Muskulatur bauen Laktat ab und wandeln es in Glukose oder Energie um. Es ist auch ein Signalmolekül.</li>
+<li><b>Nutzen:</b> Laktat zeigt die Ausdauerleistungsfähigkeit (anaerobe Schwelle im Laktatstufentest).</li>
+<li><b>H⁺-Ionen</b> entstehen bei jeder ATP-Hydrolyse. Unter anaeroben Bedingungen werden sie weniger abgebaut und sammeln sich an.</li>
+<li><b>Metabolische Azidose:</b> H⁺ häuft sich an, der pH sinkt (Übersäuerung), die Muskelkontraktion wird gehemmt → Leistungsabbruch.</li>
+</ul>
+
+<h3>Verknüpfung mit Sportarten</h3>
+<div class="tw"><table>
+<tr><th>Strecke</th><th>ATP/KrP %</th><th>anaerob laktazid %</th><th>aerob %</th></tr>
+<tr><td>100 m</td><td>25</td><td>70</td><td>unter 5</td></tr>
+<tr><td>200 m</td><td>15</td><td>60</td><td>25</td></tr>
+<tr><td>400 m</td><td>12</td><td>43</td><td>45</td></tr>
+<tr><td>800 m</td><td>10</td><td>30</td><td>60</td></tr>
+<tr><td>1500 m</td><td>8</td><td>20</td><td>72</td></tr>
+<tr><td>5000 m</td><td>4</td><td>10</td><td>86</td></tr>
+<tr><td>Marathon</td><td>0</td><td>5-2</td><td>95-98</td></tr>
+</table></div>
+<p>Achtung: Laut Tabelle ist schon beim 100-m-Lauf der grösste Anteil anaerob laktazid (70 %). KrP dominiert bei ganz kurzen Belastungen unter ca. 10 s mit einzelnen Aktionen: Start, Sprung, Wurf, Kugelstossen, Gewichtheben.</p>
+<p>Bei den Lauf-Weltrekorden sinkt die Geschwindigkeit mit der Distanz. Die Knicke zeigen den Wechsel von KrP (bis ca. 200 m) zur anaeroben Glykolyse (bis ca. 800 m) zur aeroben Glykolyse.</p>
+<p><b>Begründen:</b> 400 m und 200 m Crawl = viel anaerobe Glykolyse (45-90 s, sehr intensiv). Marathon, Langlauf = aerob. Fussball = Mischform: aerobe Grundlage für 90 min plus KrP und anaerobe Glykolyse für Sprints und Zweikämpfe.</p>
+`,
+
+l: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 45 min)</b>
+<ol><li>Lies Schwellenkonzept und Laktatstufentest.</li>
+<li>Schreib die Laktatwerte (Ruhe, AS, ANS, Ausbelastung) und je 4 Ausbelastungs- und Abbruchkriterien aus dem Kopf auf.</li>
+<li>Geh in den <a href="#" data-go="dmax">Dmax-Trainer</a> und mach Proband 1 und Probandin 2 selbst, zuerst auf Papier mit Lineal.</li>
+<li>Mach Quiz A.</li></ol></div>
+
+<h3>Leistungsphysiologie</h3>
+<p>Teil der Sportphysiologie: Wie wirken Herz-Kreislauf, Atmung, Muskulatur und Stoffwechsel bei Belastung zusammen und wie passen sie sich durch Training an? Ziel: diese Prozesse messbar machen (Leistungsdiagnostik) und daraus Trainingsempfehlungen ableiten.</p>
+<p><b>Parameter</b> sind messbare Kenngrössen, z.B. Herzfrequenz, Schlagvolumen, VO₂max, Laktat.</p>
+<div class="tw"><table>
+<tr><th>Parameter</th><th>Bedeutung</th></tr>
+<tr><td>Aerobe Leistungsfähigkeit (aerobic power)</td><td>maximale Intensität ohne Laktatakkumulation</td></tr>
+<tr><td>Aerobe Kapazität (Ermüdungsresistenz)</td><td>eine Leistung im Bereich der anaeroben Schwelle lange halten</td></tr>
+<tr><td>Anaerobe Leistungsfähigkeit</td><td>maximale Intensität mit extremer anaerober Energiebereitstellung, ohne Rücksicht auf Laktat und Sauerstoffdefizit</td></tr>
+<tr><td>Anaerobe Kapazität (Laktattoleranz, Stehvermögen)</td><td>die Folgen der anaeroben Energiebereitstellung länger ertragen</td></tr>
+<tr><td>VO₂max</td><td>maximale Sauerstoffaufnahme pro Minute</td></tr>
+</table></div>
+
+<h3>Schwellenkonzept und Laktatwerte</h3>
+<div class="tw"><table>
+<tr><th>Punkt</th><th>Laktat</th><th>Bedeutung</th></tr>
+<tr><td>Ruhelaktat</td><td>0.7-1.8 mmol/l</td><td>in Ruhe</td></tr>
+<tr><td>Aerobe Schwelle (AS)</td><td>ca. 2 mmol/l</td><td>höchste Belastung, bei der Laktat noch fast dem Ruhewert entspricht; erster Anstieg (0.3-0.4 mmol/l zwischen zwei Messungen); bis hier v.a. aerob</td></tr>
+<tr><td>Laktat Steady State</td><td>ca. 2-4 mmol/l</td><td>Laktat wird laufend abgebaut, Gleichgewicht</td></tr>
+<tr><td>Anaerobe Schwelle (ANS) = maxLSS</td><td>ca. 4 mmol/l (individuell 2.3-6.8)</td><td>höchste Belastung mit Gleichgewicht von Laktatbildung und Laktatabbau; danach exponentieller Anstieg</td></tr>
+<tr><td>Ausbelastung</td><td>über 8 mmol/l</td><td>Kriterium im Test</td></tr>
+<tr><td>Abbruch bei Trainierten</td><td>bis über 20 mmol/l</td><td>je nach Trainingszustand</td></tr>
+</table></div>
+<p>Bei leichter Aktivität (auslaufen) wird Laktat deutlich schneller abgebaut als in Ruhe.</p>
+<p><b>Schwellen erkennen:</b> AS = dort, wo die flache Kurve zum ersten Mal ansteigt. ANS = dort, wo die Kurve steil (exponentiell) wird. Senkrecht nach unten liest du die Leistung ab, auf der HF-Kurve die Herzfrequenz.</p>
+
+<h3>Einfluss von Training</h3>
+<p>Ausdauertraining verschiebt die Laktatkurve nach <b>rechts</b>: Bei gleicher Leistung weniger Laktat und tiefere HF.</p>
+<ul>
+<li><b>Lockeres Training (Zone 1, GA1):</b> Schlagvolumen ↑, Ruhe-HF ↓, mehr Kapillaren und Mitochondrien, besserer Fettstoffwechsel → aerobe Schwelle nach oben.</li>
+<li><b>Training an der ANS (Zone 2, GA2):</b> mehr Säuretoleranz und Pufferkapazität → anaerobe Schwelle nach oben.</li>
+<li><b>Training über der ANS (Zone 3):</b> VO₂max ↑, maximales Herzminutenvolumen, bessere anaerobe Kapazität und Säuretoleranz.</li>
+</ul>
+
+<h3>Ausdauerdiagnostik (Pyramide)</h3>
+<p>Von genau und teuer zu einfach und billig: VO₂-Messung (Spiroergometrie) → Laktatmessung (Stufentest) → Herzfrequenzmessung (Conconi-Test) → Zeit- oder Distanzmessung (12-min-Lauf).</p>
+
+<h3>Laktatstufentest</h3>
+<div class="tw"><table>
+<tr><td><b>Ziel</b></td><td>anaerobe Schwelle über Blutlaktat bestimmen; aerobe Ausdauerleistungsfähigkeit bestimmen</td></tr>
+<tr><td><b>Nutzen</b></td><td>Trainingsbereiche aus Laktat und Herzfrequenz ableiten</td></tr>
+<tr><td><b>Aufbau</b></td><td>Maximaltest: alle 3 min +30 W (Velo) oder +1.2 km/h (Laufband) bis zur Ausbelastung</td></tr>
+<tr><td><b>Vorgehen</b></td><td>Blutlaktat am Ohrläppchen oder Finger, vor, während und nach der Belastung</td></tr>
+<tr><td><b>Messgrössen</b></td><td>Leistung (W oder km/h), Laktat (mmol/l), Herzfrequenz, Borg (6-20)</td></tr>
+</table></div>
+<p><b>Ablauf Velo:</b> in Ruhe Laktat, HF, Borg messen → 5 min locker einfahren → messen → am Ende jeder Stufe (ca. 15 s vor Stufenende) Laktat, HF, Borg → Abbruch bei maximaler Erschöpfung (aufhören zu treten oder Kadenz unter 70), sofort messen → nach 3 min Erholung nochmals messen.</p>
+<p>Stufendauer 3 min, keine Pause, +30 W, Kadenz sinnvoll 80-100 U/min. Testperson: bereit für All-out, 48 h vorher keine maximale Belastung, gewohnte Ernährung, PAR-Q-Fragebogen, Zustimmung zu Blut- und HF-Messung.</p>
+
+<h3>Ausbelastungs- und Abbruchkriterien</h3>
+<p>Ausbelastungskriterien zeigen, dass der Test wirklich maximal war (gültig). Abbruchkriterien sind Gründe, aus Sicherheitsgründen zu stoppen.</p>
+<div class="tw"><table>
+<tr><th>Ausbelastungskriterien</th><th>Abbruchkriterien</th></tr>
+<tr><td>maximale HF erreicht (bekannt oder berechnet)</td><td>subjektive Erschöpfung</td></tr>
+<tr><td>Borg ≥ 18</td><td>Angina pectoris (Engegefühl in der Brust)</td></tr>
+<tr><td>Laktat über 8 mmol/l</td><td>zunehmende Atemnot</td></tr>
+<tr><td>Eindruck der Testleitung</td><td>Schwindel, motorische Unsicherheit, Unwohlsein, Übelkeit</td></tr>
+</table></div>
+
+<h3>Modifizierte Dmax-Methode</h3>
+<ol>
+<li>Laktat (y) gegen Leistung (x) eintragen und zur Kurve verbinden.</li>
+<li><b>Aerobe Schwelle:</b> der Messpunkt <b>vor</b> dem ersten Laktatanstieg von mehr als 0.4 mmol/l.</li>
+<li>Gerade von der AS zum letzten Messpunkt ziehen.</li>
+<li><b>Anaerobe Schwelle:</b> Punkt auf der Kurve mit dem grössten senkrechten Abstand zu dieser Geraden (Geodreieck rechtwinklig an die Gerade legen und verschieben).</li>
+<li>Bei beiden Schwellen Leistung und Herzfrequenz ablesen.</li>
+</ol>
+<p><b>Beispiele aus dem Unterricht:</b> Proband 1: AS 190 W (HF 155, 1.9 mmol/l), ANS 260 W (HF 179, 3.6 mmol/l). Probandin 2: AS 130 W (HF 155, 2.1 mmol/l), ANS 177 W (HF 171, 4.3 mmol/l).</p>
+
+<h3>Trainingsempfehlungen ableiten (Proband 1)</h3>
+<div class="tw"><table>
+<tr><th>Bereich</th><th>Leistung</th><th>HF</th></tr>
+<tr><td>Regeneration</td><td>unter 150 W</td><td>unter 135</td></tr>
+<tr><td>Grundlage (GA1)</td><td>150-190 W</td><td>135-155</td></tr>
+<tr><td>Entwicklung (GA2)</td><td>195-245 W</td><td>156-174</td></tr>
+<tr><td>Schwelle</td><td>250-270 W</td><td>175-182</td></tr>
+<tr><td>Intensiv</td><td>über 275 W</td><td>über 183</td></tr>
+</table></div>
+<p>Empfehlung 80 % locker, 20 % intensiv: 2 × Grundlage 45-90 min bei HF 135-155 (sprechen möglich), 1 × Intervalle (3 × 8-10 min bei 250-265 W oder 4 × 4 min bei 280-300 W). GA2 nicht zum Standardtempo machen. Beim Laufen ist die HF ca. 5-10 Schläge höher als auf dem Velo.</p>
+<p><b>Begründung:</b> Unter der AS v.a. aerob, kein Laktatanstieg, Grundlage wird trainiert. Über der ANS kein Gleichgewicht mehr, Laktat und H⁺ häufen sich an (Azidose), darum nur kurze Intervalle mit Pausen.</p>
+
+<h3>Spiroergometrie (nicht in den Folien, ergänzt)</h3>
+<p>Stufentest auf Velo oder Laufband bis zur Ausbelastung mit Atemmaske. Misst Sauerstoffaufnahme (VO₂max), CO₂-Abgabe, Atemminutenvolumen, HF und Leistung. Genaueste, aber teuerste Diagnostik (Exkursion Balgrist).</p>
+`,
+
+g: `
+<div class="note">Zu diesem Thema gab es keine Folien in deinen Unterlagen. Inhalt aus dem Standardstoff (Hegner), Teile stammen aus den Ausdauer-Folien. Nicht zu viel Zeit investieren.</div>
+<div class="how"><b>So lernst du dieses Kapitel (ca. 20 min)</b>
+<ol><li>Lies das Kapitel.</li><li>Wende die Faktoren der Leistungsfähigkeit auf deine Sportart (z.B. Skifahren) an.</li><li>Mach Quiz A.</li></ol></div>
+
+<h3>Fertigkeiten und Fähigkeiten</h3>
+<p>Motorische <b>Fertigkeiten</b> = gelernte Bewegungen: technische und taktische Fertigkeiten. Motorische <b>Fähigkeiten</b> = Grundlage dafür: konditionelle (energetische: Ausdauer, Kraft, Schnelligkeit, Beweglichkeit) und koordinative (informationelle) Fähigkeiten. Schnelligkeit und Beweglichkeit sind sowohl konditionell als auch koordinativ bestimmt.</p>
+
+<h3>Faktoren der sportlichen Leistungsfähigkeit</h3>
+<div class="tw"><table>
+<tr><th>Faktor</th><th>Inhalt</th><th>Beispiel Fussball</th></tr>
+<tr><td>Konditionell</td><td>Ausdauer, Kraft, Schnelligkeit, Beweglichkeit</td><td>90 min laufen, Sprints</td></tr>
+<tr><td>Koordinativ-technisch</td><td>Bewegungsqualität, Technik</td><td>Ballannahme, Pass</td></tr>
+<tr><td>Taktisch-kognitiv</td><td>Spielverständnis, Entscheidungen</td><td>richtig freilaufen</td></tr>
+<tr><td>Psychisch</td><td>Motivation, Konzentration, Druck</td><td>Penalty im Final</td></tr>
+<tr><td>Sozial und Umfeld</td><td>Team, Trainer, Material</td><td>Teamklima</td></tr>
+<tr><td>Anlagen und Gesundheit</td><td>Genetik, Körperbau</td><td>Muskelfaserverteilung</td></tr>
+</table></div>
+
+<h3>Prinzip der Trainingsbelastung</h3>
+<p>Training wirkt nur bei einem genügend starken Reiz. Zu schwach = keine Wirkung, zu stark = Schaden. Belastungsnormative:</p>
+<ul><li><b>Intensität:</b> wie stark (Tempo, % Maximalkraft, HF)</li><li><b>Dauer:</b> wie lange ein einzelner Reiz wirkt</li><li><b>Umfang:</b> Gesamtmenge (km, Wiederholungen)</li><li><b>Dichte:</b> Verhältnis Belastung zu Pause</li><li><b>Häufigkeit:</b> Trainings pro Woche</li></ul>
+<p>Beispiel: 6 × 400 m in 90 s, 2 min Pause, 2-mal pro Woche → Intensität 90 s pro 400 m, Dauer 90 s, Umfang 2400 m, Dichte 90 s zu 2 min, Häufigkeit 2 pro Woche. Aus den Ausdauer-Folien: zentrale Faktoren der Planung sind Intensität, Volumen und Erholung.</p>
+
+<h3>Adaptationen</h3>
+<p>Der Körper passt sich an wiederholte Belastung an (Superkompensation): grösseres Herz und Schlagvolumen, mehr Mitochondrien und Kapillaren, grösserer Muskelquerschnitt, bessere Koordination, grössere Energiespeicher. Ohne Training bilden sich die Anpassungen zurück.</p>
+
+<h3>Wechselwirkungen</h3>
+<ul><li>Die Fähigkeiten beeinflussen sich: viel Ausdauertraining kann Kraft- und Schnelligkeitszuwachs bremsen, Kraft verbessert Schnelligkeit.</li>
+<li>Ermüdung verschlechtert Technik und Koordination.</li>
+<li>Reihenfolge in einer Einheit: Koordination und Schnelligkeit zuerst, dann Kraft, Ausdauer am Schluss ("Koordination vor Kondition").</li></ul>
+
+<h3>Richtlinien des Trainings</h3>
+<ul><li><b>Progressive Belastungssteigerung:</b> schrittweise steigern (Ausdauer: zuerst Häufigkeit, dann Umfang, dann Intensität; Umfang max. +10 % pro Woche).</li>
+<li><b>Belastung und Erholung:</b> neuer Reiz im Moment der Superkompensation.</li>
+<li><b>Regelmässigkeit:</b> Unterbrüche führen zu Rückbildung.</li>
+<li><b>Variation:</b> Abwechslung verhindert Stagnation.</li>
+<li><b>Individualität:</b> an Alter, Niveau, Ziel anpassen.</li>
+<li><b>Spezifität:</b> trainieren, was die Sportart verlangt.</li>
+<li><b>Periodisierung:</b> in Phasen planen.</li></ul>
+`,
+
+a: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 45 min)</b>
+<ol><li>Lies das Kapitel.</li>
+<li>Zeichne aus dem Kopf: Superkompensation (optimal und zu früh) und die Methoden Dauer, Intervall, Wiederholung. Kontrolliere unter <a href="#" data-go="draw">Zeichnen</a>.</li>
+<li>Lerne die Tabelle der 5 Stufen mit der Sprechregel (singen, plaudern, ganze Sätze, knapper Wortwechsel, kein Wort).</li>
+<li>Mach Quiz A.</li></ol></div>
+
+<h3>Definition</h3>
+<p>Ausdauer ist die psycho-physische Ermüdungsresistenz bei mentaler, sensorischer, sensomotorischer, emotionaler und physischer Belastung. Sie ist die Fähigkeit, eine bestimmte Leistung bis ins Ziel aufrechtzuerhalten und eine Belastung ohne nennenswerte Ermüdung möglichst lange zu ertragen.</p>
+<div class="tw"><table>
+<tr><th>Belastung</th><th>Beispiel</th></tr>
+<tr><td>mental</td><td>3 h Schachturnier, lange Prüfung</td></tr>
+<tr><td>sensorisch</td><td>Schiedsrichter beobachtet 90 min, Autofahren in der Nacht</td></tr>
+<tr><td>sensomotorisch</td><td>Bogenschiessen, Golf-Putten: feine Bewegungen lange präzise</td></tr>
+<tr><td>emotional</td><td>Penaltyschiessen, Wettkampfdruck</td></tr>
+<tr><td>physisch</td><td>Marathon, Langlauf</td></tr>
+</table></div>
+<p>Was es braucht: Genetik, VO₂max, Muskelfasertypen, Rekrutierung (Nerven), Koordination, Muskelkraft, Gewicht, Körpergrösse, Mentales und vor allem Training (10'000-Stunden-Regel).</p>
+
+<h3>5 Intensitätsstufen</h3>
+<div class="tw"><table>
+<tr><th>Stufe</th><th>Name</th><th>Borg</th><th>Sprechregel</th><th>% HFmax</th><th>Energie</th><th>Wirkung</th></tr>
+<tr><td>1</td><td>sehr locker, aktive Erholung</td><td>6-9</td><td>singen</td><td>60-70</td><td>aerob</td><td>Regeneration</td></tr>
+<tr><td>2</td><td>locker, Ausdauer</td><td>10-12</td><td>plaudern</td><td>70-80</td><td>aerob</td><td>aerobe Kapazität</td></tr>
+<tr><td>3</td><td>mittel</td><td>13-14</td><td>ganze Sätze</td><td>80-90</td><td>aerob-anaerober Übergang</td><td>aerobe Leistungsfähigkeit</td></tr>
+<tr><td>4</td><td>hart, an der Schwelle</td><td>15-16</td><td>knapper Wortwechsel</td><td>90-95</td><td>aerob-anaerober Übergang</td><td>aerobe Leistungsfähigkeit</td></tr>
+<tr><td>5</td><td>sehr hart, voll</td><td>17-20</td><td>kein Wortwechsel</td><td>95-100</td><td>anaerob</td><td>anaerobe Kapazität und Leistungsfähigkeit</td></tr>
+</table></div>
+<p>Methoden: Stufe 1 kontinuierliche Dauermethode · Stufe 2-3 Dauermethode (kontinuierlich, variabel), extensive Intervalle · Stufe 4-5 intensive Intervalle, intermittierend, Wiederholung, Wettkampf. % vANS: 55-70, 70-80, 80-93, 93-103, über 103.</p>
+
+<h3>3 Trainingsbereiche</h3>
+<div class="tw"><table>
+<tr><th>Zone</th><th>Lage</th><th>Laktat</th><th>Effekt</th></tr>
+<tr><td>Zone 1, GA1</td><td>unter der AS</td><td>Basiswerte</td><td>Schlagvolumen ↑, Ruhe-HF ↓, Kapillaren und Mitochondrien ↑, oxidative Enzyme ↑, Fettstoffwechsel ↑, AS nach oben</td></tr>
+<tr><td>Zone 2, GA2</td><td>zwischen AS und ANS</td><td>erhöht, konstant</td><td>Herz-Kreislauf wie Zone 1, Säuretoleranz und Pufferkapazität ↑, ANS nach oben</td></tr>
+<tr><td>Zone 3, wettkampfspezifisch</td><td>über der ANS</td><td>unkonstant, steigt</td><td>VO₂max ↑, max. Herzminutenvolumen, anaerobe Kapazität und Säuretoleranz ↑</td></tr>
+</table></div>
+<p>Ungefähr: Zone 1 = Stufe 1-2, Zone 2 = Stufe 3, Zone 3 = Stufe 4-5.</p>
+
+<h3>Superkompensation</h3>
+<p>Mehr und intensiver ist nicht automatisch besser. Ablauf: Training → Leistung sinkt unter Ausgangsniveau (Ermüdung) → Erholung bis zum Ausgangsniveau → Superkompensation über das Ausgangsniveau → ohne neuen Reiz wieder zurück.</p>
+<ul><li><b>Optimal:</b> neuer Reiz im Hoch der Superkompensation → Leistung steigt treppenartig.</li>
+<li><b>Zu früh:</b> noch ermüdet → Leistung nimmt langfristig ab (Übertraining).</li>
+<li><b>Zu spät:</b> Leistung bleibt gleich.</li></ul>
+
+<h3>Trainingsmethoden</h3>
+<div class="tw"><table>
+<tr><th>Methode</th><th>Belastung</th><th>Intensität</th><th>Pause</th><th>Beispiel</th></tr>
+<tr><td>Dauermethode</td><td>ununterbrochen, 20 min bis Stunden, HF konstant</td><td>locker &lt;70 %, extensiv 70-80 %, intensiv 80-90 %</td><td>keine</td><td>GA1: 30-60 min plaudern; GA2: 30-60 min kurze Sätze</td></tr>
+<tr><td>Intervallmethode</td><td>Wechsel Belastung/Erholung, 6-12 Wdh; Kurzzeit 15-60 s, Mittelzeit 1-8 min, Langzeit 8-15 min</td><td>extensiv 60-80 %, intensiv &gt;90 %</td><td>lohnende Pause, 15 s bis 10 min</td><td>8 × 3 min, 1 min Pause; 8 × 1 min, 2 min Pause</td></tr>
+<tr><td>Wiederholungsmethode</td><td>wenige Wdh, kleiner Umfang</td><td>90-100 % VO₂max</td><td>vollständig, 4-30 min</td><td>8 × 1 min, 10 min Pause</td></tr>
+<tr><td>Intermittierende Methode</td><td>kurze hochintensive Belastungen im ständigen Wechsel mit kurzer aktiver Erholung</td><td>hoch (z.B. 95 % / 70 %)</td><td>kurz, aktiv</td><td>15 s schnell / 15 s locker, 6 min</td></tr>
+<tr><td>Kontroll- und Wettkampfmethode</td><td>Wettkampfdauer, kürzer oder länger</td><td>95-105 % Wettkampfleistung</td><td>keine</td><td>10-70 min im Wettkampftempo</td></tr>
+</table></div>
+<p><b>Lohnende Pause</b> = man startet wieder, bevor man vollständig erholt ist. Je höher die Intensität, desto kleiner der Umfang.</p>
+
+<h3>Polarisiertes Trainingsmodell (80/20)</h3>
+<p>Ca. 80 % der Einheiten in Zone I (locker), ca. 20 % in Zone III (intensiv, ca. 2 pro Woche), möglichst wenig in Zone II. Man trainiert an den Polen (Seiler). Zuerst die intensiven Einheiten planen, dann mit lockeren auffüllen.</p>
+<p><b>Beispiel Silvesterlauf:</b> 2-4 Trainings pro Woche, mindestens 1 × Zone 1-2 (Dauerlauf 30-60 min), mindestens 1 × Zone 3-5 (Intervalle, total 8-18 min Belastung; vor dem Lauf Wettkampfmethode).</p>
+<p><b>Rezept:</b> möglichst viel die Zieldisziplin trainieren, 2-3 Einheiten pro Woche Zone 3-5, Rest Zone 1-2, periodisch variieren. "Fancy stuff" (Periodisierung usw.) erst, wenn das Grundlegende stimmt.</p>
+
+<h3>Trainingsplanung</h3>
+<p>1. Ziel definieren · 2. Grobplanung (Wochen, Häufigkeit, Methoden) · 3. Feinplanung (diese Woche) · 4. Trainingsplanung (heute). Steigern: zuerst Häufigkeit, dann Umfang, dann Intensität. Umfang max. +10 % pro Woche.</p>
+
+<h3>Sportartspezifisch und Alternativtraining</h3>
+<p>Anpassungen sind spezifisch: Muskeln, Bewegungsmuster und Energiesystem passen sich an genau die trainierte Bewegung an. Darum möglichst viel die Zieldisziplin trainieren. Die Grundlagenausdauer lässt sich gut alternativ trainieren (Velo, Schwimmen): sinnvoll bei Verletzung, zur Entlastung von Gelenken, zur Regeneration und für Abwechslung.</p>
+
+<h3>Pace</h3>
+<p>Pace (min/km) = Zeit ÷ Distanz. Geschwindigkeit (km/h) = 60 ÷ Pace. Beispiel: 45 min für 8.5 km = 5.294 min/km = 5:18 min/km (0.294 × 60 = 18 s) = 11.3 km/h.</p>
+`,
+
+k: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 30 min)</b>
+<ol><li>Lies das Kapitel.</li><li>Nimm eine Sportart (z.B. Skifahren, Fussball) und schreib zu jeder der 5 Fähigkeiten ein Beispiel auf.</li><li>Erkläre dir laut die 3 Lernphasen.</li><li>Mach Quiz A.</li></ol></div>
+
+<h3>Definition</h3>
+<p>Koordination ist das Zusammenwirken von zentralem Nervensystem (Gehirn, Rückenmark), Sinnesorganen und Skelettmuskulatur innerhalb eines Bewegungsablaufs. Koordinative Fähigkeiten ermöglichen, Bewegungsaufgaben situationsgerecht und ökonomisch zu lösen, verbessern die Technik und erleichtern das Lernen.</p>
+
+<h3>Die 5 koordinativen Fähigkeiten</h3>
+<div class="tw"><table>
+<tr><th>Fähigkeit</th><th>Kern</th><th>Beispiele</th></tr>
+<tr><td>Differenzierung</td><td>Feinabstimmung einzelner Bewegungsphasen, grosse Bewegungsgenauigkeit und Ökonomie</td><td>Pass dosieren, Stoppball, Kantendruck beim Skifahren</td></tr>
+<tr><td>Orientierung</td><td>Lage und Bewegung des Körpers in Raum und Zeit bestimmen und verändern</td><td>Salto, Freilaufen, Linienwahl auf der Piste</td></tr>
+<tr><td>Reaktion</td><td>schnelle Einleitung zweckmässiger Aktionen auf Signale</td><td>Sprintstart, Goalie beim Penalty</td></tr>
+<tr><td>Rhythmisierung</td><td>Rhythmus von aussen erfassen und umsetzen, eigenen Rhythmus realisieren</td><td>Hürdenlauf, Ropeskipping, Tanzen</td></tr>
+<tr><td>Gleichgewicht</td><td>Körper im Gleichgewicht halten oder wiederherstellen</td><td>Handstand, Slackline, Skifahren</td></tr>
+</table></div>
+<p>Gruppenarbeit Alpin-Skifahren (Noten 1-6): Differenzierung 5.5, Orientierung 5, Reaktion 5.5, Rhythmisierung 5, Gleichgewicht 6.</p>
+
+<h3>Sensible Phasen</h3>
+<p>Altersabschnitte, in denen eine Fähigkeit besonders gut trainierbar ist. Koordinative Fähigkeiten: ca. <b>7-12 Jahre</b> ("goldenes Lernalter"), besonders ab ca. 9. Reaktion v.a. 8-10, Rhythmisierung 7-13, Gleichgewicht und Differenzierung ca. 9-12, Orientierung eher später (ca. 10-15). Bis ca. 12 steigt die koordinative Qualität stark, im Alter nimmt sie ab.</p>
+
+<h3>Was im Gehirn passiert</h3>
+<ul><li>Metapher: Trampelpfade im Schnee. Üben macht Verbindungen fester.</li>
+<li>Ca. 100 Mrd. Neuronen, bis 50'000 Synapsen pro Neuron. Pruning: ungenutzte Synapsen werden ab ca. 14 Jahren abgebaut.</li>
+<li>Verlernen = Programm geht verloren. Umlernen = bestehendes Programm neu lernen: sehr schwierig, unter Stress kommen alte Muster zurück. <b>Neulernen ist einfacher als Umlernen.</b></li>
+<li>Ablauf: Information über die Sinne → Verarbeitung und Speicherung im ZNS → gezielte motorische Aktion → Rückkoppelung (Feedback).</li>
+<li>Faktoren: Lerntyp, Motivation, Aufmerksamkeit, Bewegungsschatz, Erfahrung, Auffassungsgabe, Tagesform, äussere Bedingungen.</li></ul>
+
+<h3>3 Phasen des motorischen Lernens</h3>
+<div class="tw"><table>
+<tr><th>Phase</th><th>Merkmale</th></tr>
+<tr><td>Grobkoordination</td><td>Grundablauf wird erworben, meist mit Vorübungen; unter günstigen Bedingungen relativ fehlerfrei, aber nicht automatisiert und nicht stabil; stark <b>visuell</b> gesteuert</td></tr>
+<tr><td>Feinkoordination</td><td>verfeinern, üben und stabilisieren unter <b>stabilen</b> Bedingungen; dort nahezu fehlerfrei; Bewegungsempfindungen werden bewusst und verbalisierbar; kinästhetischer Analysator (Körpergefühl) wichtiger</td></tr>
+<tr><td>Feinstkoordination</td><td>Festigung auch unter <b>wechselnden</b> und schwierigen Bedingungen; variabel; Störungen werden vorweggenommen (Antizipation)</td></tr>
+</table></div>
+
+<h3>Methodische Grundsätze</h3>
+<ul><li>Neulernen ist einfacher als Umlernen: von Anfang an richtig.</li>
+<li>Vielfalt statt Einfalt: Variation der Übungen.</li>
+<li>Vom Einfachen zum Schweren.</li>
+<li>Selbständiges Üben: entdecken lassen oder mit Hilfestellung.</li>
+<li>Koordination vor Kondition: ausgeruht am Anfang des Trainings.</li>
+<li>Man lernt nie aus.</li></ul>
+`,
+
+f: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 45 min)</b>
+<ol><li>Lies das Kapitel.</li><li>Lerne die Methodentabelle: decke die Zahlen ab und sag sie auf.</li><li>Merkregel: je höher die Last, desto weniger Wiederholungen und desto länger die Pause.</li><li>Mach Quiz A.</li></ol></div>
+
+<h3>Definition</h3>
+<p>Kraft ist die Fähigkeit des Nerv-Muskel-Systems, durch Innervation Muskelkontraktionen mit mehr als 30 % des individuellen Kraftmaximums durchzuführen und dabei Widerstände zu überwinden, ihnen nachzugeben oder sie zu halten (Weineck).</p>
+
+<h3>Vorteile von Krafttraining</h3>
+<ul><li>Sportartspezifische Leistung steigern (Sprunghöhe im Basketball).</li><li>Verletzungsprophylaxe (starke Oberschenkel schützen im Fussball das Knie).</li><li>Haltungsprophylaxe (gegen Haltungsschwächen).</li></ul>
+
+<h3>Arbeitsweisen</h3>
+<div class="tw"><table>
+<tr><th>Arbeitsweise</th><th>Was passiert</th><th>Übung</th></tr>
+<tr><td>konzentrisch (überwindend)</td><td>Muskel verkürzt sich</td><td>Hantel hochheben, aus der Kniebeuge aufstehen</td></tr>
+<tr><td>exzentrisch (nachgebend)</td><td>Muskel wird unter Spannung länger</td><td>Hantel langsam absenken, Landung abbremsen</td></tr>
+<tr><td>isometrisch (haltend)</td><td>Länge bleibt gleich</td><td>Plank, Wandsitzen</td></tr>
+</table></div>
+
+<h3>Erscheinungsformen</h3>
+<div class="tw"><table>
+<tr><th>Form</th><th>Kern</th><th>Sportarten</th></tr>
+<tr><td>Maximalkraft</td><td>höchstmögliche Kraft bei maximaler willkürlicher Kontraktion</td><td>Gewichtheben, Kugelstossen, Diskus, Hammerwurf</td></tr>
+<tr><td>Schnellkraft</td><td>möglichst hoher Kraftimpuls in möglichst kurzer Zeit (Startkraft, Explosivkraft, Maximalkraft)</td><td>Tischtennis, Handball, Volleyball, Fussball</td></tr>
+<tr><td>Reaktivkraft</td><td>Dehnungs-Verkürzungs-Zyklus: schneller Wechsel exzentrisch → konzentrisch</td><td>Stützphase im Sprint, Volleyball-Sprung, Beinarbeit Tischtennis</td></tr>
+<tr><td>Kraftausdauer</td><td>Ermüdungswiderstand bei langen oder wiederholten Kraftleistungen</td><td>Rudern, Klettern, Radsport, Kajak</td></tr>
+</table></div>
+
+<h3>Kraftbestimmende Faktoren</h3>
+<ul>
+<li><b>Muskelfasertyp:</b> Typ 1 (ST) rot, dünn, langsam, tiefe Intensität. Typ 2 (FT) weiss, dick, schnell, schnellkräftig. Typ 2a Mischform. Stark genetisch.</li>
+<li><b>Muskelquerschnitt:</b> dickere Fasern = mehr Kraft. Unter 30 % der Maximalkraft arbeiten v.a. ST-Fasern, ab 30 % auch FT-Fasern.</li>
+<li><b>Intramuskuläre Koordination (IK):</b> wie viele Fasern <i>in einem Muskel</i> gleichzeitig aktiviert werden. Hohe Lasten (1-5 Wdh) erhöhen die Zahl.</li>
+<li><b>Intermuskuläre Koordination:</b> Zusammenspiel <i>mehrerer Muskeln</i>: Agonist (führt aus), Synergist (unterstützt), Antagonist (Gegenspieler). Effizienter, ökonomischer.</li>
+<li><b>Energiebereitstellung:</b> kurze maximale Kraft über ATP/KrP, Kraftausdauer zusätzlich Glykolyse.</li>
+<li>Motivation, Wille, Technik.</li>
+</ul>
+<p>Maximalkraft hängt ab von Muskelquerschnitt, intra- und intermuskulärer Koordination.</p>
+
+<h3>Methoden</h3>
+<div class="tw"><table>
+<tr><th>Methode</th><th>Last</th><th>Wdh</th><th>Serien</th><th>Pause</th></tr>
+<tr><td>Hypertrophie (Querschnitt)</td><td>75-85 %</td><td>5-8</td><td>Anfänger 10-15, Trainierte 20-25 pro Muskelgruppe pro Woche</td><td>lang (5 min besser als 1 min)</td></tr>
+<tr><td>Intramuskuläre Koordination</td><td>85-100 %</td><td>1-5</td><td>5-12 pro Training</td><td>3-5 min</td></tr>
+<tr><td>Pyramide</td><td>75-100 % steigend</td><td>12 → 1</td><td>1-10</td><td>1-5 min</td></tr>
+<tr><td>Schnellkraft</td><td>50-70 %</td><td>6-8 (Tempo darf nicht abfallen)</td><td>3-5</td><td>3-5 min</td></tr>
+<tr><td>Plyometrisch (Niedersprung)</td><td>Körpergewicht</td><td>8-10, je ca. 5 s Pause</td><td>3-5</td><td>5-8 min</td></tr>
+<tr><td>Kraftausdauer (Circuit)</td><td>35-65 %</td><td>25-50 oder 30-45 s</td><td>2-6 Durchgänge à 6-8 Stationen</td><td>10 s-1 min, 1-3 min zwischen Durchgängen</td></tr>
+</table></div>
+<p>Schnellkraft: exzentrisch langsam, konzentrisch explosiv. Niedersprung: vom Kasten springen, sofort explosiv hochspringen, kurzer Bremsweg. Pausen-Studie: 1 min Pause = Muskelproteinsynthese +68 %, 5 min = +139 % und 15 % mehr Wiederholungen.</p>
+
+<h3>Intensität, Umfang, Erholung</h3>
+<p>Je höher die Intensität, desto weniger Wiederholungen und desto länger die Pause, damit der Muskel wieder maximal aktiviert werden kann.</p>
+<div class="tw"><table>
+<tr><th>Intensität</th><th>Umfang</th><th>Bereich</th></tr>
+<tr><td>über 100 %</td><td>1-3 Se à 3-5 Wdh</td><td>reaktiv, exzentrisch</td></tr>
+<tr><td>85-100 %</td><td>1-5 Se à 1-5 Wdh</td><td>intramuskuläre Koordination</td></tr>
+<tr><td>70-85 %</td><td>3-8 Se à 6-10 Wdh</td><td>Muskelquerschnitt</td></tr>
+<tr><td>50-70 %</td><td>1-3 Se à 6-12 Wdh, explosiv</td><td>Schnellkraft</td></tr>
+<tr><td>30-50 (70) %</td><td>1-5 Se à 15-30 s</td><td>allgemeine Kräftigung</td></tr>
+<tr><td>10-30 %</td><td>1-5 Se à 15-30 Wdh</td><td>Kraftausdauer, Stabilisation</td></tr>
+</table></div>
+<p><b>Stufenmodell:</b> 1 Bewegung erlernen · 2 Muster stabilisieren · 3 Variabilität · 4 Belastbarkeit steigern · 5 Maximalkraft · 6 Explosivkraft unspezifisch · 7 sportartspezifische Kraft · 8 Umsetzung in der Sportart.</p>
+<p><b>Methode wählen:</b> Ziel nennen → Methode → mit Last, Wdh, Pause begründen. Muskelaufbau → Hypertrophie. Mehr Maximalkraft ohne Masse (z.B. Kletterer, Gewichtsklassen) → IK. Sprungkraft Volleyball → Schnellkraft/plyometrisch. Ruderer → Kraftausdauer.</p>
+`,
+
+s: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 30 min)</b>
+<ol><li>Lies das Kapitel.</li><li>Zeichne das Strukturmodell (3 Teile) aus dem Kopf.</li><li>Ordne jede 100-m-Phase einem Teil zu.</li><li>Mach Quiz A.</li></ol></div>
+
+<h3>Definition</h3>
+<p>Koordinativ-konditionell bestimmte Fähigkeit: in kürzester Zeit auf Reize reagieren, Informationen verarbeiten und Bewegungen mit maximaler Intensität ausführen. Die Belastung ist so kurz, dass Ermüdung keine Rolle spielt (Schnabel).</p>
+
+<h3>Strukturmodell</h3>
+<div class="tw"><table>
+<tr><th>Teil</th><th>Unterteilung</th></tr>
+<tr><td>Reaktionsschnelligkeit</td><td>einfach, komplex</td></tr>
+<tr><td>Bewegungsschnelligkeit</td><td>zyklisch (Frequenzschnelligkeit), azyklisch (Sequenzschnelligkeit)</td></tr>
+<tr><td>Schnelligkeitsausdauer</td><td>zyklisch, azyklisch</td></tr>
+</table></div>
+
+<h3>Reaktionsschnelligkeit</h3>
+<p><b>Einfach:</b> bekannter Reiz, vorgegebene Antwort (Startschuss). Taktil ca. 0.10 s, akustisch ca. 0.12 s, optisch ca. 0.15 s.</p>
+<p><b>Komplex:</b> mehrere mögliche Reize und Antworten (Goalie beim Penalty, Tennis-Return), ca. 0.20-0.40 s. Ablauf:</p>
+<ol><li><b>Wahrnehmung:</b> selektive Aufmerksamkeit, nur Wichtiges aufnehmen.</li><li><b>Antizipation:</b> Handlung vorwegnehmen ("wenn-dann").</li><li><b>Entscheidung:</b> unter Zeitdruck, hängt von 1 und 2 ab.</li></ol>
+<p>Training verbessert die Reaktionsschnelligkeit um 10-15 %. <b>Handlungsschnelligkeit:</b> motorischer Anteil 20-30 %, kognitiver Anteil 70-80 % des Zeitbedarfs.</p>
+
+<h3>Bewegungsschnelligkeit</h3>
+<ul><li><b>Frequenzschnelligkeit (zyklisch):</b> gleiche, wiederholte Bewegungen maximal schnell (Laufen, Radfahren).</li>
+<li><b>Sequenzschnelligkeit (azyklisch):</b> einmalige Bewegung maximal schnell (Smash, Wurf).</li></ul>
+
+<h3>100-m-Sprint</h3>
+<div class="tw"><table>
+<tr><th>Phase</th><th>Was zählt</th><th>Teil</th></tr>
+<tr><td>Start</td><td>einfache Reaktion</td><td>Reaktionsschnelligkeit</td></tr>
+<tr><td>Beschleunigung</td><td>Schnell- und Maximalkraft</td><td>Bewegungsschnelligkeit</td></tr>
+<tr><td>Topspeed</td><td>zyklische Frequenzschnelligkeit (Profis bei ca. 60 m)</td><td>Bewegungsschnelligkeit</td></tr>
+<tr><td>Schlussspurt</td><td>Geschwindigkeit halten, Stehvermögen</td><td>Schnelligkeitsausdauer</td></tr>
+</table></div>
+
+<h3>Agilität (multidirektional)</h3>
+<p>Explosiv antreten, abbremsen, Richtung ändern, erneut antreten. Komplettes Abbremsen = stop and go.</p>
+<ul><li><b>Motorisch:</b> schneller Richtungswechsel, beeinflusst von Geschwindigkeit vor dem Wechsel, Abbremskraft, Abdruckkraft danach, Körperorientierung.</li>
+<li><b>Kognitiv:</b> über sensorische Rückmeldung schnell entscheiden (auf Gegner reagieren).</li></ul>
+
+<h3>Beeinflussende Faktoren</h3>
+<p>Energie (ATP, KrP) · Trainingsgrad der Muskulatur · ZNS (Informationsverarbeitung) · Bewegungsökonomie (Technik, Beweglichkeit) · Motivation ("fight or flight") · neuronale Ansteuerung (Rekrutierung, Synchronisierung, Frequenzierung) · Sportart · Genetik (FT-Fasern).</p>
+
+<h3>Training planen</h3>
+<p><b>Wiederholungsmethode:</b> gutes Aufwärmen, Konzentration, Laufschule → maximale Intensität (100 %) → 2-3 Serien à 3-6 Wdh → vollständige Erholung → Pause verlängern oder abbrechen, wenn Reaktion, Tempo oder Qualität nachlassen.</p>
+<p>Prinzipien: nur ausgeruht, immer zu Beginn des Trainings, Zeitmessung und Wettkampf steigern die Intensität, Pausen respektieren, schon im Schulkindalter beginnen.</p>
+<p>Beispiel: 15 min Aufwärmen mit Laufschule, 3 Serien à 4 × 30 m fliegend mit Zeitmessung, 2-3 min zwischen Läufen, 5 min zwischen Serien.</p>
+`,
+
+b: `
+<div class="how"><b>So lernst du dieses Kapitel (ca. 30 min)</b>
+<ol><li>Lies das Kapitel.</li><li>Lerne die Tabelle "Mythen des Dehnens" (was stimmt, was nicht).</li><li>Überlege: Wie dehne ich vor einem Fussballmatch, wie eine Kunstturnerin?</li><li>Mach Quiz A.</li></ol></div>
+
+<h3>Definition und Bedeutung</h3>
+<p>Beweglichkeit umfasst die Voraussetzungen, Bewegungen mit grosser Schwingungsweite (Amplitude) in den Gelenken auszuführen oder bestimmte Haltungen einzunehmen. Sie sollte so gross sein, dass alle Techniken ohne Probleme gehen. Höchst sportartspezifisch. <b>Mehr ist nicht immer besser:</b> zu viel Beweglichkeit kann Explosivität und Schnellkraft verringern.</p>
+
+<h3>Gelenkigkeit und Dehnfähigkeit</h3>
+<ul><li><b>Gelenkigkeit:</b> hängt von der Gelenkstruktur ab → Mobilisieren.</li>
+<li><b>Dehnfähigkeit:</b> hängt von Muskeln, Sehnen, Gelenkkapsel, Bändern, Haut ab (Muskel: Elastizität/Titin, Muskeltonus/Muskelspindel, Länge/Sarkomere) → Dehnen.</li></ul>
+
+<h3>Begriffe</h3>
+<div class="tw"><table>
+<tr><td><b>allgemein</b></td><td>wichtigste Gelenksysteme (Hüfte, Wirbelsäule, Knie)</td></tr>
+<tr><td><b>speziell</b></td><td>bestimmte Gelenke, sportartspezifisch</td></tr>
+<tr><td><b>aktiv</b></td><td>durch eigene Muskelkontraktion</td></tr>
+<tr><td><b>passiv</b></td><td>mit Partner oder Zug von aussen</td></tr>
+<tr><td><b>statisch</b></td><td>Dehnstellung halten</td></tr>
+<tr><td><b>dynamisch</b></td><td>leicht federnd, wiederholt</td></tr>
+</table></div>
+
+<h3>Dehnformen</h3>
+<div class="tw"><table>
+<tr><td><b>Dynamisch</b></td><td>wiederholtes, federndes Dehnen</td></tr>
+<tr><td><b>Statisch</b></td><td>passives, gehaltenes Dauerdehnen</td></tr>
+<tr><td><b>AC-Stretching</b> (PNF)</td><td>Antagonist anspannen, aktives Dehnen</td></tr>
+<tr><td><b>CR-Stretching</b> (PNF)</td><td>Zielmuskel vor der Dehnung anspannen, dann dehnen</td></tr>
+<tr><td><b>CR-AC</b> (PNF)</td><td>Zielmuskel anspannen, dann mit Anspannung des Antagonisten dehnen</td></tr>
+</table></div>
+
+<h3>Einschränkende Faktoren</h3>
+<p>Gelenkstruktur · Umfang der Muskelmasse · Dehnungsfähigkeit des Muskels · Dehnungsfähigkeit von Sehnen, Bändern, Gelenkkapseln, Haut · Muskeltonus.</p>
+
+<h3>Alter und Biologie</h3>
+<p>Grösste Beweglichkeit bis zum <b>10. Lebensjahr</b>, danach Abnahme ohne Training. Frauen sind beweglicher als Männer. Beweglichkeit ist weitgehend konstitutionell, also stark <b>genetisch</b> geprägt.</p>
+
+<h3>Hypo- und Hypermobilität</h3>
+<p><b>Hyper</b>mobilität = übermässige Beweglichkeit, die muskulär nicht mehr gesteuert werden kann. <b>Hypo</b>mobilität = eingeschränkte Beweglichkeit durch knöcherne Einschränkungen oder Fehlbelastungen.</p>
+
+<h3>Wirkung des Dehnens</h3>
+<p>Regelmässiges Dehnen erhöht v.a. die <b>Dehntoleranz</b>: Propriozeptoren melden die Dehnung später (subjektive Anpassung des Nervensystems) → grösserer Bewegungsradius.</p>
+<div class="tw"><table>
+<tr><th>Annahme</th><th>Stand (Klee & Wiemann)</th></tr>
+<tr><td>senkt Muskelspannung</td><td>nur kurzfristig</td></tr>
+<tr><td>verlängert den Muskel</td><td>nein</td></tr>
+<tr><td>verhindert Verletzungen</td><td>keine Wirkung nachgewiesen</td></tr>
+<tr><td>verhindert Muskelkater</td><td>nein, kann ihn sogar auslösen</td></tr>
+<tr><td>verbessert Regeneration</td><td>nur sekundär: Körpergefühl, Wohlbefinden</td></tr>
+<tr><td>erhöht Leistung</td><td>grössere Amplitude; intensives Dehnen senkt aber kurzfristig Schnell- und Maximalkraft</td></tr>
+</table></div>
+
+<h3>Dehntechnik wählen</h3>
+<ul><li>Vor Sprint, Sprüngen, Spielen: <b>dynamisch</b> (statisch senkt kurzfristig die Schnellkraft).</li>
+<li>Nach dem Training oder separat: statisch oder CR (PNF) für langfristige Beweglichkeit.</li>
+<li>Sportarten mit grossen Endpositionen (Kunstturnen, Tanz, Kampfsport): gezielt und regelmässig statisch/PNF.</li></ul>
+
+<h3>Tests</h3>
+<p>Ischiocrurale Muskulatur (Beinrückseite): bis 90° = keine Verkürzung, 80-90° = leicht, unter 80° = Verkürzung. FMS (Functional Movement Screen): 7 Übungen, z.B. Deep Squat, Shoulder Mobility, Rotation Stability.</p>
+`
+};
+// Erste Antwort ist jeweils richtig, die Reihenfolge wird beim Anzeigen gemischt.
+const QUIZ = {
+e: {
+A: [
+{q:"Was ist ATP?", a:["Adenosintriphosphat, die Energiewährung der Zelle","Die Speicherform von Glukose in der Leber","Ein Enzym, das Laktat abbaut","Ein Fettsäuremolekül für lange Belastungen"], e:"ATP liefert direkt die Energie für jede Muskelkontraktion: ATP ⇌ ADP + P + Energie."},
+{q:"Wie lange reicht der ATP-Speicher im Muskel bei maximaler Belastung?", a:["2-3 Sekunden","ca. 10 Sekunden","45-90 Sekunden","ca. 2 Minuten"], e:"Nur ca. 6 mmol/kg, das reicht für 3-4 Kontraktionen."},
+{q:"Welche Gleichung beschreibt die Kreatinkinase-Reaktion?", a:["KrP + ADP ⇌ Kreatin + ATP","Glykogen → Laktat + Energie","ATP → ADP + P + Energie","Glukose + O₂ → CO₂ + H₂O"], e:"Kreatinphosphat gibt sein Phosphat an ADP ab, so entsteht sofort neues ATP."},
+{q:"Was bedeutet \"anaerob alaktazid\"?", a:["ohne Sauerstoff und ohne Laktatbildung","mit Sauerstoff und ohne Laktatbildung","ohne Sauerstoff, aber mit Laktatbildung","mit Sauerstoff und mit Laktatbildung"], e:"anaerob = ohne O₂, alaktazid = ohne Laktat. Das gilt für ATP-Speicher und KrP."},
+{q:"Wie viele ATP liefert ein Glukosemolekül in der anaeroben Glykolyse?", a:["2 ATP","30-32 ATP","10 ATP","0 ATP"], e:"Anaerob nur 2 ATP, aerob 30-32 ATP. Darum ist die anaerobe Glykolyse schnell, aber wenig ergiebig."},
+{q:"Welche Energiebereitstellung dominiert beim Marathon?", a:["aerob (Glukose und Fette)","Kreatinphosphat","anaerobe Glykolyse","ATP-Speicher"], e:"Marathon: 95-98 % aerob."},
+{q:"Was ist die metabolische Azidose?", a:["H⁺-Ionen häufen sich an, der pH sinkt und die Muskelkontraktion wird gehemmt","Laktat verstopft als Abfallprodukt den Muskel","Zu viel Sauerstoff im Muskel","Der pH steigt wegen der Fettverbrennung"], e:"Übersäuerung durch H⁺, nicht durch Laktat als 'Gift'. Folge: Leistungsabbruch."},
+{q:"Nach wie viel Zeit ist der Kreatinphosphatspeicher wieder aufgefüllt?", a:["nach 5-8 Minuten","nach 30 Sekunden","nach 1 Stunde","nach 24 Stunden"], e:"Darum braucht Schnelligkeitstraining vollständige Pausen."}
+],
+B: [
+{q:"Warum muss ATP laufend resynthetisiert werden?", a:["Der Speicher im Muskel ist sehr klein und reicht nur 2-3 s","ATP ist giftig und muss schnell abgebaut werden","ATP muss zuerst im Blut transportiert werden","Der Muskel kann überhaupt kein ATP speichern"], e:"Kleiner Speicher (ca. 6 mmol/kg), darum ständige Resynthese über KrP, Glykolyse und Fett."},
+{q:"Wie lange reichen ATP und KrP zusammen bei maximaler Belastung?", a:["ca. 10 Sekunden","2-3 Sekunden","ca. 90 Sekunden","ca. 90 Minuten"], e:"Bei Breitensportlern reichen ATP und KrP für ca. 20 Kontraktionen und 10 s."},
+{q:"Wie viele ATP liefert ein Glukosemolekül in der aeroben Glykolyse?", a:["30-32 ATP","2 ATP","4 ATP","100 ATP"], e:"Mit Sauerstoff wird Glukose vollständig abgebaut."},
+{q:"Welche Aussage über Laktat stimmt?", a:["Es wird in Herz, Leber und unbelasteter Muskulatur abgebaut und wiederverwertet","Es ist ein reines Abfallprodukt","Es verursacht den Muskelkater","Es entsteht in der aeroben Glykolyse"], e:"Laktat ist kein Abfallprodukt, sondern wird zu Glukose oder Energie umgewandelt."},
+{q:"Welcher Energieträger hat den grössten Speicher, liefert ATP aber am langsamsten?", a:["Fette","Kreatinphosphat","Glykogen","ATP"], e:"Fettverbrennung reicht Stunden bis Tage, die ATP-Bildungsrate ist aber tief."},
+{q:"Was passiert, wenn die Intensität steigt?", a:["Es braucht eine höhere ATP-Bildungsrate, darum mehr KrP und anaerobe Glykolyse","Der Anteil der Fettverbrennung steigt","Nur noch ein Energiesystem arbeitet","Die Energiebereitstellung wird rein aerob"], e:"Hohe Intensität = schnelle ATP-Bildung nötig = anaerobe Wege."},
+{q:"Laut Tabelle (Mader/Bompa): Welcher Anteil ist beim 100-m-Lauf am grössten?", a:["anaerob laktazid (ca. 70 %)","ATP/KrP (ca. 70 %)","aerob (ca. 70 %)","alle drei gleich"], e:"100 m: 25 % ATP/KrP, 70 % anaerob laktazid, unter 5 % aerob."},
+{q:"Welche Rolle spielen Proteine bei der Energiebereitstellung?", a:["sehr kleiner Anteil, vor allem bei extrem langen Belastungen","Hauptenergieträger bei Sprints","ca. 50 % beim Marathon","werden nie genutzt"], e:"Proteine sind Baustoff, als Energie nur bei extrem langen Belastungen."}
+],
+C: [
+{q:"Wie entsteht Laktat?", a:["Bei Sauerstoffmangel wird H⁺ auf Pyruvat übertragen","Aus Fettsäuren bei lockerer Belastung","Aus Kreatinphosphat","Durch den Abbau von Proteinen"], e:"Ohne genug O₂ kann H⁺ nicht regulär abgegeben werden, Pyruvat nimmt es auf → Laktat."},
+{q:"Was ist Glykogen?", a:["Die Speicherform von Glukose in Muskel und Leber","Die Speicherform von Fett","Ein Enzym der Glykolyse","Ein Abbauprodukt von Laktat"], e:"Glykogen wird in der Glykolyse abgebaut."},
+{q:"Wann ist die aerobe Glykolyse voll wirksam?", a:["nach ca. 2 Minuten, wenn Atmung und Kreislauf angepasst sind","sofort ab der ersten Sekunde","erst nach 90 Minuten","nur in Ruhe"], e:"Atmung und Herz-Kreislauf brauchen ca. 2 min, bis genug O₂ im Muskel ist."},
+{q:"Welche Zuordnung stimmt?", a:["Kugelstossen: ATP/KrP","Marathon: anaerobe Glykolyse","400 m: Fettverbrennung","10'000 m: Kreatinphosphat"], e:"Kurze, maximale Einzelaktion = ATP/KrP."},
+{q:"Welche Energiebereitstellung passt zu einem Fussballspiel?", a:["Mischform: aerobe Grundlage plus KrP und anaerobe Glykolyse für Sprints","nur Kreatinphosphat","nur anaerobe Glykolyse","nur Fettverbrennung"], e:"90 min Grundlage aerob, dazwischen kurze intensive Aktionen."},
+{q:"Was zeigt die Kurve der Lauf-Weltrekorde (Geschwindigkeit über Distanz)?", a:["Die Geschwindigkeit sinkt mit der Distanz; Knicke zeigen den Wechsel der Energiebereitstellung","Die Geschwindigkeit steigt bis 800 m","Die Geschwindigkeit ist über alle Distanzen gleich","Frauen sind auf langen Distanzen schneller"], e:"Knicke bei ca. 200 m (KrP → anaerobe Glykolyse) und ca. 800 m (→ aerob)."},
+{q:"Welche Aussage zu H⁺-Ionen stimmt?", a:["Sie entstehen bei jeder ATP-Hydrolyse und sammeln sich unter anaeroben Bedingungen an","Sie entstehen nur bei der Fettverbrennung","Sie erhöhen den pH-Wert","Sie schützen den Muskel vor Ermüdung"], e:"Mehr H⁺ = tieferer pH = Azidose."},
+{q:"Wie lange dominiert die anaerobe Glykolyse ungefähr?", a:["ca. 45-90 Sekunden","2-3 Sekunden","10-20 Minuten","mehrere Stunden"], e:"Typisch 400 m oder 200 m Crawl."}
+]},
+
+l: {
+A: [
+{q:"Wie hoch ist das Ruhelaktat?", a:["0.7-1.8 mmol/l","2-4 mmol/l","ca. 4 mmol/l","über 8 mmol/l"], e:"Ruhe 0.7-1.8, AS ca. 2, ANS ca. 4, Ausbelastung über 8."},
+{q:"Was ist die aerobe Schwelle?", a:["Höchste Belastung, bei der das Laktat noch fast dem Ruhewert entspricht (ca. 2 mmol/l)","Höchste Belastung mit Gleichgewicht von Laktatbildung und Abbau (ca. 4 mmol/l)","Der Punkt bei Testabbruch","Der Punkt mit Laktat über 8 mmol/l"], e:"Bis zur AS ist v.a. der aerobe Stoffwechsel aktiv."},
+{q:"Was ist die anaerobe Schwelle (maxLSS)?", a:["Höchste Belastung mit Gleichgewicht von Laktatbildung und Laktatabbau, ca. 4 mmol/l","Belastung, bei der kein Laktat entsteht","Die maximale Herzfrequenz","Der Ruhewert des Laktats"], e:"Danach steigt die Laktatkurve exponentiell."},
+{q:"Was passiert über der anaeroben Schwelle?", a:["Laktat steigt exponentiell, es gibt kein Steady State mehr","Laktat sinkt wieder","Laktat bleibt konstant","Es wird nur noch Fett verbrannt"], e:"Produktion > Abbau → Laktat und H⁺ häufen sich an."},
+{q:"Wie wird beim Velo-Laktatstufentest gesteigert?", a:["alle 3 min um 30 W","alle 1 min um 10 W","alle 5 min um 50 W","alle 3 min um 1.2 km/h"], e:"Velo: +30 W alle 3 min. Laufband: +1.2 km/h alle 3 min."},
+{q:"Welches ist ein Ausbelastungskriterium?", a:["Laktat über 8 mmol/l","Angina pectoris","Schwindel","zunehmende Atemnot"], e:"Die anderen drei sind Abbruchkriterien."},
+{q:"Was wird beim Laktatstufentest gemessen?", a:["Leistung, Laktat, Herzfrequenz und Borg","nur die Sauerstoffaufnahme","Blutdruck und Körpergewicht","nur die Laufzeit"], e:"VO₂ misst man bei der Spiroergometrie."},
+{q:"Was ist VO₂max?", a:["die maximale Sauerstoffaufnahme pro Minute","die maximale Herzfrequenz","der maximale Laktatwert","die maximale Leistung in Watt"], e:"Wichtiger Parameter der aeroben Leistungsfähigkeit."}
+],
+B: [
+{q:"Was bedeutet aerobe Kapazität (Ermüdungsresistenz)?", a:["Eine Leistung im Bereich der anaeroben Schwelle lange halten","Maximale Intensität ohne Laktatakkumulation","Die Folgen der anaeroben Energiebereitstellung ertragen","Maximale Sauerstoffaufnahme"], e:"Maximale Intensität ohne Laktatakkumulation = aerobe Leistungsfähigkeit."},
+{q:"Was bedeutet anaerobe Kapazität?", a:["Die Folgen der anaeroben Energiebereitstellung länger ertragen (Laktattoleranz)","Maximale Intensität ohne Laktat","Leistung an der ANS lange halten","Die Laktatkurve nach rechts schieben"], e:"Auch Stehvermögen genannt."},
+{q:"Welches ist ein Abbruchkriterium?", a:["Angina pectoris (Engegefühl in der Brust)","Borg ≥ 18","Laktat über 8 mmol/l","maximale HF erreicht"], e:"Abbruchkriterien sind Sicherheitsgründe, die anderen drei zeigen Ausbelastung."},
+{q:"Modifizierte Dmax-Methode: Wo liegt die aerobe Schwelle?", a:["beim Messpunkt vor dem ersten Laktatanstieg von mehr als 0.4 mmol/l","genau bei 4 mmol/l","beim Punkt mit dem grössten Abstand zur Geraden","beim letzten Messpunkt"], e:"Zuerst den ersten Sprung über 0.4 suchen, dann den Punkt davor nehmen."},
+{q:"Modifizierte Dmax-Methode: Wo liegt die anaerobe Schwelle?", a:["Punkt auf der Laktatkurve mit dem grössten senkrechten Abstand zur Geraden von AS zum letzten Punkt","Schnittpunkt der Geraden mit der HF-Kurve","Punkt bei 2 mmol/l","Punkt bei der maximalen Herzfrequenz"], e:"Geodreieck rechtwinklig zur Geraden legen und verschieben."},
+{q:"Laktat bei 70/100/130/160 W: 1.5 / 1.8 / 2.1 / 3.3 mmol/l. Wo liegt die AS?", a:["130 W","100 W","160 W","70 W"], e:"Erster Anstieg über 0.4: von 2.1 auf 3.3 (130 → 160 W). Punkt davor = 130 W."},
+{q:"Welche Methode steht an der Spitze der Pyramide (am genauesten, am teuersten)?", a:["VO₂-Messung (Spiroergometrie)","Laktatmessung","Herzfrequenzmessung (Conconi)","12-Minuten-Lauf"], e:"Danach Laktat, HF, ganz unten Zeit/Distanz."},
+{q:"In welchem Bereich liegt die ANS individuell?", a:["2.3-6.8 mmol/l","0.7-1.8 mmol/l","8-20 mmol/l","genau 4.0 mmol/l bei allen"], e:"4 mmol/l ist nur der Durchschnitt."}
+],
+C: [
+{q:"Wo wird beim Laktatstufentest Blut abgenommen?", a:["am Ohrläppchen oder Finger","an der Armvene","am Zeh","im Speichel"], e:"Kleiner Tropfen Kapillarblut."},
+{q:"Wann wird in jeder Stufe gemessen?", a:["am Ende der Stufe, ca. 15 s vor Stufenende","zu Beginn jeder Stufe","nur bei Abbruch","alle 30 Sekunden"], e:"Dann hat sich der Körper an die Stufe angepasst."},
+{q:"Proband 1: AS 190 W bei HF 155. Welche HF passt für lockeres Grundlagentraining?", a:["135-155","175-182","über 183","156-174"], e:"GA1 liegt unter der AS: 135-155."},
+{q:"Warum soll die Testperson 48 h vorher nicht maximal trainieren?", a:["Ermüdung würde die Werte verfälschen","Sonst entsteht kein Laktat","Wegen Infektionsgefahr bei der Blutabnahme","Das hat keinen Grund"], e:"Ermüdete Muskeln und leere Glykogenspeicher verändern Laktat und HF."},
+{q:"Wie verändert regelmässiges Ausdauertraining die Laktatkurve?", a:["Sie verschiebt sich nach rechts: bei gleicher Leistung weniger Laktat","Sie verschiebt sich nach links","Sie wird bei tiefer Leistung steiler","Sie bleibt gleich"], e:"Schwellen liegen danach bei höherer Leistung."},
+{q:"Training in Zone 1 (GA1) verschiebt vor allem ...", a:["die aerobe Schwelle nach oben","die anaerobe Schwelle nach unten","die VO₂max nach unten","gar nichts"], e:"Zone 2 schiebt die ANS, Zone 3 die VO₂max."},
+{q:"Was ist ein Laktat Steady State?", a:["Bereich ca. 2-4 mmol/l, in dem Laktat laufend abgebaut wird","Laktat über 8 mmol/l","Laktat unter 0.7 mmol/l","nur in Ruhe möglich"], e:"Gleichgewicht von Produktion und Abbau."},
+{q:"Warum misst man beim Test auch die Herzfrequenz?", a:["Damit man die Trainingsbereiche im Alltag mit der Pulsuhr steuern kann","Weil man aus der HF das Laktat exakt berechnet","Um die VO₂max exakt zu bestimmen","Weil die HF das wichtigste Abbruchkriterium ist"], e:"Laktat misst man nicht in jedem Training, die HF schon."}
+]},
+
+g: {
+A: [
+{q:"Welcher Faktor ist ein konditioneller Faktor der Leistungsfähigkeit?", a:["Ausdauer","Spielverständnis","Teamklima","Motivation"], e:"Konditionell: Ausdauer, Kraft, Schnelligkeit, Beweglichkeit."},
+{q:"Welche sind die Belastungsnormative?", a:["Intensität, Dauer, Umfang, Dichte, Häufigkeit","Kraft, Ausdauer, Schnelligkeit, Beweglichkeit","Technik, Taktik, Psyche","Aufwärmen, Hauptteil, Ausklang"], e:"Damit beschreibt man jede Trainingsbelastung."},
+{q:"Was beschreibt die Dichte?", a:["das Verhältnis von Belastung zu Pause","die Gesamtmenge des Trainings","wie stark die Belastung ist","wie oft pro Woche trainiert wird"], e:"Gesamtmenge = Umfang, Stärke = Intensität, pro Woche = Häufigkeit."},
+{q:"Welche Reihenfolge ist in einer Trainingseinheit sinnvoll?", a:["Koordination/Schnelligkeit → Kraft → Ausdauer","Ausdauer → Kraft → Schnelligkeit","Kraft → Ausdauer → Koordination","Reihenfolge spielt keine Rolle"], e:"Koordination und Schnelligkeit brauchen ein ausgeruhtes Nervensystem."},
+{q:"Was ist eine Adaptation?", a:["Die Anpassung des Körpers an wiederholte Belastung","Die Ermüdung nach dem Training","Das Aufwärmen","Eine Verletzung durch Überlastung"], e:"z.B. grösseres Schlagvolumen, mehr Mitochondrien."}
+],
+B: [
+{q:"6 × 400 m in 90 s mit 2 min Pause. Wie gross ist der Umfang?", a:["2400 m","90 s","2 min","6"], e:"Umfang = Gesamtmenge = 6 × 400 m."},
+{q:"Was passiert mit Anpassungen, wenn man nicht mehr trainiert?", a:["Sie bilden sich zurück","Sie bleiben für immer","Sie werden grösser","Sie verschwinden sofort am nächsten Tag"], e:"Darum Regelmässigkeit."},
+{q:"Was bedeutet progressive Belastungssteigerung?", a:["Die Belastung schrittweise erhöhen","Immer gleich trainieren","Jedes Training maximal","Belastung jede Woche verdoppeln"], e:"Bei Ausdauer: Umfang max. +10 % pro Woche."},
+{q:"Was gehört zu den motorischen Fertigkeiten?", a:["technische und taktische Fertigkeiten","konditionelle und koordinative Fähigkeiten","Ausdauer und Kraft","Genetik und Körperbau"], e:"Fähigkeiten sind die Grundlage, Fertigkeiten die gelernten Bewegungen."},
+{q:"Warum Technik nicht am Schluss eines harten Trainings üben?", a:["Ermüdung verschlechtert Koordination und Technik","Weil Technik keine Energie braucht","Weil man dann zu viel Laktat abbaut","Weil die Muskeln dann zu warm sind"], e:"Wechselwirkung: Ermüdung → schlechtere Bewegungsqualität."}
+],
+C: [
+{q:"Welche Fähigkeiten zählen zu den konditionellen Fähigkeiten?", a:["Ausdauer, Kraft, Schnelligkeit, Beweglichkeit","Orientierung, Reaktion, Rhythmus","Technik und Taktik","Motivation und Konzentration"], e:"Orientierung, Reaktion, Rhythmus sind koordinativ."},
+{q:"Was bewirkt ein zu schwacher Trainingsreiz?", a:["keine Anpassung","eine sehr grosse Anpassung","Übertraining","eine Verletzung"], e:"Reiz muss wirksam (überschwellig) sein."},
+{q:"Welche Richtlinie heisst: Training an Alter, Niveau und Ziel anpassen?", a:["Individualität","Spezifität","Variation","Periodisierung"], e:"Spezifität = trainieren, was die Sportart verlangt."},
+{q:"Was beschreibt die Häufigkeit?", a:["Anzahl Trainings pro Woche","Dauer eines Reizes","Anzahl Wiederholungen","Verhältnis Belastung zu Pause"], e:"Belastungsnormativ Häufigkeit."},
+{q:"Was bedeutet Spezifität?", a:["Trainieren, was die Sportart verlangt","Immer etwas Neues ausprobieren","Training in Phasen planen","Jeden Tag gleich trainieren"], e:"Darum trainiert ein Läufer vor allem Laufen."}
+]},
+
+a: {
+A: [
+{q:"Wie wird Ausdauer definiert?", a:["Psycho-physische Ermüdungsresistenz bei mentaler, sensorischer, sensomotorischer, emotionaler und physischer Belastung","Die Fähigkeit, maximale Kraft zu entwickeln","Die Fähigkeit, schnell zu reagieren","Grosse Bewegungsamplitude in den Gelenken"], e:"Und: eine Leistung bis ins Ziel halten, Belastung lange ohne Ermüdung ertragen."},
+{q:"Welche Sprechregel gehört zu Intensitätsstufe 2 (locker)?", a:["plaudern","singen","in ganzen Sätzen sprechen","knapper Wortwechsel"], e:"1 singen, 2 plaudern, 3 ganze Sätze, 4 knapper Wortwechsel, 5 kein Wort."},
+{q:"Wie viel % HFmax hat Stufe 4 (an der Schwelle)?", a:["90-95 %","60-70 %","70-80 %","95-100 %"], e:"1: 60-70, 2: 70-80, 3: 80-90, 4: 90-95, 5: 95-100."},
+{q:"Wo liegt Zone 2 (GA2)?", a:["zwischen aerober und anaerober Schwelle","unter der aeroben Schwelle","über der anaeroben Schwelle","bei der maximalen HF"], e:"Erhöhte, aber konstante Laktatwerte."},
+{q:"Was ist Superkompensation?", a:["Nach der Erholung steigt die Leistung über das Ausgangsniveau","Die Leistung sinkt dauerhaft nach dem Training","Die Erholung dauert länger als geplant","Zwei Trainings am selben Tag"], e:"Neuer Reiz im Hoch → Leistung steigt treppenartig."},
+{q:"Was ist typisch für die Dauermethode?", a:["ununterbrochene Belastung, 20 min bis Stunden, keine Pause","kurze Belastungen mit lohnender Pause","maximale Belastungen mit vollständiger Erholung","15 s schnell, 15 s locker"], e:"HF bleibt konstant oder steigt leicht."},
+{q:"Was sagt das polarisierte Trainingsmodell?", a:["ca. 80 % locker (Zone I), ca. 20 % intensiv (Zone III), wenig Zone II","50 % locker, 50 % intensiv","ca. 80 % in Zone II","ca. 80 % intensiv, 20 % locker"], e:"Man trainiert an den Polen (Seiler)."},
+{q:"Was ist eine lohnende Pause?", a:["Man startet wieder, bevor man vollständig erholt ist","Man wartet bis zur vollständigen Erholung","Eine Pause von genau 10 Minuten","Eine Pause mit Snack"], e:"Typisch für die Intervallmethode."}
+],
+B: [
+{q:"Welcher Borg-Wert gehört zu Stufe 5?", a:["17-20","6-9","13-14","15-16"], e:"1: 6-9, 2: 10-12, 3: 13-14, 4: 15-16, 5: 17-20."},
+{q:"Was ist die primäre Wirkung von Stufe 1?", a:["Regeneration, Erholungsfähigkeit","anaerobe Kapazität","VO₂max steigern","Laktattoleranz"], e:"Sehr locker, aktive Erholung."},
+{q:"Welche Pause hat die Wiederholungsmethode?", a:["4-30 min, vollständige Erholung","15 s bis 10 min, lohnende Pause","keine Pause","kurze aktive Pause von 15 s"], e:"Intensität 90-100 % VO₂max, geringer Umfang."},
+{q:"Wie lange dauert eine Belastung bei der Kurzzeit-Intervallmethode?", a:["15-60 s","1-8 min","8-15 min","20 min"], e:"Mittelzeit 1-8 min, Langzeit 8-15 min."},
+{q:"Was passiert bei zu früh gesetzten Trainingsreizen?", a:["Die Leistung nimmt langfristig ab (Übertraining)","Die Leistung steigt schneller","Nichts, es spielt keine Rolle","Die Superkompensation wird grösser"], e:"Man trainiert immer im ermüdeten Zustand."},
+{q:"Welcher Effekt gehört zu Zone 3 (wettkampfspezifisch)?", a:["VO₂max steigt","Fettstoffwechsel verbessert sich","Ruhe-HF sinkt als Haupteffekt","aerobe Schwelle steigt"], e:"Zone 1: Fettstoffwechsel, Ruhe-HF, AS. Zone 3: VO₂max, anaerobe Kapazität."},
+{q:"Welches Beispiel passt zur sensomotorischen Belastung?", a:["Bogenschiessen","Marathon","Penaltyschiessen","Schachturnier"], e:"Marathon physisch, Penalty emotional, Schach mental."},
+{q:"Mit welcher Intensität arbeitet die Wettkampfmethode?", a:["95-105 % der Wettkampfleistung","60-80 %","unter 70 %","120 %"], e:"Dauer = Wettkampfdauer oder kürzer/länger."}
+],
+C: [
+{q:"Was beschreibt die intermittierende Methode?", a:["Kurze hochintensive Belastungen im ständigen Wechsel mit kurzer aktiver Erholung","Eine lange, gleichmässige Belastung","Wenige maximale Läufe mit 20 min Pause","Ein Testlauf über die Wettkampfdistanz"], e:"Mischung aus Intervall- und Wiederholungsmethode, z.B. 15 s / 15 s."},
+{q:"In welcher Reihenfolge steigert man das Ausdauertraining?", a:["Häufigkeit → Umfang → Intensität","Intensität → Umfang → Häufigkeit","Umfang → Intensität → Häufigkeit","alles gleichzeitig"], e:"So steht es im Rezept für den Silvesterlauf."},
+{q:"Um wie viel darf man den Umfang pro Woche höchstens steigern?", a:["10 %","25 %","50 %","100 %"], e:"Sonst steigt das Verletzungsrisiko."},
+{q:"Wann ist ein Alternativtraining sinnvoll?", a:["bei Verletzung, zur Entlastung und für Grundlagenausdauer","immer statt der Zieldisziplin","nur für Wettkampfvorbereitung","nie, es bringt nichts"], e:"Grundlage kann man gut mit Velo oder Schwimmen trainieren."},
+{q:"Warum sollte Ausdauer sportartspezifisch trainiert werden?", a:["Anpassungen sind spezifisch für die trainierte Bewegung, Muskeln und Energiesystem","Weil andere Sportarten verboten sind","Weil Ausdauer nur genetisch ist","Weil Alternativtraining immer schadet"], e:"Ein Läufer verbessert sich am meisten durch Laufen."},
+{q:"Welcher Effekt gehört zu Zone 1 (GA1)?", a:["Ruhe-HF sinkt, mehr Kapillaren und Mitochondrien, besserer Fettstoffwechsel","Laktattoleranz unter Maximalbelastung","maximales Herzminutenvolumen","Pufferkapazität steigt als Haupteffekt"], e:"Und: aerobe Schwelle nach oben."},
+{q:"Pace 5:00 min/km. Welche Geschwindigkeit ist das?", a:["12 km/h","10 km/h","15 km/h","5 km/h"], e:"60 ÷ 5 = 12 km/h."},
+{q:"8 × 3 min mit 1 min Pause, sprechen in kurzen Sätzen möglich. Welche Methode?", a:["Intervallmethode (GA2)","Dauermethode","Wiederholungsmethode","Wettkampfmethode"], e:"Beispiel aus den Folien für den Silvesterlauf."}
+]},
+
+k: {
+A: [
+{q:"Was ist Koordination?", a:["Zusammenwirken von ZNS, Sinnesorganen und Skelettmuskulatur in einem Bewegungsablauf","Die Fähigkeit, lange zu laufen","Die maximale Kraft eines Muskels","Die Dehnfähigkeit der Muskeln"], e:"ZNS = Gehirn und Rückenmark."},
+{q:"Welche ist KEINE der 5 koordinativen Fähigkeiten?", a:["Schnellkraftfähigkeit","Orientierungsfähigkeit","Rhythmisierungsfähigkeit","Differenzierungsfähigkeit"], e:"Die 5: Differenzierung, Orientierung, Reaktion, Rhythmisierung, Gleichgewicht."},
+{q:"Einen Pass genau dosieren. Welche Fähigkeit?", a:["Differenzierungsfähigkeit","Rhythmisierungsfähigkeit","Gleichgewichtsfähigkeit","Reaktionsfähigkeit"], e:"Feinabstimmung, hohe Bewegungsgenauigkeit."},
+{q:"In welchem Alter sind koordinative Fähigkeiten besonders gut trainierbar?", a:["ca. 7-12 Jahre","ca. 2-5 Jahre","ca. 16-20 Jahre","ca. 25-30 Jahre"], e:"Goldenes Lernalter, sensible Phase."},
+{q:"Was kennzeichnet die Grobkoordination?", a:["Grundablauf erworben, nicht stabil, stark visuell gesteuert","Ausführung auch unter schwierigen Bedingungen sicher","Bewegung ist automatisiert","Störungen werden antizipiert"], e:"Erste Lernphase."},
+{q:"Was ist einfacher?", a:["Neulernen","Umlernen","beides gleich","keines von beiden ist möglich"], e:"Beim Umlernen kommen unter Stress alte Muster zurück."},
+{q:"Was kennzeichnet die Feinstkoordination?", a:["Sichere Ausführung auch unter wechselnden Bedingungen, Störungen werden antizipiert","Grundablauf wird erworben","nur unter stabilen Bedingungen fehlerfrei","stark visuell gesteuert"], e:"Dritte Lernphase."}
+],
+B: [
+{q:"Goalie reagiert auf einen Penalty. Welche koordinative Fähigkeit steht im Vordergrund?", a:["Reaktionsfähigkeit","Rhythmisierungsfähigkeit","Differenzierungsfähigkeit","Gleichgewichtsfähigkeit"], e:"Schnelle zweckmässige Aktion auf ein Signal."},
+{q:"Ropeskipping im Takt der Musik. Welche Fähigkeit?", a:["Rhythmisierungsfähigkeit","Orientierungsfähigkeit","Reaktionsfähigkeit","Differenzierungsfähigkeit"], e:"Äusseren Rhythmus erfassen und umsetzen."},
+{q:"Salto: Lage des Körpers im Raum bestimmen. Welche Fähigkeit?", a:["Orientierungsfähigkeit","Rhythmisierungsfähigkeit","Reaktionsfähigkeit","Differenzierungsfähigkeit"], e:"Lage und Bewegung in Raum und Zeit."},
+{q:"Was ist Pruning?", a:["Ungenutzte Synapsen werden ab ca. 14 Jahren abgebaut","Neue Muskelfasern entstehen","Das Lernen einer neuen Bewegung","Eine Dehnmethode"], e:"Darum früh vielseitig lernen."},
+{q:"Was gilt in der Feinkoordination?", a:["Nahezu fehlerfrei unter stabilen Bedingungen; Körpergefühl wird wichtiger","Ausführung sicher unter allen Bedingungen","Nur visuelle Steuerung","Grundablauf noch unbekannt"], e:"Kinästhetischer Analysator wird stärker einbezogen."},
+{q:"Welcher methodische Grundsatz stimmt?", a:["Vom Einfachen zum Schweren","Vom Schweren zum Einfachen","Immer die gleiche Übung","Umlernen ist einfacher als Neulernen"], e:"Erst beherrschen, dann erschweren."},
+{q:"Warum Koordination vor Kondition im Training?", a:["Ermüdung verschlechtert die Bewegungsqualität, das ZNS muss ausgeruht sein","Weil Koordination länger dauert","Weil Kondition kein Aufwärmen braucht","Das ist egal"], e:"Koordinationstraining immer am Anfang."}
+],
+C: [
+{q:"Slackline. Welche Fähigkeit?", a:["Gleichgewichtsfähigkeit","Rhythmisierungsfähigkeit","Reaktionsfähigkeit","Orientierungsfähigkeit"], e:"Körper im Gleichgewicht halten."},
+{q:"Welche Reihenfolge beschreibt den Ablauf des Bewegungslernens?", a:["Information über Sinne → ZNS → motorische Aktion → Feedback","ZNS → Feedback → Sinne → Aktion","Aktion → Sinne → ZNS → Pause","Feedback → Aktion → ZNS → Sinne"], e:"Ein Kreislauf mit Rückkoppelung."},
+{q:"Warum ist Umlernen schwierig?", a:["Unter Stress und im Wettkampf kommen die alten Muster zurück","Weil man das Alte sofort vergisst","Weil das Gehirn keine neuen Verbindungen bildet","Weil man dazu stärker sein muss"], e:"Alte 'Trampelpfade' bleiben."},
+{q:"In welcher Phase werden Bewegungsempfindungen bewusst und verbalisierbar?", a:["Feinkoordination","Grobkoordination","Feinstkoordination","vor dem Lernen"], e:"Zweite Phase."},
+{q:"Was bedeutet 'Vielfalt statt Einfalt'?", a:["Übungen variieren und abwechseln","Nur eine Sportart betreiben","Immer die gleiche Übung","Möglichst viele Wiederholungen derselben Übung"], e:"Methodischer Grundsatz."},
+{q:"Wie verläuft die koordinative Qualität über das Leben?", a:["Steigt bis ca. 12 Jahre stark, nimmt im Alter ab","Ist bei Geburt am höchsten","Steigt bis 80 Jahre","Bleibt immer gleich"], e:"Grafik Bewegungsentwicklung (Weineck)."},
+{q:"Was bewirken koordinative Fähigkeiten?", a:["Sie verbessern die Technik und erleichtern das Lernen komplexer Bewegungen","Sie erhöhen die VO₂max","Sie vergrössern den Muskelquerschnitt","Sie senken den Laktatwert"], e:"Basis für Fertigkeiten in Alltag und Sport."}
+]},
+
+f: {
+A: [
+{q:"Ab wie viel % des Kraftmaximums spricht man nach Weineck von Kraft?", a:["mehr als 30 %","mehr als 10 %","mehr als 50 %","mehr als 80 %"], e:"Kraft = Kontraktionen über 30 % des individuellen Maximums."},
+{q:"Hantel langsam absenken. Welche Arbeitsweise?", a:["exzentrisch","konzentrisch","isometrisch","plyometrisch"], e:"Muskel wird unter Spannung länger (nachgebend)."},
+{q:"Plank halten. Welche Arbeitsweise?", a:["isometrisch","konzentrisch","exzentrisch","reaktiv"], e:"Länge bleibt gleich (haltend)."},
+{q:"Welche Last hat die Hypertrophiemethode?", a:["75-85 %","85-100 %","50-70 %","35-65 %"], e:"5-8 Wiederholungen."},
+{q:"Wie viele Wiederholungen hat die IK-Methode?", a:["1-5","5-8","8-10","25-50"], e:"Last 85-100 %, Pause 3-5 min."},
+{q:"Volleyball: Landung und sofort wieder hochspringen. Welche Kraftform?", a:["Reaktivkraft","Kraftausdauer","Maximalkraft","isometrische Kraft"], e:"Dehnungs-Verkürzungs-Zyklus."},
+{q:"Klettern, Rudern. Welche Kraftform steht im Vordergrund?", a:["Kraftausdauer","Maximalkraft","Reaktivkraft","Schnellkraft"], e:"Lang andauernde oder wiederholte Kraftleistungen."},
+{q:"Wie sind Typ-1-Fasern (ST)?", a:["rot, dünn, langsam","weiss, dick, schnell","Mischform","blau, dick, langsam"], e:"Slow twitch, für tiefe Intensität."}
+],
+B: [
+{q:"Was ist intramuskuläre Koordination?", a:["Wie viele Fasern innerhalb eines Muskels gleichzeitig aktiviert werden","Das Zusammenspiel mehrerer Muskeln","Die Dicke der Muskelfasern","Die Dehnfähigkeit eines Muskels"], e:"Zusammenspiel mehrerer Muskeln = intermuskulär."},
+{q:"Was macht der Synergist?", a:["Er unterstützt den Agonisten","Er führt die Bewegung aus","Er ist der Gegenspieler","Er entspannt den Muskel"], e:"Agonist führt aus, Antagonist ist Gegenspieler."},
+{q:"Welche Last hat die Schnellkraftmethode?", a:["50-70 %","85-100 %","75-85 %","10-30 %"], e:"6-8 Wdh, Tempo darf nicht abfallen, Pause 3-5 min."},
+{q:"Wie lange ist die Serienpause bei der plyometrischen Methode?", a:["5-8 min","10 s","1 min","20 min"], e:"8-10 Niedersprünge mit je ca. 5 s Pause, 3-5 Serien."},
+{q:"Was passiert ab ca. 30 % der Maximalkraft?", a:["Es werden auch FT-Fasern beansprucht","Es arbeiten nur noch ST-Fasern","Der Muskel wird länger","Die Kraft sinkt"], e:"Unter 30 % v.a. ST-Fasern."},
+{q:"Wie hängen Intensität, Wiederholungen und Pause zusammen?", a:["Je höher die Intensität, desto weniger Wiederholungen und desto längere Pause","Je höher die Intensität, desto mehr Wiederholungen","Pause ist immer gleich lang","Je tiefer die Intensität, desto längere Pause"], e:"Damit der Muskel wieder maximal aktiviert werden kann."},
+{q:"Was zeigt die Studie zur Pausendauer (McKendrey)?", a:["5 min Pause bringt mehr Muskelproteinsynthese als 1 min","1 min Pause ist besser als 5 min","Pausen spielen keine Rolle","Ohne Pause wächst der Muskel am meisten"], e:"+139 % statt +68 %, dazu 15 % mehr Wiederholungen."},
+{q:"Welcher Vorteil von Krafttraining zeigt das Fussball-Beispiel?", a:["Verletzungsprophylaxe (Knie)","Haltungsprophylaxe","höhere VO₂max","bessere Beweglichkeit"], e:"Starke Oberschenkelvorder- und -rückseite schützt das Knie."}
+],
+C: [
+{q:"Gewichtheben, Kugelstossen. Welche Kraftform?", a:["Maximalkraft","Kraftausdauer","Reaktivkraft","isometrische Ausdauer"], e:"Höchstmögliche Kraft bei maximaler Kontraktion."},
+{q:"Wie funktioniert die Pyramidenmethode?", a:["Last steigt von ca. 75 auf 100 %, Wiederholungen sinken von ca. 12 auf 1","Last sinkt, Wiederholungen steigen","Immer 100 % und 10 Wiederholungen","Nur Körpergewicht"], e:"Trainiert Querschnitt und IK."},
+{q:"Welche Last hat ein Kraftausdauer-Circuit?", a:["35-65 %","85-100 %","75-85 %","über 100 %"], e:"25-50 Wdh oder 30-45 s, kurze Pausen."},
+{q:"Ziel: höher springen im Basketball. Welche Methode passt?", a:["Schnellkraft- oder plyometrische Methode","Kraftausdauermethode","Hypertrophiemethode mit 1 min Pause","nur Dehnen"], e:"Kraft in kurzer Zeit und Dehnungs-Verkürzungs-Zyklus."},
+{q:"Wie viele Serien pro Muskelgruppe und Woche für Trainierte (Hypertrophie)?", a:["20-25","10-15","2-5","50-60"], e:"Anfänger 10-15."},
+{q:"Wie führt man die Schnellkraftmethode aus?", a:["exzentrisch langsam, konzentrisch schnell bis explosiv","exzentrisch schnell, konzentrisch langsam","ganz langsam in beide Richtungen","nur isometrisch"], e:"z.B. Kniebeuge mit Langhantel."},
+{q:"Warum hat die IK-Methode 3-5 min Pause?", a:["Sonst kann der Muskel nicht mehr maximal innerviert werden","Weil das Laktat sonst zu tief ist","Damit der Muskel abkühlt","Weil es so vorgeschrieben ist, ohne Grund"], e:"Hohe Lasten brauchen volle Erholung (KrP)."},
+{q:"Mit welcher Methode trainiert man den Muskelquerschnitt?", a:["Hypertrophiemethode","IK-Methode","plyometrische Methode","Kraftausdauermethode"], e:"75-85 %, 5-8 Wdh."}
+]},
+
+s: {
+A: [
+{q:"Welches ist eine einfache Reaktion?", a:["Start auf den Startschuss","Goalie beim Penalty","Tennis-Return","Ausweichen im Zweikampf"], e:"Bekannter Reiz, vorgegebene Antwort."},
+{q:"Wie lange dauert eine einfache Reaktion auf einen akustischen Reiz ungefähr?", a:["0.12 s","0.10 s","0.15 s","0.30 s"], e:"Taktil 0.10, akustisch 0.12, optisch 0.15, komplex 0.20-0.40 s."},
+{q:"Welche Schritte hat eine komplexe Reaktion?", a:["Wahrnehmung, Antizipation, Entscheidung","Start, Beschleunigung, Topspeed","Grob-, Fein-, Feinstkoordination","Aufwärmen, Hauptteil, Ausklang"], e:"Entscheidung immer unter Zeitdruck."},
+{q:"Was ist Frequenzschnelligkeit?", a:["Gleiche, sich wiederholende Bewegungen mit höchster Geschwindigkeit (zyklisch)","Eine einmalige Bewegung mit höchster Geschwindigkeit","Schnelles Reagieren auf einen Reiz","Geschwindigkeit lange halten"], e:"z.B. Laufen, Radfahren."},
+{q:"Badminton-Smash. Welche Schnelligkeit?", a:["Sequenzschnelligkeit (azyklisch)","Frequenzschnelligkeit (zyklisch)","Schnelligkeitsausdauer","einfache Reaktion"], e:"Einmalige Bewegung."},
+{q:"Mit welcher Methode trainiert man Schnelligkeit?", a:["Wiederholungsmethode: maximale Intensität, vollständige Erholung","Dauermethode","extensive Intervallmethode","Kraftausdauer-Circuit"], e:"2-3 Serien à 3-6 Wdh."},
+{q:"Was zählt in der Beschleunigungsphase des 100-m-Sprints?", a:["Schnell- und Maximalkraft","einfache Reaktion","Schnelligkeitsausdauer","Beweglichkeit"], e:"Bewegungsschnelligkeit."}
+],
+B: [
+{q:"Um wie viel kann man die Reaktionsschnelligkeit durch Training verbessern?", a:["10-15 %","50 %","gar nicht","100 %"], e:"Steht auf der Folie Reaktionsschnelligkeit."},
+{q:"Wie gross ist der kognitive Anteil der Handlungsschnelligkeit?", a:["70-80 % des Zeitbedarfs","20-30 %","50 %","5 %"], e:"Motorischer Anteil 20-30 %."},
+{q:"Was ist Agilität?", a:["Explosiv antreten, abbremsen, Richtung ändern und wieder antreten","Möglichst lange schnell laufen","Auf einen Startschuss reagieren","Maximale Frequenz im Sprint"], e:"Multidirektionale Schnelligkeit."},
+{q:"Was zählt im Schlussspurt des 100-m-Sprints?", a:["Schnelligkeitsausdauer","einfache Reaktion","Schnellkraft","Agilität"], e:"Geschwindigkeit halten, Stehvermögen."},
+{q:"Wann trainiert man Schnelligkeit in einer Einheit?", a:["immer zu Beginn, nach dem Aufwärmen","am Ende, wenn man müde ist","nach dem Ausdauertraining","mitten im Krafttraining"], e:"Nur im ausgeruhten Zustand."},
+{q:"Wie viele Serien und Wiederholungen beim Schnelligkeitstraining?", a:["2-3 Serien à 3-6 Wiederholungen","5 Serien à 20 Wiederholungen","1 Serie à 50 Wiederholungen","10 Serien à 10 Wiederholungen"], e:"Wenige, maximale Wiederholungen."},
+{q:"Welche Muskelfasern haben Sprinter vor allem?", a:["viele FT-Fasern (schnell)","viele ST-Fasern (langsam)","nur Typ 2a","gleich viele wie Marathonläufer"], e:"Genetik ist ein schnelligkeitsbeeinflussender Faktor."}
+],
+C: [
+{q:"Was zählt in der Topspeed-Phase?", a:["zyklische Frequenzschnelligkeit","Sequenzschnelligkeit","einfache Reaktion","Kraftausdauer"], e:"Maximalgeschwindigkeit."},
+{q:"Wann soll man die Pause verlängern oder das Training abbrechen?", a:["Wenn Reaktionszeit, Geschwindigkeit oder Bewegungsqualität nachlassen","Wenn man schwitzt","Nach genau 3 Läufen","Nie, man soll durchziehen"], e:"Sonst trainiert man langsames Laufen."},
+{q:"Was bedeutet Antizipation?", a:["Handlungsziele vorwegnehmen ('wenn-dann')","Nur das Wichtige wahrnehmen","Schnell entscheiden","Vollständig erholen"], e:"Zweiter Schritt der komplexen Reaktion."},
+{q:"Was beeinflusst den motorischen Anteil der Agilität?", a:["Geschwindigkeit vor dem Wechsel, Abbremskraft, Abdruckkraft, Körperorientierung","Reaktionszeit auf den Startschuss","VO₂max und Laktat","Beweglichkeit der Schulter"], e:"4 Faktoren laut Steinhöfer."},
+{q:"Welche Energie nutzt man bei Schnelligkeitsleistungen?", a:["ATP und Kreatinphosphat","Fette","aerobe Glykolyse","Proteine"], e:"Sehr kurze, maximale Belastung."},
+{q:"Bei ca. wie vielen Metern erreichen Spitzensprinter die Maximalgeschwindigkeit?", a:["ca. 60 m","ca. 10 m","ca. 30 m","ca. 95 m"], e:"Schüler und weniger Trainierte früher (ca. 40 m)."},
+{q:"Welche Aussage zur Definition von Schnelligkeit stimmt?", a:["Die Belastung ist so kurz, dass Ermüdung die Leistung nicht limitiert","Schnelligkeit ist rein konditionell","Schnelligkeit ist die Fähigkeit, lange schnell zu sein","Schnelligkeit hängt nur von Genetik ab"], e:"Koordinativ-konditionell bestimmt."}
+]},
+
+b: {
+A: [
+{q:"Wovon hängt die Gelenkigkeit ab?", a:["von der Gelenkstruktur","von der Dehnfähigkeit der Muskeln","von der Herzfrequenz","vom Muskelquerschnitt"], e:"Dehnfähigkeit hängt von Muskeln, Sehnen, Bändern, Kapsel, Haut ab."},
+{q:"Bis zu welchem Alter ist die Beweglichkeit am grössten?", a:["bis ca. 10 Jahre","bis ca. 20 Jahre","bis ca. 30 Jahre","bis ca. 5 Jahre"], e:"Danach nimmt sie ohne Training ab."},
+{q:"Was ist CR-Stretching?", a:["Zielmuskel zuerst anspannen, dann dehnen","Antagonist anspannen während der Dehnung","Federnd dehnen","Lange passiv halten"], e:"Contract-Relax, eine PNF-Methode."},
+{q:"Was erhöht regelmässiges Dehnen vor allem?", a:["die Dehntoleranz","die Muskellänge","den Muskelquerschnitt","die VO₂max"], e:"Subjektive Anpassung des Nervensystems."},
+{q:"Was ist Hypermobilität?", a:["Übermässige Beweglichkeit, die muskulär nicht mehr gesteuert werden kann","Eingeschränkte Beweglichkeit durch Knochen","Normale Beweglichkeit","Beweglichkeit nur in der Hüfte"], e:"Hypomobilität = eingeschränkt."},
+{q:"Welche Dehnform passt vor einem Sprint?", a:["dynamisches Dehnen","langes statisches Dehnen","gar kein Aufwärmen","intensives CR-Stretching"], e:"Statisches Dehnen senkt kurzfristig die Schnellkraft."},
+{q:"Verhindert Dehnen Verletzungen?", a:["Es wurde keine verletzungsprophylaktische Wirkung nachgewiesen","Ja, immer","Ja, aber nur bei Kindern","Ja, wenn man 10 min dehnt"], e:"Klee & Wiemann (2004)."}
+],
+B: [
+{q:"Was ist passives Dehnen?", a:["Dehnen mit Partner oder Zug von aussen","Dehnen durch eigene Muskelkontraktion","Federnd dehnen","Dehnen nur der Arme"], e:"Aktiv = durch eigene Muskelkontraktion."},
+{q:"Was ist statisches Dehnen?", a:["Eine Dehnstellung über eine gewisse Zeit halten","Leicht federnd dehnen","Muskel anspannen und loslassen","Mit Schwung dehnen"], e:"Dynamisch = federnd."},
+{q:"Was ist AC-Stretching?", a:["Der Antagonist wird während der Dehnung angespannt","Der Zielmuskel wird vor der Dehnung angespannt","Ein Partner drückt","Federndes Dehnen"], e:"Aktives Dehnen, PNF."},
+{q:"Verhindert Dehnen Muskelkater?", a:["Nein, es kann ihn sogar hervorrufen","Ja, immer","Nur statisches Dehnen","Nur am Morgen"], e:"Dehnen kann kleine Muskelverletzungen verursachen."},
+{q:"Was ist Hypomobilität?", a:["Eingeschränkte Beweglichkeit durch knöcherne Einschränkungen oder Fehlbelastungen","Übermässige Beweglichkeit","Beweglichkeit nur bei Kindern","Muskelkrampf"], e:"Hypermobilität = übermässig."},
+{q:"Dehntest Beinrückseite: Beugung unter 80°. Was bedeutet das?", a:["Verkürzung","keine Verkürzung","leichte Verkürzung","Hypermobilität"], e:"Bis 90° keine, 80-90° leicht, unter 80° Verkürzung."},
+{q:"Wer ist im Durchschnitt beweglicher?", a:["Frauen","Männer","gleich","nur Kinder unter 3"], e:"Biologischer Aspekt."}
+],
+C: [
+{q:"Warum ist mehr Beweglichkeit nicht immer ein Vorteil?", a:["Zu viel Beweglichkeit kann Explosivität und Schnellkraft verringern","Weil Beweglichkeit immer zu Verletzungen führt","Weil Beweglichkeit die VO₂max senkt","Weil man dann langsamer denkt"], e:"Höchst sportartspezifisch."},
+{q:"Was bewirkt intensives Dehnen direkt vor dem Wettkampf?", a:["Schnell- und Maximalkraft sinken kurzfristig","Die Kraft steigt kurzfristig","Keine Wirkung","Die Ausdauer steigt"], e:"Belastet die Struktur des Muskels."},
+{q:"Was ist spezielle Beweglichkeit?", a:["Beweglichkeit bestimmter Gelenke, sportartspezifisch","Beweglichkeit der wichtigsten Gelenksysteme","Beweglichkeit nur bei Profis","Beweglichkeit durch Partnerhilfe"], e:"Allgemein = Hüfte, Wirbelsäule, Knie."},
+{q:"Welcher Faktor schränkt die Beweglichkeit ein?", a:["Muskeltonus","Herzfrequenz","Laktatwert","Reaktionszeit"], e:"Weitere: Gelenkstruktur, Muskelmasse, Dehnfähigkeit von Muskel, Sehnen, Bändern, Kapsel, Haut."},
+{q:"Wie wirkt Dehnen auf die Ruhespannung des Muskels?", a:["Sie sinkt nur kurzfristig","Sie sinkt dauerhaft","Sie steigt","Keine Wirkung, auch nicht kurzfristig"], e:"Langfristig ist keine Senkung möglich."},
+{q:"Welche Dehnform für eine Kunstturnerin, die mehr Amplitude braucht?", a:["regelmässig statisch oder PNF (CR), nicht direkt vor Schnellkraftteilen","nur dynamisch vor dem Wettkampf","gar nicht dehnen","nur Krafttraining"], e:"Langfristige Beweglichkeit braucht regelmässiges Dehnen."},
+{q:"Wie stark ist Beweglichkeit genetisch geprägt?", a:["stark, sie ist weitgehend konstitutionell","gar nicht","nur bei Männern","nur im Alter"], e:"Biologischer Aspekt aus den Folien."}
+]}
+};
+
+// Offene Prüfungsfragen mit Musterlösung
+const OPEN = {
+e: [
+{q:"Erkläre, warum ATP laufend resynthetisiert werden muss, und nenne die Wege der Resynthese.", a:"Der Muskel speichert nur ca. 6 mmol/kg ATP, das reicht bei maximaler Belastung 2-3 s. Resynthese über: Kreatinphosphat (anaerob alaktazid, bis ca. 10 s), anaerobe Glykolyse (anaerob laktazid, ca. 45-90 s, 2 ATP pro Glukose), aerobe Glykolyse (bis ca. 90 min, 30-32 ATP), Fettsäureoxidation (Stunden)."},
+{q:"Vergleiche anaerobe und aerobe Glykolyse (Sauerstoff, Produkte, ATP-Ausbeute, Dauer, Geschwindigkeit).", a:"Anaerob: ohne O₂, Glykogen → Laktat + Energie, 2 ATP pro Glukose, schnell, dominiert ca. 45-90 s. Aerob: mit O₂, Glukose wird vollständig abgebaut, 30-32 ATP, langsamer, braucht ca. 2 min Anlauf, bis ca. 90 min."},
+{q:"Erkläre Entstehung und Bedeutung von Laktat sowie Ursache und Folgen der metabolischen Azidose.", a:"Bei Sauerstoffmangel wird H⁺ in der Glykolyse auf Pyruvat übertragen → Laktat. Laktat ist kein Abfall: Herz, Leber, unbelastete Muskeln bauen es ab und nutzen es (Glukose, Energie), es ist Signalmolekül und dient zur Leistungsdiagnostik. H⁺ entsteht bei jeder ATP-Hydrolyse, unter anaeroben Bedingungen sammelt es sich an → pH sinkt (Azidose) → Muskelkontraktion gehemmt → Leistungsabbruch."},
+{q:"Ordne zu und begründe: 100-m-Lauf, 800-m-Lauf, Marathon, Fussballspiel.", a:"100 m: 25 % ATP/KrP, 70 % anaerob laktazid (kurz, maximal). 800 m: 60 % aerob, 30 % laktazid (ca. 2 min, sehr intensiv). Marathon: 95-98 % aerob, Glukose und Fett (lang, tiefere Intensität). Fussball: aerobe Grundlage über 90 min, dazu KrP und anaerobe Glykolyse für Sprints."}
+],
+l: [
+{q:"Beschreibe das Schwellenkonzept mit typischen Laktatwerten.", a:"Ruhe 0.7-1.8 mmol/l. AS ca. 2 mmol/l: höchste Belastung, bei der Laktat noch fast Ruhewert ist, erster Anstieg, bis hier v.a. aerob. ANS (maxLSS) ca. 4 mmol/l (individuell 2.3-6.8): höchste Belastung mit Gleichgewicht von Laktatbildung und -abbau, danach exponentieller Anstieg. Ausbelastung über 8, Abbruch bis über 20 mmol/l."},
+{q:"Nenne Ziel, Nutzen, Aufbau, Vorgehen und Messgrössen des Laktatstufentests.", a:"Ziel: ANS über Blutlaktat bestimmen, aerobe Ausdauerleistungsfähigkeit bestimmen. Nutzen: Trainingsbereiche aus Laktat und HF ableiten. Aufbau: Maximaltest, alle 3 min +30 W (Velo) bzw. +1.2 km/h (Laufband) bis Ausbelastung. Vorgehen: Blut am Ohrläppchen/Finger vor, während, nach der Belastung (Ende jeder Stufe). Messgrössen: Leistung, Laktat, HF, Borg."},
+{q:"Eine Testperson bricht ab mit Borg 19, Laktat 9.1 mmol/l, ohne Beschwerden. War sie ausbelastet? Unterscheide Ausbelastungs- und Abbruchkriterien.", a:"Ja: Borg ≥ 18 und Laktat über 8 mmol/l sind Ausbelastungskriterien (dazu max. HF, Eindruck der Testleitung). Ausbelastungskriterien zeigen, dass der Test maximal und gültig war. Abbruchkriterien sind Sicherheitsgründe zum Stoppen: subjektive Erschöpfung, Angina pectoris, zunehmende Atemnot, Schwindel/Unwohlsein/Übelkeit."},
+{q:"Beschreibe die modifizierte Dmax-Methode Schritt für Schritt.", a:"1. Laktat gegen Leistung eintragen, Kurve zeichnen. 2. AS = Messpunkt vor dem ersten Anstieg von mehr als 0.4 mmol/l. 3. Gerade von der AS zum letzten Messpunkt. 4. ANS = Punkt der Kurve mit grösstem senkrechtem Abstand zur Geraden. 5. Leistung und HF bei beiden Schwellen ablesen."},
+{q:"Probandin 2: AS 130 W / HF 155, ANS 177 W / HF 171. Gib eine Trainingsempfehlung für 3 Trainings pro Woche und begründe.", a:"Polarisiert 80/20: 2 × Grundlage 45-90 min unter der AS (ca. HF 145-155, sprechen möglich) → aerobe Basis, AS steigt. 1 × Intervalle um/über der ANS (z.B. 3 × 8-10 min bei 170-180 W, HF 167-172, oder 4 × 4 min bei 190-200 W) → ANS und VO₂max steigen. Über der ANS kein Gleichgewicht, Laktat/H⁺ steigen, darum nur kurze Intervalle mit Pause. GA2 nicht zum Standardtempo machen. Hinweis: Test endete bei Borg 15, Werte daher weniger sicher."},
+{q:"Wie verändern Ausdauertraining, Training an der ANS und Training über der ANS die Laktatkurve nach 8 Wochen?", a:"Allgemein: Kurve nach rechts, bei gleicher Leistung weniger Laktat und tiefere HF. Lockeres Training (Zone 1): AS steigt, besserer Fettstoffwechsel, mehr Kapillaren/Mitochondrien. An der ANS (Zone 2): ANS steigt, mehr Säuretoleranz und Pufferkapazität. Über der ANS (Zone 3): VO₂max steigt, mehr anaerobe Kapazität, höhere Laktatwerte werden toleriert."}
+],
+g: [
+{q:"Nenne die Faktoren der sportlichen Leistungsfähigkeit und wende sie auf Tennis an.", a:"Konditionell (Schnelligkeit für Antritte, Ausdauer für lange Matches), koordinativ-technisch (Schlagtechnik), taktisch (Spielzüge, Platzierung), psychisch (Konzentration bei Breakball), sozial/Umfeld (Trainer, Material), Anlagen/Gesundheit (Körpergrösse, Fasern)."},
+{q:"Erkläre das Prinzip der Trainingsbelastung an einem Beispiel.", a:"Der Reiz muss wirksam sein: zu schwach = keine Anpassung, zu stark = Schaden. Beschreibung mit Intensität, Dauer, Umfang, Dichte, Häufigkeit. Beispiel 6 × 400 m in 90 s, 2 min Pause, 2× pro Woche: Intensität 90 s/400 m, Dauer 90 s, Umfang 2400 m, Dichte 90 s : 2 min, Häufigkeit 2."},
+{q:"Nenne und erkläre drei Richtlinien des sportlichen Trainings.", a:"z.B. progressive Belastungssteigerung (schrittweise mehr, sonst Stagnation), optimale Relation Belastung/Erholung (neuer Reiz in der Superkompensation), Regelmässigkeit (sonst Rückbildung), Variation, Individualität, Spezifität, Periodisierung."}
+],
+a: [
+{q:"Erkläre die Superkompensation und was bei optimal, zu früh und zu spät gesetzten Reizen passiert.", a:"Training senkt die Leistung unter das Ausgangsniveau, in der Erholung steigt sie zurück und darüber hinaus (Superkompensation), ohne neuen Reiz fällt sie zurück. Optimal (Reiz im Hoch): Leistung steigt treppenartig. Zu früh: Leistung sinkt langfristig (Übertraining). Zu spät: kein Fortschritt."},
+{q:"Beschreibe die Intensitätsstufen 2 und 4 (Borg, Sprechregel, % HFmax, Energie, Wirkung, Methode).", a:"Stufe 2 locker: Borg 10-12, plaudern, 70-80 % HFmax, aerob, aerobe Kapazität, Dauermethode/extensive Intervalle. Stufe 4 hart, an der Schwelle: Borg 15-16, knapper Wortwechsel, 90-95 % HFmax, aerob-anaerober Übergang, aerobe Leistungsfähigkeit, intensive Intervalle/Wiederholung/Wettkampf."},
+{q:"Vergleiche Dauer-, Intervall- und Wiederholungsmethode nach Belastung, Intensität und Pause und gib je ein Beispiel.", a:"Dauer: ununterbrochen 20 min bis Stunden, <70-90 %, keine Pause (45 min Dauerlauf). Intervall: Wechsel Belastung/Erholung, 60-80 % bzw. >90 %, lohnende Pause 15 s-10 min (8 × 3 min, 1 min Pause). Wiederholung: wenige Wdh, 90-100 % VO₂max, vollständige Erholung 4-30 min (8 × 1 min, 10 min Pause)."},
+{q:"Plane mit dem polarisierten Modell eine Trainingswoche (3 Trainings) für den Silvesterlauf und begründe.", a:"80/20: 2 × Dauerlauf 30-60 min in Zone 1 (plaudern) für die Grundlage (AS, Fettstoffwechsel, Herz). 1 × Intervalle in Zone 3 (z.B. 8 × 1 min, 2 min Pause oder 4 × 4 min) für VO₂max. Zone 2 meiden. Zuerst Häufigkeit, dann Umfang, dann Intensität steigern, max. +10 % pro Woche."},
+{q:"Warum sollte Ausdauer sportartspezifisch trainiert werden, und wann ist Alternativtraining sinnvoll?", a:"Anpassungen sind spezifisch: Muskeln, Bewegungsmuster und Energiesystem passen sich an die trainierte Bewegung an. Darum möglichst viel Zieldisziplin. Alternativ (Velo, Schwimmen) sinnvoll für Grundlagenausdauer, bei Verletzungen, zur Entlastung von Gelenken, Regeneration und Abwechslung."},
+{q:"Nenne je ein Beispiel für mentale, sensorische, sensomotorische, emotionale und physische Belastung.", a:"Mental: Schachturnier. Sensorisch: Schiedsrichter 90 min konzentriert. Sensomotorisch: Bogenschiessen. Emotional: Penaltyschiessen. Physisch: Marathon."}
+],
+k: [
+{q:"Nenne die 5 koordinativen Fähigkeiten und übertrage sie auf Fussball.", a:"Differenzierung: Pass genau dosieren. Orientierung: Position zu Ball, Gegner, Tor erkennen. Reaktion: Goalie bei Ablenker. Rhythmisierung: Anlauf beim Penalty, Dribbling. Gleichgewicht: Zweikampf, Schuss auf einem Bein."},
+{q:"Erkläre das Konzept der sensiblen Phasen.", a:"Sensible Phasen sind Altersabschnitte, in denen eine Fähigkeit besonders gut trainierbar ist. Für koordinative Fähigkeiten ca. 7-12 Jahre (goldenes Lernalter). Ab ca. 14 werden ungenutzte Synapsen abgebaut (Pruning), darum früh vielseitig lernen."},
+{q:"Unterscheide die drei Phasen des motorischen Lernens.", a:"Grobkoordination: Grundablauf, unter günstigen Bedingungen relativ fehlerfrei, nicht stabil, stark visuell. Feinkoordination: verfeinert, unter stabilen Bedingungen fast fehlerfrei, Empfindungen bewusst, kinästhetisch. Feinstkoordination: sicher auch unter wechselnden Bedingungen, variabel, Antizipation von Störungen."},
+{q:"Ein Kind lernt Skifahren. Wende vier methodische Grundsätze an.", a:"Von Anfang an richtig (Neulernen einfacher als Umlernen). Vom Einfachen zum Schweren (flach, dann steiler). Vielfalt statt Einfalt (verschiedene Übungen, Gelände). Selbständig entdecken lassen mit Hilfestellung. Koordination ausgeruht am Anfang üben."}
+],
+f: [
+{q:"Unterscheide konzentrisch, exzentrisch und isometrisch mit je einer Übung.", a:"Konzentrisch: Muskel verkürzt sich (Hantel hochheben). Exzentrisch: Muskel wird unter Spannung länger (Hantel langsam ablassen, Landung). Isometrisch: Länge bleibt gleich (Plank, Wandsitzen)."},
+{q:"Unterscheide die vier Erscheinungsformen der Kraft und nenne je eine Sportart.", a:"Maximalkraft: höchstmögliche Kraft (Gewichtheben). Schnellkraft: hoher Kraftimpuls in kurzer Zeit (Handball-Wurf). Reaktivkraft: Dehnungs-Verkürzungs-Zyklus (Volleyball-Sprung). Kraftausdauer: Ermüdungswiderstand bei langen Kraftleistungen (Rudern)."},
+{q:"Erkläre die kraftbestimmenden Faktoren Muskelquerschnitt, Fasertyp, intra- und intermuskuläre Koordination.", a:"Querschnitt: dicker = mehr Kraft. Fasertyp: FT schnell/kräftig, ST langsam/ausdauernd, ab 30 % Last auch FT. Intramuskulär: Anzahl gleichzeitig aktivierter Fasern in einem Muskel. Intermuskulär: Zusammenspiel Agonist, Synergist, Antagonist."},
+{q:"Wähle eine Methode und begründe: a) Muskelaufbau, b) mehr Sprungkraft im Volleyball, c) Ruderer.", a:"a) Hypertrophie: 75-85 %, 5-8 Wdh, lange Pausen, 10-25 Serien pro Muskelgruppe pro Woche. b) Schnellkraft (50-70 %, 6-8 explosiv, 3-5 min) oder plyometrisch (Niedersprünge 8-10, 3-5 Serien, 5-8 min), weil Kraft in kurzer Zeit und DVZ. c) Kraftausdauer-Circuit: 35-65 %, 25-50 Wdh, kurze Pausen."},
+{q:"Erkläre den Zusammenhang zwischen Intensität, Umfang und Erholung im Krafttraining.", a:"Je höher die Intensität, desto weniger Wiederholungen sind möglich und desto länger muss die Pause sein (IK: 85-100 %, 1-5 Wdh, 3-5 min), damit der Muskel wieder maximal aktiviert werden kann. Tiefe Intensität: viele Wdh, kurze Pausen (Kraftausdauer)."}
+],
+s: [
+{q:"Unterscheide einfache und komplexe Reaktion mit Beispielen und beschreibe die Schritte der komplexen Reaktion.", a:"Einfach: bekannter Reiz, vorgegebene Antwort (Startschuss, 0.10-0.15 s). Komplex: mehrere Reize/Antworten (Goalie, Return, 0.20-0.40 s). Schritte: Wahrnehmung (selektive Aufmerksamkeit), Antizipation (wenn-dann), Entscheidung unter Zeitdruck."},
+{q:"Erkläre die Phasen des 100-m-Sprints.", a:"Start: einfache Reaktionsschnelligkeit. Beschleunigung: Schnell- und Maximalkraft. Topspeed: zyklische Frequenzschnelligkeit (Maximalgeschwindigkeit). Schlussspurt: Schnelligkeitsausdauer, Geschwindigkeit halten."},
+{q:"Beschreibe den motorischen und kognitiven Anteil der Agilität.", a:"Motorisch: schneller Richtungswechsel, abhängig von Geschwindigkeit vor dem Wechsel, Abbremskraft, Abdruckkraft und Körperorientierung. Kognitiv: über sensorische Rückmeldung schnell eine Entscheidung treffen (z.B. auf Gegner reagieren)."},
+{q:"Plane ein Schnelligkeitstraining.", a:"Gutes Aufwärmen mit Laufschule, dann Wiederholungsmethode am Anfang des Trainings: maximale Intensität, 2-3 Serien à 3-6 Wdh (z.B. 30 m fliegend mit Zeitmessung), vollständige Erholung (2-3 min zwischen Läufen, länger zwischen Serien), abbrechen wenn Tempo oder Qualität nachlassen."},
+{q:"Unterscheide zyklische Frequenz- und azyklische Sequenzschnelligkeit.", a:"Frequenz (zyklisch): gleiche, sich wiederholende Bewegungen maximal schnell (Laufen, Radfahren). Sequenz (azyklisch): einmalige Bewegung maximal schnell (Smash, Wurf)."}
+],
+b: [
+{q:"Unterscheide Gelenkigkeit und Dehnfähigkeit.", a:"Gelenkigkeit hängt von der Gelenkstruktur (Knochen) ab und wird durch Mobilisieren beeinflusst. Dehnfähigkeit hängt von Muskeln, Sehnen, Bändern, Gelenkkapsel und Haut ab und wird durch Dehnen beeinflusst."},
+{q:"Beschreibe dynamisches, statisches, AC- und CR-Stretching.", a:"Dynamisch: wiederholt, federnd. Statisch: passive Dehnstellung halten. AC: Antagonist anspannen, aktiv dehnen. CR: Zielmuskel zuerst anspannen, dann dehnen."},
+{q:"Beurteile kurz- und langfristige Wirkungen des Dehnens kritisch.", a:"Kurzfristig: Ruhespannung sinkt kurz, intensives Dehnen senkt Schnell- und Maximalkraft. Langfristig: grössere Amplitude durch höhere Dehntoleranz (Nervensystem), nicht durch längere Muskeln. Keine nachgewiesene Verletzungsprophylaxe, verhindert Muskelkater nicht, Regeneration nur über Wohlbefinden."},
+{q:"Wähle eine Dehntechnik für a) vor einem Fussballmatch, b) eine Kunstturnerin. Begründe.", a:"a) Dynamisch: aktiviert, ohne die Schnellkraft zu senken. b) Regelmässig statisch oder CR/PNF ausserhalb von Schnellkraftteilen, weil Turnen grosse Endpositionen verlangt und Beweglichkeit langfristig aufgebaut werden muss."},
+{q:"Unterscheide Hypo- und Hypermobilität und erkläre die Entwicklung der Beweglichkeit mit dem Alter.", a:"Hyper: übermässig, muskulär nicht mehr steuerbar. Hypo: eingeschränkt durch Knochen oder Fehlbelastungen. Grösste Beweglichkeit bis ca. 10 Jahre, danach Abnahme ohne Training. Frauen beweglicher, stark genetisch geprägt."}
+]
+};
+const EXAM_DATE = "2026-11-25";
+
+const PLAN = [
+{d:"Mi 18.11.", t:"Heute · Start", min:"ca. 45 min", tasks:[
+ {x:"Einstieg: Kapitel 1 Energiebereitstellung lesen", go:"guide/e"},
+ {x:"Tabelle 'Die 5 Wege' aus dem Kopf auf Papier schreiben und korrigieren", go:"guide/e"},
+ {x:"Quiz 1A machen (Ziel 80 %)", go:"quiz/e/A"}
+]},
+{d:"Do 19.11.", t:"Laktat und Schwellen", min:"ca. 60 min", tasks:[
+ {x:"Aufwärmen: Quiz 1B (Wiederholung von gestern)", go:"quiz/e/B"},
+ {x:"Kapitel 2 Leistungsphysiologie & Laktatstufentest lesen", go:"guide/l"},
+ {x:"Dmax-Trainer: Proband 1 und Probandin 2 zuerst auf Papier, dann prüfen", go:"dmax"},
+ {x:"Quiz 2A", go:"quiz/l/A"}
+]},
+{d:"Fr 20.11.", t:"Im Zug: Ausdauer", min:"ca. 60 min", tasks:[
+ {x:"Aufwärmen: Quiz 2B", go:"quiz/l/B"},
+ {x:"Kapitel 4 Ausdauer lesen", go:"guide/a"},
+ {x:"Superkompensation und Trainingsmethoden zeichnen, dann mit Lösung vergleichen", go:"draw"},
+ {x:"Quiz 4A", go:"quiz/a/A"},
+ {x:"Kapitel 3 Grundlagen kurz lesen + Quiz 3A", go:"guide/g"}
+]},
+{d:"Sa 21.11.", t:"Koordination und Schnelligkeit", min:"ca. 60 min", tasks:[
+ {x:"Aufwärmen: Quiz 4B", go:"quiz/a/B"},
+ {x:"Kapitel 5 Koordination lesen + Quiz 5A", go:"guide/k"},
+ {x:"Kapitel 7 Schnelligkeit lesen + Quiz 7A", go:"guide/s"},
+ {x:"Kurz: Quiz 1C (Energie bleibt frisch)", go:"quiz/e/C"}
+]},
+{d:"So 22.11.", t:"Kraft und Beweglichkeit", min:"ca. 60 min", tasks:[
+ {x:"Aufwärmen: Quiz 5B und 7B", go:"quiz/k/B"},
+ {x:"Kapitel 6 Kraft lesen, Methodentabelle auswendig + Quiz 6A", go:"guide/f"},
+ {x:"Kapitel 8 Beweglichkeit lesen + Quiz 8A", go:"guide/b"},
+ {x:"Quiz 3B (Grundlagen)", go:"quiz/g/B"}
+]},
+{d:"Mo 23.11.", t:"Übungstag 1 (Quiz und Karteikarten gehen im Auto)", min:"ca. 75 min", tasks:[
+ {x:"Quiz 6B und 8B", go:"quiz/f/B"},
+ {x:"Alle C-Quizze: Laktat, Ausdauer, Koordination, Schnelligkeit", go:"quiz/l/C"},
+ {x:"Prüfungsfragen schriftlich beantworten: Energie, Laktat, Ausdauer", go:"open/e"},
+ {x:"Dmax-Trainer: Übung 3 und 4 auf Papier lösen", go:"dmax"},
+ {x:"Alle Zeichnungen aus dem Kopf", go:"draw"}
+]},
+{d:"Di 24.11.", t:"Übungstag 2 · Generalprobe", min:"ca. 90 min", tasks:[
+ {x:"C-Quizze Kraft, Beweglichkeit, Grundlagen", go:"quiz/f/C"},
+ {x:"Prüfungsfragen: Koordination, Kraft, Schnelligkeit, Beweglichkeit", go:"open/k"},
+ {x:"Prüfungssimulation (60 min, ohne Unterlagen)", go:"sim"},
+ {x:"'Fehler wiederholen' bei jedem Thema, bis alles grün ist", go:"quiz/e/F"},
+ {x:"Merkblatt durchlesen, früh schlafen", go:"merk"}
+]},
+{d:"Mi 25.11.", t:"Prüfung", min:"ca. 15 min", tasks:[
+ {x:"Merkblatt 10 min lesen", go:"merk"},
+ {x:"Ein Zufallsquiz zum Aufwärmen", go:"quiz/l/Z"},
+ {x:"Einpacken: Schreibzeug, Massstab oder Geodreieck", go:"plan"}
+]}
+];
+
+const DMAX = [
+{name:"Proband 1 (Unterricht)", unit:"W", x:[70,100,130,160,190,220,250,280,310], y:[1.3,1.3,1.4,1.7,1.9,2.7,3.5,3.7,6.9], hf:[124,135,135,145,155,165,175,187,195]},
+{name:"Probandin 2 (Unterricht)", unit:"W", x:[70,100,130,160,190,220], y:[1.5,1.8,2.1,3.3,5.2,7.4], hf:[138,152,155,165,175,179]},
+{name:"Übung 3 (Laufband)", unit:"km/h", x:[8,9.2,10.4,11.6,12.8,14,15.2], y:[1.2,1.3,1.5,1.8,2.6,3.9,6.8], hf:[128,137,146,156,166,177,188]},
+{name:"Übung 4 (Velo)", unit:"W", x:[100,130,160,190,220,250,280], y:[1.1,1.2,1.4,1.6,2.3,3.6,6.1], hf:[118,128,138,148,160,172,185]}
+];
+
+const DRAW = [
+{t:"Energiebereitstellung über die Zeit", task:"Zeichne den Anteil von ATP, KrP, anaerober Glykolyse, aerober Glykolyse und Fettoxidation über die Belastungsdauer.",
+svg:`<svg viewBox="0 0 420 230"><line x1="40" y1="200" x2="410" y2="200" class="ax"/><line x1="40" y1="200" x2="40" y2="15" class="ax"/>
+<text x="300" y="222" class="lb">Belastungsdauer</text><text x="8" y="110" class="lb" transform="rotate(-90 12 110)">Anteil</text>
+<path d="M42 30 Q50 30 60 200" class="c1"/><text x="44" y="24" class="lb">ATP</text>
+<path d="M42 200 Q60 20 85 60 Q95 150 100 200" class="c2"/><text x="70" y="40" class="lb">KrP</text>
+<path d="M50 200 Q100 20 120 60 Q140 160 190 185" class="c3"/><text x="118" y="45" class="lb">anaerobe Glykolyse</text>
+<path d="M60 200 Q200 150 250 75 Q300 110 400 140" class="c4"/><text x="230" y="65" class="lb">aerobe Glykolyse</text>
+<path d="M200 200 Q260 120 320 70 L405 60" class="c5"/><text x="335" y="52" class="lb">Fett</text></svg>`,
+check:"Reihenfolge der Spitzen: ATP (sofort, 2-3 s) → KrP (bis 10 s) → anaerobe Glykolyse (bis ca. 90 s) → aerobe Glykolyse (bis ca. 90 min) → Fett (Stunden). Kurven überlappen sich."},
+{t:"Laktatkurve mit Schwellen", task:"Zeichne Laktat und HF über die Leistung. Markiere aerobe und anaerobe Schwelle mit Werten.",
+svg:`<svg viewBox="0 0 420 230"><line x1="40" y1="200" x2="410" y2="200" class="ax"/><line x1="40" y1="200" x2="40" y2="15" class="ax"/>
+<text x="330" y="222" class="lb">Leistung</text><text x="8" y="120" class="lb" transform="rotate(-90 12 120)">Laktat</text>
+<path d="M50 170 Q150 168 200 160 Q260 145 290 120 Q330 80 360 25" class="c3"/>
+<path d="M50 120 L360 40" class="c1"/><text x="365" y="40" class="lb">HF</text>
+<line x1="200" y1="200" x2="200" y2="20" class="dash"/><text x="170" y="15" class="lb">AS ≈ 2 mmol/l</text>
+<line x1="295" y1="200" x2="295" y2="20" class="dash"/><text x="290" y="15" class="lb">ANS ≈ 4</text>
+<text x="55" y="188" class="lb">Ruhe 0.7-1.8</text></svg>`,
+check:"Flach bis zur AS, danach leichter Anstieg (Steady State 2-4 mmol/l), ab der ANS exponentiell. HF steigt fast linear. Senkrecht nach unten Leistung ablesen."},
+{t:"Superkompensation", task:"Zeichne das Modell der Superkompensation mit Achsen und Beschriftung.",
+svg:`<svg viewBox="0 0 420 230"><line x1="30" y1="110" x2="410" y2="110" class="ax"/><line x1="30" y1="200" x2="30" y2="15" class="ax"/>
+<text x="380" y="100" class="lb">Zeit</text><text x="35" y="22" class="lb">Leistung</text><text x="300" y="125" class="lb">Ausgangsniveau</text>
+<path d="M30 110 Q80 190 130 160 Q170 130 190 110 Q230 40 270 60 Q320 85 400 105" class="c2"/>
+<line x1="245" y1="110" x2="245" y2="55" class="dash"/><text x="252" y="45" class="lb">Superkompensation</text>
+<text x="45" y="215" class="lb">Training</text><text x="140" y="215" class="lb">Erholung</text><text x="230" y="215" class="lb">neuer Reiz hier</text></svg>`,
+check:"Achsen Zeit und Leistung, waagrechte Linie = Ausgangsniveau. Ermüdung (Kurve unter Linie) → Erholung → Superkompensation über der Linie → ohne Reiz zurück. Neuer Reiz im Hochpunkt."},
+{t:"Reize optimal und zu früh", task:"Zeichne zwei Verläufe: mehrere Reize im Hoch der Superkompensation und mehrere zu früh gesetzte Reize.",
+svg:`<svg viewBox="0 0 420 230"><text x="10" y="18" class="lb">optimal</text><line x1="20" y1="80" x2="200" y2="80" class="ax"/>
+<path d="M20 80 Q35 110 50 75 Q65 100 80 65 Q95 90 110 55 Q125 80 140 45 Q160 70 190 60" class="c4"/>
+<text x="220" y="18" class="lb">zu früh</text><line x1="230" y1="60" x2="410" y2="60" class="ax"/>
+<path d="M230 60 Q245 90 255 70 Q265 100 280 80 Q292 110 305 92 Q318 125 330 105 Q345 140 360 120 Q380 150 405 140" class="c1"/>
+<text x="20" y="200" class="lb">Leistung steigt treppenartig</text><text x="230" y="200" class="lb">Leistung sinkt (Übertraining)</text></svg>`,
+check:"Optimal: jeder neue Reiz startet höher → Treppe nach oben. Zu früh: noch ermüdet → jeder Reiz startet tiefer → Treppe nach unten. Zu spät (nicht gezeichnet): immer auf Ausgangsniveau, kein Fortschritt."},
+{t:"Trainingsmethoden Ausdauer", task:"Zeichne Intensität über Zeit für Dauer-, Intervall- und Wiederholungsmethode.",
+svg:`<svg viewBox="0 0 420 230"><text x="10" y="20" class="lb">Dauer</text><line x1="110" y1="55" x2="410" y2="55" class="ax"/><rect x="110" y="30" width="290" height="25" class="blk"/>
+<text x="10" y="95" class="lb">Intervall</text><line x1="110" y1="125" x2="410" y2="125" class="ax"/>
+<rect x="110" y="85" width="35" height="40" class="blk"/><rect x="160" y="85" width="35" height="40" class="blk"/><rect x="210" y="85" width="35" height="40" class="blk"/><rect x="260" y="85" width="35" height="40" class="blk"/><rect x="310" y="85" width="35" height="40" class="blk"/><rect x="360" y="85" width="35" height="40" class="blk"/>
+<text x="10" y="165" class="lb">Wiederholung</text><line x1="110" y1="205" x2="410" y2="205" class="ax"/>
+<rect x="110" y="150" width="30" height="55" class="blk"/><rect x="230" y="150" width="30" height="55" class="blk"/><rect x="350" y="150" width="30" height="55" class="blk"/>
+<text x="150" y="222" class="lb">vollständige Erholung</text><text x="150" y="142" class="lb">lohnende Pause</text></svg>`,
+check:"Dauer: tiefe Intensität, lang, ohne Pause. Intervall: höhere Intensität, kurze (lohnende) Pausen. Wiederholung: sehr hohe Intensität, lange Pausen bis zur vollen Erholung. Je höher die Intensität, desto kleiner der Umfang."},
+{t:"Polarisiertes Modell (80/20)", task:"Zeichne die Verteilung der Trainingseinheiten auf Zone I, II und III.",
+svg:`<svg viewBox="0 0 420 230"><line x1="50" y1="200" x2="400" y2="200" class="ax"/><line x1="50" y1="200" x2="50" y2="20" class="ax"/>
+<rect x="80" y="44" width="80" height="156" class="blk"/><text x="95" y="38" class="lb">ca. 80 %</text>
+<rect x="190" y="190" width="80" height="10" class="blk"/><text x="205" y="180" class="lb">wenig</text>
+<rect x="300" y="161" width="80" height="39" class="blk"/><text x="312" y="155" class="lb">ca. 20 %</text>
+<text x="95" y="218" class="lb">Zone I</text><text x="210" y="218" class="lb">Zone II</text><text x="320" y="218" class="lb">Zone III</text></svg>`,
+check:"Man trainiert an den Polen: viel locker (Zone I), ca. 2 intensive Einheiten pro Woche (Zone III), Zone II möglichst meiden. Zuerst intensive Einheiten planen, dann auffüllen."}
+];
+
+const MERK = `
+<h3>Zahlen, die du sicher können musst</h3>
+<div class="tw"><table>
+<tr><th>Thema</th><th>Wert</th></tr>
+<tr><td>ATP-Speicher</td><td>6 mmol/kg, 2-3 s</td></tr>
+<tr><td>KrP</td><td>20 mmol/kg, bis ca. 10 s, wieder voll nach 5-8 min</td></tr>
+<tr><td>Anaerobe Glykolyse</td><td>2 ATP pro Glukose, ca. 45-90 s</td></tr>
+<tr><td>Aerobe Glykolyse</td><td>30-32 ATP pro Glukose, ca. 2 min Anlauf, bis ca. 90 min</td></tr>
+<tr><td>Laktat</td><td>Ruhe 0.7-1.8 · AS ca. 2 · ANS ca. 4 (2.3-6.8) · Ausbelastung über 8 · Abbruch bis über 20 mmol/l</td></tr>
+<tr><td>Laktatstufentest</td><td>alle 3 min +30 W (Velo) / +1.2 km/h (Laufband), Messung ca. 15 s vor Stufenende, Kadenz unter 70 = Abbruch</td></tr>
+<tr><td>Ausbelastung</td><td>max. HF · Borg ≥ 18 · Laktat über 8 · Eindruck Testleitung</td></tr>
+<tr><td>Abbruch</td><td>Erschöpfung · Angina pectoris · Atemnot · Schwindel/Übelkeit</td></tr>
+<tr><td>Dmax</td><td>AS = Punkt vor erstem Anstieg über 0.4 · ANS = grösster Abstand zur Geraden AS → letzter Punkt</td></tr>
+<tr><td>Intensitätsstufen</td><td>1 singen 60-70 % · 2 plaudern 70-80 % · 3 ganze Sätze 80-90 % · 4 knapp 90-95 % · 5 nichts 95-100 %</td></tr>
+<tr><td>Borg pro Stufe</td><td>6-9 · 10-12 · 13-14 · 15-16 · 17-20</td></tr>
+<tr><td>Polarisiert</td><td>80 % Zone I, 20 % Zone III (ca. 2 pro Woche)</td></tr>
+<tr><td>Intervall</td><td>Kurzzeit 15-60 s · Mittelzeit 1-8 min · Langzeit 8-15 min · lohnende Pause</td></tr>
+<tr><td>Wiederholungsmethode</td><td>90-100 % VO₂max, Pause 4-30 min</td></tr>
+<tr><td>Wettkampfmethode</td><td>95-105 % der Wettkampfleistung</td></tr>
+<tr><td>Steigerung</td><td>Häufigkeit → Umfang → Intensität, max. +10 % pro Woche</td></tr>
+<tr><td>Kraft-Definition</td><td>über 30 % des Kraftmaximums</td></tr>
+<tr><td>Hypertrophie</td><td>75-85 %, 5-8 Wdh, lange Pause, 10-15 / 20-25 Serien pro Woche</td></tr>
+<tr><td>IK</td><td>85-100 %, 1-5 Wdh, 3-5 min, 5-12 Serien</td></tr>
+<tr><td>Pyramide</td><td>75-100 %, 12 → 1 Wdh, 1-5 min</td></tr>
+<tr><td>Schnellkraft</td><td>50-70 %, 6-8 Wdh explosiv, 3-5 min, 3-5 Serien</td></tr>
+<tr><td>Plyometrisch</td><td>8-10 Sprünge, 5 s Pause, 5-8 min Serienpause, 3-5 Serien</td></tr>
+<tr><td>Kraftausdauer</td><td>35-65 %, 25-50 Wdh / 30-45 s, 10 s-1 min Pause</td></tr>
+<tr><td>Reaktionszeit</td><td>taktil 0.10 · akustisch 0.12 · optisch 0.15 · komplex 0.20-0.40 s · trainierbar 10-15 %</td></tr>
+<tr><td>Handlungsschnelligkeit</td><td>motorisch 20-30 %, kognitiv 70-80 %</td></tr>
+<tr><td>Schnelligkeitstraining</td><td>100 %, 2-3 Serien à 3-6 Wdh, vollständige Erholung, am Anfang</td></tr>
+<tr><td>Sensible Phase Koordination</td><td>ca. 7-12 Jahre · Pruning ab ca. 14</td></tr>
+<tr><td>Beweglichkeit</td><td>am grössten bis 10 Jahre · Frauen beweglicher · stark genetisch</td></tr>
+<tr><td>Dehntest Beinrückseite</td><td>90° ok · 80-90° leicht verkürzt · unter 80° verkürzt</td></tr>
+</table></div>
+<h3>Prüfungstipps</h3>
+<ul>
+<li>Bei "erklären" immer: Definition + Ablauf/Grund + Beispiel aus dem Sport.</li>
+<li>Bei Trainingsempfehlungen immer mit Theorie begründen (Schwellen, Energiebereitstellung, Superkompensation).</li>
+<li>Bei Zeichnungen Achsen beschriften (Zeit, Leistung, Laktat) und Schwellen mit Werten markieren.</li>
+<li>Dmax: Lineal und Geodreieck. Zuerst AS mit der 0.4-Regel, dann Gerade, dann grösster rechtwinkliger Abstand.</li>
+<li>Die Gewichtung folgt den Lektionen: Energie, Laktat und Ausdauer zählen am meisten.</li>
+</ul>`;
+// ---------- Speicher ----------
+const S = (() => { let mem = {}; let ok = false;
+  try { const k = "__t"; localStorage.setItem(k, "1"); localStorage.removeItem(k); ok = true; } catch (e) {}
+  return {
+    get(k, d) { try { if (ok) { const v = localStorage.getItem("efsport_" + k); return v === null ? d : JSON.parse(v); } } catch (e) {} return k in mem ? mem[k] : d; },
+    set(k, v) { mem[k] = v; try { if (ok) localStorage.setItem("efsport_" + k, JSON.stringify(v)); } catch (e) {} }
+  };
+})();
+
+const $ = s => document.querySelector(s);
+const app = () => $("#app");
+const topic = id => TOPICS.find(t => t.id === id);
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function allQ(t) { const out = []; ["A", "B", "C"].forEach(set => QUIZ[t][set].forEach((q, i) => out.push({ ...q, id: `${t}-${set}-${i}`, t }))); return out; }
+function setQ(t, set) { return QUIZ[t][set].map((q, i) => ({ ...q, id: `${t}-${set}-${i}`, t })); }
+
+// ---------- Navigation ----------
+const NAV = [["plan", "Plan"], ["guide", "Lernguide"], ["quiz", "Quiz"], ["dmax", "Dmax-Trainer"], ["draw", "Zeichnen"], ["open", "Prüfungsfragen"], ["sim", "Simulation"], ["merk", "Merkblatt"]];
+function renderNav(active) {
+  $("#nav").innerHTML = NAV.map(([k, l]) => `<a href="#${k}" class="${active === k ? "on" : ""}">${l}</a>`).join("");
+}
+function daysLeft() { const now = new Date(); const ex = new Date(EXAM_DATE + "T08:00:00"); const d = Math.ceil((ex - now) / 86400000); return d; }
+
+
+document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) { e.preventDefault(); go(g.dataset.go); return; }
+  const a = e.target.closest("a[href^='#']"); if (a) { e.preventDefault(); go(a.getAttribute("href").slice(1)); } });
+function go(p) { window.__r = p || "plan"; route(); }
+
+function route() {
+  if (window.__timer) { clearInterval(window.__timer); window.__timer = null; }
+  const h = (window.__r || "plan").split("/");
+  const v = h[0];
+  renderNav(v);
+  window.scrollTo(0, 0);
+  if (v === "guide") return h[1] ? viewChapter(h[1]) : viewGuideList();
+  if (v === "quiz") return h[1] ? startQuiz(h[1], h[2] || "A") : viewQuizList();
+  if (v === "dmax") return viewDmax(+(h[1] || 0));
+  if (v === "draw") return viewDraw();
+  if (v === "open") return viewOpen(h[1] || "e");
+  if (v === "sim") return viewSim();
+  if (v === "merk") return viewMerk();
+  return viewPlan();
+}
+
+// ---------- Plan ----------
+function best(t, set) { return S.get(`best_${t}_${set}`, null); }
+function topicScore(t) { const s = ["A", "B", "C"].map(x => best(t, x)).filter(x => x !== null); return s.length ? Math.round(s.reduce((a, b) => a + b, 0) / s.length) : null; }
+
+function viewPlan() {
+  const done = S.get("plan", {});
+  const dl = daysLeft();
+  let total = 0, checked = 0;
+  PLAN.forEach((d, i) => d.tasks.forEach((t, j) => { total++; if (done[`${i}-${j}`]) checked++; }));
+  const prog = TOPICS.map(t => { const s = topicScore(t.id); const w = S.get("wrong_" + t.id, []).length;
+    return `<tr><td><a href="#guide/${t.id}">${t.n} ${t.title}</a></td><td>${["A", "B", "C"].map(x => { const b = best(t.id, x); return `<a class="pill ${b === null ? "" : b >= 80 ? "good" : "bad"}" href="#quiz/${t.id}/${x}">${x}${b === null ? "" : " " + b + "%"}</a>`; }).join(" ")}</td><td>${w ? `<a href="#quiz/${t.id}/F">${w} offen</a>` : "·"}</td></tr>`; }).join("");
+  app().innerHTML = `
+  <section class="hero"><div><h1>EF Sport · Prüfung Mi 25.11.</h1>
+  <p>Energiebereitstellung und motorische Fähigkeiten · 60 min · Schreibzeug, Massstab oder Geodreieck</p></div>
+  <div class="count"><span>${dl > 0 ? dl : 0}</span>${dl === 1 ? "Tag" : "Tage"}</div></section>
+  <p class="lead">So funktioniert es: Jeden Tag die Aufgaben von oben nach unten abarbeiten und abhaken. Jedes Thema hat drei verschiedene Quiz (A, B, C) plus Zufallsquiz und "Fehler wiederholen". Die letzten zwei Tage sind fürs Üben reserviert. Ziel für eine 6: jedes Quiz über 90 % und die Prüfungsfragen ohne Spicken beantworten können.</p>
+  <div class="bar"><div style="width:${total ? Math.round(checked / total * 100) : 0}%"></div></div>
+  <p class="small">${checked} von ${total} Aufgaben erledigt</p>
+  <div class="days">${PLAN.map((d, i) => `
+    <div class="day"><div class="dh"><b>${d.d}</b> <span>${d.t}</span><em>${d.min}</em></div>
+    ${d.tasks.map((t, j) => `<label class="task"><input type="checkbox" data-k="${i}-${j}" ${done[`${i}-${j}`] ? "checked" : ""}> <span>${t.x}</span> <a href="#${t.go}" class="go">öffnen →</a></label>`).join("")}
+    </div>`).join("")}</div>
+  <h2>Dein Stand</h2>
+  <div class="tw"><table><tr><th>Thema</th><th>Beste Quiz-Resultate</th><th>Fehler</th></tr>${prog}</table></div>
+  <p class="small">Grün = mindestens 80 %. "offen" = Fragen, die du zuletzt falsch hattest.</p>`;
+  app().querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => { const d = S.get("plan", {}); d[cb.dataset.k] = cb.checked; S.set("plan", d); viewPlan(); }));
+}
+
+// ---------- Lernguide ----------
+function viewGuideList() {
+  app().innerHTML = `<h1>Lernguide</h1><p class="lead">Die Kapitel folgen den Lernzielen. Jedes Kapitel beginnt mit einer kurzen Anleitung, wie du es lernst.</p>
+  <div class="list">${TOPICS.map(t => `<a class="row" href="#guide/${t.id}"><b>${t.n}</b> ${t.title}${t.id === "g" ? ' <span class="tag">ergänzt</span>' : ""}<span class="go">→</span></a>`).join("")}</div>`;
+}
+function viewChapter(id) {
+  const t = topic(id); const i = TOPICS.indexOf(t);
+  const prev = TOPICS[i - 1], next = TOPICS[i + 1];
+  app().innerHTML = `<p class="crumb"><a href="#guide">Lernguide</a> / ${t.n}</p><h1>${t.n} ${t.title}</h1>
+  <div class="chapter">${CHAPTERS[id]}</div>
+  <div class="after"><b>Jetzt üben:</b>
+  <a class="btn" href="#quiz/${id}/A">Quiz A</a><a class="btn" href="#quiz/${id}/B">Quiz B</a><a class="btn" href="#quiz/${id}/C">Quiz C</a><a class="btn ghost" href="#quiz/${id}/Z">Zufall</a><a class="btn ghost" href="#open/${id}">Prüfungsfragen</a></div>
+  <div class="pn">${prev ? `<a href="#guide/${prev.id}">← ${prev.title}</a>` : "<span></span>"}${next ? `<a href="#guide/${next.id}">${next.title} →</a>` : ""}</div>`;
+}
+
+// ---------- Quiz ----------
+function viewQuizList() {
+  app().innerHTML = `<h1>Quiz</h1><p class="lead">A, B und C haben verschiedene Fragen. "Zufall" mischt 8 Fragen aus allen drei. "Fehler" fragt nur, was du zuletzt falsch hattest. Antworten werden jedes Mal neu gemischt.</p>
+  <div class="tw"><table><tr><th>Thema</th><th></th></tr>${TOPICS.map(t => { const w = S.get("wrong_" + t.id, []).length;
+    return `<tr><td>${t.n} ${t.title}</td><td class="btns">${["A", "B", "C"].map(x => { const b = best(t.id, x); return `<a class="btn sm ${b === null ? "" : b >= 80 ? "good" : "bad"}" href="#quiz/${t.id}/${x}">${x}${b === null ? "" : " · " + b + "%"}</a>`; }).join("")}<a class="btn sm ghost" href="#quiz/${t.id}/Z">Zufall</a>${w ? `<a class="btn sm ghost" href="#quiz/${t.id}/F">Fehler (${w})</a>` : ""}</td></tr>`; }).join("")}</table></div>
+  <p><a class="btn" href="#quiz/all/Z">Gemischtes Zufallsquiz über alle Themen (15 Fragen)</a></p>`;
+}
+
+function startQuiz(t, set) {
+  let qs, title;
+  if (t === "all") { qs = shuffle(TOPICS.flatMap(x => allQ(x.id))).slice(0, 15); title = "Gemischt, alle Themen"; }
+  else if (set === "Z") { qs = shuffle(allQ(t)).slice(0, 8); title = `${topic(t).title} · Zufall`; }
+  else if (set === "F") { const ids = S.get("wrong_" + t, []); qs = shuffle(allQ(t).filter(q => ids.includes(q.id))); title = `${topic(t).title} · Fehler wiederholen`;
+    if (!qs.length) { app().innerHTML = `<h1>${title}</h1><p class="lead">Keine offenen Fehler bei diesem Thema. Stark.</p><p><a class="btn" href="#quiz/${t}/Z">Zufallsquiz</a> <a class="btn ghost" href="#quiz">Zur Übersicht</a></p>${nextFehler(t)}`; return; } }
+  else { qs = shuffle(setQ(t, set)); title = `${topic(t).title} · Quiz ${set}`; }
+  runQuiz(qs, title, (score, wrongIds, rightIds) => {
+    if (t !== "all" && ["A", "B", "C"].includes(set)) { const b = best(t, set); if (b === null || score > b) S.set(`best_${t}_${set}`, score); }
+    // Fehlerliste pflegen
+    const byT = {}; qs.forEach(q => byT[q.t] = byT[q.t] || S.get("wrong_" + q.t, []));
+    wrongIds.forEach(id => { const tt = id.split("-")[0]; if (!byT[tt].includes(id)) byT[tt].push(id); });
+    rightIds.forEach(id => { const tt = id.split("-")[0]; byT[tt] = byT[tt].filter(x => x !== id); });
+    Object.keys(byT).forEach(tt => S.set("wrong_" + tt, byT[tt]));
+  }, t, set);
+}
+function nextFehler(t) { const others = TOPICS.filter(x => S.get("wrong_" + x.id, []).length); return others.length ? `<p class="small">Offene Fehler bei: ${others.map(x => `<a href="#quiz/${x.id}/F">${x.title}</a>`).join(", ")}</p>` : ""; }
+
+function runQuiz(qs, title, onEnd, t, set) {
+  let i = 0, right = 0; const wrong = [], ok = [], log = [];
+  function show() {
+    const q = qs[i]; const opts = shuffle(q.a.map((x, k) => ({ x, ok: k === 0 })));
+    app().innerHTML = `<p class="crumb"><a href="#quiz">Quiz</a> / ${esc(title)}</p>
+    <div class="qhead"><span>Frage ${i + 1} von ${qs.length}</span><span>${right} richtig</span></div>
+    <div class="bar"><div style="width:${i / qs.length * 100}%"></div></div>
+    <div class="qcard"><h2>${esc(q.q)}</h2>${t === "all" ? `<p class="small">${topic(q.t).title}</p>` : ""}
+    <div class="opts">${opts.map((o, k) => `<button class="opt" data-k="${k}"><span>${"ABCD"[k]}</span>${esc(o.x)}</button>`).join("")}</div>
+    <div id="fb"></div></div>`;
+    app().querySelectorAll(".opt").forEach(b => b.addEventListener("click", () => {
+      if (app().querySelector(".opts").dataset.done) return; app().querySelector(".opts").dataset.done = 1;
+      const o = opts[+b.dataset.k];
+      app().querySelectorAll(".opt").forEach((bb, k) => { if (opts[k].ok) bb.classList.add("right"); });
+      if (o.ok) { right++; ok.push(q.id); } else { b.classList.add("wrong"); wrong.push(q.id); }
+      log.push({ q, ok: o.ok, chosen: o.x });
+      $("#fb").innerHTML = `<div class="fb ${o.ok ? "y" : "n"}"><b>${o.ok ? "Richtig." : "Falsch."}</b> ${esc(q.e)}</div>
+      <button class="btn" id="nx">${i + 1 < qs.length ? "Weiter" : "Auswertung"}</button>`;
+      $("#nx").focus();
+      $("#nx").addEventListener("click", () => { i++; i < qs.length ? show() : end(); });
+    }));
+  }
+  function end() {
+    const score = Math.round(right / qs.length * 100);
+    onEnd(score, wrong, ok);
+    const note = Math.round((1 + 5 * right / qs.length) * 4) / 4;
+    app().innerHTML = `<p class="crumb"><a href="#quiz">Quiz</a> / ${esc(title)}</p><h1>${score} %</h1>
+    <p class="lead">${right} von ${qs.length} richtig · entspricht ungefähr Note ${note.toFixed(2).replace(/0$/, "")}. ${score >= 90 ? "Sehr gut, dieses Quiz sitzt." : score >= 80 ? "Gut. Lies die Fehler unten nach und mach später ein anderes Quiz." : "Lies die Fehler unten im Kapitel nach und mach das Quiz morgen nochmals."}</p>
+    <p>${wrong.length ? `<a class="btn" href="#quiz/${t}/F">Nur Fehler wiederholen</a>` : ""} ${t !== "all" ? `<a class="btn ghost" href="#quiz/${t}/Z">Zufallsquiz</a> <a class="btn ghost" href="#guide/${t}">Kapitel</a>` : ""} <a class="btn ghost" href="#quiz">Übersicht</a></p>
+    ${wrong.length ? `<h2>Deine Fehler</h2>${log.filter(l => !l.ok).map(l => `<div class="rev"><b>${esc(l.q.q)}</b><br><span class="n">Deine Antwort: ${esc(l.chosen)}</span><br><span class="y">Richtig: ${esc(l.q.a[0])}</span><br><span class="small">${esc(l.q.e)}</span></div>`).join("")}` : ""}`;
+    if (wrong.length) { const a = app().querySelector('a[href$="/F"]'); if (a && t === "all") a.remove(); }
+  }
+  show();
+}
+
+// ---------- Dmax ----------
+function fit3(xs, ys) { const n = 4; const A = [...Array(n)].map(() => Array(n + 1).fill(0));
+  for (let i = 0; i < xs.length; i++) { const p = [1, xs[i], xs[i] ** 2, xs[i] ** 3]; for (let r = 0; r < n; r++) { for (let c = 0; c < n; c++) A[r][c] += p[r] * p[c]; A[r][n] += p[r] * ys[i]; } }
+  for (let i = 0; i < n; i++) { let m = i; for (let k = i + 1; k < n; k++) if (Math.abs(A[k][i]) > Math.abs(A[m][i])) m = k; [A[i], A[m]] = [A[m], A[i]]; for (let k = 0; k < n; k++) if (k !== i) { const f = A[k][i] / A[i][i]; for (let c = i; c <= n; c++) A[k][c] -= f * A[i][c]; } }
+  return A.map((r, i) => r[n] / r[i]); }
+function dmax(ds) {
+  const { x, y, hf } = ds; let as = 0;
+  for (let i = 1; i < y.length; i++) if (y[i] - y[i - 1] > 0.4) { as = i - 1; break; }
+  const x0 = x[0], span = x[x.length - 1] - x[0]; const co = fit3(x.map(v => (v - x0) / span), y);
+  const f = v => { const t = (v - x0) / span; return co[0] + co[1] * t + co[2] * t * t + co[3] * t ** 3; };
+  const ax = x[as], ay = y[as], lx = x[x.length - 1], ly = y[y.length - 1]; let bx = ax, bd = 0;
+  for (let k = 0; k <= 2000; k++) { const v = ax + (lx - ax) * k / 2000; const d = ay + (ly - ay) * (v - ax) / (lx - ax) - f(v); if (d > bd) { bd = d; bx = v; } }
+  const hfAt = v => { for (let i = 1; i < x.length; i++) if (v <= x[i]) return hf[i - 1] + (hf[i] - hf[i - 1]) * (v - x[i - 1]) / (x[i] - x[i - 1]); return hf[hf.length - 1]; };
+  return { as, ax, ay, ahf: hf[as], bx, by: f(bx), bhf: hfAt(bx), f, lx, ly };
+}
+function viewDmax(k) {
+  const ds = DMAX[k]; const r = dmax(ds); const step = S.get("dstep_" + k, 0);
+  const W = 520, H = 300, L = 45, B = 260, T = 15, R = 505;
+  const xmin = ds.x[0] - (ds.x[1] - ds.x[0]) * 0.5, xmax = ds.x[ds.x.length - 1] + (ds.x[1] - ds.x[0]) * 0.5, ymax = Math.ceil(Math.max(...ds.y) + 1);
+  const X = v => L + (v - xmin) / (xmax - xmin) * (R - L), Y = v => B - v / ymax * (B - T);
+  let g = `<line x1="${L}" y1="${B}" x2="${R}" y2="${B}" class="ax"/><line x1="${L}" y1="${B}" x2="${L}" y2="${T}" class="ax"/>`;
+  for (let v = 0; v <= ymax; v++) g += `<line x1="${L}" y1="${Y(v)}" x2="${R}" y2="${Y(v)}" class="grid"/><text x="${L - 8}" y="${Y(v) + 4}" class="lb" text-anchor="end">${v}</text>`;
+  ds.x.forEach(v => g += `<text x="${X(v)}" y="${B + 16}" class="lb" text-anchor="middle">${v}</text>`);
+  g += `<text x="${R}" y="${B + 32}" class="lb" text-anchor="end">Leistung (${ds.unit})</text><text x="${L + 6}" y="${T + 10}" class="lb">Laktat (mmol/l)</text>`;
+  let pts = ds.x.map((v, i) => `${X(v)},${Y(ds.y[i])}`).join(" ");
+  g += `<polyline points="${pts}" class="c3" fill="none"/>` + ds.x.map((v, i) => `<circle cx="${X(v)}" cy="${Y(ds.y[i])}" r="4" class="pt"/>`).join("");
+  if (step >= 1) g += `<circle cx="${X(r.ax)}" cy="${Y(r.ay)}" r="7" class="mark"/><line x1="${X(r.ax)}" y1="${B}" x2="${X(r.ax)}" y2="${T}" class="dash"/><text x="${X(r.ax) - 4}" y="${T + 12}" class="lb" text-anchor="end">AS</text>`;
+  if (step >= 2) g += `<line x1="${X(r.ax)}" y1="${Y(r.ay)}" x2="${X(r.lx)}" y2="${Y(r.ly)}" class="c1"/>`;
+  if (step >= 3) { let sm = ""; for (let k2 = 0; k2 <= 60; k2++) { const v = ds.x[0] + (ds.x[ds.x.length - 1] - ds.x[0]) * k2 / 60; sm += `${X(v)},${Y(r.f(v))} `; }
+    const ly = r.ay + (r.ly - r.ay) * (r.bx - r.ax) / (r.lx - r.ax);
+    g += `<polyline points="${sm}" class="c4" fill="none"/><line x1="${X(r.bx)}" y1="${Y(ly)}" x2="${X(r.bx)}" y2="${Y(r.by)}" class="c2"/><circle cx="${X(r.bx)}" cy="${Y(r.by)}" r="7" class="mark"/><line x1="${X(r.bx)}" y1="${B}" x2="${X(r.bx)}" y2="${T}" class="dash"/><text x="${X(r.bx) + 6}" y="${T + 12}" class="lb">ANS</text>`; }
+  const fmt = v => ds.unit === "W" ? Math.round(v) : v.toFixed(1);
+  const steps = ["Finde zuerst die aerobe Schwelle.", `Aerobe Schwelle: ${fmt(r.ax)} ${ds.unit}, ${r.ay} mmol/l, HF ${r.ahf}. Der erste Anstieg über 0.4 mmol/l kommt danach (${r.ay} → ${ds.y[r.as + 1]}).`, "Gerade von der AS zum letzten Messpunkt gezogen.", `Anaerobe Schwelle: ca. ${fmt(r.bx)} ${ds.unit}, ${r.by.toFixed(1)} mmol/l, HF ca. ${Math.round(r.bhf)}. Hier ist der Abstand zwischen Gerade und Kurve am grössten (grüne Linie = geglättete Kurve wie in der Excel-Auswertung).`];
+  app().innerHTML = `<h1>Dmax-Trainer</h1>
+  <p class="lead">Übe die modifizierte Dmax-Methode. Am besten zuerst auf Papier: Punkte eintragen, AS mit der 0.4-Regel, Gerade, grösster rechtwinkliger Abstand. Dann hier deine Werte eingeben und prüfen.</p>
+  <div class="tabs">${DMAX.map((d, i) => `<a href="#dmax/${i}" class="${i === k ? "on" : ""}">${d.name}</a>`).join("")}</div>
+  <div class="tw"><table class="data"><tr><th>Stufe</th>${ds.x.map((v, i) => `<td>${i + 1}</td>`).join("")}</tr><tr><th>Leistung (${ds.unit})</th>${ds.x.map(v => `<td>${v}</td>`).join("")}</tr><tr><th>Laktat (mmol/l)</th>${ds.y.map(v => `<td>${v}</td>`).join("")}</tr><tr><th>HF</th>${ds.hf.map(v => `<td>${v}</td>`).join("")}</tr></table></div>
+  <svg viewBox="0 0 ${W} ${H}" class="chart">${g}</svg>
+  <div class="guess"><label>Deine AS (${ds.unit}) <input id="gas" type="number" step="any"></label><label>Deine ANS (${ds.unit}) <input id="gans" type="number" step="any"></label><button class="btn" id="chk">Prüfen</button></div>
+  <div id="gres"></div>
+  <p><b>Schritt ${step} von 3:</b> ${steps[step]}</p>
+  <p>${step < 3 ? `<button class="btn" id="nst">Nächsten Schritt zeigen</button>` : ""} <button class="btn ghost" id="rst">Zurücksetzen</button></p>`;
+  const nst = $("#nst"); if (nst) nst.onclick = () => { S.set("dstep_" + k, step + 1); viewDmax(k); };
+  $("#rst").onclick = () => { S.set("dstep_" + k, 0); viewDmax(k); };
+  $("#chk").onclick = () => { const a = parseFloat($("#gas").value), b = parseFloat($("#gans").value); const tol = ds.unit === "W" ? 10 : 0.4; let out = [];
+    if (!isNaN(a)) out.push(Math.abs(a - r.ax) < 0.01 ? `<span class="y">AS richtig: ${fmt(r.ax)} ${ds.unit}.</span>` : `<span class="n">AS stimmt nicht. Tipp: Suche den ersten Sprung über 0.4 mmol/l und nimm den Punkt davor.</span>`);
+    if (!isNaN(b)) out.push(Math.abs(b - r.bx) <= tol ? `<span class="y">ANS passt (Lösung ca. ${fmt(r.bx)} ${ds.unit}, ±${tol} ${ds.unit} ist auf Papier ok).</span>` : `<span class="n">ANS liegt nicht nahe genug. Tipp: Geodreieck rechtwinklig zur Geraden, wo ist der Abstand zur Kurve am grössten?</span>`);
+    $("#gres").innerHTML = `<div class="fb">${out.join("<br>")}</div>`; };
+}
+
+// ---------- Zeichnen ----------
+function viewDraw() {
+  app().innerHTML = `<h1>Zeichnen</h1><p class="lead">In der Prüfung musst du Grafiken erkennen und zeichnen können. Zeichne jede Grafik zuerst auf Papier, dann Lösung aufdecken und vergleichen.</p>
+  ${DRAW.map((d, i) => `<div class="drawcard"><h2>${i + 1}. ${d.t}</h2><p>${d.task}</p><button class="btn ghost" data-r="${i}">Lösung zeigen</button><div class="sol" id="sol${i}" hidden>${d.svg}<p class="small">${d.check}</p></div></div>`).join("")}`;
+  app().querySelectorAll("[data-r]").forEach(b => b.onclick = () => { const s = $("#sol" + b.dataset.r); s.hidden = !s.hidden; b.textContent = s.hidden ? "Lösung zeigen" : "Lösung verbergen"; });
+}
+
+// ---------- Offene Fragen ----------
+function viewOpen(t) {
+  const st = S.get("open", {});
+  app().innerHTML = `<h1>Prüfungsfragen</h1><p class="lead">So wie in der schriftlichen Prüfung. Antwort zuerst auf Papier schreiben (Definition, Erklärung, Beispiel), dann Musterlösung aufdecken und ehrlich bewerten.</p>
+  <div class="tabs">${TOPICS.map(x => `<a href="#open/${x.id}" class="${x.id === t ? "on" : ""}">${x.short}</a>`).join("")}</div>
+  ${OPEN[t].map((o, i) => { const k = `${t}-${i}`; return `<div class="drawcard"><h2>${i + 1}. ${esc(o.q)}</h2>
+  <button class="btn ghost" data-r="${i}">Musterlösung zeigen</button><span class="state ${st[k] || ""}">${st[k] === "y" ? "gewusst" : st[k] === "n" ? "nochmals lernen" : ""}</span>
+  <div class="sol" id="osol${i}" hidden><p>${esc(o.a)}</p><button class="btn sm good" data-s="y" data-k="${k}">Gewusst</button> <button class="btn sm bad" data-s="n" data-k="${k}">Nochmals lernen</button></div></div>`; }).join("")}`;
+  app().querySelectorAll("[data-r]").forEach(b => b.onclick = () => { const s = $("#osol" + b.dataset.r); s.hidden = !s.hidden; });
+  app().querySelectorAll("[data-s]").forEach(b => b.onclick = () => { const s = S.get("open", {}); s[b.dataset.k] = b.dataset.s; S.set("open", s); viewOpen(t); });
+}
+
+// ---------- Simulation ----------
+function viewSim() {
+  const hist = S.get("simhist", []);
+  app().innerHTML = `<h1>Prüfungssimulation</h1>
+  <p class="lead">22 Multiple-Choice-Fragen, gewichtet wie die Prüfung (Energie, Laktat und Ausdauer am meisten), dazu 4 offene Fragen. Jede Simulation zieht andere Fragen. Ohne Unterlagen, Timer läuft 60 min.</p>
+  <p><button class="btn" id="go">Simulation starten</button></p>
+  ${hist.length ? `<h2>Bisherige Simulationen</h2><div class="tw"><table><tr><th>Datum</th><th>Multiple Choice</th><th>Offene Fragen</th></tr>${hist.map(h => `<tr><td>${h.d}</td><td>${h.mc} %</td><td>${h.op}</td></tr>`).join("")}</table></div>` : ""}`;
+  $("#go").onclick = runSim;
+}
+function runSim() {
+  const W = { e: 4, l: 4, a: 4, f: 3, k: 2, s: 2, b: 2, g: 1 };
+  const mc = shuffle(Object.entries(W).flatMap(([t, n]) => shuffle(allQ(t)).slice(0, n)));
+  const ot = shuffle(["e", "l", "a", "f", "k", "s", "b"]).slice(0, 4); const op = ot.map(t => ({ t, ...shuffle(OPEN[t])[0] }));
+  const start = Date.now(); const ans = {};
+  app().innerHTML = `<h1>Simulation</h1><div class="timer" id="tm">60:00</div>
+  <h2>Teil 1: Multiple Choice</h2>
+  ${mc.map((q, i) => { const o = shuffle(q.a.map((x, k) => ({ x, ok: k === 0 }))); q._o = o;
+    return `<div class="simq"><b>${i + 1}. ${esc(q.q)}</b>${o.map((x, k) => `<label class="sopt"><input type="radio" name="q${i}" value="${k}"> ${esc(x.x)}</label>`).join("")}</div>`; }).join("")}
+  <h2>Teil 2: Offene Fragen</h2><p class="small">Schreib die Antworten auf Papier. Nach dem Abgeben siehst du die Musterlösung und bewertest dich selbst.</p>
+  ${op.map((o, i) => `<div class="simq"><b>${i + 1}. ${esc(o.q)}</b> <span class="small">(${topic(o.t).short})</span></div>`).join("")}
+  <p><button class="btn" id="sub">Abgeben</button></p>`;
+  window.__timer = setInterval(() => { const s = Math.max(0, 3600 - Math.floor((Date.now() - start) / 1000)); const el = $("#tm"); if (el) el.textContent = `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`; }, 1000);
+  $("#sub").onclick = () => {
+    clearInterval(window.__timer); window.__timer = null;
+    let right = 0; const wrongIds = [], okIds = [];
+    const res = mc.map((q, i) => { const v = app().querySelector(`input[name=q${i}]:checked`); const ok = v && q._o[+v.value].ok; if (ok) { right++; okIds.push(q.id); } else wrongIds.push(q.id); return { q, ok, chosen: v ? q._o[+v.value].x : "keine Antwort" }; });
+    const byT = {}; mc.forEach(q => byT[q.t] = byT[q.t] || S.get("wrong_" + q.t, []));
+    wrongIds.forEach(id => { const tt = id.split("-")[0]; if (!byT[tt].includes(id)) byT[tt].push(id); });
+    okIds.forEach(id => { const tt = id.split("-")[0]; byT[tt] = byT[tt].filter(x => x !== id); });
+    Object.keys(byT).forEach(tt => S.set("wrong_" + tt, byT[tt]));
+    const pct = Math.round(right / mc.length * 100);
+    const mins = Math.round((Date.now() - start) / 60000);
+    app().innerHTML = `<h1>Auswertung</h1><p class="lead">Multiple Choice: ${right} von ${mc.length} richtig (${pct} %) in ${mins} min. Bewerte jetzt die offenen Fragen.</p>
+    ${op.map((o, i) => `<div class="drawcard"><b>${i + 1}. ${esc(o.q)}</b><p>${esc(o.a)}</p><div class="rate" data-i="${i}">Wie viel hattest du? <button class="btn sm" data-v="1">alles</button> <button class="btn sm" data-v="0.5">die Hälfte</button> <button class="btn sm" data-v="0">wenig</button></div></div>`).join("")}
+    <div id="fin"></div>
+    <h2>Multiple Choice: Fehler</h2>${res.filter(r => !r.ok).map(r => `<div class="rev"><b>${esc(r.q.q)}</b> <span class="small">(${topic(r.q.t).short})</span><br><span class="n">Deine Antwort: ${esc(r.chosen)}</span><br><span class="y">Richtig: ${esc(r.q.a[0])}</span><br><span class="small">${esc(r.q.e)}</span></div>`).join("") || "<p>Keine Fehler.</p>"}
+    <p class="small">Falsche Fragen sind jetzt bei den jeweiligen Themen unter "Fehler wiederholen" gespeichert.</p>`;
+    const rates = {};
+    app().querySelectorAll(".rate button").forEach(b => b.onclick = () => { const i = b.parentElement.dataset.i; rates[i] = +b.dataset.v; b.parentElement.querySelectorAll("button").forEach(x => x.classList.remove("on")); b.classList.add("on");
+      if (Object.keys(rates).length === op.length) { const os = Object.values(rates).reduce((a, c) => a + c, 0) / op.length; const tot = 0.6 * (right / mc.length) + 0.4 * os; const note = Math.round((1 + 5 * tot) * 4) / 4;
+        $("#fin").innerHTML = `<div class="fb"><b>Geschätzte Note: ${note.toFixed(2).replace(/0$/, "")}</b> (MC 60 %, offene Fragen 40 % gewichtet). ${note >= 5.75 ? "Du bist ready." : note >= 5 ? "Fast. Fehler nachlernen und 'Fehler wiederholen' machen." : "Kapitel mit den meisten Fehlern nochmals lesen, dann neue Simulation."}</div>`;
+        const h = S.get("simhist", []); const d = new Date(); h.unshift({ d: `${d.getDate()}.${d.getMonth() + 1}. ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`, mc: pct, op: `${Math.round(os * 100)} % · Note ca. ${note}` }); S.set("simhist", h.slice(0, 10)); } });
+  };
+}
+
+// ---------- Merkblatt ----------
+function viewMerk() { app().innerHTML = `<h1>Merkblatt</h1><p class="lead">Für die letzten Tage und den Prüfungsmorgen. Alles, was du auswendig wissen musst, auf einer Seite.</p>${MERK}`; }
+
+route();
+</script>
+</body>
+</html>
