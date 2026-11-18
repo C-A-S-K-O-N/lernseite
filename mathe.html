@@ -142,7 +142,7 @@ table.conj td,table.conj th{white-space:nowrap}
 @media (max-width:600px){h1{font-size:24px}main{padding:18px 16px 70px}.count span{font-size:32px}.btns{white-space:normal}th,td{padding:7px 8px 7px 0}}
 .home{font-size:13px;text-decoration:none;margin-right:6px}
 </style>
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="theme.css"><style>:root{--acc:#7048E8}</style></head>
 <body>
 <header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>Mathe mündlich</b><span>Prüfung Mi 25.11.2026</span></div><nav id="nav"></nav></header>
 <main id="app"></main>
@@ -602,6 +602,7 @@ function viewPlan() {
   const done = S.get("plan", {}); const dl = Math.ceil((new Date(EXAM_DATE + "T08:00:00") - new Date()) / 86400000);
   let total = 0, checked = 0; PLAN.forEach((d, i) => d.tasks.forEach((t, j) => { total++; if (done[`${i}-${j}`]) checked++; }));
   const allCards = Object.values(CARDS).flat(); const sims = S.get("simhist", []);
+  S.set("planpct", total ? Math.round(checked / total * 100) : 0);
   app().innerHTML = `<section class="hero"><div><h1>Mathematik mündlich · Mi 25.11.</h1><p>15 min ohne Vorbereitung und Hilfsmittel · Teil 1: Präsentation (4 Punkte) · Teil 2: je eine Aufgabe Differentialrechnung und Stochastik (8 Punkte)</p></div><div class="count"><span>${dl > 0 ? dl : 0}</span>${dl === 1 ? "Tag" : "Tage"}</div></section>
   <p class="lead">Mündlich heisst: Formeln und Definitionen auswendig, jeden Rechenschritt laut kommentieren, auf Fragen reagieren. Darum übst du hier vor allem laut. Ziel für eine 6: 11 von 12 Punkten. Beide Präsentationen frei in 4 min, alle Karteikarten gewusst, Übungsblätter über 90 %.</p>
   <div class="bar"><div style="width:${total ? Math.round(checked / total * 100) : 0}%"></div></div><p class="small">${checked} von ${total} Aufgaben erledigt</p>

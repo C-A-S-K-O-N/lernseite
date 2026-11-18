@@ -112,7 +112,7 @@ rect.blk{fill:#d9d9d4;stroke:#999}
 @media (max-width:600px){h1{font-size:24px}main{padding:18px 16px 70px}.count span{font-size:32px}.btns{white-space:normal}th,td{padding:7px 8px 7px 0}}
 .home{font-size:13px;text-decoration:none;margin-right:6px}
 </style>
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="theme.css"><style>:root{--acc:#0E9F6E}</style></head>
 <body>
 <header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>EF Sport Lernguide</b><span>Prüfung Mi 25.11.2026</span></div><nav id="nav"></nav></header>
 <main id="app"></main>
@@ -1112,6 +1112,7 @@ function viewPlan() {
   PLAN.forEach((d, i) => d.tasks.forEach((t, j) => { total++; if (done[`${i}-${j}`]) checked++; }));
   const prog = TOPICS.map(t => { const s = topicScore(t.id); const w = S.get("wrong_" + t.id, []).length;
     return `<tr><td><a href="#guide/${t.id}">${t.n} ${t.title}</a></td><td>${["A", "B", "C"].map(x => { const b = best(t.id, x); return `<a class="pill ${b === null ? "" : b >= 80 ? "good" : "bad"}" href="#quiz/${t.id}/${x}">${x}${b === null ? "" : " " + b + "%"}</a>`; }).join(" ")}</td><td>${w ? `<a href="#quiz/${t.id}/F">${w} offen</a>` : "·"}</td></tr>`; }).join("");
+  S.set("planpct", total ? Math.round(checked / total * 100) : 0);
   app().innerHTML = `
   <section class="hero"><div><h1>EF Sport · Prüfung Mi 25.11.</h1>
   <p>Energiebereitstellung und motorische Fähigkeiten · 60 min · Schreibzeug, Massstab oder Geodreieck</p></div>
