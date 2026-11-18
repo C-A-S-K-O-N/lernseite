@@ -147,6 +147,7 @@ table.conj td,table.conj th{white-space:nowrap}
 <header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>Mathe mündlich</b><span>Prüfung Mi 25.11.2026</span></div><nav id="nav"></nav></header>
 <main id="app"></main>
 <script>
+
 const EXAM_DATE = "2026-11-25";
 const fr = (a, b) => `<span class="fr"><span>${a}</span><span>${b}</span></span>`;
 const sq = x => `√<span class="ol">${x}</span>`;
@@ -284,6 +285,7 @@ steps:[
 checks:["Gegenbeispiel (f·g)' ≠ f'·g'","Produktregel korrekt notiert","Beweis mit Nullergänzung","Kontrolle am Beispiel","Quotientenregel aus Produktregel hergeleitet","Bedingung h(x) ≠ 0","Reihenfolge im Zähler / Merksatz","Quotienten-Beispiel komplett"],
 qs:[["Warum darf man im Zähler einfach etwas addieren?","Man addiert −f(x)g(x+h) + f(x)g(x+h) = 0, der Wert ändert sich also nicht. Das nennt man Nullergänzung."],["Warum geht g(x+h) gegen g(x)?","g ist differenzierbar, also auch stetig. Für h → 0 nähert sich g(x+h) dem Wert g(x)."],["Warum ist die Reihenfolge im Zähler der Quotientenregel wichtig?","Wegen des Minus: g'h − gh' ist das Negative von gh' − g'h. Vertauscht man, hat das Resultat das falsche Vorzeichen."],["Wie leitet man 1/h(x) ab?","Mit g = 1, g' = 0: (1/h)' = −h'/h². Beispiel (1/x)' = −1/x²."],["Kann man f(x) = (x²+1)/x auch ohne Quotientenregel ableiten?","Ja, zuerst vereinfachen: x + x⁻¹ → 1 − 1/x². Oft ist Umformen schneller."],["Wie leitet man ein Produkt aus drei Faktoren ab?","Produktregel zweimal: (fgk)' = f'gk + fg'k + fgk'."]]}
 ];
+
 // Karteikarten (auswendig)
 const CARDS = {
 d2: [
@@ -489,11 +491,15 @@ const SIMS = [
 {q:"Ursina wirft eine Münze, bis Kopf kommt, höchstens dreimal. Jeder Wurf kostet 1 Fr., bei Kopf gibt Paul 3 Fr. X = Gewinn von Ursina. Verteilung und E(X).", sol:"K1: +2 (½), K2: +1 (¼), K3: 0 (⅛), kein Kopf: −3 (⅛). E = 1 + 0.25 + 0 − 0.375 = 0.875 Fr.", c:["Werte von X","Wahrscheinlichkeiten","E(X)"]},
 {q:"Zwei Spiele haben beide E(Gewinn) = 0. Bei A ist σ = 1 Fr., bei B σ = 20 Fr. Was bedeutet das?", sol:"Beide sind fair. B ist viel riskanter: Gewinne und Verluste schwanken stärker um 0.", c:["Fair erkannt","σ als Streuung erklärt","Interpretation Risiko"]}
 ];
+
 const PLAN = [
-{d:"Fr 20.11.", t:"Im Zug: Ableitung + alle Ableitungsregeln", min:"ca. 2 h", tasks:[
+{d:"Do 19.11.", t:"Start: die Ableitung", min:"60 min", tasks:[
  {x:"Kapitel 1 Die Ableitung lesen, Definitionen leise aufsagen", go:"guide/d2"},
  {x:"Karteikarten Kapitel 1", go:"cards/d2"},
- {x:"Übungsblatt 1 (schwer, auf Papier)", go:"ueb/d1"},
+ {x:"Übungsblatt 1 (schwer, auf Papier)", go:"ueb/d1"}
+]},
+{d:"Fr 20.11.", t:"Im Zug: alle Ableitungsregeln", min:"ca. 2 h", tasks:[
+ {x:"Karteikarten Kapitel 1 nochmals (nur die schwierigen)", go:"cards/d2"},
  {x:"Kapitel 2 Ableitungsregeln, Quotientenregel selbst herleiten", go:"guide/d3"},
  {x:"Übungsblatt 2 (schwer)", go:"ueb/d2"},
  {x:"Quiz A und B", go:"quiz/A"},
@@ -558,6 +564,7 @@ const MERK = `
 </ul>
 <h3>Notenskala</h3>
 <p>12 Punkte: 11-12 → 6 · 10 → 5.5 · 9 → 5 · 8 → 4.5 · 6-7 → 4 · 5 → 3.5 · 4 → 3. Für eine 6 brauchst du mindestens 11 Punkte.</p>`;
+
 const S = (() => { let mem = {}; let ok = false;
   try { localStorage.setItem("__t", "1"); localStorage.removeItem("__t"); ok = true; } catch (e) {}
   return { get(k, d) { try { if (ok) { const v = localStorage.getItem("mamue_" + k); return v === null ? d : JSON.parse(v); } } catch (e) {} return k in mem ? mem[k] : d; },
@@ -752,6 +759,7 @@ function runSim() {
 }
 
 route();
+
 </script>
 </body>
 </html>
