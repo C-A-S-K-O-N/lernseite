@@ -131,6 +131,7 @@ table.conj td,table.conj th{white-space:nowrap}
 <header><div class="top"><a class="home" href="index.html">← Alle Fächer</a><b>Französisch Lernguide</b><span>Prüfung Di 24.11.2026</span></div><nav id="nav"></nav></header>
 <main id="app"></main>
 <script>
+
 const EXAM_DATE = "2026-11-24";
 const EXAM_LABEL = "Französisch · Prüfung Di 24.11.";
 
@@ -247,39 +248,161 @@ s: `
 `,
 
 pc: `
-<div class="how"><b>So lernst du (ca. 30 min)</b><ol>
-<li>Lerne die Liste der unregelmässigen Partizipien und die Verben mit être.</li>
-<li><a href="#" data-go="trainer/pc">Konjugationstrainer Passé composé</a>, achte auf die Angleichung bei être.</li>
-<li>Quiz A.</li></ol></div>
-<h3>Bildung</h3>
-<p><b>avoir oder être im Präsens + Participe passé.</b> -er → -é (manger → mangé), -ir → -i (finir → fini, dormir → dormi).</p>
-<div class="tw"><table>
-<tr><th>Infinitiv</th><th>PP</th><th>Infinitiv</th><th>PP</th><th>Infinitiv</th><th>PP</th></tr>
-<tr><td>avoir</td><td>eu</td><td>lire</td><td>lu</td><td>offrir</td><td>offert</td></tr>
-<tr><td>être</td><td>été</td><td>boire</td><td>bu</td><td>souffrir</td><td>souffert</td></tr>
-<tr><td>faire</td><td>fait</td><td>venir*</td><td>venu</td><td>découvrir</td><td>découvert</td></tr>
-<tr><td>pouvoir</td><td>pu</td><td>descendre*</td><td>descendu</td><td>conduire</td><td>conduit</td></tr>
-<tr><td>vouloir</td><td>voulu</td><td>connaître</td><td>connu</td><td>construire</td><td>construit</td></tr>
-<tr><td>voir</td><td>vu</td><td>vivre</td><td>vécu</td><td>produire</td><td>produit</td></tr>
-<tr><td>devoir</td><td>dû</td><td>naître*</td><td>né</td><td>traduire</td><td>traduit</td></tr>
-<tr><td>savoir</td><td>su</td><td>mourir*</td><td>mort</td><td>dire</td><td>dit</td></tr>
-<tr><td>recevoir</td><td>reçu</td><td>mettre</td><td>mis</td><td>écrire</td><td>écrit</td></tr>
-<tr><td>tenir</td><td>tenu</td><td>prendre</td><td>pris</td><td>rire</td><td>ri</td></tr>
-<tr><td>croire</td><td>cru</td><td>asseoir</td><td>assis</td><td>suivre</td><td>suivi</td></tr>
-<tr><td>perdre</td><td>perdu</td><td>ouvrir</td><td>ouvert</td><td>courir</td><td>couru</td></tr>
-</table></div>
-<p>* mit être. Achtung: rire → <b>ri</b> (nicht "rit", das steht in deinem Notizbuch falsch).</p>
+<div class="how"><b>So lernst du (ca. 45 min)</b><ol>
+<li>Lies Schritt 1 bis 3 und mach nach jedem Schritt den kleinen Test zum Aufklappen. Zuerst selbst antworten, dann aufklappen.</li>
+<li>Lerne die Partizipien und das Haus der être-Verben auswendig.</li>
+<li>Lies die typischen Fehler. Genau dort holen Lehrpersonen Punkte.</li>
+<li><a href="#" data-go="trainer/pc">Konjugationstrainer Passé composé</a>, danach Quiz A.</li></ol></div>
 
-<h3>Mit être</h3>
-<p>Verben der Bewegung und Zustandsänderung: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, tomber, naître, mourir, rentrer, retourner, devenir, revenir. Dazu <b>alle reflexiven Verben</b>: je me suis levé(e), elle s'est excusée.</p>
-<p><b>Angleichung:</b> Mit être passt sich das Partizip an das Subjekt an wie ein Adjektiv: elle est allée, ils sont allés, elles sont allées, nous sommes rentré(e)s.</p>
-<div class="tw"><table><tr><th></th><th>Singular</th><th>Plural</th></tr><tr><td>männlich</td><td>allé</td><td>allés</td></tr><tr><td>weiblich</td><td>allée</td><td>allées</td></tr></table></div>
-<p><b>Verneinung:</b> ne + Hilfsverb + pas + Partizip: je n'ai pas compris, elle n'est pas venue.</p>
+<h3>Die Idee</h3>
+<p>Das Passé composé funktioniert wie das deutsche Perfekt: ein Hilfsverb im Präsens und dazu ein Partizip. „Ich habe gegessen“ heisst „j'ai mangé“. Du musst bei jedem Verb nur drei Fragen beantworten, immer in dieser Reihenfolge.</p>
+<div class="tw"><table>
+<tr><th>Frage</th><th>Beispiel: „sie (Pl., weiblich) sind gegangen“</th></tr>
+<tr><td>1. avoir oder être?</td><td>aller ist ein être-Verb → elles sont</td></tr>
+<tr><td>2. Wie heisst das Partizip?</td><td>aller → allé</td></tr>
+<tr><td>3. Muss ich angleichen?</td><td>bei être ja, weiblich Plural → allées</td></tr>
+</table></div>
+<p>Ergebnis: elles sont allées.</p>
+
+<h3>Schritt 1: avoir oder être?</h3>
+<p>Fast alle Verben nehmen <b>avoir</b>. être nehmen nur zwei Gruppen:</p>
+<p>Erstens die rund 16 Verben aus dem „Haus“. Stell dir ein Haus vor: man kommt an (arriver), geht hinein (entrer), steigt die Treppe hoch (monter), bleibt (rester), steigt hinunter (descendre), fällt (tomber), geht hinaus (sortir) und weg (partir). Dazu kommen die Paare aller/venir, naître/mourir, rentrer/retourner und die Ableitungen devenir, revenir, parvenir.</p>
+<div class="tw"><table>
+<tr><th>Paar</th><th>Gegenteil</th></tr>
+<tr><td>aller (gehen)</td><td>venir (kommen)</td></tr>
+<tr><td>arriver (ankommen)</td><td>partir (abfahren)</td></tr>
+<tr><td>entrer (hineingehen)</td><td>sortir (hinausgehen)</td></tr>
+<tr><td>monter (hinaufgehen)</td><td>descendre (hinuntergehen)</td></tr>
+<tr><td>naître (geboren werden)</td><td>mourir (sterben)</td></tr>
+<tr><td>rester (bleiben)</td><td>tomber (fallen)</td></tr>
+<tr><td>rentrer, retourner (zurückkehren)</td><td>devenir, revenir (werden, zurückkommen)</td></tr>
+</table></div>
+<p>Zweitens <b>alle reflexiven Verben</b>, also alle mit se: se lever, se laver, s'amuser, se tromper, se souvenir. Je me suis levé.</p>
+<p>Achtung, das Deutsche führt dich in die Irre. Im Deutschen sagst du „ich bin gelaufen, gefahren, geflogen, gerannt“. Auf Französisch sind das aber keine Verben aus dem Haus: j'ai marché, j'ai conduit, j'ai volé, j'ai couru. Umgekehrt sagst du „ich habe mich gewaschen“, aber je me suis lavé. Verlass dich also nie auf das Deutsche, sondern nur auf die Liste.</p>
+<div class="tw"><table>
+<tr><th>Deutsch</th><th>Französisch</th></tr>
+<tr><td>ich bin gelaufen</td><td>j'ai marché / j'ai couru</td></tr>
+<tr><td>ich bin gefahren (Auto)</td><td>j'ai conduit</td></tr>
+<tr><td>ich bin gereist</td><td>j'ai voyagé</td></tr>
+<tr><td>ich bin geschwommen</td><td>j'ai nagé</td></tr>
+<tr><td>es ist passiert</td><td>il s'est passé (reflexiv) / c'est arrivé</td></tr>
+<tr><td>ich habe mich beeilt</td><td>je me suis dépêché(e)</td></tr>
+</table></div>
+<details class="chk"><summary>Test 1: avoir oder être? courir, tomber, se réveiller, voyager, rester, nager, s'asseoir, devenir</summary>
+<p>avoir: courir, voyager, nager. être: tomber, rester, devenir (Haus) und se réveiller, s'asseoir (reflexiv).</p></details>
+
+<h3>Die Hilfsverben im Präsens</h3>
+<div class="tw"><table class="conj">
+<tr><th></th><th>je</th><th>tu</th><th>il/elle</th><th>nous</th><th>vous</th><th>ils/elles</th></tr>
+<tr><td>avoir</td><td>ai</td><td>as</td><td>a</td><td>avons</td><td>avez</td><td>ont</td></tr>
+<tr><td>être</td><td>suis</td><td>es</td><td>est</td><td>sommes</td><td>êtes</td><td>sont</td></tr>
+</table></div>
+<p>Häufiger Fehler: ils <b>ont</b> (avoir) und ils <b>sont</b> (être) nicht verwechseln. Ils ont mangé, ils sont partis.</p>
+
+<h3>Schritt 2: das Partizip</h3>
+<p>Regelmässig ist es einfach: -er wird zu -é (parler → parlé), -ir wird zu -i (finir → fini, partir → parti), -re wird zu -u (attendre → attendu, vendre → vendu).</p>
+<p>Die unregelmässigen lernst du am besten nach Endung, dann merkst du sie dir leichter:</p>
+<div class="tw"><table>
+<tr><th>Endung</th><th>Verben</th></tr>
+<tr><td>-u</td><td>avoir → eu, boire → bu, croire → cru, devoir → dû, lire → lu, pouvoir → pu, recevoir → reçu, savoir → su, voir → vu, vouloir → voulu, connaître → connu, venir → venu, tenir → tenu, vivre → vécu, courir → couru, falloir → fallu, pleuvoir → plu</td></tr>
+<tr><td>-is</td><td>mettre → mis, prendre → pris (auch apprendre → appris, comprendre → compris), asseoir → assis</td></tr>
+<tr><td>-it</td><td>dire → dit, écrire → écrit, faire → fait, conduire → conduit, construire → construit, produire → produit, traduire → traduit</td></tr>
+<tr><td>-ert</td><td>ouvrir → ouvert, offrir → offert, découvrir → découvert, souffrir → souffert</td></tr>
+<tr><td>-i</td><td>rire → ri, suivre → suivi, sourire → souri</td></tr>
+<tr><td>ganz eigen</td><td>être → été, naître → né, mourir → mort</td></tr>
+</table></div>
+<p>Trick für die Prüfung: Bei -is und -it hörst du den Endkonsonanten in der weiblichen Form. La lettre qu'il a écrite, la table qu'il a mise. Darum weisst du, dass ein s oder t dasteht.</p>
+<details class="chk"><summary>Test 2: Partizip von prendre, voir, ouvrir, devoir, rire, lire, mettre, naître, recevoir, vivre</summary>
+<p>pris, vu, ouvert, dû, ri, lu, mis, né, reçu, vécu.</p></details>
+
+<h3>Schritt 3: die Angleichung</h3>
+<p><b>Mit être</b> verhält sich das Partizip wie ein Adjektiv und passt sich dem Subjekt an. Weiblich +e, Plural +s.</p>
+<div class="tw"><table class="conj">
+<tr><th>aller</th><th>männlich</th><th>weiblich</th></tr>
+<tr><td>je</td><td>je suis allé</td><td>je suis allée</td></tr>
+<tr><td>tu</td><td>tu es allé</td><td>tu es allée</td></tr>
+<tr><td>il / elle</td><td>il est allé</td><td>elle est allée</td></tr>
+<tr><td>nous</td><td>nous sommes allés</td><td>nous sommes allées</td></tr>
+<tr><td>vous</td><td>vous êtes allé(s)</td><td>vous êtes allée(s)</td></tr>
+<tr><td>ils / elles</td><td>ils sont allés</td><td>elles sont allées</td></tr>
+</table></div>
+<p>Bei gemischten Gruppen gilt männlich: Paul et Marie sont partis. Bei „vous“ als Höflichkeitsform für eine Person kein s: Madame, vous êtes arrivée ?</p>
+<p><b>Mit avoir</b> gleichst du normalerweise nicht an: elle a mangé, elles ont mangé. Es gibt eine Ausnahme, die bei schweren Prüfungen gern vorkommt: Wenn das direkte Objekt <b>vor</b> dem Verb steht, gleichst du an dieses Objekt an. Das passiert bei le, la, les, bei que und bei quel(s), quelle(s).</p>
+<div class="tw"><table>
+<tr><th>Objekt hinten, keine Angleichung</th><th>Objekt vorne, Angleichung</th></tr>
+<tr><td>J'ai vu Marie.</td><td>Je l'ai vu<b>e</b>.</td></tr>
+<tr><td>Il a acheté les chaussures.</td><td>Il les a acheté<b>es</b>.</td></tr>
+<tr><td>J'ai écrit une lettre.</td><td>La lettre que j'ai écrit<b>e</b> est longue.</td></tr>
+<tr><td>Tu as pris quelles photos ?</td><td>Quelles photos as-tu pris<b>es</b> ?</td></tr>
+</table></div>
+<p>Mit lui und leur (indirektes Objekt) gibt es keine Angleichung: Je leur ai parlé.</p>
+<details class="chk"><summary>Test 3: Setze die richtige Form ein. a) Elles (partir) hier. b) Ma sœur (naître) en 2010. c) Les clés ? Je les (perdre). d) Nous (manger) ensemble, Léa et moi.</summary>
+<p>a) sont parties. b) est née. c) ai perdues. d) avons mangé (avoir, keine Angleichung).</p></details>
+
+<h3>Reflexive Verben genau</h3>
+<p>Das Reflexivpronomen bleibt vor dem Hilfsverb: je me suis levé, tu t'es levé, il s'est levé, nous nous sommes levés, vous vous êtes levés, ils se sont levés.</p>
+<p>Normalerweise gleichst du ans Subjekt an: elle s'est levée, elles se sont amusées. Zwei Fälle ohne Angleichung, gut für eine 6:</p>
+<ul>
+<li>Wenn nach dem Verb noch ein direktes Objekt kommt: Elle s'est lavé <b>les mains</b>. Aber: Elle s'est lavée.</li>
+<li>Bei Verben mit „à quelqu'un“, weil se dann indirekt ist: se parler, se téléphoner, se dire, se sourire, se demander. Elles se sont parlé. Ils se sont téléphoné.</li>
+</ul>
+
+<h3>Sechs Verben mit avoir und être</h3>
+<p>monter, descendre, sortir, rentrer, passer und retourner nehmen <b>avoir</b>, wenn ein direktes Objekt folgt. Dann ändert sich auch die Bedeutung.</p>
+<div class="tw"><table>
+<tr><th>ohne Objekt → être</th><th>mit Objekt → avoir</th></tr>
+<tr><td>Je suis monté au 3e étage. (hinaufgegangen)</td><td>J'ai monté les valises. (hinaufgetragen)</td></tr>
+<tr><td>Elle est descendue. (hinuntergegangen)</td><td>Elle a descendu l'escalier. (die Treppe hinunter)</td></tr>
+<tr><td>Il est sorti. (ausgegangen)</td><td>Il a sorti le chien. (hinausgeführt)</td></tr>
+<tr><td>Nous sommes rentrés. (heimgekommen)</td><td>Nous avons rentré le vélo. (hineingestellt)</td></tr>
+<tr><td>Ils sont passés chez moi. (vorbeigekommen)</td><td>Ils ont passé une semaine à Paris. (verbracht)</td></tr>
+<tr><td>Elle est retournée en France. (zurückgekehrt)</td><td>Elle a retourné la crêpe. (umgedreht)</td></tr>
+</table></div>
+<details class="chk"><summary>Test 4: a) Elle (sortir) la poubelle. b) Elle (sortir) avec ses amies. c) Nous (passer) les vacances en Italie. d) Tu (descendre) du train.</summary>
+<p>a) a sorti. b) est sortie. c) avons passé. d) es descendu(e).</p></details>
+
+<h3>Wo stehen ne, pas, Pronomen und Adverbien?</h3>
+<p>Merke dir: Alles „klebt“ am Hilfsverb, das Partizip kommt ganz am Schluss.</p>
+<div class="tw"><table>
+<tr><th>Fall</th><th>Stellung</th><th>Beispiel</th></tr>
+<tr><td>Verneinung</td><td>ne + Hilfsverb + pas + Partizip</td><td>Je n'ai pas compris. Elle n'est jamais venue.</td></tr>
+<tr><td>Pronomen</td><td>vor dem Hilfsverb</td><td>Je l'ai vu. Il y est allé. J'en ai mangé.</td></tr>
+<tr><td>Pronomen + Verneinung</td><td>ne + Pronomen + Hilfsverb + pas</td><td>Je ne l'ai pas vu. Il n'y est pas allé.</td></tr>
+<tr><td>Reflexiv + Verneinung</td><td>ne + se + Hilfsverb + pas</td><td>Elle ne s'est pas réveillée.</td></tr>
+<tr><td>kurze Adverbien</td><td>zwischen Hilfsverb und Partizip</td><td>J'ai bien dormi. Tu as déjà fini ? Il a beaucoup mangé.</td></tr>
+<tr><td>Frage mit Inversion</td><td>Hilfsverb-Pronomen + Partizip</td><td>As-tu fini ? Est-elle partie ? A-t-il compris ?</td></tr>
+</table></div>
+<p>Ausnahme: „personne“ steht nach dem Partizip. Je n'ai vu personne. Aber: Je n'ai rien vu.</p>
+<details class="chk"><summary>Test 5: Verneine. a) Il s'est trompé. b) Je les ai invités. c) Nous y sommes allés. d) Elle a vu quelqu'un.</summary>
+<p>a) Il ne s'est pas trompé. b) Je ne les ai pas invités. c) Nous n'y sommes pas allés. d) Elle n'a vu personne.</p></details>
+
 <h3>Wann Passé composé?</h3>
+<p>Denk an einen Film. Das Passé composé zeigt die <b>Handlung</b>, also was passiert ist, Schritt für Schritt. Das Imparfait zeigt den <b>Hintergrund</b>, also wie es war (Kapitel 4).</p>
 <ul><li>Abgeschlossene, einmalige Handlung: Hier, je suis allé au cinéma.</li>
-<li>Aufeinanderfolgende Handlungen: Il s'est levé, il a pris son petit-déjeuner et il est parti.</li>
-<li>Eine Handlung, die eine laufende Handlung unterbricht: Je dormais quand le téléphone a sonné.</li></ul>
-<p><b>Signalwörter:</b> hier, la semaine passée, à ce moment-là, ensuite, puis, après, un jour, entre 12h et 14h, soudain, tout à coup, tout de suite.</p>
+<li>Handlungen nacheinander: Il s'est levé, il a pris son petit-déjeuner et il est parti.</li>
+<li>Eine Handlung unterbricht eine laufende: Je dormais quand le téléphone a sonné.</li>
+<li>Abgeschlossene Dauer mit klarem Ende: J'ai habité trois ans à Zurich. Il a plu toute la journée.</li></ul>
+<p><b>Signalwörter:</b> hier, la semaine passée, l'année dernière, à ce moment-là, ensuite, puis, après, un jour, soudain, tout à coup, tout de suite, pendant deux heures, deux fois.</p>
+
+<h3>Die zehn häufigsten Fehler</h3>
+<div class="tw"><table>
+<tr><th>Falsch</th><th>Richtig</th><th>Warum</th></tr>
+<tr><td>je suis couru</td><td>j'ai couru</td><td>courir ist kein être-Verb, auch wenn man auf Deutsch „bin gerannt“ sagt</td></tr>
+<tr><td>elle est allé</td><td>elle est allée</td><td>être: angleichen</td></tr>
+<tr><td>elles ont mangées</td><td>elles ont mangé</td><td>avoir: nicht ans Subjekt angleichen</td></tr>
+<tr><td>je me suis lavée les mains</td><td>je me suis lavé les mains</td><td>direktes Objekt nach dem Verb</td></tr>
+<tr><td>il a rit</td><td>il a ri</td><td>rire → ri</td></tr>
+<tr><td>j'ai prendu</td><td>j'ai pris</td><td>prendre → pris</td></tr>
+<tr><td>ils sont eu</td><td>ils ont eu</td><td>ont und sont verwechselt</td></tr>
+<tr><td>je n'ai vu pas</td><td>je n'ai pas vu</td><td>pas steht vor dem Partizip</td></tr>
+<tr><td>je ai fini</td><td>j'ai fini</td><td>Apostroph vor Vokal</td></tr>
+<tr><td>il a du partir</td><td>il a dû partir</td><td>dû mit Akzent, sonst ist es „du“ (Artikel)</td></tr>
+</table></div>
+
+<h3>Abschlusstest</h3>
+<details class="chk"><summary>Übersetze: a) Sie (weiblich) ist um 8 Uhr aufgestanden. b) Wir sind gestern gerannt. c) Hast du die Fotos gesehen? Ja, ich habe sie gesehen. d) Sie (Pl.) haben sich nicht verstanden. e) Er hat den Koffer hinuntergetragen.</summary>
+<p>a) Elle s'est levée à 8 heures. b) Nous avons couru hier. c) As-tu vu les photos ? Oui, je les ai vues. d) Ils ne se sont pas compris. e) Il a descendu la valise.</p></details>
+<p>Wenn du alle Tests ohne Fehler geschafft hast, geh zu den schweren Übungsblättern.</p>
 `,
 
 im: `
@@ -350,6 +473,7 @@ fu: `
 <p>Oft geht beides. Es kommt darauf an, ob du das Projekt (Futur simple) oder die unmittelbare Handlung (Futur proche) betonst.</p>
 `
 };
+
 // Erste Antwort ist richtig, Reihenfolge wird gemischt.
 const QUIZ = {
 p: {
@@ -610,6 +734,7 @@ fu: [
 {q:"Juliette et Camille (préparer) ___ le repas.", a:["prépareront"]}
 ]
 };
+
 // pres: 6 Formen; pp; aux; fut: Futurstamm; sj: [Stamm je/tu/il/ils, Stamm nous/vous] oder volle Formen (sjf)
 const VERBS = [
 {inf:"parler", g:"reg", pres:["parle","parles","parle","parlons","parlez","parlent"], pp:"parlé", aux:"avoir", fut:"parler", sj:["parl","parl"]},
@@ -701,6 +826,7 @@ pqp:"Plus-que-parfait: avoir/être im Imparfait + Participe passé.",
 fut:"Futur simple: Infinitiv (bzw. unregelmässiger Stamm) + -ai, -as, -a, -ons, -ez, -ont.",
 fp:"Futur proche: aller im Präsens + Infinitiv."
 };
+
 // Schwere Übungsblätter. k: gap (Lücke, Form), fix (Fehler korrigieren: richtige Form eintippen), trans (ganzen Satz schreiben), text (mehrere Lücken)
 // a: akzeptierte Antworten; bei text: Array pro Lücke
 const UEB = {
@@ -918,6 +1044,7 @@ fu: [
 ]}
 ]
 };
+
 const PLAN = [
 {d:"Mi 18.11.", t:"Heute · Présent", min:"30 min", tasks:[
  {x:"Kapitel 1 Présent lesen, Sonderfälle bei -er markieren", go:"guide/p"},
@@ -999,6 +1126,7 @@ const MERK = `
 <li>Bei être immer Angleichung prüfen (wer ist das Subjekt? weiblich? Plural?).</li>
 <li>Akzente zählen: préfère, achète, dû, été, connaît.</li>
 <li>Nach si nie Futur und nie Subjonctif.</li></ul>`;
+
 // ---------- Speicher ----------
 const S = (() => { let mem = {}; let ok = false;
   try { const k = "__t"; localStorage.setItem(k, "1"); localStorage.removeItem(k); ok = true; } catch (e) {}
@@ -1282,6 +1410,7 @@ function viewUeb(t, n) {
 function viewMerk() { app().innerHTML = `<h1>Merkblatt</h1><p class="lead">Alles Wichtige auf einer Seite, für die letzten Tage und den Prüfungsmorgen.</p>${MERK}`; }
 
 route();
+
 </script>
 </body>
 </html>
